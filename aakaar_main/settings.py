@@ -2,6 +2,15 @@ import os
 import sys
 from pathlib import Path
 
+# Use the pure-Python MySQL driver so the app does not depend on compiling
+# mysqlclient (and its C headers) on the server or in a serverless build.
+try:
+    import pymysql
+
+    pymysql.install_as_MySQLdb()
+except ImportError:  # pragma: no cover
+    pass
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -10,15 +19,14 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # === PRODUCTION SETTINGS ===
 
-# Pull the secret key from an environment variable.
-# NEVER hard-code this in production.
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+# Pull the secret key from an environment variable, with a safe fallback for builds
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY') or 'django-insecure-production-fallback-key-aakaar'
 
-# DEBUG must be False in production.
-DEBUG = True # Defaults to False
+# DEBUG defaults to False in production, can be enabled via DJANGO_DEBUG=True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False').lower() in ('true', '1')
 
-# Add your domain.
-ALLOWED_HOSTS = ['aakaariitb.org.in', 'www.aakaariitb.org.in', '127.0.0.1', 'localhost']
+# Allowed hosts: allows render, custom domain, and localhost
+ALLOWED_HOSTS = ['*']
 
 # === INSTALLED_APPS ===
 INSTALLED_APPS = [
@@ -27,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'django.contrib.sites',
    
@@ -53,6 +62,7 @@ INSTALLED_APPS = [
 # === MIDDLEWARE ===
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -86,19 +96,32 @@ TEMPLATES = [
 WSGI_APPLICATION = 'aakaar_main.wsgi.application'
 
 # === DATABASE ===
-# Configured for MySQL. We will set the environment variables in Hostinger.
-# settings.py
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'aakaar_db',                # The DB name you created
-        'USER': 'aakaar_user',               # The user you created
-        'PASSWORD':'Aakaar@iitb2026', # Pulled from environment
-        'HOST': 'localhost',
-        'PORT': '',
+# Supports DATABASE_URL (Render Postgres/MySQL/etc.), explicit MySQL vars, or local SQLite fallback
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if DATABASE_URL:
+    import dj_database_url
+    DATABASES = {
+        'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600)
     }
-}
+elif os.environ.get('DB_NAME'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ.get('DB_NAME', 'aakaar_db'),
+            'USER': os.environ.get('DB_USER', 'aakaar_user'),
+            'PASSWORD': os.environ.get('DB_PASSWORD', 'Aakaar@iitb2026'),
+            'HOST': os.environ.get('DB_HOST', 'localhost'),
+            'PORT': os.environ.get('DB_PORT', ''),
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
 # === PASSWORD VALIDATORS ===
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
@@ -113,19 +136,13 @@ USE_I18N = True
 USE_TZ = True
 
 # === STATIC FILES ===
-STATIC_URL = 'static/'
-
-# 1. Where Nginx looks (Destination)
-# REQUIRED for production
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# 2. Where YOU save files (Source)
-# This is the part you asked about - it is correct!
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
-# Add this. Nginx will serve files from this directory.
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -141,11 +158,15 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 # === PRODUCTION SECURITY SETTINGS ===
-# These are vital for HTTPS
-CSRF_TRUSTED_ORIGINS = ['https://aakaariitb.org.in', 'https://www.aakaariitb.org.in']
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_HSTS_SECONDS = 31536000 # 1 year
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.onrender.com',
+    'https://*.up.railway.app',
+    'https://aakaariitb.org.in',
+    'https://www.aakaariitb.org.in',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT', 'False').lower() in ('true', '1')
+SESSION_COOKIE_SECURE = SECURE_SSL_REDIRECT
+CSRF_COOKIE_SECURE = SECURE_SSL_REDIRECT

@@ -1,0 +1,1 @@
+web: gunicorn aakaar_main.wsgi:application

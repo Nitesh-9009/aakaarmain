@@ -1,0 +1,29 @@
+# Vercel uploads the whole working directory minus this file, so keep local
+# environments, secrets, database dumps and scratch folders out of the bundle.
+.venv/
+venv/
+.git/
+.git_corrupted/
+__pycache__/
+*.py[cod]
+
+# Secrets must be set with `vercel env add`, never uploaded.
+.env
+*.env
+
+# Local database and logs
+db.sqlite3
+*.sqlite3
+*.log
+
+# Local scratch (not needed at runtime)
+.backup_*
+.cloud-attachments/
+.preview_shots/
+.stitch_design/
+screenshots/
+static/design/_cfg_raw.txt
+
+# NOTE: staticfiles/ is intentionally NOT ignored - WhiteNoise serves the
+# collected static files out of the deployment bundle. Run `manage.py collectstatic`
+# with the Vercel settings before every deploy.

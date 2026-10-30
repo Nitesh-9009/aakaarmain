@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: aakaar-website
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn aakaar_main.wsgi:application"
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DJANGO_SETTINGS_MODULE
+        value: aakaar_main.settings
+      - key: DJANGO_DEBUG
+        value: "False"
