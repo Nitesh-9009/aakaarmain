@@ -1,0 +1,487 @@
+{% load static %}
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thesis 180 - Aakaar | IIT Bombay</title>
+    <meta name="description" content="Present Technical Jargons In a Non-Technical Way. Showcase your research to the world in just 3 minutes.">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'fevicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fevicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fevicon/favicon-16x16.png' %}">
+    <link rel="manifest" href=" {% static 'fevicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'fevicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CORE THEME STYLES --- */
+        :root {
+            --color-bg: #111111;
+            --color-text: #EAEAEA;
+            --color-text-muted: #a0a0a0;
+            --color-primary: #9D00FF; /* Vibrant Purple */
+            --color-primary-light: #bb63ff;
+            --color-border: #444444;
+            --font-base: "Bai Jamjuree", sans-serif;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-base);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-text);
+            font-weight: 700;
+        }
+
+        .text-brand { color: var(--color-primary) !important; }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        a:hover { color: var(--color-primary-light); }
+
+        section { padding-top: 80px; padding-bottom: 80px; }
+
+        .full-height {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(17, 17, 17, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .navbar-brand img { height: 50px; width: auto; max-width: 150px; }
+
+        /* Buttons */
+        .btn-brand {
+            background-color: var(--color-primary);
+            color: #fff !important;
+            border: none;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 12px 28px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .btn-brand:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-2px);
+        }
+        .btn-outline-light { border-color: var(--color-border); color: var(--color-text); }
+        .btn-outline-light:hover { background-color: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+        
+        /* Cards */
+        .card-custom {
+            background-color: rgba(34, 34, 34, 0.5);
+            border: 1px solid var(--color-border);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Tabs */
+        .nav-tabs { border-bottom: 1px solid var(--color-border); }
+        
+        .nav-tabs .nav-link {
+            color: var(--color-text-muted);
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            background: transparent;
+        }
+        
+        .nav-tabs .nav-link:hover { color: var(--color-primary-light); }
+        
+        .nav-tabs .nav-link.active {
+            color: var(--color-primary);
+            background-color: transparent;
+            border-bottom: 3px solid var(--color-primary);
+        }
+
+        .tab-content {
+            background-color: rgba(34, 34, 34, 0.3);
+            border: 1px solid var(--color-border);
+            border-top: none;
+            border-radius: 0 0 1rem 1rem;
+            padding: 2rem;
+        }
+
+        /* Lists in Tabs */
+        .tab-pane ul { list-style-type: none; padding-left: 0; }
+        .tab-pane li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+        .tab-pane li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--color-primary);
+        }
+
+        /* Accordion */
+        .accordion-button {
+            background-color: #222;
+            color: var(--color-text);
+            border: none;
+            box-shadow: none;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: var(--color-primary);
+            color: #fff;
+        }
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        .accordion-item {
+            background-color: transparent;
+            border: 1px solid var(--color-border);
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .accordion-body {
+            background-color: rgba(34, 34, 34, 0.3);
+            color: var(--color-text-muted);
+        }
+
+        /* Team Members */
+        .team-member img {
+            width: 160px; height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--color-border);
+            margin-bottom: 1.5rem;
+            transition: 0.3s;
+        }
+        .team-member:hover img {
+            border-color: var(--color-primary);
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 1.2rem;
+            color: var(--color-text-muted);
+        }
+        .social-icons a:hover { color: var(--color-primary); }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: var(--color-text-muted);
+            border-top: 1px solid var(--color-border);
+            padding: 2.5rem 0;
+        }
+    </style>
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    {% include "includes/design_header.html" %}
+
+    <main id="content-wrapper">
+
+        <section id="hero" class="full-height">
+            <div class="container">
+                <div class="row align-items-center" data-aos="fade-up">
+                    <div class="col-lg-6 mb-5 mb-lg-0 order-lg-2">
+                        <img src="{% static 'sympo_events/Theses 180.png' %}" loading="lazy"
+                             class="img-fluid rounded shadow-lg border border-secondary" alt="Thesis 180">
+                    </div>
+                    <div class="col-lg-6 ps-lg-5 order-lg-1">
+                        <h1 class="display-3 fw-bold mb-2">THESIS <span class="text-brand">180</span></h1>
+                        <p class="lead text-muted mb-4">
+                            Present Technical Jargons In a Non-Technical Way. Showcase your research to the world in just 3 minutes.
+                        </p>
+                        
+                        <div class="card-custom p-4 mb-4">
+                            <h3 class="mb-1"><span class="text-brand">INR 25,000</span></h3>
+                            <p class="mb-0 text-muted">Total Prize Pool</p>
+                        </div>
+
+                        <div class="d-flex flex-column flex-md-row gap-3">
+                            <!-- <a href="https://forms.gle/dZsdGfsFXCcm3PJa8" target="_blank" class="btn btn-brand btn-lg">
+                                <a class="btn btn-outline-light" target="_blank">Registeration Closed</a>
+                            </a> -->
+                            <!-- <a class="btn btn-outline-light" target="_blank">Registeration Closed</a> -->
+                              <a target="_blank" class="btn btn-brand btn-lg">
+                                <i class="bi bi-pencil-square me-2"></i> Registeration Closed
+                            </a>
+
+                            <a href="https://drive.google.com/file/d/1R1QaegEpabi3DtFVI2nRW8SbYoGLPaoW/view?usp=sharing" target="_blank"
+                                class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-file-earmark-pdf me-2"></i> Brochure
+                            </a>
+                            <a href="https://drive.google.com/file/d/1F5VL7LCKDBM22SmpIY6SYQVyZh5lRDUM/view?usp=sharing" target="_blank"
+                                class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-file-earmark-pdf me-2"></i> Helpbook
+                            </a>
+                        </div>
+                        <p class="mt-4 text-white small">
+                            <i class="bi bi-clock-history me-1 text-brand"></i> 
+                            Registration Deadline: <strong>5th March, 2027</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="pt-0">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <nav>
+                    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about" type="button" role="tab">ABOUT</button>
+                        <button class="nav-link" id="nav-rules-tab" data-bs-toggle="tab" data-bs-target="#nav-rules" type="button" role="tab">RULES</button>
+                        <button class="nav-link" id="nav-incentives-tab" data-bs-toggle="tab" data-bs-target="#nav-incentives" type="button" role="tab">INCENTIVES</button>
+                    </div>
+                </nav>
+                
+                <div class="tab-content" id="nav-tabContent">
+                    
+                    <div class="tab-pane fade show active" id="nav-about" role="tabpanel">
+                        <h3 class="mb-4">About <span class="text-brand">Thesis 180</span></h3>
+                        <p class="mb-4">
+                            Aakaar IIT Bombay presents the first edition of <strong>Thesis 180</strong> for enthusiastic researchers to show off their speaking skills. 
+                            Curate your thesis so that you can express it in <strong>180 seconds</strong>. Present it such that a non-specialist can understand and appreciate your research.
+                        </p>
+                        <div class="p-4 border border-secondary rounded mt-4" style="background: rgba(157, 0, 255, 0.1);">
+                            <p class="fst-italic h5 mb-0 text-brand text-center">"Speak clearly, if you speak at all; carve every word before you let it fall"</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-rules" role="tabpanel">
+                        <h3 class="mb-4">Competition <span class="text-brand">Format</span></h3>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <i class="bi bi-stopwatch-fill fs-3 text-brand me-3"></i>
+                                    <div>
+                                        <h5>3 Minutes Limit</h5>
+                                        <p class="text-muted small">Strict time limit of 180 seconds to present your entire thesis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <i class="bi bi-people-fill fs-3 text-brand me-3"></i>
+                                    <div>
+                                        <h5>General Audience</h5>
+                                        <p class="text-muted small">The presentation must be understood by a non-specialist audience (no heavy jargon).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <i class="bi bi-easel-fill fs-3 text-brand me-3"></i>
+                                    <div>
+                                        <h5>One Static Slide</h5>
+                                        <p class="text-muted small">Only one single static PowerPoint slide is permitted. No slide transitions, animations or movement.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-incentives" role="tabpanel">
+                        <h3 class="mb-4">Why <span class="text-brand">Participate?</span></h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card-custom p-3 h-100 d-flex flex-column align-items-center text-center">
+                                    <i class="bi bi-trophy-fill fs-2 text-brand mb-2"></i>
+                                    <h5>Prizes</h5>
+                                    <p class="mb-0 text-muted">Win cash prizes worth INR 25,000.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-custom p-3 h-100 d-flex flex-column align-items-center text-center">
+                                    <i class="bi bi-rocket-takeoff-fill fs-2 text-brand mb-2"></i>
+                                    <h5>Skill Development</h5>
+                                    <p class="mb-0 text-muted">Master the art of explaining complex research to a general audience.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-custom p-3 h-100 d-flex flex-column align-items-center text-center">
+                                    <i class="bi bi-patch-check-fill fs-2 text-brand mb-2"></i>
+                                    <h5>Resume Value</h5>
+                                    <p class="mb-0 text-muted">Add a prestigious IIT-NIT competition win to your resume.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container" data-aos="fade-up">
+                <div class="row text-center mb-5">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">Frequently Asked <span class="text-brand">Questions</span></h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="accordion" id="faqAccordion">
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                        Who is eligible to participate?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        All undergraduate and postgraduate students undertaking research work in civil engineering or related fields are eligible.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                        Can I use additional props?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        No, additional electronic media (e.g. sound and video files) and additional props (e.g. costumes, musical instruments, laboratory equipment) are strictly prohibited.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container" data-aos="fade-up">
+                <div class="row text-center mb-5">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">Contact <span class="text-brand">Us</span></h1>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-custom p-4 text-center h-100 team-member">
+                            <img src="{% static 'image/dunggam.jpg' %}" alt="Dunggam Gao" class="team-member-img">
+                            <h5 class="mt-3">Dunggam Gao</h5>
+                            <p class="text-brand small mb-3">Symposium Manager</p>
+                            <div class="social-icons">
+                                <a href="tel:9362607727"><i class="bi bi-telephone-fill"></i></a>
+                                <a href="mailto:symposium@aakaariitb.org.in"><i class="bi bi-envelope-fill"></i></a>
+                                <a href="https://www.linkedin.com/in/dunggam-gao-1504462b4/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-custom p-4 text-center h-100 team-member">
+                            <img src="{% static 'image/generated.png' %}" alt="Anand" class="team-member-img">
+                            <h5 class="mt-3">Anand</h5>
+                            <p class="text-brand small mb-3">Symposium Manager</p>
+                            <div class="social-icons">
+                                <a href="tel:9785220930"><i class="bi bi-telephone-fill"></i></a>
+                                <a href="mailto:symposium@aakaariitb.org.in"><i class="bi bi-envelope-fill"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    {% include "includes/design_footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize AOS (Animate On Scroll)
+            AOS.init({
+                offset: 100,
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+            });
+
+            // Initialize Particles.js
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js',
+                    {
+                        "particles": {
+                            "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+                            "color": { "value": "#9D00FF" }, // Purple particles
+                            "shape": { "type": "circle" },
+                            "opacity": { "value": 0.5, "random": true },
+                            "size": { "value": 3, "random": true },
+                            "line_linked": { "enable": false },
+                            "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+                        },
+                        "interactivity": {
+                            "detect_on": "canvas",
+                            "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": false }, "resize": true },
+                            "modes": { "bubble": { "distance": 250, "size": 5, "duration": 2, "opacity": 0.8, "speed": 3 } }
+                        },
+                        "retina_detect": true
+                    });
+            }
+        });
+    </script>
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+/* ==========================================================================
+   AAKAAR — component layer
+   Maps the older Bootstrap markup onto the reference design's components
+   (tactile pills, vellum fields, editorial accordions, forest tabs).
+   Loaded after Bootstrap, before the design's Tailwind runtime.
+   ========================================================================== */
+
+/* 1. BUTTONS — pills with hard offset grounding --------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--aa-font-display);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--aa-pill);
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: transform var(--aa-transition), background-color var(--aa-transition),
+                color var(--aa-transition), border-color var(--aa-transition);
+}
+
+.btn:active { transform: translateY(2px); }
+.btn-lg { font-size: 17px; padding: 0.8rem 2rem; }
+.btn-sm { font-size: 14px; padding: 0.4rem 1.1rem; }
+.btn-block, .w-100 { width: 100%; }
+
+/* Primary CTA — forest green */
+.btn-primary, .btn-success, .btn-info {
+    background: var(--aa-primary-container) !important;
+    border-color: var(--aa-primary-container) !important;
+    color: var(--aa-surface) !important;
+    box-shadow: var(--aa-shadow-tactile);
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-info:hover {
+    background: var(--aa-primary) !important;
+    border-color: var(--aa-primary) !important;
+    color: var(--aa-surface) !important;
+}
+
+/* Highlight CTA — warm ochre */
+.btn-brand, .btn-warning,
+.btn-primary.btn-lg,
+.btn-success.btn-lg {
+    background: var(--aa-ochre) !important;
+    border-color: #d4a33b !important;
+    color: var(--aa-charcoal) !important;
+    box-shadow: var(--aa-shadow-ochre);
+}
+
+.btn-brand:hover, .btn-warning:hover,
+.btn-primary.btn-lg:hover, .btn-success.btn-lg:hover {
+    background: var(--aa-ochre-dark) !important;
+    border-color: var(--aa-ochre-dark) !important;
+    color: var(--aa-charcoal) !important;
+}
+
+/* Outline / ghost */
+.btn-secondary, .btn-outline-light, .btn-outline-primary, .btn-outline-dark,
+.btn-outline-secondary, .btn-outline-success {
+    background: transparent !important;
+    border: 1.5px solid var(--aa-primary-container) !important;
+    color: var(--aa-primary-container) !important;
+    box-shadow: none;
+}
+
+.btn-secondary:hover, .btn-outline-light:hover, .btn-outline-primary:hover,
+.btn-outline-dark:hover, .btn-outline-secondary:hover, .btn-outline-success:hover {
+    background: var(--aa-primary-container) !important;
+    color: var(--aa-surface) !important;
+}
+
+.btn-link {
+    padding: 0;
+    border: 0;
+    background: none !important;
+    box-shadow: none;
+    color: var(--aa-primary-container) !important;
+    text-decoration: underline;
+}
+
+.btn-close { filter: none; opacity: 0.55; }
+.btn-close:hover { opacity: 0.9; }
+
+/* 2. FORMS --------------------------------------------------------------- */
+.form-label, .form-check-label {
+    font-family: var(--aa-font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--aa-primary-container);
+    margin-bottom: 0.35rem;
+}
+
+.form-control, .form-select, .form-styling,
+input[type="text"], input[type="email"], input[type="number"],
+input[type="tel"], input[type="date"], input[type="password"],
+select, textarea {
+    background-color: var(--aa-surface-lowest) !important;
+    border: 1.5px solid var(--aa-sandstone-strong) !important;
+    border-radius: var(--aa-radius-sm) !important;
+    color: var(--aa-charcoal) !important;
+    font-family: var(--aa-font-body);
+    font-size: 16px;
+    min-height: 48px;
+    padding: 0.6rem 0.9rem;
+    box-shadow: none !important;
+    transition: border-color var(--aa-transition), box-shadow var(--aa-transition);
+}
+
+textarea.form-control, textarea { min-height: 120px; }
+
+.form-control:focus, .form-select:focus, .form-styling:focus,
+input:focus, select:focus, textarea:focus {
+    background-color: var(--aa-surface-lowest) !important;
+    border-color: var(--aa-primary-container) !important;
+    box-shadow: 0 0 0 2px var(--aa-sage) !important;
+    color: var(--aa-charcoal) !important;
+    outline: none;
+}
+
+.form-control::placeholder, input::placeholder, textarea::placeholder {
+    color: #8a908a;
+}
+
+.form-select option { background: var(--aa-surface-lowest); color: var(--aa-charcoal); }
+
+.form-check-input { border-color: var(--aa-sandstone-strong); }
+.form-check-input:checked { background-color: var(--aa-primary-container); border-color: var(--aa-primary-container); }
+
+/* Native autofill keeps the vellum canvas */
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-text-fill-color: var(--aa-charcoal);
+    -webkit-box-shadow: 0 0 0 1000px var(--aa-surface-lowest) inset;
+    box-shadow: 0 0 0 1000px var(--aa-surface-lowest) inset;
+}
+
+/* 3. NAV TABS — forest pills -------------------------------------------- */
+.nav-tabs {
+    border-bottom: 1px solid var(--aa-sandstone) !important;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-tabs .nav-link {
+    font-family: var(--aa-font-display);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--aa-on-surface-variant) !important;
+    background: transparent;
+    border: 1px solid var(--aa-sandstone) !important;
+    border-radius: var(--aa-pill) !important;
+    padding: 0.5rem 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-tabs .nav-link:hover { background: var(--aa-sage-tint) !important; color: var(--aa-primary-container) !important; }
+
+.nav-tabs .nav-link.active {
+    background: var(--aa-primary-container) !important;
+    border-color: var(--aa-primary-container) !important;
+    color: var(--aa-surface) !important;
+}
+
+.tab-content { padding-top: 1.5rem; }
+.tab-pane { color: var(--aa-charcoal); }
+
+.nav-pills .nav-link {
+    border-radius: var(--aa-pill);
+    color: var(--aa-on-surface-variant);
+    font-weight: 700;
+}
+
+.nav-pills .nav-link.active { background: var(--aa-primary-container); color: var(--aa-surface); }
+
+/* 4. ACCORDIONS — editorial dividers with mono indices ------------------ */
+.accordion, .accordion-item {
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid var(--aa-sandstone) !important;
+    border-radius: 0 !important;
+}
+
+.accordion-item:first-of-type { border-top: 1px solid var(--aa-sandstone) !important; }
+
+.accordion-button {
+    background: transparent !important;
+    color: var(--aa-on-surface) !important;
+    font-family: var(--aa-font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 1.15rem 0.25rem;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.accordion-button:not(.collapsed) { color: var(--aa-primary-container) !important; }
+.accordion-button:focus { box-shadow: none !important; border: 0 !important; }
+
+.accordion-button::after {
+    background-image: none !important;
+    content: "+";
+    font-family: var(--aa-font-mono);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--aa-sage);
+    transform: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.accordion-button:not(.collapsed)::after { content: "\2013"; color: var(--aa-primary-container); }
+
+.accordion-body {
+    padding: 0 0.25rem 1.4rem;
+    color: var(--aa-on-surface-variant);
+    font-size: 16px;
+    line-height: 1.7;
+    background: transparent !important;
+}
+
+/* 5. ALERTS & DJANGO MESSAGES ------------------------------------------- */
+.alert {
+    border: 1px solid var(--aa-sandstone) !important;
+    border-radius: var(--aa-radius) !important;
+    background: var(--aa-surface-lowest) !important;
+    color: var(--aa-charcoal) !important;
+    padding: 1rem 1.25rem;
+}
+
+.alert-success { border-left: 4px solid var(--aa-secondary) !important; }
+.alert-danger, .alert-error { border-left: 4px solid #ba1a1a !important; }
+.alert-warning { border-left: 4px solid var(--aa-ochre) !important; }
+.alert-info { border-left: 4px solid var(--aa-primary-container) !important; }
+
+.alert-link { color: var(--aa-primary-container) !important; font-weight: 700; }
+
+/* 6. HERO BANDS & SECTION HEADERS --------------------------------------- */
+#hero.full-height, .full-height {
+    min-height: auto;
+    padding-top: clamp(32px, 5vw, 64px);
+    padding-bottom: clamp(32px, 5vw, 64px);
+}
+
+#hero .lead, .aa-lede {
+    color: var(--aa-on-surface-variant) !important;
+    font-size: 18px;
+    line-height: 1.65;
+    max-width: 62rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Legacy section headings sit left in the design language */
+.aa-lede-left { margin-left: 0; }
+#hero h1, .display-1, .display-3 { text-align: center; }
+
+/* Small mono kicker above section headings */
+.kicker, .section-kicker, .text-eyebrow, .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--aa-font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--aa-secondary);
+    background: var(--aa-sage-tint);
+    border: 1px solid var(--aa-sandstone);
+    border-radius: var(--aa-pill);
+    padding: 0.4rem 0.9rem;
+    margin-bottom: 0.9rem;
+}
+
+/* 7. TEAM / SPONSORS ---------------------------------------------------- */
+.team-member {
+    padding: 1.5rem;
+    text-align: center;
+    background: var(--aa-surface-lowest) !important;
+    border: 1px solid var(--aa-sandstone) !important;
+    border-radius: var(--aa-radius-lg);
+    box-shadow: var(--aa-shadow-card) !important;
+}
+
+.team-member img {
+    border-radius: var(--aa-radius) !important;
+    border: 1px solid var(--aa-sandstone);
+    object-fit: cover;
+}
+
+.team-member h5, .team-member h4 { margin-top: 1rem; margin-bottom: 0.15rem; }
+
+.sponsor-logo, .sponsor-plate, .logo-plate {
+    background: var(--aa-surface-lowest) !important;
+    border: 1px solid var(--aa-sandstone);
+    border-radius: var(--aa-radius);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-logo img, .sponsor-plate img { filter: none !important; max-height: 72px; width: auto; }
+
+/* 8. IMAGERY ------------------------------------------------------------ */
+img { max-width: 100%; height: auto; }
+
+.img-fluid { border-radius: var(--aa-radius); }
+
+.rounded-4 { border-radius: var(--aa-radius-xl) !important; }
+
+/* Old pages used heavy coloured glows on imagery — flatten to a soft plate */
+.shadow-lg, .shadow {
+    box-shadow: var(--aa-shadow-card) !important;
+}
+
+/* 9. SIDEBAR TRACK SWITCHER -------------------------------------------- */
+#sidebar-nav, .sidebar-nav {
+    position: static !important;
+    transform: none !important;
+    width: auto !important;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.sidebar-links {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 0.75rem !important;
+    justify-content: center;
+}
+
+.sidebar-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--aa-surface-lowest) !important;
+    border: 1px solid var(--aa-sandstone) !important;
+    border-radius: var(--aa-pill) !important;
+    color: var(--aa-primary-container) !important;
+    padding: 0.45rem 1.15rem !important;
+    font-family: var(--aa-font-display);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.sidebar-link:hover { background: var(--aa-sage-tint) !important; }
+
+.sidebar-icon, .large-letter {
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    color: var(--aa-secondary) !important;
+    font-family: var(--aa-font-mono);
+    font-size: 13px !important;
+}
+
+/* 10. TABLES / LISTS / MISC -------------------------------------------- */
+.list-group-item {
+    background: var(--aa-surface-lowest) !important;
+    border-color: var(--aa-sandstone) !important;
+    color: var(--aa-charcoal);
+}
+
+.progress { background: var(--aa-surface-highest); border-radius: var(--aa-pill); height: 8px; }
+.progress-bar { background: var(--aa-primary-container); }
+
+iframe { border: 1px solid var(--aa-sandstone); border-radius: var(--aa-radius); }
+
+/* Iframe / embed plates (Google Forms, maps) */
+.ratio, iframe[src*="docs.google.com"] {
+    background: var(--aa-surface-lowest);
+    border-radius: var(--aa-radius);
+}
+
+/* 11. FOOTER AREA (legacy inline footers) ------------------------------ */
+footer:not(#aa-contact) {
+    background: var(--aa-surface-high) !important;
+    border-top: 1px solid var(--aa-sandstone);
+    color: var(--aa-on-surface-variant) !important;
+    padding: 2.5rem 0;
+}
+
+footer:not(#aa-contact) h1, footer:not(#aa-contact) h2, footer:not(#aa-contact) h3,
+footer:not(#aa-contact) h4, footer:not(#aa-contact) h5 {
+    color: var(--aa-on-surface) !important;
+}
+
+footer:not(#aa-contact) a { color: var(--aa-on-surface-variant); }
+footer:not(#aa-contact) a:hover { color: var(--aa-primary-container); }
+
+/* 12. RESPONSIVE SAFEGUARDS -------------------------------------------- */
+@media (max-width: 991.98px) {
+    h1, .display-1, .display-2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+    #hero h1, .display-3 { font-size: clamp(1.75rem, 6.5vw, 2.4rem); }
+}
+
+@media (max-width: 575.98px) {
+    .btn-lg { font-size: 15px; padding: 0.7rem 1.4rem; }
+    section { padding-top: 40px; padding-bottom: 40px; }
+}
+
+/* 13. LEGACY INLINE COLOURS -------------------------------------------- */
+/* The older pages hard-code their old dark-teal / lime palette in inline
+   style attributes. A stylesheet declaration marked !important still beats a
+   normal inline declaration, so these rules re-skin them from the outside. */
+
+/* Old dark surfaces → forest structural panels */
+div[style*="background-color: black"], div[style*="background-color:black"],
+div[style*="background: black"], div[style*="background:black"],
+div[style*="background-color: #0e1f29"], div[style*="background-color:#0e1f29"],
+div[style*="background: #0e1f29"], div[style*="background-color: #022a30"],
+div[style*="background-color:#022a30"], div[style*="background: #022a30"],
+div[style*="background-color: #000"], div[style*="background-color:#000"],
+section[style*="background-color: black"], section[style*="background-color:#0e1f29"],
+section[style*="background-color: #0e1f29"], section[style*="background-color: #022a30"],
+main[style*="background-color: #0e1f29"] {
+    background-color: var(--aa-primary-container) !important;
+    color: var(--aa-surface) !important;
+}
+
+/* Buttons that carried the old dark fill become the ochre highlight pill */
+.btn[style*="background-color: black"], .btn[style*="background-color:black"],
+.btn[style*="background: black"], .btn[style*="background-color: #0e1f29"],
+.btn[style*="background-color:#0e1f29"], .btn[style*="background-color: #022a30"],
+.btn[style*="background-color:#022a30"], .btn[style*="background-color: rgb(174, 0, 255)"],
+.btn[style*="background-color: #e0f780"], .btn[style*="background-color:#e0f780"],
+.btn[style*="background-color: yellow"], .btn[style*="background-color: rgb(0, 251, 255)"] {
+    background-color: var(--aa-ochre) !important;
+    border-color: #d4a33b !important;
+    color: var(--aa-charcoal) !important;
+    box-shadow: var(--aa-shadow-ochre) !important;
+}
+
+/* Old lime / cyan / magenta fills used on non-buttons → sage plate */
+div[style*="background-color: #e0f780"], span[style*="background-color: #e0f780"],
+div[style*="background-color: rgb(174, 0, 255)"], div[style*="background-color: rgb(0, 251, 255)"],
+div[style*="background-color: rgb(175 251 255)"], div[style*="background-color: rgb(70, 187, 255)"],
+div[style*="background-color: #80f7eb"], div[style*="background-color: #80f7f7"] {
+    background-color: var(--aa-sage-tint) !important;
+    color: var(--aa-primary-container) !important;
+}
+
+/* The same old hues used as ink → forest / deep ochre */
+*[style*="color: #e0f780"], *[style*="color:#e0f780"],
+*[style*="color: #80f7eb"], *[style*="color: #80f7f7"],
+*[style*="color: rgb(0, 251, 255)"], *[style*="color: rgb(175 251 255)"],
+*[style*="color: rgb(70, 187, 255)"], *[style*="color: rgb(174, 0, 255)"] {
+    color: var(--aa-primary-container) !important;
+}
+
+*[style*="color: black"], *[style*="color:black"], *[style*="color: #000"] {
+    color: var(--aa-charcoal) !important;
+}
+
+/* Old salmon / coral highlights → the design's error red */
+*[style*="color: rgb(241, 146, 146)"], *[style*="color: #ff5b58"] {
+    color: #ba1a1a !important;
+}
+
+/* Pure-white ink on a forest panel stays white; on vellum it must not vanish */
+div[style*="background-color: white"] *, div[style*="background-color: #fff"] * {
+    color: inherit;
+}
+
+/* Old tab buttons stripped their own border inline; restore the ghost outline */
+.btn-outline-light[style*="border: none"], .btn-outline-light[style*="border:none"],
+.btn-outline-primary[style*="border: none"], .btn-outline-secondary[style*="border: none"] {
+    border: 1.5px solid var(--aa-sandstone-strong) !important;
+    color: var(--aa-on-surface-variant) !important;
+}
+
+.btn-outline-light.active[style*="border: none"],
+.btn-outline-light[style*="border: none"].active {
+    background-color: var(--aa-primary-container) !important;
+    border-color: var(--aa-primary-container) !important;
+    color: var(--aa-surface) !important;
+}
+
+/* Old hard black / white hairlines → sandstone */
+*[style*="border: 2px solid black"], *[style*="border: 2px solid #000"],
+*[style*="border: 2px solid rgb(0, 0, 0)"], *[style*="border: black 2px solid"],
+*[style*="border: 2px solid black 2px solid"] {
+    border-color: var(--aa-sandstone) !important;
+}
+
+/* 14. PRINT -------------------------------------------------------------- */
+@media print {
+    #particles-js, header { display: none !important; }
+    #aa-contact { display: none !important; }
+}

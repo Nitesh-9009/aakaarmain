@@ -1,0 +1,275 @@
+{% load socialaccount %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+   
+
+  <!-- Fevicon  -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+
+   <style>
+        .gradient-custom {
+/* fallback for old browsers */
+background: #a8e6ff;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to bottom right, rgb(75, 231, 255), rgb(0, 197, 246));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to bottom right, rgb(31 233 76 / 59%), rgb(255 234 70 / 56%))
+}
+
+
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+.toggle_class{
+    font-weight: 700;font-size: 20px;color: black;background-color: rgb(124, 194, 255);border-radius: 0.5rem;
+}
+.toggle_class:hover{
+    background-color: rgb(1, 123, 255);
+    color: black;
+}
+    </style>
+      <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlink:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/static/css/custom-theme.css?v=15">
+    <link rel="stylesheet" href="/static/css/site-polish.css?v=15">
+</head>
+  <body>
+    
+
+    
+<section class="vh-120 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+              <form method="post" action="registered">{% csrf_token%}
+
+              
+
+                 <!-- <div style="justify-content:center;">
+                   <button class="toggle_class"  >Participant 1 ::</button>
+
+                 </div> -->
+                 
+                 <div class="container my-2 d-grid gap-2">
+
+                      <button class="btn btn-primary toggle_class" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Participant 1 <span style="color: red;">*</span> :
+                      </button>
+                 </div>
+                  <div class="collapse  show" id="collapseExample">
+                    <div class="card card-body">
+                        <div class="row "  >
+                            <!-- <p style="font-weight: 700;font-size: 18px;"> Participant 1</p> -->
+                          <div class="col-md-4 mb-4 " >
+          
+                            <div class="form-outline">
+                                <label class="form-label" for="firstName">Name</label>
+                              <input type="text" id="firstName" class="form-control form-control-lg" name="part1" required />
+                            </div>
+          
+                          </div>
+                          <div class="col-md-4 mb-4">
+          
+                            <div class="form-outline">
+                                <label class="form-label" for="lastName">Contact</label>
+                              <input type="tel" id="lastName" class="form-control form-control-lg" name="contact1" required />
+                            </div>
+          
+                          </div>
+        
+                          <div class="col-md-4 mb-4">
+          
+                            <div class="form-outline">
+                                <label class="form-label" for="email">Email Id</label>
+                              <input type="email" id="email" class="form-control form-control-lg" name="email1" required />
+                            </div>
+          
+                          </div>
+                        </div>
+
+                    </div>
+                  </div>
+
+
+                  <div class="container my-2 d-grid gap-2">
+
+                    <button class="btn btn-primary toggle_class" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                      Participant 2 : 
+                    </button>
+               </div>
+                  
+              
+                <div class="collapse" id="collapseExample1">
+                <div class="card card-body">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="firstName1">Name</label>
+                      <input type="text" id="firstName1" class="form-control form-control-lg" name="part2" />
+                    </div>
+  
+                  </div>
+                  <div class="col-md-4 mb-4">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="lastName1">Contact</label>
+                      <input type="tel" id="lastName1" class="form-control form-control-lg" name="contact2"/>
+                    </div>
+  
+                  </div>
+
+                  <div class="col-md-4 mb-4">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="email1">Email Id</label>
+                      <input type="email" id="email1" class="form-control form-control-lg" name="email2" />
+                    </div>
+  
+                  </div>
+                </div>
+                </div>
+                </div>
+
+
+                <div class="container my-2 d-grid gap-2">
+
+                    <button class="btn btn-primary toggle_class" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                      Participant 3 : 
+                    </button>
+               </div>
+                  
+              
+                <div class="collapse" id="collapseExample2">
+                <div class="card card-body">
+
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="firstName3">Name</label>
+                      <input type="text" id="firstName3" class="form-control form-control-lg" name="part3" />
+                    </div>
+  
+                  </div>
+                  <div class="col-md-4 mb-4">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="lastName3">Contact</label>
+                      <input type="tel" id="lastName3" class="form-control form-control-lg" name="contact3" />
+                    </div>
+  
+                  </div>
+
+                  <div class="col-md-4 mb-4">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="email3">Email</label>
+                      <input type="email" id="email3" class="form-control form-control-lg" name="email3" />
+                    </div>
+  
+                  </div>
+                </div>
+                </div>
+                </div>
+
+
+                <div class="container my-2 d-grid gap-2">
+
+                    <button class="btn btn-primary toggle_class" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                      Participant 4 : 
+                    </button>
+               </div>
+              
+                <div class="collapse" id="collapseExample3">
+                <div class="card card-body">
+                <div class="row">
+                    <p style="font-weight: 700;font-size: 18px;"> Participant 4</p>
+                  <div class="col-md-4 mb-4">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="firstName4">Name</label>
+                      <input type="text" id="firstName4" class="form-control form-control-lg" name="part4" />
+                    </div>
+  
+                  </div>
+                  <div class="col-md-4 mb-4">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="lastName4">Contact</label>
+                      <input type="tel" id="lastName4" class="form-control form-control-lg" name="contact4" />
+                    </div>
+  
+                  </div>
+
+                  <div class="col-md-4 mb-4">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="email4">Email</label>
+                      <input type="email" id="email3" class="form-control form-control-lg" name="email4" />
+                    </div>
+  
+                  </div>
+                </div>
+                </div>
+                </div>
+  
+                
+                  
+
+
+  
+                <div class="row">
+                  
+                  <div class="col-md-6 mb-4 pb-2">
+  
+                    <div class="form-outline">
+                        <label class="form-label" for="phoneNumber">Referral Id</label>
+                        <input type="text" id="phoneNumber" class="form-control form-control-lg" name="ref" />
+                    </div>
+  
+                  </div>
+                </div>
+
+                <span style="color: red;">*</span><p style="display: inline;"><strong> Mandatory to fill details of Participant 1</strong></p>
+  
+                
+  
+                <div class="mt-4 pt-2">
+                  <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                </div>
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>

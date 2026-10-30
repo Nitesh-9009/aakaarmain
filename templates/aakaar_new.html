@@ -1,0 +1,503 @@
+{% extends "base_design.html" %}
+{% load static %}
+{% block title %}AAKAAR | IIT Bombay{% endblock %}
+{% block extra_head %}<link rel="stylesheet" href="{% static 'design/hero-pixel.css' %}">{% endblock %}
+{% block content %}
+<!-- Top Hero Section -->
+{% include "includes/hero_home.html" %}
+<!-- Editorial Section: About AAKAAR -->
+<section class="w-full bg-surface-container-low py-space-xl my-space-md" id="about">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Narrative -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">About The Legacy</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+            Asia's Largest Departmental College Festival
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Aakaar is the annual festival of the Department of Civil Engineering, IIT Bombay. Since its inception in 2009, it has grown into Asia's largest departmental college festival &mdash; a platform where aspiring engineers innovate, create and learn.
+          </p>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed bg-surface-container-lowest p-space-md rounded-2xl shadow-sm">
+            From the International Civil Engineering Symposium to Bridge-IT, ConquerIT, CENEX and the national LogiQ quiz, Aakaar brings together competitions, lectures, workshops and lab visits that connect textbook mechanics with real engineering practice.
+          </p>
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="flex items-center -space-x-2">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-mono-xs text-label-mono-xs">IIT</div>
+<div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-label-mono-xs text-label-mono-xs">CEA</div>
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-label-mono-xs text-label-mono-xs">19th</div>
+</div>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Department of Civil Engineering &middot; IIT Bombay &middot; Since 2009</span>
+</div>
+</div>
+<!-- Right Column: Tactile Stats 2x2 Bento -->
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[20px]">history_edu</span>
+</div>
+<div>
+<div class="font-display-hero text-headline-lg text-primary tracking-tight">2009</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">Inception</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">The annual technical festival of the Department of Civil Engineering, IIT Bombay.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary-container mb-space-md">
+<span class="material-symbols-outlined text-[20px]">celebration</span>
+</div>
+<div>
+<div class="font-display-hero text-headline-lg text-primary tracking-tight">19th</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">Edition &mdash; 2027</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">All set to scale new prominences with a wider line-up of competitions.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-space-md">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div>
+<div class="font-display-hero text-headline-lg text-primary tracking-tight">11th</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">International Symposium</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">ICES brings young research enthusiasts together to exchange ideas and scientific knowledge.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[20px]">emoji_events</span>
+</div>
+<div>
+<div class="font-display-hero text-headline-lg text-primary tracking-tight">6</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">Event Formats</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">CENEX, workshops, lab visits, lectures, panel discussion and the Civil Expo.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Pillars: How You Can Experience AAKAAR -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl" id="flagship">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">Our Events</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+          Explore Our Events
+        </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Explore our wide range of lectures, workshops, and exhibitions designed for the civil engineering community.
+      </p>
+</div>
+<!-- 6-Card Tactile Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Track: CENEX -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Exhibition</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">CENEX</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Civil Engineering National Exhibition: a national-level exhibition showcasing groundbreaking research and projects in civil engineering.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">National Level</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Workshops -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">developer_board</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Workshops</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Workshops</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Gain hands-on experience with industry-standard software and simulations in the fields of design, analysis and construction processes.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Certification Track</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Lab Visits -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">biotech</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Lab Visits</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Lab Visits</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Aakaar organizes educational lab visits to various laboratories to introduce students to the latest developments and evolving technologies.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Exclusive Access</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Lectures -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">record_voice_over</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Keynotes</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Lectures</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            The Aakaar lecture series, renowned globally, unites experts in civil engineering for insightful discussions and knowledge dissemination.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Global Speakers</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Panel Discussion -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Flagship</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Panel Discussion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Our flagship event, where eminent personalities from different sectors of Civil Engineering discuss pressing industry topics.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Round Table</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Civil Expo -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">storefront</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Civil Expo</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Civil Expo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            A grand platform for Civil Engineering companies to display their products, and for attendees to learn about market trends.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Industry Floor</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+
+</div>
+</section>
+<!-- International Civil Engineering Symposium (ICES) Section -->
+<section class="w-full bg-secondary-container/40 py-space-xl my-space-md"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin"><div class="bg-surface-container-lowest rounded-[28px] p-space-lg md:p-space-xl shadow-md border border-secondary-fixed-dim/30"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center"><div class="lg:col-span-7 flex flex-col gap-space-sm"><div class="inline-flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed-variant px-space-md py-1 rounded-full font-label-mono-xs text-label-mono-xs self-start font-bold"><span class="material-symbols-outlined text-[14px] text-secondary">school</span><span class="">ICES 2027 • 11TH EDITION</span></div><h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">International Civil Engineering Symposium</h2><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-xl">Aakaar is proud to host its Eleventh International Civil Engineering Symposium (ICES), encouraging young research enthusiasts and acting as a platform to exchange ideas and scientific knowledge.</p><div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-space-sm"><div class="bg-surface-container-low p-space-md rounded-xl hover:bg-secondary-container/20 transition-colors"><span class="font-label-mono-xs text-label-mono-xs text-secondary block font-bold">TRACK 01</span><span class="font-headline-sm text-[16px] text-on-surface font-bold">Paper Presentation</span><p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Present your research to experienced professors and industry leaders &mdash; prizes worth over &#8377;50,000!</p></div><div class="bg-surface-container-low p-space-md rounded-xl hover:bg-secondary-container/20 transition-colors"><span class="font-label-mono-xs text-label-mono-xs text-secondary block font-bold">TRACK 02</span><span class="font-headline-sm text-[16px] text-on-surface font-bold">Poster Exhibition</span><p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Communicate your research in a concise, creative format that demonstrates your findings and analytical skills.</p></div><div class="bg-surface-container-low p-space-md rounded-xl hover:bg-secondary-container/20 transition-colors"><span class="font-label-mono-xs text-label-mono-xs text-secondary block font-bold">TRACK 03</span><span class="font-headline-sm text-[16px] text-on-surface font-bold">Thesis in 180</span><p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Curate and present your entire thesis in just three minutes, in a way that anyone can understand.</p></div></div><div class="flex flex-wrap items-center gap-space-xs pt-space-xs"><span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Innovation</span><span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Research</span><span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Design</span><span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Structure</span><span class="bg-secondary-container text-on-secondary-fixed-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full font-bold">Analysis</span></div></div><div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-[22px] flex flex-col gap-space-md"><div class="flex items-center justify-between"><span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant font-bold">SYMPOSIUM EVENTS</span><span class="bg-secondary-fixed text-on-secondary-fixed-variant px-space-sm py-0.5 rounded-full font-label-mono-xs text-label-mono-xs font-bold">Prizes Worth &#8377;95,000+</span></div><div class="space-y-space-xs"><div class="flex justify-between items-center py-2 border-b border-surface-container-highest"><span class="font-body-sm text-body-sm text-on-surface">Paper Presentation</span><span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">&#8377;50,000+</span></div><div class="flex justify-between items-center py-2 border-b border-surface-container-highest"><span class="font-body-sm text-body-sm text-on-surface">Poster Presentation</span><span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">&#8377;20,000+</span></div><div class="flex justify-between items-center py-2"><span class="font-body-sm text-body-sm text-on-surface">Thesis 180</span><span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">&#8377;25,000</span></div></div><div class="flex flex-col gap-space-xs"><a class="inline-flex items-center justify-center gap-space-xs bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed-variant py-space-sm rounded-full font-button-text text-button-text shadow-sm active:translate-y-0.5 transition-all text-center font-bold" href="/compi/"><span class="material-symbols-outlined text-[18px]">upload_file</span><span class="">View Symposium Details</span></a><span class="font-label-mono-xs text-[10px] text-center text-on-surface-variant">Eleventh International Civil Engineering Symposium &middot; IIT Bombay</span></div></div></div></div></div></section>
+<!-- National Competitions Showcase -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">National Competitions</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+          Our Competitions
+        </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Aakaar in its 19th edition is all set to scale new prominences with many competitions. It instigates students to innovate, create and learn better.
+      </p>
+</div>
+<!-- 5 Card Asymmetric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Comp: Crackathon -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-xs text-label-mono-xs bg-error-container text-on-error-container px-2.5 py-1 rounded-full font-bold">Road Intelligence</span>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Computer Vision</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Crackathon</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Leverage the power of artificial intelligence to revolutionize road maintenance: build a computer vision model that automatically detects and classifies road defects such as cracks, paving the way for smarter infrastructure.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">&#8377;20,000 Prize</span>
+<a class="bg-surface-container hover:bg-surface-container-high text-on-surface font-button-text text-body-sm px-space-md py-1.5 rounded-full transition-colors" href="/compi/">Details &rarr;</a>
+</div>
+</div>
+<!-- Comp: ConquerIT -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-xs text-label-mono-xs bg-secondary-container text-on-secondary-fixed-variant px-2.5 py-1 rounded-full font-bold">Materials Science</span>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Structures</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">ConquerIT</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Investigate the future of materials by exploring high-strength pervious concrete and lightweight beam structures &mdash; an introduction to pervious concrete for the budding civil engineer.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">&#8377;25,000 Prize</span>
+<a class="bg-surface-container hover:bg-surface-container-high text-on-surface font-button-text text-body-sm px-space-md py-1.5 rounded-full transition-colors" href="/compi/">Details &rarr;</a>
+</div>
+</div>
+<!-- Comp: Bidwars -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-xs text-label-mono-xs bg-tertiary-fixed text-on-tertiary-fixed-variant px-2.5 py-1 rounded-full font-bold">Tender Simulation</span>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Estimation</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Bidwars</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Simulate real-world tendering by analysing tender documents and developing cost-effective, innovative bidding strategies.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">Prizes TBA</span>
+<a class="bg-surface-container hover:bg-surface-container-high text-on-surface font-button-text text-body-sm px-space-md py-1.5 rounded-full transition-colors" href="/compi/">Details &rarr;</a>
+</div>
+</div>
+<!-- Comp: BridgeIT -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-xs text-label-mono-xs bg-primary-fixed text-on-primary-fixed-variant px-2.5 py-1 rounded-full font-bold">Truss Load Test</span>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Fabrication</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">BridgeIT</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Design and construct the most efficient truss popsicle bridge, built to specific technical load requirements.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">&#8377;50,000 Prize</span>
+<a class="bg-surface-container hover:bg-surface-container-high text-on-surface font-button-text text-body-sm px-space-md py-1.5 rounded-full transition-colors" href="/compi/">Details &rarr;</a>
+</div>
+</div>
+<!-- Comp: Industrial Design Problem (IDP) -->
+<div class="md:col-span-2 bg-primary text-on-primary rounded-[24px] p-space-lg shadow-md flex flex-col justify-between"><div><div class="flex items-center justify-between mb-space-sm"><span class="font-label-mono-xs text-label-mono-xs bg-secondary-fixed text-on-secondary-fixed-variant px-2.5 py-1 rounded-full font-bold">Flagship Industry Track</span><span class="font-label-mono-xs text-label-mono-xs text-secondary-fixed">National Open</span></div><h3 class="font-headline-sm text-headline-sm text-on-primary mb-space-xs">Industrial Design Problem (IDP)</h3><p class="font-body-md text-body-md text-on-primary-container leading-relaxed">An opportunity to tackle real-world engineering challenges faced by the industry. Participants are expected to provide innovative, sustainable and practical solutions to complex structural and design hurdles.</p></div><div class="pt-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-label-mono-sm text-label-mono-sm text-secondary-fixed font-bold">&#8377;30,000 Prize</span><span class="text-outline-variant font-label-mono-xs">&bull;</span><span class="font-label-mono-xs text-label-mono-xs text-primary-fixed">Innovative, practical solutions</span></div><a class="bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed-variant font-button-text text-body-sm px-space-md py-1.5 rounded-full shadow-sm transition-all font-bold" href="/compi/">View IDP &rarr;</a></div></div>
+
+</div>
+</section>
+<!-- Editorial Section: Why Civil Engineers Flock to AAKAAR -->
+<section class="w-full bg-surface-container-low py-space-xl my-space-md">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-lg">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider block mb-1">About Us</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+          A Platform to Innovate, Create and Learn
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+          Aakaar upholds the legacy of inter-college civil events, carrying the best ideas and creativity from every civil enthusiast at the nation's finest institutions.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">emoji_events</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Inter-College Legacy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Since 2009, Aakaar has brought the nation's civil engineering students together to compete, share and learn.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">developer_board</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Software Workshops</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Hands-on workshops in ETABS, Autodesk Civil 3D, STAAD Pro, BIM and Revit build practical, industry-ready skills.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Certificates &amp; Prizes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Certificates from Aakaar, IIT Bombay for participants, plus prize money across the competition and symposium tracks.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Lectures &amp; Lab Visits</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            A globally renowned lecture series and educational lab visits introduce students to the latest developments and evolving technologies.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Atmosphere & Highlights Gallery -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">Event Gallery</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+          Moments from AAKAAR
+        </h2>
+</div>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant bg-surface-container px-space-md py-1 rounded-full">IIT Bombay Campus • Powai</span>
+</div>
+<!-- Media Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<div class="md:col-span-7 rounded-[22px] overflow-hidden bg-surface-container-lowest relative group shadow-sm">
+<img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"  src="{% static 'design/img/wide-1.jpg' %}">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent flex items-end p-space-md">
+<div class="text-on-secondary">
+<span class="font-label-mono-xs text-label-mono-xs text-tertiary-fixed uppercase">Exhibition</span>
+<h4 class="font-headline-sm text-headline-sm">CENEX Showcase</h4>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 rounded-[22px] overflow-hidden bg-surface-container-lowest relative group shadow-sm">
+<img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"  src="{% static 'design/img/wide-2.jpg' %}">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent flex items-end p-space-md">
+<div class="text-on-secondary">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary-fixed uppercase">Symposium</span>
+<h4 class="font-headline-sm text-headline-sm">Paper Presentations at ICES</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners & Patrons Showcase -->
+<section class="w-full bg-surface-container-lowest py-space-xl my-space-md shadow-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="text-center max-w-xl mx-auto mb-space-lg">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider block mb-1">Our Sponsors</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+          Sponsors &amp; Partners of Aakaar 2027
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Backed by leading names across industry, media and student communities &mdash; through workshop, media, CR and symposium partnerships.
+        </p>
+</div>
+<!-- Partner Logo Strip / Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-sm items-center">
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://www.jsw.in/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">JSW</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Sponsor</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://www.hccindia.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">HCC</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Sponsor</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://ind.sika.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">SIKA</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Sponsor</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://www.bentley.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">BENTLEY</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Sponsor</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://www.autodesk.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">AUTODESK</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Workshop Partner</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://unstop.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">UNSTOP</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">CR Partner</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Call-To-Action Banner -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl">
+<div class="bg-primary text-on-primary rounded-[28px] p-space-lg md:p-space-xl shadow-xl relative overflow-hidden"><div class="relative z-10 max-w-2xl flex flex-col gap-space-md"><span class="bg-secondary-fixed text-on-secondary-fixed-variant px-space-md py-1 rounded-full font-label-mono-xs text-label-mono-xs self-start font-bold">Registration Open &mdash; Aakaar 2027</span><h2 class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-on-primary tracking-tight">Be Part of Asia's Largest Civil Engineering Festival.</h2><p class="font-body-md text-body-md text-on-primary-container leading-relaxed">Present your research at the International Civil Engineering Symposium, compete in the national competitions, or join a workshop &mdash; your gateway to Aakaar 2027 begins here.</p><div class="flex flex-wrap items-center gap-space-md pt-space-xs"><a class="inline-flex items-center justify-center gap-space-xs bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed-variant px-space-lg py-space-sm rounded-full font-button-text text-button-text shadow-sm active:translate-y-0.5 transition-all font-bold" href="https://docs.google.com/forms/d/e/1FAIpQLSex34g1QLGBRVXOg6Ow_uSFwe79qsu1BJFjHpBFzzyI1toKgw/viewform?usp=header"><span class="">Register Now</span><span class="material-symbols-outlined text-[18px]">how_to_reg</span></a><a class="inline-flex items-center justify-center gap-space-xs bg-primary-container hover:bg-primary-container/80 text-on-primary px-space-lg py-space-sm rounded-full font-button-text text-button-text transition-all font-bold" href="https://crportal.aakaariitb.org.in/cr/" target="_blank" rel="noopener"><span class="">CR Portal</span><span class="material-symbols-outlined text-[18px]">download</span></a></div></div><div class="absolute -right-12 -bottom-12 w-96 h-96 opacity-10 pointer-events-none text-secondary-fixed"><svg class="w-full h-full" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" stroke-dasharray="4 4"></circle><circle cx="100" cy="100" r="60"></circle><path d="M10 100h180M100 10v180M36.36 36.36l127.28 127.28M36.36 163.64L163.64 36.36"></path></svg></div></div>
+</section>
+<!-- Newsletter / Quick Query Hook -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin pb-space-lg">
+<div class="bg-surface-container-low rounded-[22px] p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">forward_to_inbox</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Stay Tuned to Aakaar 2027</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Get schedule updates, registration alerts and event announcements as they go live.</p>
+</div>
+</div>
+<div class="flex items-center w-full md:w-auto gap-space-xs">
+<input class="bg-surface-container-lowest px-space-md py-2.5 rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none w-full md:w-72 shadow-sm focus:ring-2 focus:ring-secondary" placeholder="Enter college or email ID" type="email">
+<button class="bg-primary hover:bg-primary-container text-on-primary px-space-md py-2.5 rounded-full font-button-text text-body-sm shrink-0 transition-colors shadow-sm">
+          Subscribe
+        </button>
+</div>
+</div>
+</section>
+<script>
+  // Simple micro-interaction for smooth link anchor jumps
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+</script>
+{% endblock %}

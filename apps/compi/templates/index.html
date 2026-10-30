@@ -1,0 +1,729 @@
+{% load socialaccount %}
+<h1 style="color:blue;">COMPI HOME PAGE</h1>
+<!-- RENAMED: compi_home.html -->
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Aakaar in its 16th edition is all set to scale new prominences with many competitions. Competitions such as Bridge-It, Conquer-It, Civil Engineering National Exhibition, and LOGiQ are conducted by Aakaar all year around, letting students challenge and enhance their practical skills and knowledge. Competitions present an exceptional platform for aspiring civil engineers to explore and understand about the vastness of the stream. It instigates students to innovate, create, and learn better.
+     ">
+    <meta name="keywords" content="Aakaar, LogiQ, Online Quiz, Civil Engineering Quiz, Civil Engineering online quiz, Quiz, IIT, IITB, IIT Bombay, Technical Festival, Asia’s largest, Pan India, Civil, Civil Engineering, Competition, Civil Engineering Competition, Department Festival, Festival, Civil Engineering IIT Bombay, Civil Engineering questions, Innovation, Engineering, Tech, Event, India, Nation level Quiz, Bombay, Mumbai, Technology, Indian Institute of Technology, Opportunity, B.Tech, M.Tech, PhD, diploma, tech festival, Explore, knowledge, chance, online, LogiQ - Aakaar | IIT Bombay, prizes, explore, civil, Aakaar IITB, Aakaar 15th Edition, Aakaar IIT Bombay
+    ">
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <title>Competition - Aakaar | IIT Bombay</title>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@200&family=Poppins:wght@600&family=Road+Rage&family=Roboto+Mono:wght@400&display=swap"
+        rel="stylesheet">
+    
+
+</head>
+
+<!-- Fevicon  -->
+
+<!-- Fevicon  -->
+{% load static %}
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'fevicon/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'fevicon/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'fevicon/favicon-16x16.png' %}">
+<link rel="manifest" href=" {% static 'fevicon/site.webmanifest' %}">
+<link rel="mask-icon" href="{% static 'fevicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<style>
+ .logo-header {
+    background: linear-gradient(rgba(63, 64, 65, 0.7), rgba(63, 64, 65, 0.7)), url("https://github.com/hvm0901/AakaarStatic/assets/135495501/eda81f35-3319-47d1-902b-31ee39eefd97");
+	background-size: cover;
+	background-position: center bottom;
+	color: #fff;
+	font-family: 'Nunito', sans-serif;
+	padding-top: 150px;
+	padding-bottom: 100px;
+}
+
+.logo-header h1 {
+	font-size: 3rem;
+	font-weight: 300;
+	margin: 0 auto 0.2em auto;
+}
+
+.logo-header p {
+	font-size: 1.15rem;
+	width: 80%;
+	margin: 0 auto 2em auto;
+}
+
+.logo-header .logo {
+	margin: 0 auto 1em auto;
+}
+
+.logo-header .btn {
+	padding: 10px 26px;
+	background-color: #313131;
+	color: #FFF;
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	text-decoration: none;
+	border: solid 2px #313131;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.logo-header .btn:hover {
+	color: #FFF;
+	background-color: #1f69ff;
+	border-color: #1f69ff;
+}
+
+@media (min-width: 992px) {
+	.logo-header {
+		height: 100vh;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.logo-header h1 {
+		font-size: 4rem;
+	}
+	.logo-header p {
+		width: 60%;
+	}
+}
+
+@media (max-width: 480px) {
+	.logo-header h1 {
+		font-size: 2.4rem;
+	}
+}
+
+
+
+   body{
+    color: white;
+   }
+   .card1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)), url("https://t4.ftcdn.net/jpg/02/64/45/15/360_F_264451548_jBnKeAeS8nUWVWDpgbeqZwneFyTTPh0y.jpg");
+
+   }
+   .card2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+                       rgba(0, 0, 0, 0.5)), url("https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/sesmic.jpg");
+
+   }
+ .card3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+                       rgba(0, 0, 0, 0.5)), url("{% static 'img/howrah1.jpeg'%}");
+
+   }
+   .card7{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+                       rgba(0, 0, 0, 0.5)), url("https://github.com/hvm0901/AakaarStatic/assets/135495501/ab29abf2-25b6-463f-a11a-73a9278c3b5a");
+
+   }
+
+ .card4{
+    background-image: linear-gradient(rgba(29, 27, 27, 0.5),
+                       rgba(29,27,27, 0.8)), url("{% static 'img/conquerit_front.png'%}");
+    background-repeat: no-repeat;
+   }
+ .card10{
+    background-image: linear-gradient(rgba(29, 27, 27, 0.5),
+                       rgba(29,27,27, 0.8)), url("{% static 'img/wall.jpg'%}");
+    background-repeat: no-repeat;
+   }
+
+
+   .text-logo {
+        font-family: 'Road Rage', Impact, cursive;
+        font-size: 80px;
+        line-height: .5em;
+        text-transform: uppercase;
+        filter: drop-shadow(0.4rem 0.4rem 0.45rem rgba(0, 0, 30, 0.5));
+
+      }
+      @media screen and (min-width: 430px) {
+        .text-logo {
+        font-family: 'Road Rage', Impact, cursive;
+        font-size: 150px;
+        line-height: .5em;
+        text-transform: uppercase;
+        filter: drop-shadow(0.4rem 0.4rem 0.45rem rgba(0, 0, 30, 0.5));
+
+      }
+}
+
+
+
+.title {
+  position: relative;
+  margin: 1.5em 0 .9em;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: bolder;
+  text-align: center;
+  overflow: hidden; 
+}
+.title:before, .title:after {
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 50%;
+  height: 5px;
+  display: inline-block;
+  background: white;
+}
+
+.title:before {
+  margin-left: calc(-50% - 14px);
+}
+
+.title:after {
+  margin-left: 14px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 15px;
+  }
+}
+
+
+.navbar-nav li a {
+      position: relative;
+      font-size: 20px;
+      color: rgb(255, 255, 255);
+    }
+
+    .navbar-nav li a::after {
+      content: '';
+      width: 0%;
+      height: 3px;
+      background: #ffffff;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    .navbar-nav li a:hover::after {
+      width: 100%;
+      opacity: 1;
+    }
+
+
+
+</style>
+
+<body style="background-color: #0e1f29;">
+    {% load static %}
+
+    <nav class="navbar navbar-expand-lg navbar-transparent" style=" margin-top: 0px; margin-bottom: 0; padding-top: 0px; padding-bottom: 0; z-index: 2000; background-color: transparent;">
+        <div class="container"><a href="#"> <img src="https://user-images.githubusercontent.com/135495501/271797522-ef163998-e499-4ab0-9555-9d4c3b4269eb.png" width="210px"></a>
+          <button type="button" style="background-color: white;" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto">
+              <li class="nav-item active fw-bold"><a href="#" class="nav-link" style="margin-right: 20px; font-size: 22px; color:white">
+                Home</a></li>
+              <li class="nav-item active fw-bold"><a href="#about" class="nav-link" style="margin-right: 20px; font-size: 22px; color: white"> About </a>
+              </li>
+             
+              <li class="nav-item active fw-bold"><a href="#compi" class="nav-link" style="margin-right: 20px; font-size: 22px; color: white"> Competitions </a>
+              </li>
+
+              <li class="nav-item active fw-bold"><a href="https://aakaar.org.in/cr" class="nav-link" style="margin-right: 20px; font-size: 22px; color: white"> CR Portal </a>
+              </li>
+
+              <li class="nav-item active fw-bold"><a href="#contact" class="nav-link" style="margin-bottom: 18px; margin-right: 20px; font-size: 22px; color: white"> Contacts </a>
+              </li>
+              
+            <!-- <li class="nav-item active fw-bold"><a href="https://symposium.aakaariitbombay.org/" class="nav-link" style="font-size: 18px; color: white" target="_blank">
+                Symposium</a></li>
+                <li class="nav-item active fw-bold "><a href="#contact" class="nav-link" style="font-size: 18px; color:white"> Contact Us</a>
+                </li> -->
+            </ul>
+            {% if user.is_authenticated %}
+            <a class="btn" style="background-color: #1DA1F2; font-weight: 600;  color: rgb(236, 229, 229); margin-left: 10px;" href="{% url 'account_logout' %}">Log
+              out</a>
+            {% else %}
+            <a class="btn" style="background-color: #1DA1F2; font-weight: 600; color: rgb(236, 229, 229); margin-left: 10px;"
+              href="{% provider_login_url 'google' %}">Login</a>
+            {% endif %}
+          </div>
+        </div>
+      </nav>
+<!--<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>BridgeIT's Registrations are Open ! </strong> Do Register With Your Team !!!
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+-->
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Coming soon!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+          <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/ab6dc93e-ed46-48fb-847e-924d0a44cddd" class="img-fluid" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- sympo copy -->
+
+  <section class="logo-header " style="overflow-x: hidden;">
+    <div class="container h-100">
+       <div class="row h-100 align-items-center">
+          <div class="col-12 col-md-12 text-center header-content" style="padding-left: 0px; margin-left: 0; margin-right: 0;">
+            <div id="logo">
+                <span class="text-logo text-white">COMPETITIONS</span>
+              </div>             <br>
+             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center py-2">
+              {% if user.is_authenticated %}
+              <a class="btn btn-lg" style="background-color: black; font-weight: 600;  color: rgb(236, 229, 229); border-radius: 5px;" href="{% url 'account_logout' %}">Log Out</a>
+              {% else %}
+              <a class="btn btn-lg" style="background-color: black; font-weight: 600; color: rgb(236, 229, 229); border-radius: 5px;"
+                href="{% provider_login_url 'google' %}">Sign Up</a>
+              {% endif %}                </div>
+          </div>
+       </div>
+    </div>
+ </section>
+
+
+
+    <!-- <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://miro.medium.com/max/807/1*RioMXLLvqz40LujIbCxrEQ.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">COMPETITION</h1>
+            <div id="logo">
+                <span class="text-logo text-white"><h1>COMPETITION</h1></span>
+              </div>
+            <h4 class="lead">There is no success <br> without hard work</h4>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                {% if user.is_authenticated %}
+                <a class="btn btn-lg" style="background-color: black; font-weight: 600;  color: rgb(236, 229, 229); border-radius: 5px;" href="{% url 'account_logout' %}">LOG OUT</a>
+                {% else %}
+                <a class="btn btn-lg" style="background-color: black; font-weight: 600; color: rgb(236, 229, 229); border-radius: 5px;"
+                  href="{% provider_login_url 'google' %}">LOGIN</a>
+                {% endif %}                </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    
+
+
+
+      <div class="container" id="about">
+
+          <h1 style="text-align: center;" class="fw-bold title">ABOUT US</h1>
+          <p style="margin-top: 13px;">
+            Aakaar IIT Bombay is the annual technical festival of the Department of Civil
+Engineering IIT Bombay. Aakaar is acting as an excellent platform for students across
+the country, giving them opportunities to showcase and enhance their skills at the
+highest level since its inception in 2009.
+<br>   <br>Aakaar is Asia's largest Civil Engineering festival. Many exciting competitions are held
+in Aakaar, such as the International Civil Engineering Symposium, Bridge-It, ConquerIt, Civil Engineering National Exhibition, ENVIZN, and Smart Pitch, letting students
+compete and enhance their practical skills and knowledge. As a part of a knowledgesharing endeavor, many software workshops are conducted, viz, E-Tabs, Autodesk Civil
+3D, Staad-Pro, BIM, Revit, etc. A national-level Civil Engineering Quiz Competition
+is conducted every year named LogiQ. And many more fun events are a part of Aakaar,
+making learning fun. In its 16th edition, it is all set to scale new heights, with many
+recent events and competitions providing an excellent platform for aspiring civil
+engineers to explore and learn about the stream's vastness. It instigates students to
+innovate, create, and learn through exciting events and competitions.  
+          </p>
+        </div>
+
+<div class="container py-5" id="compi">
+    <h1 style="text-align: center;" class="fw-bold title">COMPETITIONS</h1>
+
+        <div class="row align-items-md-stretch">
+
+<center>
+
+ <!-- <div class="col-md-6">
+                <div class="h-100 p-5 rounded-3 card10" >
+                    <h2 class="text-white">MSE Wall</h2>
+                    <p class="text-white">
+The MSE Wall competition is about creating a prototype for a special kind of retaining wall called a mechanically stabilized earth (MSE) wall. The wall is meant to be a temporary partition, and it will be made using reinforced paper that is glued to a paper-facing wall.
+                    </p>
+                    <h3 class="text-white">Prize: INR 10,000</h3>
+                    <a href="msewall"> <button class="btn btn-outline-light" type="button">Explore</button></a>
+
+                </div>
+              </div>
+            </center>
+<hr style="background: none;">
+<center>
+<div class="col-md-6">
+                <div class="h-100 p-5 rounded-3 card3" >
+                    <h2 class="text-white">BridgeIT</h2>
+                    <p class="text-white">Launching the most awaited competition of Aakaar, IIT Bombay, Bridge it. This year's bridge features designing and constructing the most efficient truss popsicle bridge with certain specifications. 
+
+                    </p>
+                    <h3 class="text-white">Prize: INR 50000</h3>
+                    <a href="bridgeit"> <button class="btn btn-outline-light" type="button">Explore</button></a>
+                    {% if user.is_authenticated %}
+                    {% if is_filled_bridgeit %}
+                    <a href="#"><button class="btn btn-success" disabled type="button">Registered</button></a>
+                    {% else %} -->
+
+
+
+ <!--                    <a href="bridgeit"><button class="btn btn-outline-light" disabled type="button">Phase 2 coming soon...</button></a> -->
+
+
+
+                      <!-- <a ><button class="btn btn-danger" type="button" disabled>Phase 2 coming soon...</button></a>
+                    {% endif %}
+                   {% else %}
+                   <a href="{% provider_login_url 'google' %}"><button class="btn btn-outline-light" type="button">Sign Up</button></a>
+                   {% endif %}
+
+                </div>
+              </div>
+            </center>
+<hr style="background: none;">
+
+<center> -->
+  <div class="col-md-6">
+    <div class="h-100 p-5 rounded-3 card7" >
+        <h2 class="text-white">Industrial Design Problem</h2>
+        <p class="text-white">Address challenges from industry leaders, emphasizing innovation and advanced solutions for complex technical issues in civil construction, shaping the future through a unique learning expedition.
+
+        </p>
+        <h3 class="text-white">Prize: INR 20000</h3>
+        <a href="idp"> <button class="btn btn-outline-light" type="button">Explore</button></a>
+        {% if user.is_authenticated %}
+        <a href="idp"> <button class="btn btn-outline-light" type="button">Register</button></a>
+
+
+       {% else %}
+       <a href="{% provider_login_url 'google' %}"><button class="btn btn-outline-light" type="button">Sign Up</button></a>
+       {% endif %}
+
+    </div>
+  </div>
+
+
+  </center>
+<hr style="background: none;">
+
+
+            
+<center>
+  <div class="col-md-6">
+    <div class="h-100 p-5 rounded-3 card3" >
+        <h2 class="text-white">BridgeIT</h2>
+        <p class="text-white">Launching the most awaited competition of Aakaar, IIT Bombay, Bridge it. This year's bridge features designing and constructing the most efficient truss popsicle bridge with certain specifications. 
+
+        </p>
+        <h3 class="text-white">Prize: INR 50000</h3>
+        <a href="bridgeit"> <button class="btn btn-outline-light" type="button">Explore</button></a>
+        {% if user.is_authenticated %}
+        {% if is_filled_bridgeit %}
+        <a href="#"><button class="btn btn-success" disabled type="button">Registered</button></a>
+        {% else %}
+        <a href="bridgeit"> <button class="btn btn-outline-light" type="button">Register</button></a>
+
+
+<!--                    <a href="bridgeit"><button class="btn btn-outline-light" disabled type="button">Phase 2 coming soon...</button></a> -->
+
+
+
+          <!-- <a ><button class="btn btn-danger" type="button" disabled>Phase 2 coming soon...</button></a> -->
+        {% endif %}
+       {% else %}
+       <a href="{% provider_login_url 'google' %}"><button class="btn btn-outline-light" type="button">Sign Up</button></a>
+       {% endif %}
+
+    </div>
+  </div>
+
+
+  </center>
+<hr style="background: none;">
+
+
+            
+<center>
+
+
+
+
+  <div class="col-md-6">
+    <div class="h-100 p-5 rounded-3 card4" >
+        <h2 class="text-white">ConquerIT</h2>
+        <p class="text-white">
+This year AAKAAR presents you to investigate pervious concrete with high flexural strength and highly permeable beam structure. As a budding civil engineer, now is an appropriate time and AAKAAR's "Conquer IT" is the best stage to get introduced to pervious concrete.
+
+        </p>
+        <h3 class="text-white">Prize: INR 25000</h3>
+        <a href="conquerit"> <button class="btn btn-outline-light" type="button">Explore</button></a>
+        {% if user.is_authenticated %}
+        {% if is_filled_conquerit %}
+        <a href="#"><button class="btn btn-success" disabled type="button">Registered</button></a>
+        {% else %}
+
+
+
+
+      <a href=""><button class="btn btn-outline-light" type="button">Registrations Closed</button></a> 
+
+
+
+
+
+         <!-- <a ><button class="btn btn-danger" type="button" disabled>Registration closed</button></a> -->
+        {% endif %}
+       {% else %}
+       <a href="{% provider_login_url 'google' %}"><button class="btn btn-outline-light" type="button">Sign Up</button></a>
+       {% endif %}
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </center>
+  <hr style="background: none;">
+
+
+
+            <center>
+            <div class="col-md-6">
+                <div class="h-100 p-5 rounded-3 card2" >
+                    <h2 class="text-white">SeismiC</h2>
+                    <p class="text-white">Design an efficient and sustainable earthquake resistant structure using simple popsicle sticks. The competition aims to promote the study of earthquake engineering among students.
+                    </p>
+                    <h3 class="text-white">Prize: INR 40000</h3>
+                    
+                     <!--  <button class="btn btn-outline-light" type="button" style="color: #FFF; background-color: red; font-weight: 600;" disabled>Coming Soon...</button> -->
+                    <!-- <a href=""> <button class="btn btn-outline-light" type="button">Registration Closed</button></a> -->
+                    <a href="seismic"> <button class="btn btn-outline-light" type="button">Explore</button></a>
+                    {% if user.is_authenticated %}
+                    {% if is_filled_seismic %}
+                    <a href="#"><button class="btn btn-success" disabled type="button">Registered</button></a>  
+                    {% else %}
+			  <a href=""><button class="btn btn-outline-light" type="button">Registrations Closed</button></a> 
+
+<!-- 
+                    <button class="btn btn-outline-light" type="button" style="color: #FFF; background-color: red; font-weight: 600;" disabled>Coming Soon...</button> -->
+
+                    <!-- <a href="seismic" style="font-weight: 800;"><button class="btn btn-outline-light" type="button" disabled style="color: #FFF; background-color: red; font-weight: 800;">Coming Soon...</button></a> -->
+
+                      <!-- <a ><button class="btn btn-danger" type="button" disabled>Registration closed</button></a>  -->
+                    {% endif %}
+                   {% else %}
+                   <a href="{% provider_login_url 'google' %}"><button class="btn btn-outline-light" type="button">Sign Up</button></a>  
+                   {% endif %}
+     
+                </div>
+              </div>            
+
+
+            </center>
+<hr style="background: none;">
+            
+
+<center>
+  <div class="col-md-6">
+    <div class="h-100 p-5 rounded-3 card1" >
+      <h2 class="text-white">LOGIQ - Phase 3</h2>
+      <p class="text-white">Aakaar’s 16th Edition is back with a new series of quizzes and presents you with the 3rd Edition of LogiQ. LogiQ is an online quiz series for civil engineering students. The competition deals with topics varying from basic Civil Engineering concepts to advanced engineering ideas in a way that undergraduates from any year of study can participate in the competition.
+      </p>
+      <h3 class="text-white">Prize: INR 20000</h3>
+     <a href="logiq"> <button class="btn btn-outline-light" type="button">Explore</button></a>
+     {% if user.is_authenticated %}
+     {% if is_filled %}
+     <!-- <a href=""><button type="button" class="btn btn-success">Quiz Link</button></a> -->
+	           <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Final Results
+      </button>
+
+     {% else %}
+
+	           <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Final Results
+      </button>
+     <!-- <a href="register-logiq"><button class="btn btn-outline-light" type="button" >Register</button></a> -->
+     <!--<button class="btn btn-outline-light" type="button" disabled>Register</button> -->
+	     <a><button class="btn btn-danger" type="button" disabled>Registration closed</button></a>
+       
+     {% endif %}
+    {% else %}
+    <a href="{% provider_login_url 'google' %}"><button class="btn btn-outline-light" type="button">Sign Up</button></a>  
+    {% endif %}
+    
+    </div>
+  </div>
+</center>
+  <hr style="background: none;">
+
+
+ 
+          </div>
+        </div>
+
+
+
+
+        <section id="contact" class="page-section py-1">
+            <div class="container">
+              <div class="text-center">
+                <h1 class="title">CONTACT US</h1>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 text-center">
+                  <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="https://github.com/hvm0901/AakaarStatic/assets/135495501/22f2931d-7d13-4d5e-9489-cc979744b6ca" width="240px" height="240px" alt="..." style="border-bottom: 5px solid #03989E; object-fit: cover;">
+                    <h4>T. Vivek Vardhan Reddy</h4>
+                    <p class="text-muted">Competitions Manager</p>
+                    <a class="btn btn-social mx-2"  href="tel:7032519647"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#03989E" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                      </svg></a>
+                      <a class="btn  btn-social mx-2" href="mailto:competition.aakaariitb@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#03989E" class="bi bi-envelope" viewBox="0 0 16 16">
+                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+                        </svg></a>
+                      <a class="btn btn-social mx-2" href="https://www.linkedin.com/in/vivekvardhan-reddy-407341285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#03989E" class="bi bi-linkedin" viewBox="0 0 16 16">
+                          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
+                        </svg></a>
+                  </div>
+                </div>
+        
+                <div class="col-lg-6 text-center">
+                  <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="https://github.com/hvm0901/AakaarStatic/assets/135495501/08c37498-1d89-4c81-8dce-ce9608767db0" width="240px" height="240px" alt="..." style="border-bottom: 5px solid #03989E;">
+
+                    <h4>Bibhuti Kumar Mishra</h4>
+                    <p class="text-muted">Competitions Manager</p>
+                    <a class="btn btn-social mx-2" href="tel:7970893372" ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#03989E" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                    </svg></a>
+                    <a class="btn  btn-social mx-2" href="mailto:competition.aakaariitb@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#03989E" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+                      </svg></a>
+                    <a class="btn btn-social mx-2" href="https://www.linkedin.com/in/bibhuti-kumar-mishra-49564b241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#03989E" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
+                      </svg></a>
+                     
+                  </div>
+                </div>
+              </div>
+              
+          </section> 
+        
+        
+        
+          <!-- #################################################################### -->
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top container">
+            <div class="col-md-4 d-flex align-items-center">
+              <span class="mb-3 mb-md-0 text-muted">© Aakaar, IIT Bombay 2023-24</span>
+            </div>
+        
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <li class="ms-3" style="padding-right: 10px;"><a class="text-muted"
+                  href="https://twitter.com/aakaariitb" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                  fill="#03989E" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                  </svg></a></li>
+              <li class="ms-3" style="padding-right: 10px;"><a class="text-muted"
+                    href="https://www.instagram.com/aakaar_iitbombay/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    fill="#03989E" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg></a></li>
+              <li class="ms-3" style="padding-right: 5px;"><a class="text-muted"
+                  href="https://www.facebook.com/AakaariitBombay" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    fill="#03989E" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                  </svg></a></li>
+              <li class="ms-3" style="padding-right: 5px;"><a class="text-muted"
+                  href="https://www.linkedin.com/company/aakaariitb/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                    height="18" fill="#03989E" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                  </svg></a></li>
+            </ul>
+          </footer>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>

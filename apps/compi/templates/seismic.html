@@ -1,0 +1,945 @@
+{% load static %}
+{% load socialaccount %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seismic - AAKAAR | IIT Bombay</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+
+<!-- Fevicon  -->
+
+<link rel="apple-touch-icon" sizes="180x180"
+  href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32"
+  href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16"
+  href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<style>
+  body {
+    color: white;
+  }
+
+  .title {
+    position: relative;
+    margin: 1.5em 0 .9em;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: bolder;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .title:before,
+  .title:after {
+    position: absolute;
+    top: 50%;
+    content: '';
+    width: 50%;
+    height: 5px;
+    display: inline-block;
+    background: white;
+  }
+
+  .title:before {
+    margin-left: calc(-50% - 14px);
+  }
+
+  .title:after {
+    margin-left: 14px;
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .title {
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .title {
+      font-size: 15px;
+    }
+  }
+
+
+
+
+  .card {
+    border: none;
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    overflow: hidden;
+    border-radius: 20px;
+    min-height: 450px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      min-height: 350px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .card {
+      min-height: 300px;
+    }
+  }
+
+  .card.card-has-bg {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .card.card-has-bg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  .card.card-has-bg:hover {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
+    background-size: 130%;
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .card.card-has-bg:hover .card-img-overlay {
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background: #234f6d;
+    background: linear-gradient(0deg, rgba(4, 69, 114, 0.5) 0%, rgba(4, 69, 114, 1) 100%);
+  }
+
+  .card .card-footer {
+    background: none;
+    border-top: none;
+  }
+
+  .card .card-footer .media img {
+    border: solid 3px rgba(255, 255, 255, 0.3);
+  }
+
+  .card .card-meta {
+    color: #26bd75;
+  }
+
+  .card .card-body {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .card:hover {
+    cursor: pointer;
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .card:hover .card-body {
+    margin-top: 30px;
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .card .card-img-overlay {
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background: #234f6d;
+    background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889355742297) 0%, rgba(69, 95, 113, 1) 100%);
+  }
+
+  .navbar-nav li a {
+    position: relative;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+
+  .navbar-nav li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .navbar-nav li a:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
+
+
+
+  .img-fluid {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+</style>
+
+<body>
+  {% load static %}
+
+  {% include "includes/design_header.html" %}
+
+  <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Attention!</strong> LogiQ is live
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div> -->
+
+  <!-- poster and buttons -->
+  <!-- <div class="container my-4 border">
+    <div   style="display:inline-block ;">
+      
+          <img src="https://source.unsplash.com/700x500/?civil" alt="" class="img-fluid" >
+        </div>
+   
+   <div   style="display: inline-block ;  ">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        
+        
+      </div> 
+    </div>
+  </div>
+
+    </div> -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12  p-1">
+        <img class="img-fluid" src="https://github.com/hvm0901/AakaarStatic/assets/135495501/66374de0-787c-46aa-951c-29e240b86d25"
+          alt="">
+      </div>
+      <div class="col-lg-6 col-12  overflow-hidden shadow-sm ">
+        <div class=" mx-3 p-4 d-flex flex-column position-static mb-4 ">
+          <h1 class="mb-0 ">SeismiC</h1>
+          <p></p>
+
+          <p style="font-size: 25px;">Prize Worth : <strong> INR 40000</strong></p>
+
+          <div class="mb-1  font-weight-bold">
+            <!-- <p class="font-weight-bold" style="font-size:20px ; ">Competition Live On  : <strong>  4 December</strong></p></div> -->
+
+            {% if user.is_authenticated %}
+            {% if is_filled_seismic %}
+            <button class="btn btn-lg btn-success text-white" type="button"><a href="#"
+                style="text-decoration: none; color: white; font-weight: 700;">Registered</a> </button>
+            <button class="btn btn-lg  text-white mx-2" style="background-color: black;" type="button"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">Abstract </button>
+            <br>
+            {% else %}
+            <button class="btn btn-lg btn-success text-white" type="button"><a href="#"
+              style="text-decoration: none; color: white; font-weight: 700;">Registrations Closed</a> </button>
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                      Launch demo modal
+                    </button> -->
+            <button class="btn btn-lg  text-white mx-2" style="background-color: black;" type="button"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">Abstract </button>
+
+            <br>
+            {% endif %}
+
+            {% else %}
+            <button class="btn btn-lg  text-white" style="background-color: black;" type="button"><a
+                href="{% provider_login_url 'google' %}"
+                style="text-decoration: none; color:white; font-weight: 700;">Sign Up</a> </button>
+            <button class="btn btn-lg  text-white mx-2" style="background-color: black;" type="button"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">Abstract </button>
+            <br>
+            {% endif %}
+            <!-- <button class="btn btn-lg text-white my-2" style="background-color: black;" type="button"><a href="https://drive.google.com/file/d/1y67GegiodPoSxe_NL2HZutdxQBLsQShu/view?usp=sharing" style="text-decoration: none; color:white; font-weight: 700;">Detailed Instructions</a>  </button> -->
+            <!-- <br>
+            <h5>Eligibility Criteria-</h5>
+            <ul>
+              <li>Category 1: School students of standard 8th to 12th </li>
+              <li>Category 2: Current UG/PG students </li>
+              <li>Category 3: Current UG/PG students </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Button trigger modal -->
+
+
+
+
+
+
+    <!-- ========== Register ======================================== -->
+
+    <!-- Modal -->
+    <div class="modal fade text-black" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+      tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Register</h5>
+          </div>
+          <div class="modal-body">
+            <form action="/seismic_reg" method="post"> {% csrf_token %}
+              <div class="mb-3">
+                <label for="colName" class="form-label">Team Name</label>
+                <input type="text" class="form-control" id="colName" name="team" required>
+              </div>
+              <div class="mb-3">
+                <label for="colName" class="form-label">Name (Participant 1)</label>
+                <input type="text" class="form-control" id="colName" name="name1" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="state" class="form-label">Email ID (Participant 1) </label>
+                <input type="email" class="form-control" id="state" name="email1" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="phoneNo" class="form-label">Contact No. (Participant 1) Preferably WhatsApp No. </label>
+                <input type="number" class="form-control" id="phoneNo" name="contact1" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="whatsNo" class="form-label">College (Participant 1)</label>
+                <input type="text" class="form-control" id="whatsNo" name="colg1" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="colName" class="form-label">Name (Participant 2)</label>
+                <input type="text" class="form-control" id="colName" name="name2">
+              </div>
+
+              <div class="mb-3">
+                <label for="state" class="form-label">Email ID (Participant 2) </label>
+                <input type="email" class="form-control" id="state" name="email2">
+              </div>
+
+              <div class="mb-3">
+                <label for="phoneNo" class="form-label">Contact No. (Participant 2) Preferably WhatsApp No. </label>
+                <input type="text" class="form-control" id="phoneNo" name="contact2">
+              </div>
+
+              <div class="mb-3">
+                <label for="whatsNo" class="form-label">College (Participant 2)</label>
+                <input type="text" class="form-control" id="whatsNo" name="colg2">
+              </div>
+
+              <div class="mb-3">
+                <label for="colName" class="form-label">Name (Participant 3)</label>
+                <input type="text" class="form-control" id="colName" name="name3">
+              </div>
+
+              <div class="mb-3">
+                <label for="state" class="form-label">Email ID (Participant 3) </label>
+                <input type="email" class="form-control" id="state" name="email3">
+              </div>
+
+              <div class="mb-3">
+                <label for="phoneNo" class="form-label">Contact No. (Participant 3) Preferably WhatsApp No. </label>
+                <input type="text" class="form-control" id="phoneNo" name="contact3">
+              </div>
+
+              <div class="mb-3">
+                <label for="whatsNo" class="form-label">College (Participant 3)</label>
+                <input type="text" class="form-control" id="whatsNo" name="colg3">
+              </div>
+
+
+              <div class="mb-3">
+                <label for="colName" class="form-label">Name (Participant 4)</label>
+                <input type="text" class="form-control" id="colName" name="name4">
+              </div>
+
+              <div class="mb-3">
+                <label for="state" class="form-label">Email ID (Participant 4) </label>
+                <input type="email" class="form-control" id="state" name="email4">
+              </div>
+
+              <div class="mb-3">
+                <label for="phoneNo" class="form-label">Contact No. (Participant 4) Preferably WhatsApp No. </label>
+                <input type="text" class="form-control" id="phoneNo" name="contact4">
+              </div>
+
+              <div class="mb-3">
+                <label for="whatsNo" class="form-label">College (Participant 4)</label>
+                <input type="text" class="form-control" id="whatsNo" name="colg4">
+              </div>
+
+              <!-- <div class="mb-3">
+                <label for="whatsNo" class="form-label">Category</label>
+                <select class="form-select" aria-label="Default select example" name="category" required>
+                  <option selected> </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div> -->
+
+              <div class="mb-3">
+                <label for="whatsNo" class="form-label">CR Referral (if any)</label>
+                <input type="text" class="form-control" id="whatsNo" name="ref">
+              </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- ######################################################## -->
+
+
+
+
+
+    <!-- middle navbar -->
+
+    <div class="container   my-4" style="height: auto; ">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="btn btn-outline-light active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+            type="button" role="tab" aria-controls="nav-home" aria-selected="false" style="border: none;">
+            <h3>ABOUT</h3>
+          </button>
+          <button class="btn btn-outline-light" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+            type="button" role="tab" aria-controls="nav-profile" aria-selected="false" style="border: none;">
+            <h3>STRUCTURE</h3>
+          </button>
+          <button class="btn btn-outline-light" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+            type="button" role="tab" aria-controls="nav-contact" aria-selected="false" style="border: none;">
+            <h3>TIMELINE</h3>
+          </button>
+          <button class="btn btn-outline-light" id="nav-incentives-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-incentives" type="button" role="tab" aria-controls="nav-incentives"
+            aria-selected="false" style="border: none;">
+            <h3>INCENTIVES</h3>
+          </button>
+
+          <button class="btn btn-outline-light" id="nav-disabled-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false"
+            style="border: none;">
+            <h3>RULES</h3>
+          </button>
+        </div>
+      </nav>
+
+
+      <div class="tab-content" id="nav-tabContent" style=" background-color: #0e1f29;">
+        <div class="tab-pane fade show active " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+          tabindex="0">
+          <ul>
+            <li>Prize money will be alloted to top 5 performers.
+            </li>
+            <li>Design and build a structure that can withstand maximum earthquake acceleration and shows minimum
+              inter-storey drift. The building should incorporate advanced earthquake-resistant techniques like cross
+              bracing, base isolation, tuned mass damper, or any other innovative technique that would be highly
+              appreciated.
+            </li>
+            <li>The objective is to provide students with an opportunity to work on a hands-on project designing and
+              constructing a frame building to resist seismic loading and promote earthquake engineering study among
+              students.</li>
+            <li>All Civil engineering UG/PG students are eligible to enter this competition.
+            </li>
+          </ul>
+        </div>
+        </p>
+
+
+
+
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+
+
+
+          <ul>
+            <h5>Intermediate Submission:
+            </h5>
+            <li>Participants have to submit an abstract based on the work done so far and it should also include images
+              showing the various stages of the task you have completed and serving as proof that you built the model
+              yourself. You will be shortlisted for the final presentation based on the abstract submitted. Details regarding the abstract: "Click on Abstract button above."
+
+            </li>
+            <br>
+            <h5>Final Presentation:
+            </h5>
+            <li>The final shortlisted participants would get a chance to present their model in front of judges during
+              the main fest which will be held at IIT Bombay.
+            </li>
+            <li>Selected teams must have to pay a non-refundable fee of Rs.250 per team to take part in our competition that's gonna happen on the day of Aakaar main event in March.
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade " id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+          <ul>
+            <li>Last date of registration: 13 Jan’ 24</li>
+            <li>Intermediate submission Deadline: 21 Jan'24 - 18 Feb ‘24
+            </li>
+            <li>Final Presentation / Testing at IIT Bombay: Dates to be announced soon!</li>
+          </ul>
+        </div>
+        <div class="tab-pane fade " id="nav-incentives" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+          <ul>
+            <li>Total prizes worth INR 40,000 will be awarded to the winning teams.
+            </li>
+            <li>Aakaar IIT Bombay will present certificates of participation to each of the final shortlisted
+              candidates.</li>
+            <li>The final shortlisted teams will get to attend workshops, lectures, and exhibitions at the main event,
+              at discounted prices.
+
+            </li>
+            <li>Winners will be featured on our social media accounts/magazine and their testimonials will be featured
+              on Aakaar’s official website.
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+          <ul>
+            <li>This competition is a bring-from-home competition.
+
+            </li>
+            <li>Participate in teams of a maximum of 4 members, with at least one member should be majoring in Civil
+              Engineering. Individual participation is also allowed.
+            </li>
+            <li>Participants from different colleges/organizations can form a team.
+            </li>
+            <li>Each team member should be a UG/PG student of some recognized college irrespective of
+              specialization.
+
+            </li>
+            <li>Aakaar IIT Bombay reserves the right to disqualify any team if they do not follow above-mentioned
+              instructions.
+
+            </li>
+            <li>Aakaar, IIT Bombay reserves the right to change any or all of the above rules as they deem fit. Change
+              in rules, if any, will be highlighted on the website and notified to the registered participants.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <br>
+
+
+
+
+    <!-- ################################################################################### -->
+
+    <!-- <div class="container">
+    <h2 class="accordion-header title" id="panelsStayOpen-headingOne" style="color: white; text-align: center;">
+        CATEGORIES
+    </h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card border-dark h-100" style="max-width: 22rem;">
+                <div class="card-header text-white fw-bold" style="background: rgba(0, 0, 0, 0.5);"> <h3 style="font-family: 'Roboto', sans-serif;"> CATEGORY 1</h3></div>
+                <div class="card-body" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.8)),url('https://www.teahub.io/photos/full/54-545724_civil-engineering-wallpaper-construction-architecture.jpg'); background-size:cover">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <center>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                  </center>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card border-dark h-100" style="max-width: 22rem;">
+                <div class="card-header text-white fw-bold bg-black" ><h3 style="font-family: 'Roboto', sans-serif;"> CATEGORY 2</h3></div>
+                <div class="card-body" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.8)),url('https://www.teahub.io/photos/full/54-545724_civil-engineering-wallpaper-construction-architecture.jpg'); background-size:cover">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <center>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                  </center>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card border-dark h-100" style="max-width: 22rem;">
+                <div class="card-header text-white fw-bold bg-black" ><h3 style="font-family: 'Roboto', sans-serif;"> CATEGORY 3</h3></div>
+                <div class="card-body" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.8)),url('https://www.teahub.io/photos/full/54-545724_civil-engineering-wallpaper-construction-architecture.jpg'); background-size:cover">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <center>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                  </center>
+                </div>
+              </div>
+        </div>
+      </div>
+</div> -->
+
+
+
+    <!-- ##################################################################################3# -->
+
+
+
+
+
+
+    <div class="container">
+      <h2 class="accordion-header title" id="panelsStayOpen-headingOne" style="color: white; text-align: center;">
+        BROCHURE
+      </h2>
+
+      <!-- <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?manhattan building');">
+                    <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+                   <div class="card-img-overlay d-flex flex-column">
+                    <div class="card-body">
+                       
+                       <h1 class="card-title mt-0 text-center">CATEGORY 1</h1>
+                      
+                     </div>
+                     <div class="card-footer">
+                      <div class="media">
+                        <center>
+                       <a href="https://drive.google.com/file/d/1HHZHZt_3OAwPwwibjudjnsxfT8BoaHnD/view?usp=sharing" target="_blank"><button type="button" class="btn  btn-lg btn-success" >Problem Statement</button></a>     
+                        </center>
+                        <div class="media-body">
+             </div>
+           </div>
+                     </div>
+                   </div>
+                 </div></div> -->
+      <!-- <div class="col-sm-12 col-md-6 col-lg-4 mb-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?burj building');">
+                    <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,civil,engineering,building" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+                   <div class="card-img-overlay d-flex flex-column">
+                    <div class="card-body">
+                      
+                       <h1 class="card-title mt-0 text-center">CATEGORY 2</h1>
+                      
+                     </div>
+                     <div class="card-footer">
+                      <div class="media">
+                        <center>
+                       <a href="https://drive.google.com/file/d/1mUsiCd6be-gkvQtRlUDCOh1iMuCGU81V/view" target="_blank">  <button type="button" class="btn btn-success btn-lg">Problem Statement</button></a>   
+                        </center>
+                        <div class="media-body">
+             </div>
+           </div>
+                     </div>
+                   </div>
+                 </div></div> -->
+      <center>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+          <div class="card text-white card-has-bg click-col"
+            style="background-image:url('https://source.unsplash.com/600x900/?paris building');">
+            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street"
+              alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+            <div class="card-img-overlay d-flex flex-column">
+              <div class="card-body">
+                <!-- <small class="card-meta mb-2">Thought Leadership</small> -->
+                <!-- <h1 class="card-title mt-0 text-center">CATEGORY</h1> -->
+                <!-- <small><i class="far fa-clock"></i> October 15, 2020</small> -->
+              </div>
+              <div class="card-footer">
+                <div class="media">
+                  <center>
+                    <a href="https://drive.google.com/file/d/1HHZHZt_3OAwPwwibjudjnsxfT8BoaHnD/view?usp=sharing"
+                      target="_blank"><button type="button" class="btn btn-success btn-lg">Problem
+                        Statement</button></a>
+                  </center>
+                  <div class="media-body">
+                  </div>
+      </center>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- faq -->
+  <div class="container my-4 " style="background-color: #0e1f29;">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item" style="border: none; background-color: #0e1f29;">
+        <h2 class="accordion-header title" id="panelsStayOpen-headingOne" style="color: white; text-align: center;">
+          Frequently Asked Questions
+        </h2>
+      </div>
+      <br>
+      <div class="accordion " id="accordionPanelsStayOpenExample">
+        <!-- <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+              how many rounds I can play?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div> -->
+        <div class="accordion-item" style="border: none;">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed border" style="color: white; background-color: #0e1f29;"
+              type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo">
+              1. How to register?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingOne" style="background-color: #0e1f29;">
+            <div class="accordion-body text-white">
+              Follow these steps to register: <br>
+              Go to <a href="competition.aakaar.org.in">competition.aakaar.org.in</a> > <a
+                href="https://competition.aakaar.org.in/seismic">SeismiC</a> > Explore > Register > Fill all
+              your/team’s valid details > you will be registered
+              <br>
+              Note: Only one member needs to fill out the registration form
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item" style="border: none;">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed text-white border" type="button" data-bs-toggle="collapse"
+              style="color: white; background-color: #0e1f29;" data-bs-target="#panelsStayOpen-collapseTwo"
+              aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              2. What are the eligibility criteria for the competition?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo" style="background-color: #0e1f29;">
+            <div class="accordion-body text-white">
+              All current undergraduate and postgraduate (B.Techs, M.Techs, Dual Degree students, PhDs) students of some
+              recognized college irrespective of specialization are eligible to participate. </div>
+          </div>
+        </div>
+        <!-- <br> -->
+        <div class="accordion-item" style="border: none;">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed  text-white border" type="button" data-bs-toggle="collapse"
+              style="color: white; background-color: #0e1f29;" data-bs-target="#panelsStayOpen-collapseThree"
+              aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              3. How many people can be there in one team?
+
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse "
+            aria-labelledby="panelsStayOpen-headingTwo" style="color: white; background-color: #0e1f29;">
+            <div class="accordion-body text-white">
+              One team can have a maximum of four members.
+
+            </div>
+          </div>
+        </div>
+        <!-- <br> -->
+        <div class="accordion-item" style="border: none;">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button class="accordion-button collapsed  text-white border" type="button" data-bs-toggle="collapse"
+              style="color: white; background-color: #0e1f29;" data-bs-target="#panelsStayOpen-collapseFour"
+              aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              4. Can a team have members from different colleges?
+
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse "
+            aria-labelledby="panelsStayOpen-headingThree" style="color: white; background-color: #0e1f29;">
+            <div class="accordion-body text-white">
+              Yes, students from different colleges can form a team
+            </div>
+          </div>
+        </div>
+        <!-- <br> -->
+        <div class="accordion-item" style="border: none;">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button class="accordion-button collapsed  text-white border" type="button" data-bs-toggle="collapse"
+              style="color: white; background-color: #0e1f29;" data-bs-target="#panelsStayOpen-collapseFive"
+              aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+              5. Can I register for more than one competition?
+
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingFive" style="color: white; background-color: #0e1f29;">
+            <div class="accordion-body text-white">
+              Yes, you can participate in more than one competition. However, it is recommended to focus on only one
+              competition as there may be some chances of a slot clash
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- #################################################################### -->
+    {% include "includes/design_footer.html" %}
+    <!-- Modal for compi -->
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Abstract description:</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="color: black;">
+
+
+            <p>
+              An abstract is a concise version of your model focusing on the essentials of a more significant idea. It
+              should be sufficient for reviewers to recognize the nature and significance of your model and the fairness
+              of your approach.
+
+            </p>
+            <p>The following elements must be included in the abstract:
+
+            </p>
+
+            <ul>
+              <li>Team Name</li>
+
+              <li>Names of all the team members.</li>
+              <li> Specific details of the earthquake-resistant approach to be used in the model's construction.</li>
+              <li>Photos of the model-making process from the beginning to the present state of the model.</li>
+            </ul>
+
+            <h5>Note: Abstract should be in .pdf format
+            </h5>
+
+            <h5>
+              Submission
+            </h5>
+            <ul>
+              <li>Submission form will be open from <strong>21 Jan ‘24 to 18 Feb ‘24 </strong>
+
+              </li>
+              <li>Fill all the valid details in the form.
+              </li>
+              <li> For submission link, follow the following steps:</li>
+              <ol>
+                <li>Add your Abstract file (.pdf) to your <strong>Google Drive. </strong>
+
+                </li>
+                <li><strong>Rename</strong> the folder as &lt;Team name&gt;_&lt;Aakaar_2023_SeismiC&gt;
+                </li>
+                <li>Submit the link in the given submission form (And give <strong>access</strong> too) </li>
+              </ol>
+
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+
+</html>

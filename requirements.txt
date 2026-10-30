@@ -1,0 +1,14 @@
+Django==5.2.5
+mysqlclient
+gunicorn
+django-import-export==4.3.9
+
+# --- ALLAUTH (From your INSTALLED_APPS) ---
+django-allauth
+
+# --- CRISPY FORMS (From your INSTALLED_APPS) ---
+django-crispy-forms
+requests
+jwt
+boto3
+pillow

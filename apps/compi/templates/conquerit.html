@@ -1,0 +1,434 @@
+{% load static %}
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ConquerIT - Aakaar | IIT Bombay</title>
+    <meta name="description"
+        content="ConquerIT is the competition to check the ability of the participants to design and cast the pervious concrete with high compressive and flexural strength.">
+    <meta name="keywords"
+        content="Aakaar, ConquerIT, IIT Bombay, Technical Festival, Civil Engineering, Concrete, IITB">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'fevicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fevicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fevicon/favicon-16x16.png' %}">
+    <link rel="manifest" href=" {% static 'fevicon/site.webmanifest' %}">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- RETAINED CORE STYLES FROM CRACKATHON --- */
+        :root {
+            --color-bg: #111111;
+            --color-text: #EAEAEA;
+            --color-text-muted: #a0a0a0;
+            --color-primary: #9D00FF; 
+            --color-primary-light: #bb63ff;
+            --color-border: #444444;
+            --font-base: "Bai Jamjuree", sans-serif;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-base);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-text);
+            font-weight: 700;
+        }
+
+        .text-brand { color: var(--color-primary) !important; }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        a:hover { color: var(--color-primary-light); }
+
+        section { padding-top: 80px; padding-bottom: 80px; }
+
+        .full-height {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar {
+            background-color: rgba(17, 17, 17, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .navbar-brand img { height: 50px; width: auto; max-width: 150px; }
+
+        .btn-brand {
+            background-color: var(--color-primary);
+            color: #fff !important;
+            border: none;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 12px 28px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .btn-brand:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-2px);
+        }
+
+        .card-custom {
+            background-color: rgba(34, 34, 34, 0.5);
+            border: 1px solid var(--color-border);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tabs { border-bottom: 1px solid var(--color-border); }
+        
+        .nav-tabs .nav-link {
+            color: var(--color-text-muted);
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            background: transparent;
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: var(--color-primary);
+            background-color: transparent;
+            border-bottom: 3px solid var(--color-primary);
+        }
+
+        .tab-content {
+            background-color: rgba(34, 34, 34, 0.3);
+            border: 1px solid var(--color-border);
+            border-top: none;
+            border-radius: 0 0 1rem 1rem;
+            padding: 2rem;
+        }
+
+        .tab-pane ul { list-style-type: none; padding-left: 0; }
+        .tab-pane li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        .tab-pane li::before {
+            content: "\F26E";
+            font-family: "bootstrap-icons";
+            color: var(--color-primary);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .accordion-item {
+            background-color: transparent;
+            border: 1px solid var(--color-border);
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background-color: #222;
+            color: var(--color-text);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--color-primary);
+            color: #fff;
+        }
+
+        footer {
+            background-color: #000;
+            color: var(--color-text-muted);
+            border-top: 1px solid var(--color-border);
+            padding: 2.5rem 0;
+        }
+    </style>
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    {% include "includes/design_header.html" %}
+
+    <main id="content-wrapper">
+
+        <section id="hero" class="full-height">
+            <div class="container">
+                <div class="row align-items-center" data-aos="fade-up">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+{% load static %}
+                <img src="{% static 'compi/dildo.png' %}" 
+                             class="img-fluid rounded shadow-lg border border-secondary" alt="ConquerIT Poster">
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <h1 class="display-3 fw-bold mb-2">CONQUER<span class="text-brand">IT</span></h1>
+                        
+                        <div class="card-custom p-4 mb-4">
+                            <h3 class="mb-1"><span class="text-brand">INR 25,000</span></h3>
+                            <p class="mb-0 text-muted">Prizes Worth</p>
+                        </div>
+
+                        <div class="d-flex flex-column flex-md-row gap-3">
+                            {% if user.is_authenticated %}
+                                {% if is_filled_conquerit %}
+                                    <button class="btn btn-success btn-lg disabled" type="button" disabled>
+                                        <i class="bi bi-check-circle-fill me-2"></i> Registered
+                                    </button>
+                                {% else %}
+                                    <button class="btn btn-brand btn-lg" type="button">Registrations Closed</button>
+                                {% endif %}
+                            {% else %}
+                                <a class="btn btn-brand btn-lg">Registeration Closed</a>
+                            {% endif %}
+
+                            <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSeW037qE-OOs1nf12bnSfjYsyDS1TWJPEtvPoNo6LMMonyFpg/viewform?usp=sharing&ouid=116739072304697144630" class="btn btn-outline-light btn-lg">Fee Submission</a> -->
+
+
+                            <!-- <a href="https://drive.google.com/file/d/1XWgpkB0cnan0AbMlUpIByobcsKkyPo9J/view?usp=sharing" 
+                               target="_blank" class="btn btn-outline-light btn-lg">Problem Statement</a> -->
+                        </div>
+
+
+                        <p class="mt-4 text-muted small">
+                            <i class="bi bi-info-circle me-1"></i> 
+                            Eligibility: UG or PG student.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="pt-0">
+            <div class="container" data-aos="fade-up">
+                <nav>
+                    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about" type="button" role="tab">ABOUT</button>
+                        <!-- <button class="nav-link" id="nav-structure-tab" data-bs-toggle="tab" data-bs-target="#nav-structure" type="button" role="tab">STRUCTURE</button> -->
+                        <button class="nav-link" id="nav-timeline-tab" data-bs-toggle="tab" data-bs-target="#nav-timeline" type="button" role="tab">TIMELINE</button>
+                        <button class="nav-link" id="nav-incentives-tab" data-bs-toggle="tab" data-bs-target="#nav-incentives" type="button" role="tab">INCENTIVES</button>
+                        <button class="nav-link" id="nav-rules-tab" data-bs-toggle="tab" data-bs-target="#nav-rules" type="button" role="tab">RULES</button>
+                    </div>
+                </nav>
+                
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-about" role="tabpanel">
+                        <h3 class="mb-4">About <span class="text-brand">ConquerIT</span></h3>
+                        <ul>
+                            <li>Check the ability of participants to design and cast the light weight concrete with high compressive and flexural strength.</li>
+                            <li>Exposes you to practical issues faced by the civil engineering sector.</li>
+                            <li>Innovative ideas in concrete mix design are welcomed and significantly appreciated.</li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="tab-pane fade" id="nav-structure" role="tabpanel">
+                        <h3 class="mb-4">Competition <span class="text-brand">Structure</span></h3>
+                        <div class="table-responsive">
+                            <table class="table table-dark table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Stage</th>
+                                        <th>Description</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Report Submission</td>
+                                        <td>Report with files and video</td>
+                                        <td>21st February</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Round 1 (Offline)</td>
+                                        <td>Compressive Test</td>
+                                        <td>Mid March</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Round 2 (Offline)</td>
+                                        <td>Water permeability Test</td>
+                                        <td>Mid March</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Round 3 (Offline)</td>
+                                        <td>Flexure Test</td>
+                                        <td>Mid March</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> -->
+
+                    <div class="tab-pane fade" id="nav-timeline" role="tabpanel">
+                        <h3 class="mb-4">Event <span class="text-brand">Timeline</span></h3>
+                        <ul>
+                            <li><strong>Registration Deadline:</strong> 31st January 2027</li>
+                            <li><strong>Report Submission Deadline:</strong> 20st February 2027</li>
+                            <li><strong>Fee Submission:</strong> 1st March 2027</li>
+                            <li><strong>Final Event:</strong> 15th March 2027</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-incentives" role="tabpanel">
+                        <h3 class="mb-4">Key <span class="text-brand">Incentives</span></h3>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card-custom p-3 h-100 d-flex align-items-center">
+                                    <i class="bi bi-trophy-fill fs-2 text-brand me-3"></i>
+                                    <div>
+                                        <h5>Prizes</h5>
+                                        <p class="mb-0 text-muted">Worth INR 25,000 awarded to top winners.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-custom p-3 h-100 d-flex align-items-center">
+                                    <i class="bi bi-patch-check-fill fs-2 text-brand me-3"></i>
+                                    <div>
+                                        <h5>Certificates</h5>
+                                        <p class="mb-0 text-muted">Certificates of participation to all qualified teams.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-rules" role="tabpanel">
+                        <h3 class="mb-4">Rules & <span class="text-brand">Regulations</span></h3>
+                        <ul>
+                            <li>Bring from home competition; certificates awarded to every qualified entry.</li>
+                            <li>Team Size: 2 to 4 members from any recognized college (UG/PG).</li>
+                            <li>Curing must be done properly; no points for curing duration.</li>
+                            <li>Aakaar IIT Bombay reserves the right to disqualify teams or change rules.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container" data-aos="fade-up">
+                <div class="row text-center mb-5">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">Frequently Asked <span class="text-brand">Questions</span></h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                        How to register?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse text-white" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Go to ConquerIt > Explore > Register > Fill team details. Only one member needs to fill the form.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                        What are the eligibility criteria?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse text-white" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Current undergraduate and postgraduate students (B.Tech, M.Tech, PhD) from recognized colleges are eligible.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                        Can a team have members from different colleges?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse text-white" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, students from different colleges can form a team of up to 4 members.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    {% include "includes/design_footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({ offset: 100, duration: 800, easing: 'ease-in-out', once: true });
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+                        "color": { "value": "#9D00FF" },
+                        "shape": { "type": "circle" },
+                        "opacity": { "value": 0.5, "random": true },
+                        "size": { "value": 3, "random": true },
+                        "line_linked": { "enable": false },
+                        "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "out_mode": "out" }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": { "onhover": { "enable": true, "mode": "bubble" }, "resize": true },
+                        "modes": { "bubble": { "distance": 250, "size": 5, "duration": 2, "opacity": 0.8, "speed": 3 } }
+                    },
+                    "retina_detect": true
+                });
+            }
+        });
+    </script>
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+
+</html>

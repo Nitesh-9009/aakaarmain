@@ -1,0 +1,1772 @@
+<!-- {% load socialaccount %} -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Poster Presentation - AAKAAR | IIT Bombay</title>
+
+
+
+
+  <!-- Fevicon  -->
+
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+
+
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    #intro {
+      background-image: url("https://drive.google.com/file/d/1jjlX3jXlGyujVIFu-2tCdNg1F1KrU4DE/view");
+      height: 100vh;
+    }
+
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #intro {
+        /* margin-top: -58.59px; */
+      }
+    }
+
+    .navbar .nav-link {
+      color: #000000 !important;
+    }
+
+
+    .accordion-section .panel-default>.panel-heading {
+      border: 0;
+      border-radius: 7px;
+      background: #eaeef2;
+      padding: 0;
+    }
+
+    .accordion-section .panel-default .panel-title a {
+      display: block;
+      text-decoration: none;
+      font-weight: 400;
+      /* font-family:
+    ui-sans-serif
+    system-ui
+    -apple-system
+    BlinkMacSystemFont
+    'Segoe UI'
+    Roboto
+    'Helvetica Neue'
+    Arial
+    'Noto Sans'
+    sans-serif
+    'Apple Color Emoji'
+    'Segoe UI Emoji'
+    'Segoe UI Symbol'
+    'Noto Color Emoji' ; */
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+
+    .accordion-section .panel-default .panel-title a:after {
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 28px;
+      content: "\f106";
+      color: #693FDD;
+      float: right;
+      margin-top: 2px;
+      /* position: relative; */
+    }
+
+    .accordion-section .panel-default .panel-title a.collapsed:after {
+      content: "\f107";
+    }
+
+    .accordion-section .panel-default .panel-body {
+      font-size: 1.2rem;
+    }
+
+
+
+
+    /* your CSS goes here*/
+    .title {
+      color: #fa9746;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .title::before {
+      position: absolute;
+      left: -29px;
+      top: 0;
+      height: 20px;
+      width: 20px;
+      transform: rotate(45deg);
+      background-color: #03989E;
+      /* box-shadow: 0px 4px 4px 0px #aaa; */
+      border-radius: 4px;
+      content: '';
+    }
+
+    .title::after {
+      position: absolute;
+      left: -19px;
+      top: 25px;
+      height: 14px;
+      width: 14px;
+      transform: rotate(45deg);
+      background-color: #03989E;
+      /* box-shadow: 0px 4px 4px 0px #aaa; */
+      border-radius: 4px;
+      content: '';
+    }
+
+    /* services */
+    .services {
+      padding: 40px;
+      position: relative;
+    }
+
+    .services .square {
+      height: 100px;
+      width: 100px;
+      margin: 30px auto 40px;
+      position: relative;
+      border-radius: 15px;
+      transform: rotate(45deg);
+      padding: 10px;
+      background-color: #B09BED;
+      /* box-shadow: 0px 0px 27px 0px #ccc; */
+      /* border: 2px dotted #eaf3fa; */
+    }
+
+    /* .square :hover{
+  background-color: #03989E;
+} */
+    .square i {
+      transform: rotate(315deg);
+      display: block;
+      color: #693FDD;
+      font-size: 40px;
+      padding-top: 17px;
+      padding-right: 16px;
+    }
+
+    .services .square::before {
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      /* background-color: #fa9746; */
+      content: '';
+    }
+
+    .services .square::after {
+      position: absolute;
+      left: 50px;
+      top: 66px;
+      width: 1px;
+      height: 88%;
+      /* background-color:#fa9746; */
+      content: '';
+      /* transform: rotate(90deg); */
+    }
+
+    .services .serv .num {
+      width: 60px;
+      height: 60px;
+      background-color: #7499f1;
+      /* box-shadow: 0px 0px 15px 0px #00a9d3; */
+      margin: -38px auto 15px auto;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 30px;
+      padding-top: 7px;
+      border: 1px dashed;
+    }
+
+    .services .serv h5 {
+      color: #fa9746;
+    }
+
+    .services .serv p {
+      color: black;
+    }
+
+    .services .serv hr {
+      width: 30px;
+      border-top: 3px solid rgb(0 169 211);
+    }
+
+
+
+
+
+
+
+    .timeline-steps {
+      display: flex;
+      justify-content: center;
+      /* flex-wrap: wrap */
+    }
+
+    .timeline-steps .timeline-step {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 1rem
+    }
+
+    @media (min-width:768px) {
+      .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #3b82f6;
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+      }
+
+      .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #3b82f6;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+      }
+    }
+
+    .timeline-steps .timeline-content {
+      width: 10rem;
+      text-align: center
+    }
+
+    .timeline-steps .timeline-content .inner-circle {
+      border-radius: 1.5rem;
+      height: 1rem;
+      width: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #3b82f6
+    }
+
+    .timeline-steps .timeline-content .inner-circle:before {
+      content: "";
+      background-color: #3b82f6;
+      display: inline-block;
+      height: 3rem;
+      width: 3rem;
+      min-width: 3rem;
+      border-radius: 6.25rem;
+      opacity: .5
+    }
+
+
+
+
+    .panel {
+      margin-bottom: 20px;
+      background-color: #fff;
+      /* border: 1px solid transparent; */
+      border-radius: 4px;
+      /* -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05); */
+      /* box-shadow: 0 1px 1px rgba(0,0,0,.05); */
+    }
+
+    /* .profile-information .profile-desk {
+    border-right: 1px solid #ddd;
+    padding-right: 30px;
+} */
+
+    .btn-primary {
+      background-color: #1fb5ad;
+      border-color: #1fb5ad;
+      color: #FFFFFF;
+    }
+
+    .act-content {
+      padding: 40px;
+    }
+
+    .recent-act h1 {
+      text-align: center;
+      color: #1fb5ad;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .activity-icon {
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      color: #FFFFFF;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      width: 30px;
+      margin: 20px auto 20px;
+      position: relative;
+    }
+
+    .activity-icon.terques {
+      background: #8fd6d6;
+    }
+
+    .activity-icon {
+      /* background: #C7CBD6; */
+    }
+
+    .recent-act:before {
+      /* background-color: #eeeeee; */
+      bottom: 0;
+      content: "";
+      left: 50%;
+      position: absolute;
+      top: 50px;
+      width: 2px;
+      z-index: 0;
+    }
+
+    .activity-desk {
+      padding: 7px;
+      background: #f2f2f2;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      position: relative;
+      text-align: center;
+    }
+
+    .activity-desk h2 {
+      color: #03989E;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+    }
+
+
+    p {
+      font-size: 1.1rem;
+      font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      /* font-family: monserrat; */
+    }
+
+
+
+
+
+
+
+
+    /* body {
+    margin-top: 20px;
+} */
+    .timeline_area {
+      position: relative;
+      z-index: 1;
+    }
+
+    .single-timeline-area {
+      position: relative;
+      z-index: 1;
+      /* padding-left: 80px; */
+    }
+
+    @media only screen and (max-width: 575px) {
+      .single-timeline-area {
+        /* padding-left: 100px; */
+      }
+    }
+
+    .single-timeline-area .timeline-date {
+      position: absolute;
+      width: 180px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      padding-right: 60px;
+    }
+
+    @media only screen and (max-width: 575px) {
+      .single-timeline-area .timeline-date {
+        width: 100px;
+      }
+    }
+
+    /* .single-timeline-area .timeline-date::after {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    content: "";
+    background-color: #ebebeb;
+    top: 0;
+    right: 30px;
+    z-index: 1;
+} */
+    /* .single-timeline-area .timeline-date::before {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #355681;
+    content: "";
+    top: 50%;
+    right: 26px;
+    z-index: 5;
+    margin-top: -5.5px;
+} */
+    .single-timeline-area .timeline-date p {
+      margin-bottom: 0;
+      color: #020710;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .single-timeline-area .single-timeline-content {
+      position: relative;
+      z-index: 1;
+      padding: 30px 30px 25px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+      box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+      border: 1px solid #ebebeb;
+    }
+
+    @media only screen and (max-width: 575px) {
+      .single-timeline-area .single-timeline-content {
+        padding: 20px;
+      }
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-icon {
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+      width: 30px;
+      height: 30px;
+      background-color: #03989E;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+      flex: 0 0 30px;
+      text-align: center;
+      max-width: 30px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-icon svg {
+      color: #ffffff;
+      line-height: 30px;
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-icon i {
+      color: #ffffff;
+      line-height: 30px;
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-text h6 {
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+    }
+
+    .single-timeline-area .single-timeline-content .timeline-text p {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+
+    .single-timeline-area .single-timeline-content:hover .timeline-icon,
+    .single-timeline-area .single-timeline-content:focus .timeline-icon {
+      background-color: #020710;
+    }
+
+    .single-timeline-area .single-timeline-content:hover .timeline-text h6,
+    .single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+      color: #355681;
+    }
+
+
+
+
+    /* header {
+  background: white;
+  display: flex;
+  color: #355681;
+  border-radius: 6px;
+}
+header:before,
+header:after {
+  content: '';
+  margin: auto 1em;
+  border-bottom: solid 6px;
+  flex: 1;
+}
+h1 {
+  position: relative;
+  padding: 0.25em 1em;
+  overflow: hidden;
+  background: linear-gradient(currentcolor, currentcolor) no-repeat top center, linear-gradient(currentcolor, currentcolor) no-repeat bottom center;
+  background-size: calc(100% - 1.65em) 3px;
+}
+h1:before,
+h1:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: solid 3px;
+  border-top: none;
+  border-bottom: none;
+  transform: skew(45deg);
+  border-radius : 3px
+
+}
+
+h1:after {
+  transform: skew(-45deg)
+} */
+
+
+
+    /* h1 {
+	margin: 1em 0 0.5em 0;
+	font-weight: normal;
+	position: relative;
+	text-shadow: 0 -1px rgba(0,0,0,0.6);
+	font-size: 34px;
+	line-height: 40px;
+	background: #03989E;
+	background: #03989E;
+	border: 1px solid #fff;
+	padding: 5px 15px;
+	color: white;
+	border-radius: 0 10px 0 10px;
+	box-shadow: inset 0 0 5px #03989E;
+  font-family: 'Montserrat','Helvetica Neue',Arial,sans-serif;
+} */
+
+
+
+
+    h1 {
+      position: relative;
+      margin: 1.5em 0 .9em;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: bolder;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1:before,
+    h1:after {
+    /* content: " ";
+    margin: 1em 0 0.5em 0;
+    position: absolute;
+    text-shadow: 0 -1px rgb(0 0 0 / 60%);
+    font-size: 28px;
+    line-height: 40px;
+    background: #355681;
+    background: rgba(53,86,129, 0.8);
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 0 10px 0 10px; */
+    /* box-shadow: inset 0 0 5px rgb(53 86 129 / 50%); */
+    position: absolute;
+    top: 36%;
+    content: '';
+    width: 50%;
+    height: 8px;
+    display: inline-block;
+    background: #5324d5;
+    border-radius: 0px 10px 0px 10px;
+    /* padding: 6px 160px; */
+    }
+
+    h1:before {
+      margin-left: calc(-50% - 14px);
+
+    }
+
+    h1:after {
+      margin-left: 14px;
+    }
+
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      h1 {
+        font-size: 15px;
+      }
+    }
+
+
+
+
+
+    .md-stepper-horizontal {
+      display: table;
+      width: 100%;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+      /* box-shadow: 0 3px 8px -6px rgba(0,0,0,.50); */
+    }
+
+    .md-stepper-horizontal .md-step {
+      display: table-cell;
+      position: relative;
+      padding: 24px;
+    }
+
+    /* .md-stepper-horizontal .md-step:hover,
+.md-stepper-horizontal .md-step:active {
+	background-color:rgba(0,0,0,0.04);
+} */
+    .md-stepper-horizontal .md-step:active {
+      border-radius: 15% / 75%;
+    }
+
+    .md-stepper-horizontal .md-step:first-child:active {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .md-stepper-horizontal .md-step:last-child:active {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .md-stepper-horizontal .md-step:hover .md-step-circle {
+      /* background-color:#757575; */
+    }
+
+    .md-stepper-horizontal .md-step:first-child .md-step-bar-left,
+    .md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+      display: none;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-circle {
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
+      background-color: #355681;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .md-stepper-horizontal.green .md-step.active .md-step-circle {
+      background-color: #00AE4D;
+    }
+
+    .md-stepper-horizontal.orange .md-step.active .md-step-circle {
+      background-color: #355681;
+    }
+
+    .md-stepper-horizontal .md-step.active .md-step-circle {
+      background-color: #355681;
+    }
+
+    .md-stepper-horizontal .md-step.done .md-step-circle:before {
+      font-family: 'FontAwesome';
+      font-weight: 100;
+      content: "\f00c";
+    }
+
+    .md-stepper-horizontal .md-step.done .md-step-circle *,
+    .md-stepper-horizontal .md-step.editable .md-step-circle * {
+      display: none;
+    }
+
+    .md-stepper-horizontal .md-step.editable .md-step-circle {
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
+    .md-stepper-horizontal .md-step.editable .md-step-circle:before {
+      font-family: 'FontAwesome';
+      font-weight: 100;
+      content: "\f040";
+    }
+
+    .md-stepper-horizontal .md-step .md-step-title {
+      margin-top: 16px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-title,
+    .md-stepper-horizontal .md-step .md-step-optional {
+      text-align: center;
+      color: rgba(0, 0, 0, .26);
+    }
+
+    .md-stepper-horizontal .md-step.active .md-step-title {
+      font-weight: 600;
+      color: rgba(0, 0, 0, .87);
+    }
+
+    .md-stepper-horizontal .md-step.active.done .md-step-title,
+    .md-stepper-horizontal .md-step.active.editable .md-step-title {
+      font-weight: 600;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-optional {
+      font-size: 12px;
+    }
+
+    .md-stepper-horizontal .md-step.active .md-step-optional {
+      color: rgba(0, 0, 0, .54);
+    }
+
+    .md-stepper-horizontal .md-step .md-step-bar-left,
+    .md-stepper-horizontal .md-step .md-step-bar-right {
+      position: absolute;
+      top: 36px;
+      height: 1px;
+      border-top: 1px solid #DDDDDD;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-bar-right {
+      right: 0;
+      left: 50%;
+      margin-left: 20px;
+    }
+
+    .md-stepper-horizontal .md-step .md-step-bar-left {
+      left: 0;
+      right: 50%;
+      margin-right: 20px;
+    }
+
+
+
+
+
+
+    ul.timeline {
+      list-style-type: none;
+      position: relative;
+    }
+
+    ul.timeline:before {
+      content: ' ';
+      background: #d4d9df;
+      display: inline-block;
+      position: absolute;
+      left: 29px;
+      width: 2px;
+      height: 100%;
+      z-index: 400;
+    }
+
+    ul.timeline>li {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    ul.timeline>li:before {
+      content: ' ';
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #355681;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      z-index: 400;
+    }
+
+
+
+
+
+
+    /* h3 {
+        font-family: sans-serif;
+        margin: 100px auto;
+        color: #228B22;
+        text-align: center;
+        font-size: 30px;
+        max-width: 600px;
+        position: relative;
+      }
+       h3:before {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 5px;
+        background: #03989E;
+        left: 0;
+        top: 50%;
+        position: absolute;
+      }
+h3:after {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 5px;
+        background: #03989E;
+        right: 0;
+        top: 50%;
+        position: absolute;
+      } */
+
+    .intention {
+      background-color: #B09BED;
+    }
+
+    /* .intention:hover {
+      background-color: #5324d5;
+    } */
+
+
+
+
+    .context {
+      width: 100%;
+      position: absolute;
+      /* top:50vh; */
+
+    }
+
+    .context img {
+      text-align: center;
+      color: #fff;
+      /* font-size: 50px; */
+      z-index: 1000;
+    }
+
+
+    .area {
+      background: white;
+      background: -webkit-linear-gradient(to left, #B09BED, #31c3a6);
+      width: 100%;
+      height: 100vh;
+
+
+    }
+
+    .circles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .circles li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: #31c3a6;
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+
+    }
+
+    .circles li:nth-child(1) {
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+    }
+
+
+    .circles li:nth-child(2) {
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+
+    .circles li:nth-child(3) {
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 4s;
+    }
+
+    .circles li:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s;
+    }
+
+    .circles li:nth-child(5) {
+      left: 65%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 0s;
+    }
+
+    .circles li:nth-child(6) {
+      left: 75%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s;
+    }
+
+    .circles li:nth-child(7) {
+      left: 35%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 7s;
+    }
+
+    .circles li:nth-child(8) {
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      animation-delay: 15s;
+      animation-duration: 45s;
+    }
+
+    .circles li:nth-child(9) {
+      left: 20%;
+      width: 15px;
+      height: 15px;
+      animation-delay: 2s;
+      animation-duration: 35s;
+    }
+
+    .circles li:nth-child(10) {
+      left: 85%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 11s;
+    }
+
+
+
+    @keyframes animate {
+
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+      }
+
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+      }
+
+    }
+
+
+
+
+
+    .logo-header {
+      background: linear-gradient(rgba(62, 63, 64, 0.6), rgba(62, 63, 64, 0.6)), url("https://source.unsplash.com/1400x400/?paper,presentation");
+      background-size: cover;
+      background-position: center bottom;
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
+    .logo-header h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin: 0 auto 0.2em auto;
+    }
+
+    .logo-header p {
+      font-size: 1.15rem;
+      width: 80%;
+      margin: 0 auto 2em auto;
+    }
+
+    .logo-header .logo {
+      margin: 0 auto 1em auto;
+    }
+
+    .logo-header .btn {
+      padding: 10px 26px;
+      background-color: #313131;
+      color: #FFF;
+      display: inline-block;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      text-decoration: none;
+      border: solid 2px #313131;
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+    }
+
+    .logo-header .btn:hover {
+      color: #FFF;
+      background-color: #1f69ff;
+      border-color: #1f69ff;
+    }
+
+    @media (min-width: 992px) {
+      .logo-header {
+        height: 100vh;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .logo-header h1 {
+        font-size: 4rem;
+      }
+
+      .logo-header p {
+        width: 60%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-header h1 {
+        font-size: 2.4rem;
+      }
+    }
+
+    .bg {
+      /* The image used */
+      background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+
+      /* Full height */
+      height: 100%;
+      width: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+</head>
+
+<body>
+  {% load static %}
+  <nav class="navbar navbar-expand-lg navbar-transparent"
+    style=" margin-top: 0px; margin-bottom: 0; padding-top: 0px; padding-bottom: 0; z-index: 2; background-color: transparent;">
+    <div class="container"><a href="/"> <img
+          src="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/logo.png"
+          width="150px"></a>
+      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active fw-bold"><a href="#about" class="nav-link" style="font-size: 18px; color:black">
+              About </a>
+          </li>
+          <li class="nav-item active fw-bold"><a href="#incentive" class="nav-link"
+              style="font-size: 18px; color:black">
+              Incentives</a></li>
+          <li class="nav-item active fw-bold"><a href="#guidelines" class="nav-link"
+              style="font-size: 18px; color:black">
+              Guidelines</a></li>
+          <li class="nav-item active fw-bold"><a href="#faq" class="nav-link" style="font-size: 18px; color:black"> FAQ
+            </a>
+          </li>
+          <li class="nav-item active fw-bold"><a href="#contact" class="nav-link" style="font-size: 18px; color:black">
+              Contact Us</a>
+          </li>
+        </ul>
+        {% if user.is_authenticated %}
+        <a class="btn"
+          style="background-color: #693FDD; font-weight: 600;  color: rgb(236, 229, 229); margin-left: 10px;"
+          href="{% url 'account_logout' %}">Log
+          out</a>
+        {% else %}
+        <a class="btn"
+          style="background-color: #693fdd; font-weight: 600; color: rgb(236, 229, 229); margin-left: 10px;"
+          href="{% provider_login_url 'google' %}">Login</a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="bg-light bg">
+    <div class="container py-5  container-fluid " style="position:relative; width:100%; height:100vh; ">
+      <div class="row h-100 align-items-center py-5">
+        <div class="col-lg-12 text-center">
+          <p class="display-4" style="font-weight: bold;">TECHNICAL POSTER PRESENTATION </p>
+          <h3 style="font-family: cursive; font-weight: bold; color: white;" class="my-4"> A Chance to present in front
+            of your stakeholders!</h3>
+
+            <h3 class="my-4" style="color:white ;">And win prizes worth INR 30K!
+            </h3>
+          {% if is_register %}
+          <a class="btn btn-lg" style="background-color: #355681; font-weight: 600;  color: rgb(236, 229, 229);"
+            >Registered</a>
+          {% else %}
+          <a class="btn btn-lg my-4" style="background-color: #693fdd; font-weight: 600; color: rgb(236, 229, 229);"
+            data-toggle="modal" data-target="#exampleModalCenter">Register</a>
+         <!-- <a class="btn btn-lg my-4" style="background-color: #693fdd; font-weight: 600; color: rgb(236, 229, 229);"
+            href="{% provider_login_url 'google' %}" data-toggle="modal" data-target="#exampleModalCenter">Register</a> --> 
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Registration Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     
+        <div class="modal-body container my-4 border rounded shadow-sm bg-secondary p-4">
+          <form class="row g-3" action="poster_submit" method="post">{% csrf_token %} 
+              <div class="col-md-12">
+                  <label for="inputName" class="form-label">Member 1</label>
+                  <input type="text" class="form-control" name="name1" id="inputName">
+              </div>
+              
+              
+              <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" name="mail1" id="inputEmail4">
+              </div>
+
+              <div class="col-md-12">
+                  <label for="inputContact4" class="form-label">Mobile Number(Preferably Whatsapp)</label>
+                  <input type="contact" class="form-control" name="mobile1" id="inputContact4">
+              </div>
+              
+              <div class="col-md-12">
+                  <label for="inputColledge" class="form-label">College Name</label>
+                  <input type="text" class="form-control" name="col1" id="inputColledge">
+              </div>
+
+              <div class="col-md-12">
+                <label for="inputName" class="form-label">Member 2</label>
+                <input type="text" class="form-control" name="name2" id="inputName">
+            </div>
+            
+            
+            <div class="col-md-12">
+              <label for="inputEmail4" class="form-label">Email Id </label>
+              <input type="email" class="form-control" name="mail2" id="inputEmail4">
+            </div>
+
+            <div class="col-md-12">
+                <label for="inputContact4" class="form-label">Mobile Number(Preferably Whatsapp)</label>
+                <input type="contact" class="form-control" name="mobile2" id="inputContact4">
+            </div>
+              <div class="col-12">
+
+                <div class="col-md-12">
+                  <label for="inputName" class="form-label">Member 3</label>
+                  <input type="text" class="form-control" name="name3" id="inputName">
+              </div>
+              
+              
+              <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" name="mail3" id="inputEmail4">
+              </div>
+
+              <div class="col-md-12">
+                  <label for="inputContact4" class="form-label">Mobile Number(Preferably Whatsapp)</label>
+                  <input type="contact" class="form-control" name="mobile3" id="inputContact4">
+              </div>
+
+                  
+              </div>
+
+              <label for="field">Field</label>
+                <select id="field" name="field" class="form-styling" required >
+                    <option value="mandatory" selected disabled>*Mandatory </option>
+                    <option value="construction Management and Methods">Construction Management and Methods</option>
+                    <option value="Concrete Technology and Buliding Material">Concrete Technology and Building Materials</option>
+                    <option value="Geotechnical Engineering">Geotechnical Engineering</option>
+                    <option value="Hydrulic and Water Resources Engineering / Ocean Engineering">Hydraulic and Water Resources Engineering/Ocean Engineering</option>
+                    <option value="Remote Sensing (GPS/GIS)">Remote Sensing (GPS/GIS)</option>
+                    <option value=" structural Engineering">Structural Engineering</option>
+                    <option value="Transport Engineering">Transportation Engineering</option>
+                    <option value="Environmental Engineering">Environmental Engineering</option>
+                    <option value="Architecture, Infrastructure and Urban Science">Architecture, Infrastructure and Urban Science</option>
+                    <option value="Ohter field">Other Field</option>
+                </select>
+                <label for="others">Other Field </label>
+                <input class="form-styling" type="text" name="others" placeholder=""/>
+  
+              
+              <!-- <div class="col-md-4">
+                  <label for="inputProg" class="form-label">Program</label>
+                  <select id="inputProg" class="form-select">
+                      <option selected>B.Tech</option>
+                      <option>M.Tech</option>
+                      <option>PhD</option>
+                      <option>other</option>
+                  </select>
+              </div>
+              <div class="col-md-4">
+                  <label for="inputNum" class="form-label">Year of Study</label>
+                  <select id="inputNum" class="form-select">
+                      <option selected>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                  </select>
+              </div>
+   -->
+              <!-- <div class="col-12">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                          Check me out
+                      </label>
+                  </div>
+              </div>
+              <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+              </div> -->
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button  type="submit" class="btn btn-primary">Submit</button>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div id="about" class=" mb-4 py-0" style="background-color: white; margin-top: -10px; padding-top: -16px;">
+    <div class="container">
+      <header>
+        <h1 class="" style="text-align: center;"> TECHNICAL POSTER PRESENTATION</h1>
+
+      </header>
+    
+      
+
+      <p style="text-align: justify; font-size: 1.2rem;">International Civil Engineering Symposium launches<span
+          class="fw-bold">Technical Poster Presentation</span> with the prime motive of encouraging young research enthusiasts in the field of civil engineering to engage in vigorous research and take civil engineering to a whole new level.</p>
+      <p style="text-align: justify; font-size: 1.2rem;">The<span class="fw-bold">Technical Poster Presentation</span>
+        is a way to communicate your research and your understanding of the topic in a concise format. It requires analysing, evaluating, and synthesising the idea and creatively demonstrating the findings of your research work in a visually capturing way.
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div id="motive" class="container">
+    <h1 class="" style="text-align: center;">Our Motive</h1>
+    <div class="row row-cols-1 row-cols-md-4 mb-4 text-center">
+      <div class="col">
+        <div class=" mb-4 ">
+          <div class="card-body intention"
+            style="border: #693fdd solid; border-top-left-radius: 50px;border-bottom-right-radius: 50px;">
+            <p style="font-size: 1.2rem;"> Encourage, promote <br> and support Research in <br> Civil Engineering</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class=" mb-4 rounded-3 ">
+          <div class="card-body intention"
+            style="border: #693fdd solid; border-top-left-radius: 50px;border-bottom-right-radius: 50px;">
+            <p style="font-size: 1.2rem;">Bring together Academia, Industry Professionals, and Research Scholars. </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class=" mb-4 rounded-3">
+          <div class="card-body intention"
+            style="border: #693fdd solid; border-top-left-radius: 50px;border-bottom-right-radius: 50px;">
+            <p style="font-size: 1.2rem;">Provide an excellent platform for exchanging new ideas & possible
+              cross-collaboration.
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class=" mb-4 rounded-3">
+          <div class="card-body intention"
+            style="border: #693fdd solid; border-top-left-radius: 50px;border-bottom-right-radius: 50px;">
+            <p style="font-size: 1.2rem;">Give exposure to researchers to present their Research work at a formal
+              Conference
+            </p>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!--Section: Content-->
+
+
+
+
+  <!-- ################################################## -->
+
+
+
+
+
+
+
+
+  <!-- ################################### -->
+  <div id="incentive" class="services pd container py-0">
+    <h1 class="" style="text-align: center;">Key Incentives</h1>
+
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="square rounded-circle"><i class="fas fa-trophy"></i></div>
+          <div class="serv">
+            <h3>Prizes</h3>
+            <p style="font-size: 1.3rem;">Get a chance to win cash prizes of worth INR 30k</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="serv">
+            <div class="square rounded-circle"><i class="fa-solid fa-person-chalkboard"></i></div>
+            <h3>Stakeholder</h3>
+            <p style="font-size: 1.3rem;">Opportunity to present in front of stakeholders.
+            </p>
+          </div>
+        </div>
+        <!-- <div class="col-md-4">
+              <div class="square"><i class="fas fa-newspaper"></i></div>
+              <div class="serv">
+                <h3>Stakeholder</h3>
+                <p style="font-size: 1.3rem;">Chance to interact with IITB professors and industrialists</p>
+              </div>
+            </div> -->
+        <div class="col-md-3">
+          <div class="square rounded-circle"><i class="fas fa-handshake"></i></div>
+          <div class="serv">
+            <h3>Interaction</h3>
+            <p style="font-size: 1.3rem;">Chance to interact with IITB professors and industrialists</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="square rounded-circle"><i class="fa-solid fa-award"></i></div>
+          <div class="serv">
+            <h3>Certification</h3>
+            <p style="font-size: 1.3rem;">Get Certified from India's largest Civil Engineering promoting body</p>
+          </div>
+        </div>
+        <!-- <div class="col-md-4">
+              <div class="square"><i class="fas fa-file"></i></div>
+              <div class="serv">
+                <h3>Resume Point</h3>
+                <p style="font-size: 1.3rem;">A Pan-India competition will definitely add stars to resume</p>
+              </div> -->
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ##################################### -->
+
+
+
+
+
+
+
+  <div id="guidelines" class="container my-5 text-center">
+    <h1>Guidelines</h1>
+    <div class="">
+      <p style="font-size: 1.2rem;">Strictly follow the guidelines for participation and submission of Abstract</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="https://drive.google.com/file/d/1hCljQ_HSw49Bk2gQ7FT4M-K10z60u6sK/view?usp=sharing"><button
+            type="button" class="btn btn-lg px-4 gap-3"
+            style="background-color: #693FDD; color: white;">Guidelines</button></a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ####################################### -->
+
+
+
+
+
+
+
+  <section id="faq" class="accordion-section clearfix mt-3" aria-label="Question Accordions" style="padding-top: 0px;"
+    id="faq">
+    <div class="container">
+
+      <h1 class="" style="text-align: center;">Frequently Asked Questions</h1>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin-top: 10px;">
+        <div class="panel panel-default">
+          <div class="panel-heading p-3 mb-3" role="tab" id="heading0" style="background-color: #c5b1fe">
+            <h3 class="panel-title">
+              <a class="collapsed text-dark " title="" data-toggle="collapse" data-parent="#accordion"
+                href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                Who is eligible to participate?
+              </a>
+            </h3>
+          </div>
+          <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+            <div class="panel-body px-3 mb-4">
+              <p class="text-dark">All undergraduate and postgraduate (B.Techs, M.Techs, Dual Degree students, PhDs)
+                students undertaking research work in the field of civil engineering are eligible to participate.
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading p-3 mb-3" role="tab" id="heading1" style="background-color: #c5b1fe;">
+            <h3 class="panel-title">
+              <a class="collapsed text-dark " role="button" title="" data-toggle="collapse"
+                data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                My topic is related to civil engineering, but it is not listed in the specified categories. Am I still
+                eligible to participate?
+              </a>
+            </h3>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+            <div class="panel-body px-3 mb-4">
+              <p class="text-dark">Yes, you are eligible to participate. Select the category which fits the most to your
+                field of research.
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading p-3 mb-3" role="tab" id="heading2" style="background-color: #c5b1fe;">
+            <h3 class="panel-title">
+              <a class="collapsed text-dark " role="button" title="" data-toggle="collapse"
+                data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                What is the procedure for application?
+              </a>
+            </h3>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+            <div class="panel-body px-3 mb-4">
+              <p class="text-dark">Go through the Abstract submission guidelines carefully. After this, go to the
+                Registrations section, fill out the form completely and upload the Abstract and Authentication letter
+                while registering.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading p-3 mb-3" role="tab" id="heading2" style="background-color: #c5b1fe;">
+            <h3 class="panel-title">
+              <a class="collapsed text-dark " role="button" title="" data-toggle="collapse"
+                data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                Can I register for two different research works?
+              </a>
+            </h3>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+            <div class="panel-body px-3 mb-4">
+              <p class="text-dark">Yes, you can register. We highly recommend that one of your works is a group work
+                with other students.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading p-3 mb-3" role="tab" id="heading3" style="background-color: #c5b1fe;">
+            <h3 class="panel-title">
+              <a class="collapsed text-dark " role="button" title="" data-toggle="collapse"
+                data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                What if my work research is not yet finished? Can I still apply?
+              </a>
+            </h3>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+            <div class="panel-body px-3 mb-4">
+              <p class="text-dark">Yes, students can present research that is still in progress. It is perfectly
+                acceptable as long as it has sufficient content to be displayed in the presentation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading p-3 mb-3" role="tab" id="heading4" style="background-color: #c5b1fe;">
+            <h3 class="panel-title">
+              <a class="collapsed text-dark " role="button" title="" data-toggle="collapse"
+                data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                How will I receive information and updates about the Symposium?
+
+              </a>
+            </h3>
+          </div>
+          <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+            <div class="panel-body px-3 mb-4">
+              <p class="text-dark">Information and updates will be conveyed to you through our Facebook Page, Instagram,
+                Twitter and Website. Important updates will be sent to you via email, also. It is recommended to check
+                the website and emails and follow our Facebook page Instagram, and Twitter for all the updates and
+                reminders.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default">
+          <div class="panel-heading p-3 mb-3" role="tab" id="heading3" style="background-color: #c5b1fe;">
+            <h3 class="panel-title">
+              <a class="collapsed text-dark " role="button" title="" data-toggle="collapse"
+                data-parent="#accordion" href="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                I have submitted the abstract, but I need to make some amendments. What should I do?
+              </a>
+            </h3>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+            <div class="panel-body px-3 mb-4">
+              <p class="text-dark">Changes can be made within the stipulated deadline. You should not register again.
+                Mail your query to any one of the Symposium Managers. We will respond to your query ASAP.</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading p-3 mb-3" role="tab" id="heading3" style="background-color: #c5b1fe;">
+            <h3 class="panel-title">
+              <a class="collapsed text-dark " role="button" title="" data-toggle="collapse"
+                data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                Who reviews the abstracts and determines who can present?
+              </a>
+            </h3>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+            <div class="panel-body px-3 mb-4">
+              <p class="text-dark">All the abstracts are sent to our review committee, which comprises Civil Engineering
+                Department and IIT Bombay's faculty members. They will decide and will select the best abstracts.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <!-- ############################################################################# -->
+
+
+        <section id="contact">
+            <div class="container">
+                <div class="row text-center pb-4" data-aos="fade-up">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">Contact <span class="text-brand">Us</span></h1>
+                    </div>
+                </div>
+                <div class="row gy-4 justify-content-center mt-4">
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up">
+                        <div class="team-member">
+                            <div class="team-member-img">
+                                <img src="{% static 'img/mansi_new.jpg' %}" alt="Manasi Bandichode">
+                            </div>
+                            <div class="team-member-info">
+                                <h5 class="mb-0">Dunggam Gao</h5>
+                                <p class="mb-2">Symposium Manager</p>
+                                <div class="social-icons">
+                                    <a href="tel:9362607727	"><i class="bi bi-telephone-fill"></i></a>
+                                    <a href="mailto:symposium@aakaariitb.org.in"><i class="bi bi-envelope-fill"></i></a>
+                                    <a href="https://www.linkedin.com/in/dunggam-gao-1504462b4/"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                         <div class="team-member">
+                            <div class="team-member-img">
+                                <img src="{% static 'img/vaishnavi_new.jpg' %}" alt="Vaishnavi Shinde">
+                            </div>
+                            <div class="team-member-info">
+                                <h5 class="mb-0">Anand Keharwala </h5>
+                                <p class="mb-2">Symposium Manager</p>
+                                <div class="social-icons">
+                                    <a href="tel:9785220930"><i class="bi bi-telephone-fill"></i></a>
+                                    <a href="mailto:symposium@aakaariitb.org.in"><i class="bi bi-envelope-fill"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+  <!-- #################################################################### -->
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top container">
+    <div class="col-md-4 d-flex align-items-center">
+      <span class="mb-3 mb-md-0 text-muted">© Aakaar, IIT Bombay 2023</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3" style="padding-right: 10px;"><a class="text-muted" href="https://twitter.com/aakaariitb"><svg
+            xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#693FDD" class="bi bi-twitter"
+            viewBox="0 0 16 16">
+            <path
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+          </svg></a></li>
+      <li class="ms-3" style="padding-right: 10px;"><a class="text-muted"
+          href="https://www.instagram.com/aakaar_iitbombay/"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+            height="18" fill="#693FDD" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+          </svg></a></li>
+      <li class="ms-3" style="padding-right: 5px;"><a class="text-muted"
+          href="https://www.facebook.com/AakaariitBombay"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            fill="#693FDD" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+          </svg></a></li>
+      <li class="ms-3" style="padding-right: 5px;"><a class="text-muted"
+          href="https://www.linkedin.com/company/aakaariitb/"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+            height="18" fill="#693FDD" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+          </svg></a></li>
+    </ul>
+  </footer>
+
+</body>
+
+</html>
+<!-- <html>
+<body>
+<h1>My Google OAuth Project </h1>
+{% if user.is_authenticated %}
+  <p>Welcome, You are logged in as {{ user.username }}</p>
+{% else %}
+  <a href="{% provider_login_url 'google' %}">Login With Google</a>
+{% endif %}
+</body>
+</html> -->

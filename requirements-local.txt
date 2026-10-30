@@ -1,0 +1,12 @@
+# Requirements for running the site locally (no MySQL needed).
+# Same versions as the production venv, minus mysqlclient (which requires
+# MySQL C headers to build and is only needed for the production database).
+Django==5.2.5
+gunicorn==23.0.0
+django-import-export==4.3.9
+django-allauth==65.13.0
+django-crispy-forms==2.5
+requests==2.32.5
+jwt==1.4.0
+boto3==1.40.74
+pillow==12.0.0

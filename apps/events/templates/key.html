@@ -1,0 +1,1103 @@
+{% load static %}
+{% load socialaccount %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="CENEX provides a unique opportunity to all civil engineering students across India by facilitating them to showcase their research projects incorporating new technology via different models, prototypes, simulation models or samples in front of eminent professors and professionals.">
+    <meta name="keywords" content="Aakaar, Cenex, Exhibition, Civil Engineering Exhibition, Civil Engineering offline, Prototype, IIT, IITB, IIT Bombay, Technical Festival, Asia’s largest, Pan India, Civil, Civil Engineering, Events, Researchers,Industrialist,Showcase,Student,Professionals,Civil Engineering Events, Department Festival, Department,Festival, Fest,Department Fest,Civil Engineering IIT Bombay, Dream, Construct,Innovate,Simulation models,Sample,Innovation, Engineering, Tech, Event, India, National level Exhibition, Bombay, Mumbai, Technology, Indian Institute of Technology, Opportunity, B.Tech, M.Tech, PhD, diploma, tech festival, Explore, knowledge, chance, offline, CENEX- Aakaar | IIT Bombay, prizes, explore, civil, Aakaar IITB, Aakaar 15th Edition, Aakaar IIT Bombay
+    ">
+    <title>Lecture Series | AAKAAR - IIT Bombay</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lecture Series - Aakaar IIT Bombay</title>
+    <!-- Fevicon  -->
+    <!-- Fevicon  -->
+    {% load static %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'fevicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fevicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href=" {% static 'fevicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'fevicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlink:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+
+    :root {
+        --color-body: #b6cbce;
+        --color-heading: #eef3db;
+        --color-base: #033f47;
+        --color-base2: #022a30;
+        --color-brand: #e0f780;
+        --color-brand2: #deff58;
+        --sidbar-width: 240px;
+        --font-base: "Bai Jamjuree";
+    }
+
+    body {
+        background-color: var(--color-base2);
+        color: var(--color-body);
+        font-family: var(--font-base), sans-serif;
+    }
+
+    .title {
+        position: relative;
+        margin: 1.5em 0 .9em;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: bolder;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .title:before,
+    .title:after {
+        position: absolute;
+        top: 50%;
+        content: '';
+        width: 50%;
+        height: 5px;
+        display: inline-block;
+        background: white;
+    }
+
+    .title:before {
+        margin-left: calc(-50% - 14px);
+    }
+
+    .title:after {
+        margin-left: 14px;
+    }
+
+
+    @media screen and (max-width: 600px) {
+        .title {
+            font-size: 24px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .title {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .title {
+            font-size: 15px;
+        }
+    }
+
+
+
+
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #deff58;
+        font-weight: 700;
+    }
+</style>
+
+<body>
+    {% load static %}
+
+    {% include "includes/design_header.html" %}
+
+    <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Registrations for the following workshops are open on a first-come, first-served basis !</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div> -->
+
+
+
+
+    {% if is_not_fusion %}
+    <div class="container">
+        {% if is_exists%}
+        <div class="alert alert-danger text-center alert-dismissible fade show" role="alert">
+            <strong>Hi!</strong> {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Hi!</strong> {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+
+    {% if is_not_primavera %}
+    <div class="container">
+        {% if is_exists%}
+        <div class="alert alert-danger text-center alert-dismissible fade show" role="alert">
+            <strong>Hi!</strong> {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Hi!</strong> {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if is_not_staadpro %}
+    <div class="container">
+        {% if is_exists%}
+        <div class="alert alert-danger text-center alert-dismissible fade show" role="alert">
+            <strong>Hi!</strong> {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Hi!</strong> {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+
+
+
+
+
+
+    <center>
+        <!-- <h2 class="text-white">
+            16th March 2024
+        </h2> -->
+
+        <h1 class="display-5 fw-bold lh-1 mb-3">Inauguration</h1>
+    </center>
+
+
+
+	<div class="container col-xxl-8 px-4 py-4" id="fusion">
+		<div class="row flex-lg-row align-items-center g-5">
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-10 col-sm-8 offset-lg-1">
+						<img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/79b836a8-27ba-49ca-880b-6feb51ec7de3"
+							class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+							style="border-radius: 10px" loading="lazy">
+					</div>
+					<div class="col-lg-10 offset-lg-1" style="margin-top: 10px;">
+						<h1 class="display-5 fw-bold lh-1 mb-3"><span style="font-size: 25; text-align: center;">Mr. K M Chandrasekhar</span></h1>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-10 col-sm-8 offset-lg-1">
+						<img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/b8a2fad5-3bef-4a7f-8b15-8bb1d0636f22"
+							class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+							style="border-radius: 10px" loading="lazy">
+					</div>
+					<div class="col-lg-10 offset-lg-1" style="margin-top: 10px;">
+						<h1 class="display-5 fw-bold lh-1 mb-3"><span style="font-size: 25; text-align: center;">Mr. Ved Parkash Dudeja</span></h1>
+					</div>
+				</div>
+			</div>
+			<p style="font-size: 25px; text-align: center;">Excited to kick off Aakaar 16th Edition with industry titans</p>
+			<p style="font-size: 20px; text-align: center; margin-top: 4px;" >Join us for the Inauguration Ceremony featuring K.M Chandrashekhar, former Cabinet Secretary of India, and Ved Parkash Dudeja, Vice Chairman of RLDA.</p>
+		</div>
+	</div>
+	
+
+
+
+
+
+
+
+    <center>
+        <!-- <h2 class="text-white">
+            16th March 2024
+        </h2> -->
+
+        <h1 class="display-5 fw-bold lh-1 mb-3">CEO Power Hour</h1>
+    </center>
+
+    <script>
+        setInterval(() => {
+
+            if (para1.style.display == 'inline') {
+                para1.style.display = 'none'
+
+            }
+            else {
+                para1.style.display = 'inline'
+            }
+
+        }, 600);
+    </script>
+
+    <div class="container col-xxl-8 px-4 py-4" id="fusion">
+        <div class="row flex-lg-row align-items-center g-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/11d40053-3248-4014-aa1b-9d06ded69d05"
+                    class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200"
+                    style="border-radius: 10px" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3"><span style="font-size: 30;">Mr. Ajay Kapur</span></h1>
+
+                <p>Immerse yourself in the "CEO Power Hour" of our Lecture Series featuring Mr. Ajay Kapur, CEO of Adani Cement and former CEO of Adani Ports and SEZ, exclusively at IIT Bombay on March 16, 2024, during the 16th edition of Aakaar. Join Mr. Kapur as he unveils "Advancements in Concrete Technology" and sets the stage for future discussions with industry leaders.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container col-xxl-8 px-4 py-4" id="fusion">
+      <div class="row flex-lg-row align-items-center g-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+              <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/fea0ea9f-a70f-4a2f-87b9-1f594b4d01cb"
+                  class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200"
+                  style="border-radius: 10px" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+              <h1 class="display-5 fw-bold lh-1 mb-3"><span style="font-size: 30;">Mr. Gaurav Pandey</span></h1>
+
+              <p>Dive into the 2nd installment of our CEO Power Hour Lecture Series with Mr. Gaurav Pandey, MD & CEO of Godrej Properties Limited, exclusively at IIT Bombay on March 16, 2024, as part of Aakaar's 16th edition. Explore "Residential Real Estate in India" with Mr. Pandey, offering unique insights into the country's housing landscape.</p>
+          </div>
+      </div>
+  </div>
+  <div class="container col-xxl-8 px-4 py-4" id="fusion">
+    <div class="row flex-lg-row align-items-center g-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/3be3b886-bfaa-41c1-8ade-07c35a219112"
+                class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200"
+                style="border-radius: 10px" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3"><span style="font-size: 30;">Mr. V N Heggade</span></h1>
+
+            <p>Immerse yourself in the 3rd installment of our CEO Power Hour Lecture Series with Mr. V N Heggade, exclusively at IIT Bombay on March 16, 2024, as part of Aakaar's 16th edition. Join us as Mr. Heggade explores "Towards Net-zero: Smart Engineering Strategies for Carbon Neutral Construction", offering invaluable insights into sustainable and environmentally friendly construction practices.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<center>
+	<!-- <h2 class="text-white">
+		16th March 2024
+	</h2> -->
+
+	<h1 class="display-5 fw-bold lh-1 mb-3">Keynote Session</h1>
+</center>
+
+<script>
+	setInterval(() => {
+
+		if (para1.style.display == 'inline') {
+			para1.style.display = 'none'
+
+		}
+		else {
+			para1.style.display = 'inline'
+		}
+
+	}, 600);
+</script>
+
+<div class="container col-xxl-8 px-4 py-4" id="fusion">
+	<div class="row flex-lg-row align-items-center g-5">
+		<div class="col-10 col-sm-8 col-lg-6">
+			<img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/52ac0259-17c1-49a7-8ca9-7cc4ad286d5e"
+				class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200"
+				style="border-radius: 10px" loading="lazy">
+		</div>
+		<div class="col-lg-6">
+			<h1 class="display-5 fw-bold lh-1 mb-3"><span style="font-size: 30;">Mr. S.V.R. Srinivas, IAS</span></h1>
+
+			<p>Dive into the visionary world of urban redevelopment with S.V.R Srinivas IAS, CEO of Dharavi Redevelopment Authority,and Former Metropolitan Commissioner of MMRDA, his keynote session promises insights into transforming cities. Don't miss this pivotal event in Aakaar's 16th Edition on March 16th!</p>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<button type="button" class="btn fw-bold btn-lg" style="background-color: #E0F780; text-decoration: none; color:black; font-weight: 700; display: block; margin-left: auto; margin-right: auto;" data-bs-toggle="modal" data-bs-target="#ceo">
+    Register
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ########################################################################################3 
+
+<div class="container col-xxl-8 px-4 py-4" id="fusion">
+    <div class="row flex-lg-row align-items-center g-5">
+      <div class="col-10 col-sm-8 col-lg-6" >
+        <img src="{% static 'img/fusion.jpg'%}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" style="border-radius: 10px" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">FUSION 360</h1>
+        <p class="lead fw-bold">Registration Fee : INR 600</p>
+        <p class="lead fw-bold">Duration : 6 hours</p>
+        <p class="lead fw-bold">Date : 18th March</p>
+        <p class="lead fw-bold">Venue : IIT Bombay</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          
+          <button type="button" class="btn fw-bold btn-lg" style="background-color: #E0F780;" style="text-decoration: none; color:black; font-weight: 700;" data-bs-toggle="modal" data-bs-target="#staticBackdropfusion">
+              Register
+            </button>
+
+           <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Register</button> 
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScgz9LwUYsA-bVnF27DhTHDWV9g8LmFvgzdZE7tFdhZe9Hccw/viewform">    <button type="button" class="btn fw-bold btn-lg " style="background-color: rgb(241, 146, 146);" style="text-decoration: none; color:black; font-weight: 700;" >Pay Now!!</button></a> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+-->
+
+
+
+
+
+
+
+    <!-- AI/ML in civil -->
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade text-black" id="staticBackdropfusion" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="staticBackdropLabel">Details</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/fusion_reg" method="post">
+                        {% csrf_token %}
+                        <p><span style="font-weight: 700;">Workshop Overview</span><br>
+                            Revit is a powerful BIM software, revolutionizing building design with intelligent 3D
+                            models. Crucial for architects and engineers, it sets new benchmarks in efficiency and
+                            innovation throughout the project lifecycle.
+                            <br><br>
+                            <span style="font-weight: 700;">Prerequisites</span><br>
+                            1. Laptop is must.<br>
+                            2. Prior experience or knowledge in building planning, design, drafting, or engineering is
+                            highly recommended to ensure a foundational understanding of the concepts covered.
+                            <br><br>
+                            <span style="font-weight: 700;">Incentives</span><br>
+                            1. <b>Professional Development:</b> Gain essential skills in Building Information Modeling
+                            (BIM) and Autodesk Revit, enhancing your credentials in the field of civil engineering and
+                            construction management.
+                            <br>
+                            2. <b>Career Advancement:</b> Acquire proficiency in BIM practices, which are increasingly
+                            becoming standard in the industry, enhancing your employability and career prospects.
+                            <br>
+                            3. <b>Hands-on Experience:</b> Work with parametric 3D design tools, learn to create
+                            construction documentation, and utilize presentation tools, providing practical experience
+                            for real-world projects.
+                            <br>
+                            4. <b>Certification:</b> Obtain an Autodesk Workshop Certificate validating your skills and
+                            knowledge.
+                            <br>
+
+                            <!-- <br>
+<span style="font-weight: 700;">For more info regarding syllabus visit <a href="https://www.remarkskill.com/iitbombay">here</a></span>
+<br> -->
+
+
+                        </p>
+                        <!--   <div class="mb-3">
+              <label for="colName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="colName" name="name"  required>
+            </div>
+  
+            
+  
+            <div class="mb-3">
+              <label for="phoneNo" class="form-label">Contact No.         </label>
+              <input type="number" class="form-control" id="phoneNo" name="contact"  required>
+            </div>
+  
+            <div class="mb-3">
+              <label for="whatsNo" class="form-label">College/Organization Name</label>
+              <input type="text" class="form-control" id="whatsNo" name="colg"  required>
+            </div>
+
+            <div class="mb-3">
+                <label for="state" class="form-label">Email ID </label>
+                <input type="email" class="form-control" id="state" name="email" >
+              </div> -->
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!--    <button type="submit" class="btn btn-success">Submit</button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- <div class="container col-xxl-8 px-4 py-4" id="primavera">
+  <div class="row flex-lg-row align-items-center g-5">
+    <div class="col-10 col-sm-8 col-lg-6" >
+      <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/53d6154a-0665-4bb4-aa45-a6184d22dd92" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" style="border-radius: 10px" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">Etabs</h1>
+
+      <p class="lead fw-bold">Duration : 14 hours (7 hours each day)</p>
+      <p class="lead fw-bold">Date : 20th and 21st January 2024</p>
+      <p class="lead fw-bold">Venue : IIT Bombay</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        
+        <button type="button" class="btn fw-bold btn-lg" style="background-color: #E0F780;" style="text-decoration: none; color:black; font-weight: 700;" data-bs-toggle="modal" data-bs-target="#staticBackdropprimavera">
+            Details
+          </button>
+<button type="button" class="btn fw-bold btn-lg" style="background-color: rgb(241, 146, 146); text-decoration: none; color: black; font-weight: 700;" onclick="window.location.href='https://www.townscript.com/e/remarkskill-technical-workshop-in-association-with-aakaar-iit-bombay-2024-130401'">Register</button>
+
+           <a href="https://www.townscript.com/e/remarkskill-technical-workshop-in-association-with-aakaar-iit-bombay-2024-130401" style="text-decoration: none; color: black; font-weight: 700;">
+            <button type="button" class="btn fw-bold btn-lg" style="background-color: rgb(241, 146, 146);" data-bs-toggle="modal" data-bs-target="#payment_primavera_id">Register</button>
+          </a>-->
+    <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Register</button> -->
+    <!-- </div>
+    </div>
+    </div>
+    </div>
+    <br><br> -->
+    <!-- <center style="margin-bottom: 0px;">
+    <h2 class="text-white">
+        19 March 2023
+       </h2>
+</center> -->
+    <script>
+        setInterval(() => {
+
+            if (para.style.display == 'inline') {
+                para.style.display = 'none'
+
+            }
+            else {
+                para.style.display = 'inline'
+            }
+
+        }, 600);
+    </script>
+
+
+    <!-- new workshop -->
+
+
+    <!-- <div class="container col-xxl-8 px-4 py-4" id="staadpro">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6" >
+        <img src="https://www.techbooster.co.in/images/news/afd5f2efdc0300607015821dfa2deb04.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" style="border-radius: 10px" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">STAAD PRO</h1>
+        <p class="lead fw-bold">Registration Fee : <del>INR 600</del> <span id="para" style="color: #ff5b58;"> INR 300</span></p>
+        <p class="lead fw-bold">Duration : 6 hours</p>
+        <p class="lead fw-bold">Date : 19th March</p>
+        <p class="lead fw-bold">Venue : IIT Bombay</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+         
+          <button type="button" class="btn fw-bold btn-lg" style="background-color: #E0F780;" style="text-decoration: none; color:black; font-weight: 700;" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+              Register
+            </button>
+
+
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Register</button> -->
+    <!-- <button type="button" class="btn fw-bold btn-lg " style="background-color: rgb(241, 146, 146);" style="text-decoration: none; color:black; font-weight: 700;"  data-bs-toggle="modal" data-bs-target="#payment_staadpro_id">Pay Now!!</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+    <!-- Modal -->
+    <div class="modal fade text-black" id="staticBackdropprimavera" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="staticBackdropLabel">Details</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/primavera_reg" method="post">
+                        {% csrf_token %}
+
+
+                        <p><span style="font-weight: 700;">Workshop Overview</span><br>
+                            Embark on a journey of structural analysis and design with the ETABS (Extended
+                            Three-Dimensional Analysis of Building Systems) Workshop at Aakaar Pre-event 2024. This
+                            intensive two-day program, thoughtfully designed by industry experts, provides participants
+                            with a deep understanding of ETABS and its application in civil engineering.
+                            <br><br>
+                            <span style="font-weight: 700;">Prerequisites</span><br>
+                            1. Etabs software installed in your laptop.
+                            <br><br>
+                            <span style="font-weight: 700;">Incentives</span><br>
+                            1. Workshop Participation Certificate from Remark Skill and Aakaar, IIT Bombay. <br>
+                            2. Comprehensive Learning: Master both basic and advanced features of ETABS. <br>
+                            3. Practical Application: Apply learned concepts to real-world projects. <br>
+                            4. Design Code Knowledge: Understand and implement design codes for structural integrity.
+                            <br>
+                            5. Interactive Sessions: Engage in hands-on exercises and discussions. <br>
+
+
+                            <br>
+                            <span style="font-weight: 700;">For more info regarding syllabus visit <a
+                                    href="https://www.remarkskill.com/iitbombay">here</a></span>
+                            <br>
+                        </p>
+
+
+
+                        <!-- <div class="mb-3">
+            <label for="colName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="colName" name="name"  required>
+          </div>
+
+          
+
+          <div class="mb-3">
+            <label for="phoneNo" class="form-label">Contact No.         </label>
+            <input type="number" class="form-control" id="phoneNo" name="contact"  required>
+          </div>
+
+          <div class="mb-3">
+            <label for="whatsNo" class="form-label">College/Organization Name</label>
+            <input type="text" class="form-control" id="whatsNo" name="colg"  required>
+          </div>
+
+          <div class="mb-3">
+              <label for="state" class="form-label">Email ID </label>
+              <input type="email" class="form-control" id="state" name="email" required >
+            </div>
+<div class="mb-3">
+              <label for="state" class="form-label">Referral</label>
+              <input type="text" class="form-control" id="state" name="ref" >
+            </div> -->
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="submit" class="btn btn-success">Submit</button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ########################### Payment Modal for STAAD Pro ###################################### -->
+
+    <!-- <div class="modal fade text-black" id="payment_staadpro_id" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="staticBackdropLabel">Registration Form</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/ceo" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+
+                        <div class="mb-3">
+                            <label for="state" class="form-label">Email ID </label>
+                            <input type="email" class="form-control" id="state" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phoneNo" class="form-label">Transaction Id </label>
+                            <input type="number" class="form-control" id="phoneNo" name="transaction_id" required>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+
+                            <div class="form-outline">
+                                <label class="form-label fw-bold" for="lastName"> Screenshot of Transaction </label><br>
+                                <span style="color: red;">*</span><span>(any valid id such as  Passport, driving licence, voters' ID card, PAN card, Aadhaar card )</span> -->
+                                <!-- <input type="file" id="lastName" class="form-control form-control-lg"
+                                    name="payment_screenshot" required />
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    </div>
+
+    <!-- ########################### Payment Modal for fusion ###################################### -->
+
+    <div class="modal fade text-black" id="payment_fusion_id" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="staticBackdropLabel">Payment for AI/ML in Civil</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/payment_fusion" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+
+
+                        <p><span style="color: red;">*</span> After Payment it's mandetory to upload the proof of
+                            payment </p>
+
+
+                        <img src="{% static 'img/300.jpeg'%}" style="border: black 2px solid;"
+                            class="rounded mx-auto d-block img-fluid" alt="not found">
+
+                        <br>
+                        <div class="mb-3">
+                            <label for="state" class="form-label">Email ID </label>
+                            <input type="email" class="form-control" id="state" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phoneNo" class="form-label">Transaction Id </label>
+                            <input type="number" class="form-control" id="phoneNo" name="transaction_id" required>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+
+                            <div class="form-outline">
+                                <label class="form-label fw-bold" for="lastName"> Screenshot of Transaction </label><br>
+                                <!-- <span style="color: red;">*</span><span>(any valid id such as  Passport, driving licence, voters' ID card, PAN card, Aadhaar card )</span> -->
+                                <input type="file" id="lastName" class="form-control form-control-lg"
+                                    name="payment_screenshot" required />
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    <!-- ########################### Payment Modal for Primavera  ###################################### -->
+
+    <div class="modal fade text-black" id="payment_primavera_id" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="staticBackdropLabel">Payment for Etabs</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/payment_primavera" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+
+
+                        <p><span style="color: red;">*</span> After Payment it's mandetory to upload the proof of
+                            payment </p>
+
+
+                        <img src="{% static 'img/700.jpeg'%}" style="border: black 2px solid;"
+                            class="rounded mx-auto d-block img-fluid" alt="not found">
+
+                        <br>
+                        <div class="mb-3">
+                            <label for="state" class="form-label">Email ID </label>
+                            <input type="email" class="form-control" id="state" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="transaction_id" class="form-label">Transaction Id </label>
+                            <input type="number" class="form-control" id="phoneNo" name="contact" required>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+
+                            <div class="form-outline">
+                                <label class="form-label fw-bold" for="lastName"> Screenshot of Transaction </label><br>
+                                <!-- <span style="color: red;">*</span><span>(any valid id such as  Passport, driving licence, voters' ID card, PAN card, Aadhaar card )</span> -->
+                                <input type="file" id="lastName" class="form-control form-control-lg"
+                                    name="payment_screenshot" required />
+                            </div>
+                            x
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+    <!-- ########################### Payment Modal for fusionplusstaad  ###################################### -->
+
+    <div class="modal fade text-black" id="payment_fusionplusstaad_id" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="staticBackdropLabel">Payment for Fusion + Staad Pro</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/payment_fusionplusstaad" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+
+
+                        <p><span style="color: red;">*</span> After Payment it's mandetory to upload the proof of
+                            payment </p>
+
+
+                        <img src="{% static 'img/500.jpeg'%}" style="border: black 2px solid;"
+                            class="rounded mx-auto d-block img-fluid" alt="not found">
+
+                        <br>
+                        <div class="mb-3">
+                            <label for="state" class="form-label">Email ID </label>
+                            <input type="email" class="form-control" id="state" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phoneNo" class="form-label">Transaction Id </label>
+                            <input type="number" class="form-control" id="phoneNo" name="transaction_id" required>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+
+                            <div class="form-outline">
+                                <label class="form-label fw-bold" for="lastName"> Screenshot of Transaction </label><br>
+                                <!-- <span style="color: red;">*</span><span>(any valid id such as  Passport, driving licence, voters' ID card, PAN card, Aadhaar card )</span> -->
+                                <input type="file" id="lastName" class="form-control form-control-lg"
+                                    name="payment_screenshot" required />
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+    <!-- ########################### Payment Modal for primaveraplusstaad  ###################################### -->
+
+    <div class="modal fade text-black" id="payment_primaveraplusstaad_id" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="staticBackdropLabel">Payment for Primavera + Staad</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/payment_primaveraplusstaad" method="post" enctype="multipart/form-data"> {%
+                        csrf_token %}
+
+
+
+                        <p><span style="color: red;">*</span> After Payment it's mandetory to upload the proof of
+                            payment </p>
+
+
+                        <img src="{% static 'img/500.jpeg'%}" style="border: black 2px solid;"
+                            class="rounded mx-auto d-block img-fluid" alt="not found">
+
+                        <br>
+                        <div class="mb-3">
+                            <label for="state" class="form-label">Email ID </label>
+                            <input type="email" class="form-control" id="state" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phoneNo" class="form-label">Transaction Id </label>
+                            <input type="number" class="form-control" id="phoneNo" name="transaction_id" required>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+
+                            <div class="form-outline">
+                                <label class="form-label fw-bold" for="lastName"> Screenshot of Transaction </label><br>
+                                <!-- <span style="color: red;">*</span><span>(any valid id such as  Passport, driving licence, voters' ID card, PAN card, Aadhaar card )</span> -->
+                                <input type="file" id="lastName" class="form-control form-control-lg"
+                                    name="payment_screenshot" required />
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+    <!-- ################################################################################## -->
+    <!-- <div class="container">
+
+    <center style="margin-bottom: 0px;">
+        <h2 class="text-white">
+           Special    Offer
+           </h2>
+    </center>
+</div> -->
+
+
+    <!-- <div class="row align-items-md-stretch">
+
+  <div class="col-md-4"></div>
+    <div class="col-md-4 mt-1" >
+      <div class="h-100 p-5 rounded-3 card4" style="border: rgb(0, 251, 255) solid 2px;">
+        <h2 class="text-white">
+          Fusion360 + STAAD Pro
+        </h2>
+        <p class="text-white">Creatively demonstrate the findings of your research work in a visually capturing way and check on yourself on how concisely you can make a poster.
+
+
+        </p> -->
+    <!-- <br>
+        <h5 class="text-white">Registration Fee: INR 500 
+        </h5> 
+        
+        <br>
+        <button type="button" class="btn fw-bold btn-lg mx-2" style="background-color: #E0F780;" style="text-decoration: none; color:black; font-weight: 700;" data-bs-toggle="modal" data-bs-target="#reg_fusionplusstaad">
+            Register
+        </button>
+        <button type="button" class="btn fw-bold btn-lg " style="background-color: rgb(175 251 255);" style="text-decoration: none; color:black; font-weight: 700;"  data-bs-toggle="modal" data-bs-target="#payment_fusionplusstaad_id">Pay Now!!</button> -->
+
+
+    <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Register</button> -->
+    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScgz9LwUYsA-bVnF27DhTHDWV9g8LmFvgzdZE7tFdhZe9Hccw/viewform">    <button type="button" class="btn fw-bold btn-lg " style="background-color: rgb(175 251 255);" style="text-decoration: none; color:black; font-weight: 700;" >Pay Now!!</button></a>  -->
+
+
+    <!--     <button class="btn btn-success" disabled="disabled"> Coming Soon</button> -->
+
+    <!-- </div>
+    </div>  -->
+
+
+
+    <!--    <div class="col-md-2"></div>
+    <div class="col-md-4 mt-1" >
+      <div class="h-100 p-5 rounded-3 card4" style="border: rgb(0, 251, 255) solid 2px;">
+        <h3 class="text-white">
+            PRIMAVERA + STAAD Pro
+        </h3>
+        <br>
+        <h5 class="text-white">Registration Fee: INR 1000 
+        </h5> 
+       
+<br>
+        <button type="button" class="btn fw-bold btn-lg mx-2" style="background-color: #E0F780;" style="text-decoration: none; color:black; font-weight: 700;" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+            Register
+          </button>
+          <button type="button" class="btn fw-bold btn-lg " style="background-color: rgb(175 251 255);" style="text-decoration: none; color:black; font-weight: 700;"  data-bs-toggle="modal" data-bs-target="#payment_primaveraplusstaad_id">Pay Now!!</button>
+          
+        
+
+      </div>
+    </div>
+-->
+
+    <!-- <hr style="background: none;"> -->
+
+
+
+
+    <!-- <hr style="background: none;"> -->
+
+
+
+    <!-- <hr style="background: none;"> -->
+
+
+
+    </div>
+    </div>
+
+
+
+
+
+    <!-- modal for reg special offer  -->
+    <div class="modal fade text-black" id="ceo" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-black" id="staticBackdropLabel">Registration Form</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/ceo" method="post">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                            <label for="phoneNo" class="form-label">Contact No. </label>
+                            <input type="number" class="form-control" id="phoneNo" name="contact" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email ID</label>
+                            <input type="text" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Are you a Professional/Student?</label>
+                            <input type="text" class="form-control" id="status" name="status" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="org" class="form-label">College/Organisation</label>
+                            <input type="text" class="form-control" id="org" name="org">
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer  -->
+    {% include "includes/design_footer.html" %}
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script> -->
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+
+</html>

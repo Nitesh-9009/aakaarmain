@@ -1,0 +1,873 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Submission Form</title>
+
+
+
+  <!-- Fevicon  -->
+
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://raw.githubusercontent.com/Himanshi62/AAKAAR/main/aakar-website/static/img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    html,
+    body * {
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background:
+        /* linear-gradient(rgba(246, 247, 249, 0.8),
+          rgba(246, 247, 249, 0.8)), */
+        url("https://github.com/hvm0901/AakaarStatic/assets/135495501/05407f11-c4d1-481e-8d4c-9541d2000422") no-repeat center center fixed;
+      background-size: cover;
+      background: absolute;
+      
+    }
+
+    input::placeholder {
+      color: rgb(234, 111, 111);
+      text-align: right;
+      padding-right: 3rem;
+    }
+
+    /* .container {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 100px;
+} */
+
+    .frame {
+      height: auto;
+      margin-top: 1px;
+      width: 430px;
+      background:
+        linear-gradient(rgba(35, 43, 85, 0.75),
+          rgba(35, 43, 85, 0.95)),
+        url(https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center center;
+      background-size: cover;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: solid 1px rgba(255, 255, 255, .5);
+      border-radius: 5px;
+      box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: all .5s ease;
+      padding-bottom: 50px;
+    }
+
+    .frame-long {
+      height: 615px;
+    }
+
+    .frame-short {
+      height: 400px;
+      margin-top: 50px;
+      box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+    }
+
+    /* .nav {
+  width: 100%;
+  height: 100px;
+  padding-top: 40px;
+  opacity: 1;
+  transition: all .5s ease;
+} */
+
+    /* .nav-up {
+  transform: translateY(-100px);
+  opacity: 0;
+} */
+
+    li {
+      padding-left: 10px;
+      font-size: 18px;
+      display: inline;
+      text-align: left;
+      text-transform: uppercase;
+      padding-right: 10px;
+      color: #ffffff;
+    }
+
+    .signin-active a {
+      padding-bottom: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: solid 2px #1059FF;
+      transition: all .25s ease;
+      cursor: pointer;
+    }
+
+    .signin-inactive a {
+      padding-bottom: 0;
+      color: rgba(255, 255, 255, .3);
+      text-decoration: none;
+      border-bottom: none;
+      cursor: pointer;
+    }
+
+    .signup-active a {
+      cursor: pointer;
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: solid 2px #1059FF;
+      padding-bottom: 10px;
+    }
+
+    .signup-inactive a {
+      cursor: pointer;
+      color: rgba(255, 255, 255, .3);
+      text-decoration: none;
+      transition: all .25s ease;
+    }
+
+    .form-signin {
+      width: 430px;
+      /* height: 375px; */
+      font-size: 16px;
+      font-weight: 300;
+      padding-left: 37px;
+      padding-right: 37px;
+      padding-top: 55px;
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .form-signin-left {
+      transform: translateX(-400px);
+      opacity: .0;
+    }
+
+    .form-signup {
+      width: 430px;
+      /* height: 375px; */
+      font-size: 16px;
+      font-weight: 300;
+      padding-left: 37px;
+      padding-right: 37px;
+      padding-top: 55px;
+      position: relative;
+      top: -375px;
+      left: 400px;
+      opacity: 0;
+      transition: all .5s ease;
+    }
+
+    .form-signup-left {
+      transform: translateX(-399px);
+      opacity: 1;
+    }
+
+    .form-signup-down {
+      top: 0px;
+      opacity: 0;
+    }
+
+    .success {
+      width: 80%;
+      /* height: 150px; */
+      text-align: center;
+      position: relative;
+      top: -890px;
+      left: 450px;
+      opacity: .0;
+      transition: all .8s .4s ease;
+    }
+
+    .success-left {
+      transform: translateX(-406px);
+      opacity: 1;
+    }
+
+    .successtext {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 300;
+      margin-top: -35px;
+      padding-left: 37px;
+      padding-right: 37px;
+    }
+
+    #check path {
+      stroke: #ffffff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: .85px;
+      stroke-dasharray: 60px 300px;
+      stroke-dashoffset: -166px;
+      fill: rgba(255, 255, 255, .0);
+      transition: stroke-dashoffset 2s ease .5s, fill 1.5s ease 1.0s;
+    }
+
+    #check.checked path {
+      stroke-dashoffset: 33px;
+      fill: rgba(255, 255, 255, .03);
+    }
+
+    .form-signin input,
+    .form-signup input {
+      color: #ffffff;
+      font-size: 13px;
+    }
+
+    .form-styling {
+      width: 100%;
+      height: 35px;
+      padding-left: 15px;
+      border: none;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, .2);
+    }
+
+    label {
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 13px;
+      padding-left: 15px;
+      padding-bottom: 10px;
+      color: rgba(255, 255, 255, .7);
+      display: block;
+    }
+
+    :focus {
+      outline: none;
+    }
+
+    .form-signin input:focus,
+    textarea:focus,
+    .form-signup input:focus,
+    textarea:focus {
+      background: rgba(255, 255, 255, .3);
+      border: none;
+      padding-right: 40px;
+      transition: background .5s ease;
+    }
+
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+      position: absolute;
+      display: none;
+    }
+
+    [type="checkbox"]:not(:checked)+label,
+    [type="checkbox"]:checked+label {
+      position: relative;
+      padding-left: 85px;
+      padding-top: 2px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    [type="checkbox"]:not(:checked)+label:before,
+    [type="checkbox"]:checked+label:before,
+    [type="checkbox"]:not(:checked)+label:after,
+    [type="checkbox"]:checked+label:after {
+      content: '';
+      position: absolute;
+    }
+
+    [type="checkbox"]:not(:checked)+label:before,
+    [type="checkbox"]:checked+label:before {
+      width: 65px;
+      height: 30px;
+      background: rgba(255, 255, 255, .2);
+      border-radius: 15px;
+      left: 0;
+      top: -3px;
+      transition: all .2s ease;
+    }
+
+    [type="checkbox"]:not(:checked)+label:after,
+    [type="checkbox"]:checked+label:after {
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, .7);
+      border-radius: 50%;
+      top: 7px;
+      left: 10px;
+      transition: all .2s ease;
+    }
+
+    /* on checked */
+    [type="checkbox"]:checked+label:before {
+      background: #0F4FE6;
+    }
+
+    [type="checkbox"]:checked+label:after {
+      background: #ffffff;
+      top: 7px;
+      left: 45px;
+    }
+
+    [type="checkbox"]:checked+label .ui,
+    [type="checkbox"]:not(:checked)+label .ui:before,
+    [type="checkbox"]:checked+label .ui:after {
+      position: absolute;
+      left: 6px;
+      width: 65px;
+      border-radius: 15px;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 22px;
+      transition: all .2s ease;
+    }
+
+    [type="checkbox"]:not(:checked)+label .ui:before {
+      content: "no";
+      left: 32px;
+      color: rgba(255, 255, 255, .7);
+    }
+
+    [type="checkbox"]:checked+label .ui:after {
+      content: "yes";
+      color: #ffffff;
+    }
+
+    [type="checkbox"]:focus+label:before {
+      box-sizing: border-box;
+      margin-top: -1px;
+    }
+
+    .btn-signup {
+      float: left;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13px;
+      text-align: center;
+      color: #ffffff;
+      padding-top: 8px;
+      width: 100%;
+      height: 35px;
+      border: none;
+      border-radius: 20px;
+      margin-top: 23px;
+      background-color: #1059FF;
+    }
+
+    .btn-signin {
+      float: left;
+      padding-top: 8px;
+      width: 100%;
+      height: 35px;
+      border: none;
+      border-radius: 20px;
+      margin-top: -8px;
+    }
+
+    .btn-animate {
+      float: left;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13px;
+      text-align: center;
+      color: rgba(255, 255, 255, 1);
+      padding-top: 8px;
+      width: 100%;
+      height: 35px;
+      border: none;
+      border-radius: 20px;
+      margin-top: 23px;
+      background-color: rgba(16, 89, 255, 1);
+      left: 0px;
+      top: 0px;
+      transition: all .5s ease, top .5s ease .5s, height .5s ease .5s, background-color .5s ease .75s;
+    }
+
+    .abstract {
+      float: left;
+      padding-top: 5px;
+      width: 100%;
+      height: 35px;
+      border: none;
+      border-radius: 10px;
+      margin-top: -8px;
+      float: left;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13px;
+      text-align: center;
+      color: rgba(255, 255, 255, 1);
+      padding-top: 8px;
+      width: 100%;
+      height: 35px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1px;
+      background-color: rgba(16, 89, 255, 1);
+      left: 0px;
+      top: 0px;
+      transition: all .5s ease, top .5s ease .5s, height .5s ease .5s, background-color .5s ease .75s;
+    }
+
+    .btn-animate-grow {
+      width: 130%;
+      height: 625px;
+      position: relative;
+      left: -55px;
+      top: -420px;
+      color: rgba(255, 255, 255, 0);
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    a.btn-signup:hover,
+    a.btn-signin:hover {
+      cursor: pointer;
+      background-color: #0F4FE6;
+      transition: background-color .5s;
+    }
+
+    .forgot {
+      height: 100px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      padding-top: 24px;
+      margin-top: -535px;
+      border-top: solid 1px rgba(255, 255, 255, .3);
+      transition: all 0.5s ease;
+    }
+
+    .forgot-left {
+      transform: translateX(-400px);
+      opacity: 0;
+    }
+
+    .forgot-fade {
+      opacity: 0;
+    }
+
+    .forgot a {
+      color: rgba(255, 255, 255, .3);
+      font-weight: 400;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .welcome {
+      width: 100%;
+      height: 50px;
+      position: relative;
+      color: rgba(35, 43, 85, 0.75);
+      opacity: 0;
+      transition: transform 1.5s ease .25s, opacity .1s ease 1s;
+    }
+
+    .welcome-left {
+      transform: translateY(-780px);
+      opacity: 1;
+    }
+
+    .cover-photo {
+      height: 150px;
+      position: relative;
+      left: 0px;
+      top: -900px;
+      background:
+        linear-gradient(rgba(35, 43, 85, 0.75),
+          rgba(35, 43, 85, 0.95)),
+        url(https://img.icons8.com/bubbles/100/000000/user.png);
+      background-size: cover;
+      opacity: 0;
+      transition: all 1.5s ease 0.55s;
+    }
+
+    .cover-photo-down {
+      top: -575px;
+      opacity: 1;
+    }
+
+    .profile-photo {
+      height: 125px;
+      width: 125px;
+      position: relative;
+      border-radius: 70px;
+      left: 155px;
+      top: -1000px;
+      background: url(https://img.icons8.com/bubbles/100/000000/user.png);
+      background-size: 100% 135%;
+      background-position: 100% 100%;
+      opacity: 0;
+      transition: top 1.5s ease 0.35s, opacity .75s ease .5s;
+      border: solid 3px #ffffff;
+    }
+
+    .profile-photo-down {
+      top: -636px;
+      opacity: 1;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 35px;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .btn-goback {
+      position: relative;
+      margin-right: auto;
+      top: -400px;
+      float: left;
+      padding: 8px;
+      width: 83%;
+      margin-left: 37px;
+      margin-right: 37px;
+      height: 35px;
+      border-radius: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13px;
+      text-align: center;
+      color: #1059FF;
+      margin-top: -8px;
+      border: solid 1px #1059FF;
+      opacity: 0;
+      transition: top 1.5s ease 0.35s, opacity .75s ease .5s;
+    }
+
+    .btn-goback-up {
+      top: -1080px;
+      opacity: 1;
+    }
+
+    a.btn-goback:hover {
+      cursor: pointer;
+      background-color: #0F4FE6;
+      transition: all .5s;
+      color: #ffffff;
+    }
+
+    /* refresh button styling */
+
+    #refresh {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffffff;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+      padding: 13px 0 0 13px;
+    }
+
+    .refreshicon {
+      fill: #d3d3d3;
+      transform: rotate(0deg);
+      transition: fill .25s ease, transform .25s ease;
+    }
+
+    .refreshicon:hover {
+      cursor: pointer;
+      fill: #1059FF;
+      transform: rotate(180deg);
+    }
+
+    .middle {
+      margin-top: 5px;
+      display: flex;
+      margin-left: 37%;
+      margin-right: 38%;
+      justify-content: space-between;
+    }
+
+    .chang{
+
+      margin-top: 0px; 
+      margin-bottom: 0;
+       padding-top: 0px; 
+       padding-bottom: -10px;
+      z-index: 2000;
+        background-color: white;
+        border: 2px solid red; 
+    }
+    
+    @media(min-width: 400px){
+      .chang{
+        margin-right: -50;
+        padding-left: 20;
+      }
+    }
+
+    @media(max-height: 900px){
+      .chang{
+        margin-right:-22%;
+        padding-left: 10%;
+      
+      }
+    }
+
+
+
+  </style>
+  <script>
+    $(function () {
+      $(".btn").click(function () {
+        $(".form-signin").toggleClass("form-signin-left");
+        $(".form-signup").toggleClass("form-signup-left");
+        $(".frame").toggleClass("frame-long");
+        $(".signup-inactive").toggleClass("signup-active");
+        $(".signin-active").toggleClass("signin-inactive");
+        $(".forgot").toggleClass("forgot-left");
+        $(this).removeClass("idle").addClass("active");
+      });
+    });
+
+    $(function () {
+      $(".btn-signup").click(function () {
+        $(".nav").toggleClass("nav-up");
+        $(".form-signup-left").toggleClass("form-signup-down");
+        $(".success").toggleClass("success-left");
+        $(".frame").toggleClass("frame-short");
+      });
+    });
+
+    $(function () {
+      $(".btn-signin").click(function () {
+        $(".btn-animate").toggleClass("btn-animate-grow");
+        $(".welcome").toggleClass("welcome-left");
+        $(".cover-photo").toggleClass("cover-photo-down");
+        $(".frame").toggleClass("frame-short");
+        $(".profile-photo").toggleClass("profile-photo-down");
+        $(".btn-goback").toggleClass("btn-goback-up");
+        $(".forgot").toggleClass("forgot-fade");
+      });
+    });
+  </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+
+<body>
+
+  {% include "includes/design_header.html" %}
+  <nav>
+    <div class="nav nav-tabs middle" id="nav-tab" role="tablist">
+      <button class="btn btn-outline-primary active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+        type="button" role="tab" aria-controls="nav-home" aria-selected="false"
+        style="border: 2px solid rgb(0, 0, 0);background-color: rgba(35, 43, 85,0.75);">
+        <h4>PARTICIPANTS</h4>
+      </button>
+
+
+
+
+
+      <button class="btn btn-outline-primary" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled"
+        type="button" role="tab" aria-controls="nav-disabled" aria-selected="false"
+        style="border: 2px solid black;background-color: rgba(35, 43, 85,0.75);">
+        <h4>VISITORS</h4>
+      </button>
+    </div>
+
+
+  </nav>
+
+
+
+
+
+
+  <div class="tab-content" id="nav-tabContent" style="position: relative;">
+    <div class="tab-pane fade show active " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+
+
+
+      <div class="container">
+        <div class="frame">
+          <div class="nav">
+            <ul class="links">
+              <li class="signin-active"><a class="btn">ICES' Paper Presentation Registration Form </a></li>
+              <li style="text-align: centre ; font-size: 0.8rem; "><i> Deadline for registration and submission of
+                  Abstract
+                  & Authentication Letter: 5th January 2024</i></li>
+            </ul>
+          </div>
+          <div ng-app ng-init="checked = false">
+            <form class="form-signin" action="submitted" method="post" name="form" enctype="multipart/form-data">
+              {%csrf_token%}
+              <label for="author">Name of Participant 1</label>
+              <input class="form-styling" type="text" name="author" placeholder="*mandatory" required />
+              <label for="password">Email ID (Institute/University)
+              </label>
+              <input class="form-styling" type="email" name="email" placeholder="*mandatory" required />
+
+              <label for="mobileNo">Contact no. </label>
+              <input class="form-styling" type="tel" name="mobileNo" pattern="[0-9]{10}"
+                title="Please enter a 10-digit phone number" placeholder="*mandatory" required />
+              </span>
+
+
+              <label for="colgName">Name of Institute/University </label>
+              <input class="form-styling" type="text" name="colgName" placeholder="*mandatory" required />
+              <label for="degree">Degree & Year of Study ( Eg. BTech 4th year, PhD 2nd year) </label>
+              <input class="form-styling" type="text" name="degree" placeholder="*mandatory" required />
+              <label for="co1">Name of Participant 2 </label>
+              <input class="form-styling" type="text" name="co1" placeholder="" />
+              <label for="mail1">Mail ID</label>
+              <input class="form-styling" type="email" name="mail1" placeholder="" />
+              <label for="co2">Name of Participant 3 </label>
+              <input class="form-styling" type="text" name="co2" placeholder="" />
+              <label for="mail2">Mail ID</label>
+              <input class="form-styling" type="email" name="mail2" placeholder="" />
+              <label for="co3">Name of Participant 4 </label>
+              <input class="form-styling" type="text" name="co3" placeholder="" />
+              <label for="mail3">Mail ID</label>
+              <input class="form-styling" type="email" name="mail3" placeholder="" />
+              <label for="field">Field</label>
+              <select id="field" name="field" class="form-styling" required>
+                <option value=" mandatory" selected disabled>*Mandatory </option>
+                <option value="Construction Management and Methods">Construction Management and Methods</option>
+                <option value="Concrete Technology and Building Materials">Concrete Technology and Building Materials
+                </option>
+                <option value="Geotechnical Engineering">Geotechnical Engineering</option>
+                <option value="Hydraulic and Water Resources Engineering/Ocean Engineering">Hydraulic and Water
+                  Resources
+                  Engineering/Ocean Engineering</option>
+                <option value="Remote Sensing (GPS/GIS)">Remote Sensing (GPS/GIS)</option>
+                <option value="Structural Engineering">Structural Engineering</option>
+                <option value="Transportation Engineering">Transportation Engineering</option>
+                <option value="Environmental Engineering">Environmental Engineering</option>
+                <option value="Architecture, Infrastructure and Urban Science">Architecture, Infrastructure and Urban
+                  Science</option>
+                <option value="Other Field">Other Field</option>
+              </select>
+              <label for="others">Other Field </label>
+              <input class="form-styling" type="text" name="others" placeholder="" />
+              <label for="title">Title of Paper</label>
+              <input class="form-styling" type="text" name="title" placeholder="*mandatory" required />
+
+
+              <label for="abstract">Abstract (Read Guidelines Before Submitting)</label>
+              <input name="abstract" type="file" accept="application/pdf, application/vnd.ms-excel" required />
+              <p></p>
+              <label for="authentication">Authentication Letter (Read Guidelines Before Submitting)</label>
+
+
+
+              <input type="file" name="authentication" accept="application/pdf, application/vnd.ms-excel" placeholder=""
+                required /> 
+                <label for="referral" style="margin-top: 10px;">CR Referral</label>
+                <input class="form-styling" type="text" name="referral" placeholder="" />
+              <button class="btn-animate" type="submit" style="text-decoration: none;">Submit</button>
+
+            </form>
+
+
+
+
+          </div>
+
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+
+
+    <div class="container">
+      <div class="frame" id="nav-disabled">
+        <div class="nav">
+          <ul class="links">
+            <li class="signin-active"><a class="btn">ICES' Paper Presentation Visitors Form </a></li>
+            <li style="text-align: centre ; font-size: 0.8rem; "><i>
+                Please submit a valid ID proof for registration
+              </i></li>
+          </ul>
+        </div>
+        <div ng-app ng-init="checked = false">
+<form class="form-signin" action="submitted" method="post" name="form" enctype="multipart/form-data" onsubmit="return showSuccessMessage();">
+    {% csrf_token %}
+    <label for="author">Name</label>
+    <input class="form-styling" type="text" name="author" placeholder="*mandatory" required />
+
+    <label for="mobileNo">Contact no. </label>
+    <input class="form-styling" type="tel" name="mobileNo" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" placeholder="*mandatory" required />
+
+    <label for="colgName">Email</label>
+    <input class="form-styling" type="email" name="colgName" placeholder="*mandatory" required />
+
+    <label for="authentication">ID Proof(Any authorized ID)</label>
+    <input type="file" name="authentication" accept="application/pdf, application/vnd.ms-excel" placeholder="" required />
+
+    <button class="btn-animate" type="submit" style="text-decoration: none;">Submit</button>
+</form>
+
+<script>
+    function showSuccessMessage() {
+        alert("Submitted successfully!");
+        // You can also customize the display of the success message using a modal or other UI elements.
+        return true; // Returning true allows the form to be submitted.
+    }
+</script>
+
+
+
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+{% include "includes/design_footer.html" %}
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+
+</html>

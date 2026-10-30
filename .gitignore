@@ -1,0 +1,39 @@
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment variables & secrets
+.env
+*.env
+
+# SQLite local database
+db.sqlite3
+db.sqlite3-journal
+*.sqlite3
+
+# Logs
+*.log
+runserver.log
+
+# Static collection output (re-generated on deploy)
+staticfiles/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Backup and scratch folders
+.git_corrupted/
+.backup_*
+.cloud-attachments/
+.freebuff/
+.preview_shots/
+.stitch_design/
+screenshots/

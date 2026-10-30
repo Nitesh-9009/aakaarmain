@@ -1,0 +1,527 @@
+{% load static %}
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crackathon - Aakaar | IIT Bombay</title>
+    <meta name="description"
+        content="Leverage the power of Artificial Intelligence to revolutionize road maintenance. This challenge invites you to develop a state-of-the-art computer vision model capable of automatically detecting and classifying road defects like cracks, paving the way for smarter and resilient infrastructure.">
+    <meta name="keywords"
+        content="Aakaar, Crackathon,IIT Bombay, Technical Festival">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'fevicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fevicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fevicon/favicon-16x16.png' %}">
+    <link rel="manifest" href=" {% static 'fevicon/site.webmanifest' %}">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CORE STYLES FROM PAPER PRESENTATION --- */
+        :root {
+            --color-bg: #111111;
+            --color-text: #EAEAEA;
+            --color-text-muted: #a0a0a0;
+            --color-primary: #9D00FF; /* Vibrant Purple */
+            --color-primary-light: #bb63ff;
+            --color-border: #444444;
+            --font-base: "Bai Jamjuree", sans-serif;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-base);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-text);
+            font-weight: 700;
+        }
+
+        .text-brand { color: var(--color-primary) !important; }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        a:hover { color: var(--color-primary-light); }
+
+        section { padding-top: 80px; padding-bottom: 80px; }
+
+        .full-height {
+            min-height: 85vh; /* Adjusted slightly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(17, 17, 17, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .navbar-brand img { height: 50px; width: auto; max-width: 150px; }
+
+        /* Buttons */
+        .btn-brand {
+            background-color: var(--color-primary);
+            color: #fff !important;
+            border: none;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 12px 28px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .btn-brand:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-2px);
+        }
+        .btn-outline-light { border-color: var(--color-border); color: var(--color-text); }
+        .btn-outline-light:hover { background-color: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+        
+        /* Disabled Button Style */
+        .btn:disabled, .btn.disabled {
+            background-color: #333;
+            border-color: #444;
+            color: #888;
+            opacity: 1;
+        }
+
+        /* Cards / Panels */
+        .card-custom {
+            background-color: rgba(34, 34, 34, 0.5);
+            border: 1px solid var(--color-border);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        /* --- LOGIQ SPECIFIC STYLES --- */
+        
+        /* Custom Tab Styling to match Theme */
+        .nav-tabs { border-bottom: 1px solid var(--color-border); }
+        
+        .nav-tabs .nav-link {
+            color: var(--color-text-muted);
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            background: transparent;
+        }
+        
+        .nav-tabs .nav-link:hover { color: var(--color-primary-light); }
+        
+        .nav-tabs .nav-link.active {
+            color: var(--color-primary);
+            background-color: transparent;
+            border-bottom: 3px solid var(--color-primary);
+        }
+
+        .tab-content {
+            background-color: rgba(34, 34, 34, 0.3);
+            border: 1px solid var(--color-border);
+            border-top: none;
+            border-radius: 0 0 1rem 1rem;
+            padding: 2rem;
+        }
+
+        .tab-pane ul { list-style-type: none; padding-left: 0; }
+        .tab-pane li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        .tab-pane li::before {
+            content: "\F26E"; /* Bootstrap check circle icon code */
+            font-family: "bootstrap-icons";
+            color: var(--color-primary);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Accordion Customization */
+        .accordion-button {
+            background-color: #222;
+            color: var(--color-text);
+            border: none;
+            box-shadow: none;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: var(--color-primary);
+            color: #fff;
+        }
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        .accordion-item {
+            background-color: transparent;
+            border: 1px solid var(--color-border);
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .accordion-body {
+            background-color: rgba(34, 34, 34, 0.3);
+            color: var(--color-text-muted);
+        }
+
+        /* Modal Customization */
+        .modal-content {
+            background-color: #222;
+            border: 1px solid var(--color-primary);
+            color: var(--color-text);
+        }
+        .modal-header { border-bottom: 1px solid var(--color-border); }
+        .modal-footer { border-top: 1px solid var(--color-border); }
+        .btn-close { filter: invert(1); }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: var(--color-text-muted);
+            border-top: 1px solid var(--color-border);
+            padding: 2.5rem 0;
+        }
+        .social-icons a {
+            font-size: 1.2rem;
+            margin-left: 15px;
+            color: var(--color-text-muted);
+            transition: 0.3s;
+        }
+        .social-icons a:hover { color: var(--color-primary); }
+    </style>
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    {% include "includes/design_header.html" %}
+
+    <main id="content-wrapper">
+
+        <section id="hero" class="full-height">
+            <div class="container">
+                <div class="row align-items-center" data-aos="fade-up">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <img src="{% static 'compi/Crackathon.jpeg' %}" loading="lazy"
+                             class="img-fluid rounded shadow-lg border border-secondary" alt="LogiQ Poster">
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <h1 class="display-3 fw-bold mb-2">CRACKA<span class="text-brand">THON</span></h1>
+                        
+                        <div class="card-custom p-4 mb-4">
+                            <h3 class="mb-1"><span class="text-brand">INR 20,000</span></h3>
+                            <p class="mb-0 text-muted">Total Prize Pool</p>
+                        </div>
+
+                        <a 
+                            class="btn btn-brand btn-lg" download>
+                            <i class="bi me-2"></i> Registeration Closed
+                        </a>
+
+                        <!-- <div class="d-flex flex-column flex-md-row gap-3">
+                            <script lang="javascript">
+                                function welcome() { alert('First Register in order to Access Quiz link !') }
+                            </script>
+
+                            {% if user.is_authenticated %}
+                                {% if is_filled %}
+                                    <button class="btn btn-success btn-lg disabled" type="button" disabled>
+                                        <i class="bi bi-check-circle-fill me-2"></i> Registered
+                                    </button>
+                                {% else %}
+                                    <a href="register-logiq" class="btn btn-brand btn-lg">
+                                        Register Now
+                                    </a>
+                                {% endif %}
+                            {% else %}
+                                <a href="{% provider_login_url 'google' %}" class="btn btn-brand btn-lg">
+                                    Sign Up to Register
+                                </a>
+                            {% endif %}
+                        </div> -->
+
+                        <!-- <p class="mt-4 text-muted small">
+                            <i class="bi bi-info-circle me-1"></i> 
+                            LogiQ will be a three-phase quiz series with each release in November, December, and January.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="pt-0">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <nav>
+                    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab">ABOUT</button>
+                        <!-- <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab">STRUCTURE</button> -->
+                        <!-- <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab">TIMELINE</button> -->
+                        <button class="nav-link" id="nav-incentives-tab" data-bs-toggle="tab" data-bs-target="#nav-incentives" type="button" role="tab">INCENTIVES</button>
+                        <button class="nav-link" id="nav-rules-tab" data-bs-toggle="tab" data-bs-target="#nav-rules" type="button" role="tab">RULES</button>
+                        <!-- <button class="nav-link" id="nav-winners-tab" data-bs-toggle="tab" data-bs-target="#nav-winners" type="button" role="tab">WINNERS</button> -->
+                    </div>
+                </nav>
+                
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
+                        <h3 class="mb-4">About <span class="text-brand">Crackathon</span></h3>
+                        <ul>
+                            <li>The competition spans from core engineering fundamentals to advanced analytical problem statements.</li>
+
+                            <li>It is open to students from all academic years, ensuring inclusivity across experience levels.</li>
+
+                            <li>The problems are application-oriented and inspired by real-world engineering scenarios.</li>
+
+                            <li>The focus is on evaluating depth of conceptual understanding rather than correctness alone.</li>
+
+                            <li>Participants are challenged to design, analyze, and optimize machine learning and computer vision models.</li>
+
+                        </ul>
+                    </div>
+
+                    <!-- <div class="tab-pane fade" id="nav-profile" role="tabpanel">
+                        <h3 class="mb-4">Quiz <span class="text-brand">Structure</span></h3>
+                        <ul>
+                            <li>LogiQ will be a three-phase quiz series with releases in November, December, and January.</li>
+                            <li>Consists of MCQs, True/False, Fill in blanks, and Match the Following.</li>
+                            <li>Each answer is unique.</li>
+                            <li>All participants have to solve questions in a specified time interval.</li>
+                        </ul>
+                    </div> -->
+<!-- 
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel">
+                        <h3 class="mb-4">Event <span class="text-brand">Timeline</span></h3>
+                        <ul>
+                            <li><strong>Phase 1:</strong> 5th November, 11AM - 11PM</li>
+                            <li><strong>Phase 2:</strong> 9th December, 11AM - 11PM</li>
+                            <li><strong>Phase 3:</strong> 7th January, 11AM - 11PM</li>
+                        </ul>
+                    </div> -->
+
+                    <div class="tab-pane fade" id="nav-incentives" role="tabpanel">
+    <h3 class="mb-4">Key <span class="text-brand">Incentives</span></h3>
+    <div class="row g-4">
+
+        <!-- Prizes -->
+        <div class="col-md-6">
+            <div class="card-custom p-3 h-100 d-flex align-items-center">
+                <i class="bi bi-trophy-fill fs-2 text-brand me-3"></i>
+                <div>
+                    <h5>Prizes</h5>
+                    <p class="mb-0 text-muted">
+                        Cash prizes worth INR 20,000 awarded to the top 5 performers in the overall series.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="col-md-6">
+            <div class="card-custom p-3 h-100 d-flex align-items-center">
+                <i class="bi bi-patch-check-fill fs-2 text-brand me-3"></i>
+                <div>
+                    <h5>Certificates</h5>
+                    <p class="mb-0 text-muted">
+                        Participation and merit certificates for top-performing participants.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Value -->
+        <div class="col-md-6">
+            <div class="card-custom p-3 h-100 d-flex align-items-center">
+                <i class="bi bi-file-earmark-text-fill fs-2 text-brand me-3"></i>
+                <div>
+                    <h5>Resume Value</h5>
+                    <p class="mb-0 text-muted">
+                        Strong resume point highlighting real-world problem solving in ML and engineering.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+                    <div class="tab-pane fade" id="nav-rules" role="tabpanel">
+                        <h3 class="mb-4">Rules & <span class="text-brand">Regulations</span></h3>
+                        <ul>
+                            <li>Open to Undergraduate, Postgraduate, and PhD students from any college.</li>
+                            <li>Tie-breaker: Submission timestamp.</li>
+                            <li>Team Aakaar, IIT Bombay, has the final decision-making authority.</li>
+                            <li>Dataset Usage: Participants must use only the provided dataset for training. No external datasets are allowed.</li>
+                            <li>Pre-trained Models: Pre-trained models are allowed and encouraged.</li>
+                            <li>Team Size: Teams are limited to a maximum of 4 members.</li>
+                            <li>Final Decision: The final ranking will be based on the mAP score calculated on the private test set. The organizers' decision is final.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="faq">
+            <div class="container" data-aos="fade-up">
+                <div class="row text-center mb-5">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">Frequently Asked <span class="text-brand">Questions</span></h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                        Who is eligible to take part in Crackathon?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        This competition is open to all college students.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                        How to register for Crackathon?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Go to Register > Fill all your valid details > You will be registered.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                        Is it free to register for Crackathon?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, there is no registration fee for Crackathon.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                        Is the competition completely online?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, Crackathon is conducted entirely online, and all submissions will be made through unstop.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                        Can I register for all phases of LogiQ?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, participants can take part in all phases of LOGiQ. Your best score will be taken into account for the Overall Quiz Result.
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    {% include "includes/design_footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize AOS (Animate On Scroll)
+            AOS.init({
+                offset: 100,
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+            });
+
+            // Initialize Particles.js
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js',
+                    {
+                        "particles": {
+                            "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+                            "color": { "value": "#9D00FF" }, // Purple particles
+                            "shape": { "type": "circle" },
+                            "opacity": { "value": 0.5, "random": true },
+                            "size": { "value": 3, "random": true },
+                            "line_linked": { "enable": false },
+                            "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+                        },
+                        "interactivity": {
+                            "detect_on": "canvas",
+                            "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": false }, "resize": true },
+                            "modes": { "bubble": { "distance": 250, "size": 5, "duration": 2, "opacity": 0.8, "speed": 3 } }
+                        },
+                        "retina_detect": true
+                    });
+            }
+        });
+    </script>
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+
+</html>

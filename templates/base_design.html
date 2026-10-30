@@ -1,0 +1,26 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AAKAAR | IIT Bombay{% endblock %}</title>
+    <meta name="description"
+          content="AAKAAR - Asia's largest Civil Engineering technical festival by the Civil Engineering Association, IIT Bombay.">
+    <link rel="icon" type="image/png" href="{% static 'design/img/emblem.png' %}">
+    {% include "includes/design_assets.html" %}
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+{% include "includes/design_header.html" %}
+
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+    <div class="flex flex-col w-full">
+        {% block content %}{% endblock %}
+    </div>
+</main>
+
+{% include "includes/design_footer.html" %}
+<script src="{% static 'design/chrome.js' %}"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

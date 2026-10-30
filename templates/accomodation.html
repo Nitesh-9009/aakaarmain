@@ -1,0 +1,522 @@
+{% load static %}
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospitality - Aakaar | IIT Bombay</title>
+    <meta name="description" content="Accommodation and Hospitality services for Aakaar, IIT Bombay.">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'fevicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fevicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fevicon/favicon-16x16.png' %}">
+    <link rel="manifest" href=" {% static 'fevicon/site.webmanifest' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-bg: #111111;
+            --color-card-bg: rgba(30, 30, 30, 0.6);
+            --color-text: #EAEAEA;
+            --color-text-muted: #a0a0a0;
+            --color-primary: #00D1FF; /* Cyan for Aakaar Brand */
+            --color-primary-dark: #008fb3;
+            --color-accent: #FFD700; /* Gold for "Premium/Hospitality" feel */
+            --color-danger: #ff4d4d;
+            --color-border: #444444;
+            --font-base: "Bai Jamjuree", sans-serif;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-base);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Particles Background */
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-text);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .text-brand { color: var(--color-primary) !important; }
+        .text-accent { color: var(--color-accent) !important; }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(17, 17, 17, 0.9) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--color-border);
+            padding: 15px 0;
+        }
+        .nav-link {
+            color: var(--color-text) !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+        .nav-link:hover { color: var(--color-primary) !important; }
+
+       
+       /* Hero Section */
+        .hero-section {
+            /* 1. Background Definition */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://img.veenaworld.com/wp-content/uploads/2021/03/Gateway-of-India-Mumbai-History-and-Heritage.jpeg');
+            
+            /* 2. Positioning & Behavior */
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll; 
+            
+            /* 3. Sizing */
+            min-height: 100vh;
+            
+            /* 4. Flexbox for centering text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            
+            /* 5. Spacing adjustments */
+            margin-top: 0; 
+            padding-top: 100px;
+        }
+
+        /* Cards */
+        .card-glass {
+            background: var(--color-card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            height: 100%;
+        }
+        .card-glass:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+        }
+
+        /* Buttons */
+        .btn-brand {
+            background-color: var(--color-primary);
+            color: #000;
+            font-weight: 700;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-brand:hover {
+            background-color: #fff;
+            transform: scale(1.05);
+            color: var(--color-primary);
+        }
+        .btn-outline-brand {
+            border: 2px solid var(--color-primary);
+            color: var(--color-text);
+            font-weight: 700;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .btn-outline-brand:hover {
+            background-color: var(--color-primary);
+            color: #000;
+        }
+
+        /* Pricing Card Special */
+        .pricing-card {
+            border-top: 5px solid var(--color-primary);
+        }
+        .pricing-card.professional {
+            border-top: 5px solid var(--color-accent);
+        }
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+
+        /* Alert Box */
+        .alert-custom {
+            background: rgba(255, 77, 77, 0.1);
+            border-left: 5px solid var(--color-danger);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Accordion */
+        .accordion-item {
+            background-color: transparent;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .accordion-button {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--color-text);
+            font-weight: 600;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: var(--color-primary);
+            color: #000;
+            box-shadow: none;
+        }
+        .accordion-body {
+            color: var(--color-text-muted);
+            background-color: rgba(0,0,0,0.2);
+        }
+
+        /* Features Grid */
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Profile Images */
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--color-primary);
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background-color: #000;
+            border-top: 1px solid var(--color-border);
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        .social-link {
+            color: var(--color-text-muted);
+            font-size: 1.2rem;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+        .social-link:hover { color: var(--color-primary); }
+
+        /* Sections padding */
+        section { padding: 80px 0; }
+    </style>
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    {% include "includes/design_header.html" %}
+
+    <section class="hero-section">
+        <div class="container" data-aos="fade-up">
+            <h5 class="text-brand mb-3">Welcome to Aakaar 2027</h5>
+            <h1 class="display-2 fw-bold mb-4">HOSPITALITY & <span class="text-brand">ACCOMMODATION</span></h1>
+            <p class="lead text-light opacity-75 mb-5 mx-auto" style="max-width: 700px;">
+                Experience the best of Mumbai while you innovate. We provide comfortable, secure, and accessible accommodation facilities to ensure your focus remains on the competition.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="#pricing" class="btn btn-brand">View Charges</a>
+                <a href="#pricing" class="btn btn-outline-brand">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2>Why Stay With <span class="text-brand">Us?</span></h2>
+                <p class="text-muted">We ensure a hassle-free experience for all participants.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-glass text-center">
+                        <i class="bi bi-shield-lock-fill feature-icon"></i>
+                        <h5>24/7 Security</h5>
+                        <p class="small text-muted">Dedicated security team and help desk available round the clock.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-glass text-center">
+                        <i class="bi bi-geo-alt-fill feature-icon"></i>
+                        <h5>Prime Location</h5>
+                        <p class="small text-muted">Located within 2-5 km of Powai, ensuring quick travel times.</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2>Accommodation <span class="text-brand">Charges</span></h2>
+                <p class="text-muted">Choose the plan that suits you best.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-glass pricing-card text-center">
+                        <h4 class="text-muted">One Night Stay</h4>
+                        <div class="price-tag text-brand">₹999</div>
+                        <p class="text-muted mb-4">Per Head</p>
+                        <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                            <li class="mb-2"><i class="bi bi-calendar-check-fill text-brand me-2"></i> <strong>Check-in:</strong><br>14 Mar (11 AM)</li>
+                            <li class="mb-2"><i class="bi bi-calendar-x-fill text-brand me-2"></i> <strong>Check-out:</strong><br>15 Mar (10 AM)</li>
+                            <li class="mb-2"><i class="bi bi-moon-stars-fill text-brand me-2"></i> 1 Night</li>
+                            <li class="mb-2"><i class="bi bi-people-fill text-brand me-2"></i> Shared Room</li>
+                        </ul>
+                        <div class="mt-3 text-muted small fst-italic">*Each team member must pay individually</div>
+                        <a href="https://forms.gle/nMrRfH5z4oNSryJF8" class="btn btn-brand w-100 mt-4">Register Here</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-glass pricing-card text-center">
+                        <h4 class="text-muted">One Night Stay</h4>
+                        <div class="price-tag text-brand">₹999</div>
+                        <p class="text-muted mb-4">Per Head</p>
+                        <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                            <li class="mb-2"><i class="bi bi-calendar-check-fill text-brand me-2"></i> <strong>Check-in:</strong><br>15 Mar (11 AM)</li>
+                            <li class="mb-2"><i class="bi bi-calendar-x-fill text-brand me-2"></i> <strong>Check-out:</strong><br>16 Mar (10 AM)</li>
+                            <li class="mb-2"><i class="bi bi-moon-stars-fill text-brand me-2"></i> 1 Night</li>
+                            <li class="mb-2"><i class="bi bi-people-fill text-brand me-2"></i> Shared Room</li>
+                        </ul>
+                        <div class="mt-3 text-muted small fst-italic">*Each team member must pay individually</div>
+                        <a href="https://forms.gle/nMrRfH5z4oNSryJF8" class="btn btn-brand w-100 mt-4">Register Here</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card-glass pricing-card text-center" style="border-top-color: var(--color-primary);">
+                        <h4 class="text-muted">Two Nights Stay</h4>
+                        <div class="price-tag text-brand">₹1899</div>
+                        <p class="text-muted mb-4">Per Head</p>
+                        <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                            <li class="mb-2"><i class="bi bi-calendar-check-fill text-brand me-2"></i> <strong>Check-in:</strong><br>14 Mar (11 AM)</li>
+                            <li class="mb-2"><i class="bi bi-calendar-x-fill text-brand me-2"></i> <strong>Check-out:</strong><br>16 Mar (10 AM)</li>
+                            <li class="mb-2"><i class="bi bi-moon-stars-fill text-brand me-2"></i> 2 Nights</li>
+                            <li class="mb-2"><i class="bi bi-people-fill text-brand me-2"></i> Shared Room</li>
+                        </ul>
+                        <div class="mt-3 text-muted small fst-italic">*Each team member must pay individually</div>
+                        <a href="https://forms.gle/nMrRfH5z4oNSryJF8" class="btn btn-brand w-100 mt-4">Register Here</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card-glass pricing-card professional text-center">
+                        <h4 class="text-muted">Three Nights Stay</h4>
+                        <div class="price-tag text-accent">₹2799</div>
+                        <p class="text-muted mb-4">Per Head</p>
+                        <ul class="list-unstyled text-start mx-auto" style="max-width: 250px;">
+                            <li class="mb-2"><i class="bi bi-calendar-check-fill text-accent me-2"></i> <strong>Check-in:</strong><br>14 Mar (11 AM)</li>
+                            <li class="mb-2"><i class="bi bi-calendar-x-fill text-accent me-2"></i> <strong>Check-out:</strong><br>17 Mar (10 AM)</li>
+                            <li class="mb-2"><i class="bi bi-moon-stars-fill text-accent me-2"></i> 3 Nights</li>
+                            <li class="mb-2"><i class="bi bi-people-fill text-accent me-2"></i> Shared Room</li>
+                        </ul>
+                        <div class="mt-3 text-muted small fst-italic">*Each team member must pay individually</div>
+                        <a href="https://forms.gle/nMrRfH5z4oNSryJF8" class="btn btn-brand w-100 mt-4" style="background-color: var(--color-accent) !important; color: #000;">Register Here</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-5 text-muted small">
+                <i class="bi bi-info-circle me-1"></i> Payment must be completed online. Receipts are mandatory for check-in.
+            </div>
+        </div>
+    </section>
+
+    <section>
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <h3 class="mb-4">Cancellation <span class="text-danger">Policy</span></h3>
+                <div class="card-glass">
+                    <p class="lead" style="font-size: 1.15rem;">Confirmed Accommodation can be cancelled through email only.</p>
+                    <ul class="mb-0 text-muted" style="font-size: 1.1rem;">
+                        <li class="mb-2"><strong>Email:</strong> hospitality.aakaar@gmail.com</li>
+                        <li class="mb-2"><strong>Subject:</strong> "Cancellation of Accommodation"</li>
+                        <li class="mb-2"><strong>Deadline:</strong> 6th March 2027 (for 75% refund)</li>
+                        <li>No refund provided after the deadline. Refunds processed within 25 working days post-fest.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <h3 class="mb-4">Strict <span class="text-brand">Guidelines</span></h3>
+                <div class="card-glass">
+                    <ul class="mb-0 text-muted" style="font-size: 1.1rem;">
+                        <li class="mb-2"><i class="bi bi-exclamation-circle text-danger me-2"></i> <strong>ID Mandatory:</strong> College ID + Govt ID (Aadhaar) required at all times.</li>
+                        <li class="mb-2"><i class="bi bi-gender-ambiguous text-brand me-2"></i> <strong>Separation:</strong> Boys and girls will be strictly provided separate accommodation.</li>
+                        <li class="mb-2"><i class="bi bi-ban text-danger me-2"></i> <strong>Prohibited:</strong> Alcohol, drugs, sharp objects, and explosives are strictly banned.</li>
+                        <li><i class="bi bi-clock-history text-brand me-2"></i> <strong>Punctuality:</strong> Check-out timings are absolute.</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+    <section id="faq">
+        <div class="container" data-aos="fade-up">
+            <div class="text-center mb-5">
+                <h2 class="display-6">Frequently Asked <span class="text-brand">Questions</span></h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                                    1. How to avail accommodation?
+                                </button>
+                            </h2>
+                            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Fill the registration form above, complete the payment, and wait for confirmation email. Report to the venue mentioned in the mail upon arrival.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                                    2. What kind of accommodation is provided?
+                                </button>
+                            </h2>
+                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Accommodation will be provided in dormitories or hotels within a 5-10 km radius of the IIT Bombay campus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+                                    3. Will my team stay together?
+                                </button>
+                            </h2>
+                            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We endeavor to keep teams together, but cannot guarantee it. Note: Boys and girls will compulsorily have separate accommodation.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
+                                    4. How to reach IIT Bombay?
+                                </button>
+                            </h2>
+                            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Closest stations: Kanjurmarg (Central Line) or Andheri (Western Line). From there, take an auto/bus to IIT Main Gate, Powai.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="contact">
+    <div class="container" data-aos="fade-up">
+        <div class="text-center mb-5">
+            <h2 class="display-6">Contact <span class="text-brand">Us</span></h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center mb-4">
+                <div class="card-glass p-4">
+                    <div class="member-img-wrapper mb-3" style="width: 150px; height: 150px; margin: 0 auto; border-radius: 50%; overflow: hidden; border: 3px solid rgba(255,255,255,0.2);">
+                        <img src="{% static 'jse.png' %}" alt="pratham" class="member-img" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4 class="mb-1">Pratham Pandit</h4>
+                    <p class="text-primary mb-3">Hospitality & FnB Manager</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="tel:6263659009" class="social-link"><i class="bi bi-telephone-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/pratham-pandit-7132492a1/" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+    {% include "includes/design_footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        // Init Animate On Scroll
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Init Particles
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 40 },
+                "color": { "value": "#00D1FF" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.2 },
+                "size": { "value": 3 },
+                "move": { "enable": true, "speed": 1 }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "bubble" } }
+            }
+        });
+    </script>
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,524 @@
+.
+├── aakaar_main
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── settings.cpython-312.pyc
+│   │   ├── urls.cpython-312.pyc
+│   │   └── wsgi.cpython-312.pyc
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── apps
+│   ├── compi
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── admin.cpython-312.pyc
+│   │   │   ├── apps.cpython-312.pyc
+│   │   │   ├── models.cpython-312.pyc
+│   │   │   ├── urls.cpython-312.pyc
+│   │   │   └── views.cpython-312.pyc
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── e_views.py
+│   │   ├── images
+│   │   │   └── Screenshot_3.png
+│   │   ├── migrations
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   │   └── 0001_initial.cpython-312.pyc
+│   │   │   └── 0001_initial.py
+│   │   ├── models.py
+│   │   ├── old_views.py
+│   │   ├── static
+│   │   ├── templates
+│   │   │   ├── bridgeit.html
+│   │   │   ├── compi
+│   │   │   │   └── index.html
+│   │   │   ├── compi_home.html
+│   │   │   ├── compi_page.html
+│   │   │   ├── conquerit_old.html
+│   │   │   ├── conquerit.html
+│   │   │   ├── idp.html
+│   │   │   ├── index.html
+│   │   │   ├── logiq_before_2.html
+│   │   │   ├── logiq.html
+│   │   │   ├── msewall.html
+│   │   │   ├── old_bridgeit.html
+│   │   │   ├── old_index.html
+│   │   │   ├── old_logiq.html
+│   │   │   ├── old_seismic.html
+│   │   │   ├── seismic.html
+│   │   │   ├── seismic2.html
+│   │   │   ├── submission.html
+│   │   │   └── submitted.html
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── events
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── admin.cpython-312.pyc
+│   │   │   ├── apps.cpython-312.pyc
+│   │   │   ├── models.cpython-312.pyc
+│   │   │   ├── urls.cpython-312.pyc
+│   │   │   └── views.cpython-312.pyc
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── images
+│   │   │   └── Screenshot_3.png
+│   │   ├── migrations
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   │   └── 0001_initial.cpython-312.pyc
+│   │   │   └── 0001_initial.py
+│   │   ├── models.py
+│   │   ├── static
+│   │   ├── templates
+│   │   │   ├── cenex_preupdate.html
+│   │   │   ├── cenex.html
+│   │   │   ├── events
+│   │   │   │   └── index.html
+│   │   │   ├── events_page.html
+│   │   │   ├── index.html
+│   │   │   ├── index2.html
+│   │   │   ├── key.html
+│   │   │   ├── labvisit.html
+│   │   │   ├── old_cenex.html
+│   │   │   ├── old_index.html
+│   │   │   ├── old_workshop.html
+│   │   │   ├── workshop.html
+│   │   │   └── workshop.html.save
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   └── sympo
+│       ├── __init__.py
+│       ├── __pycache__
+│       │   ├── __init__.cpython-312.pyc
+│       │   ├── admin.cpython-312.pyc
+│       │   ├── apps.cpython-312.pyc
+│       │   ├── models.cpython-312.pyc
+│       │   ├── urls.cpython-312.pyc
+│       │   └── views.cpython-312.pyc
+│       ├── admin.py
+│       ├── apps.py
+│       ├── cityplan_app
+│       │   ├── __init__.py
+│       │   ├── __pycache__
+│       │   │   ├── __init__.cpython-312.pyc
+│       │   │   ├── admin.cpython-312.pyc
+│       │   │   ├── apps.cpython-312.pyc
+│       │   │   └── models.cpython-312.pyc
+│       │   ├── admin.py
+│       │   ├── apps.py
+│       │   ├── models.py
+│       │   ├── tests.py
+│       │   ├── urls.py
+│       │   └── views.py
+│       ├── images
+│       │   └── Screenshot_3.png
+│       ├── migrations
+│       │   ├── __init__.py
+│       │   ├── __pycache__
+│       │   │   ├── __init__.cpython-312.pyc
+│       │   │   └── 0001_initial.cpython-312.pyc
+│       │   └── 0001_initial.py
+│       ├── models.py
+│       ├── poster_app
+│       │   ├── __init__.py
+│       │   ├── __pycache__
+│       │   │   ├── __init__.cpython-312.pyc
+│       │   │   ├── admin.cpython-312.pyc
+│       │   │   ├── apps.cpython-312.pyc
+│       │   │   └── models.cpython-312.pyc
+│       │   ├── admin.py
+│       │   ├── apps.py
+│       │   ├── models.py
+│       │   ├── templates
+│       │   │   └── old_poster.html
+│       │   ├── tests.py
+│       │   ├── urls.py
+│       │   └── views.py
+│       ├── static
+│       ├── templates
+│       │   ├── academic.html
+│       │   ├── academic.html.save
+│       │   ├── city_front.html
+│       │   ├── cityplan_form.html
+│       │   ├── css
+│       │   │   └── style.css
+│       │   ├── home_new.html
+│       │   ├── home.html
+│       │   ├── index_old.html
+│       │   ├── index.html
+│       │   ├── mtt_old.html
+│       │   ├── mtt.html
+│       │   ├── new.html
+│       │   ├── poster_old.html
+│       │   ├── poster.html
+│       │   ├── registraton_form.html
+│       │   ├── static
+│       │   │   ├── prize.png
+│       │   │   └── trial.jpg
+│       │   ├── submission.html
+│       │   ├── sympo
+│       │   │   └── index.html
+│       │   ├── sympo_home.html
+│       │   ├── sympo_main.html
+│       │   └── sympo_page.html
+│       ├── tests.py
+│       ├── threemtt
+│       │   ├── __init__.py
+│       │   ├── __pycache__
+│       │   │   ├── __init__.cpython-312.pyc
+│       │   │   ├── admin.cpython-312.pyc
+│       │   │   ├── apps.cpython-312.pyc
+│       │   │   └── models.cpython-312.pyc
+│       │   ├── admin.py
+│       │   ├── apps.py
+│       │   ├── models.py
+│       │   ├── tests.py
+│       │   ├── urls.py
+│       │   └── views.py
+│       ├── urls.py
+│       └── views.py
+├── db.sqlite3
+├── manage.py
+├── static
+│   ├── assets
+│   │   ├── css
+│   │   │   ├── animate.css
+│   │   │   ├── bootstrap-datetimepicker.min.css
+│   │   │   ├── bootstrap.css
+│   │   │   ├── bootstrap.css.map
+│   │   │   ├── flexslider.css
+│   │   │   ├── icomoon.css
+│   │   │   ├── index.html
+│   │   │   ├── style_main.css
+│   │   │   ├── style.css
+│   │   │   └── style.css.map
+│   │   ├── img
+│   │   │   ├── 1.png
+│   │   │   ├── 2.png
+│   │   │   ├── 3.png
+│   │   │   ├── 4.png
+│   │   │   ├── aakaar
+│   │   │   │   └── 2197.jpg
+│   │   │   ├── aakaar.jpg
+│   │   │   ├── aakaar1.jpg
+│   │   │   ├── aakaar1.png
+│   │   │   ├── akhi.jpg
+│   │   │   ├── b1.jpg
+│   │   │   ├── b2.jpg
+│   │   │   ├── b3.jpg
+│   │   │   ├── b4.jpg
+│   │   │   ├── broken_noise_@2X.png
+│   │   │   ├── broken_noise.png
+│   │   │   ├── compi.jpg
+│   │   │   ├── galary_1.jpeg
+│   │   │   ├── galary_1.jpg
+│   │   │   ├── galary_6.jpg
+│   │   │   ├── galary_7_.jpg
+│   │   │   ├── galary_7.jpg
+│   │   │   ├── galary_8.jpg
+│   │   │   ├── galary_9.jpg
+│   │   │   ├── gallery_1_.jpeg
+│   │   │   ├── gallery_2.jpeg
+│   │   │   ├── gallery_3.jpeg
+│   │   │   ├── gallery_4.jpeg
+│   │   │   ├── h1.jpg
+│   │   │   ├── h2.jpg
+│   │   │   ├── h3.jpg
+│   │   │   ├── h4.jpg
+│   │   │   ├── h5.jpg
+│   │   │   ├── harsh.png
+│   │   │   ├── hero_1_1.jpg
+│   │   │   ├── hero_1_2.jpg
+│   │   │   ├── hero_1_3.jpg
+│   │   │   ├── hero_1.jpg
+│   │   │   ├── img_1.jpeg
+│   │   │   ├── img_sm_1.jpeg
+│   │   │   ├── IMG-20240214-WA0005.jpg
+│   │   │   ├── IMG-20240214-WA0007.jpg
+│   │   │   ├── IMG-20240214-WA0008.jpg
+│   │   │   ├── IMG-20240214-WA0009.jpg
+│   │   │   ├── IMG-20240214-WA0010.jpg
+│   │   │   ├── IMG-20240214-WA0011.jpg
+│   │   │   ├── img1.png
+│   │   │   ├── loader.gif
+│   │   │   ├── Nisha.jpg
+│   │   │   ├── person_1.jpg
+│   │   │   ├── photo.jpg
+│   │   │   ├── piyushraj.JPG
+│   │   │   ├── Rahul.jpg
+│   │   │   ├── skguota.jpg
+│   │   │   ├── smart.jpg
+│   │   │   ├── sym1.jpg
+│   │   │   └── sympo.jpg
+│   │   ├── js
+│   │   │   ├── bootstrap-datetimepicker.js
+│   │   │   ├── bootstrap.min.js
+│   │   │   ├── jquery.easing.1.3.js
+│   │   │   ├── jquery.flexslider-min.js
+│   │   │   ├── jquery.min.js
+│   │   │   ├── jquery.stellar.min.js
+│   │   │   ├── jquery.waypoints.min.js
+│   │   │   ├── main.js
+│   │   │   ├── modernizr-2.6.2.min.js
+│   │   │   ├── moment.min.js
+│   │   │   ├── respond.min.js
+│   │   │   └── zoomerang.js
+│   │   └── particles.json
+│   └── css
+│       └── custom-theme.css
+├── staticfiles
+│   ├── account
+│   │   └── js
+│   │       ├── account.js
+│   │       └── onload.js
+│   ├── admin
+│   │   ├── css
+│   │   │   ├── autocomplete.css
+│   │   │   ├── base.css
+│   │   │   ├── changelists.css
+│   │   │   ├── dark_mode.css
+│   │   │   ├── dashboard.css
+│   │   │   ├── forms.css
+│   │   │   ├── login.css
+│   │   │   ├── nav_sidebar.css
+│   │   │   ├── responsive_rtl.css
+│   │   │   ├── responsive.css
+│   │   │   ├── rtl.css
+│   │   │   ├── unusable_password_field.css
+│   │   │   ├── vendor
+│   │   │   │   └── select2
+│   │   │   │       ├── LICENSE-SELECT2.md
+│   │   │   │       ├── select2.css
+│   │   │   │       └── select2.min.css
+│   │   │   └── widgets.css
+│   │   ├── img
+│   │   │   ├── calendar-icons.svg
+│   │   │   ├── gis
+│   │   │   │   ├── move_vertex_off.svg
+│   │   │   │   └── move_vertex_on.svg
+│   │   │   ├── icon-addlink.svg
+│   │   │   ├── icon-alert.svg
+│   │   │   ├── icon-calendar.svg
+│   │   │   ├── icon-changelink.svg
+│   │   │   ├── icon-clock.svg
+│   │   │   ├── icon-deletelink.svg
+│   │   │   ├── icon-hidelink.svg
+│   │   │   ├── icon-no.svg
+│   │   │   ├── icon-unknown-alt.svg
+│   │   │   ├── icon-unknown.svg
+│   │   │   ├── icon-viewlink.svg
+│   │   │   ├── icon-yes.svg
+│   │   │   ├── inline-delete.svg
+│   │   │   ├── LICENSE
+│   │   │   ├── README.txt
+│   │   │   ├── search.svg
+│   │   │   ├── selector-icons.svg
+│   │   │   ├── sorting-icons.svg
+│   │   │   ├── tooltag-add.svg
+│   │   │   └── tooltag-arrowright.svg
+│   │   └── js
+│   │       ├── actions.js
+│   │       ├── admin
+│   │       │   ├── DateTimeShortcuts.js
+│   │       │   └── RelatedObjectLookups.js
+│   │       ├── autocomplete.js
+│   │       ├── calendar.js
+│   │       ├── cancel.js
+│   │       ├── change_form.js
+│   │       ├── core.js
+│   │       ├── filters.js
+│   │       ├── inlines.js
+│   │       ├── jquery.init.js
+│   │       ├── nav_sidebar.js
+│   │       ├── popup_response.js
+│   │       ├── prepopulate_init.js
+│   │       ├── prepopulate.js
+│   │       ├── SelectBox.js
+│   │       ├── SelectFilter2.js
+│   │       ├── theme.js
+│   │       ├── unusable_password_field.js
+│   │       ├── urlify.js
+│   │       └── vendor
+│   │           ├── jquery
+│   │           │   ├── jquery.js
+│   │           │   ├── jquery.min.js
+│   │           │   └── LICENSE.txt
+│   │           ├── select2
+│   │           │   ├── i18n
+│   │           │   │   ├── af.js
+│   │           │   │   ├── ar.js
+│   │           │   │   ├── az.js
+│   │           │   │   ├── bg.js
+│   │           │   │   ├── bn.js
+│   │           │   │   ├── bs.js
+│   │           │   │   ├── ca.js
+│   │           │   │   ├── cs.js
+│   │           │   │   ├── da.js
+│   │           │   │   ├── de.js
+│   │           │   │   ├── dsb.js
+│   │           │   │   ├── el.js
+│   │           │   │   ├── en.js
+│   │           │   │   ├── es.js
+│   │           │   │   ├── et.js
+│   │           │   │   ├── eu.js
+│   │           │   │   ├── fa.js
+│   │           │   │   ├── fi.js
+│   │           │   │   ├── fr.js
+│   │           │   │   ├── gl.js
+│   │           │   │   ├── he.js
+│   │           │   │   ├── hi.js
+│   │           │   │   ├── hr.js
+│   │           │   │   ├── hsb.js
+│   │           │   │   ├── hu.js
+│   │           │   │   ├── hy.js
+│   │           │   │   ├── id.js
+│   │           │   │   ├── is.js
+│   │           │   │   ├── it.js
+│   │           │   │   ├── ja.js
+│   │           │   │   ├── ka.js
+│   │           │   │   ├── km.js
+│   │           │   │   ├── ko.js
+│   │           │   │   ├── lt.js
+│   │           │   │   ├── lv.js
+│   │           │   │   ├── mk.js
+│   │           │   │   ├── ms.js
+│   │           │   │   ├── nb.js
+│   │           │   │   ├── ne.js
+│   │           │   │   ├── nl.js
+│   │           │   │   ├── pl.js
+│   │           │   │   ├── ps.js
+│   │           │   │   ├── pt-BR.js
+│   │           │   │   ├── pt.js
+│   │           │   │   ├── ro.js
+│   │           │   │   ├── ru.js
+│   │           │   │   ├── sk.js
+│   │           │   │   ├── sl.js
+│   │           │   │   ├── sq.js
+│   │           │   │   ├── sr-Cyrl.js
+│   │           │   │   ├── sr.js
+│   │           │   │   ├── sv.js
+│   │           │   │   ├── th.js
+│   │           │   │   ├── tk.js
+│   │           │   │   ├── tr.js
+│   │           │   │   ├── uk.js
+│   │           │   │   ├── vi.js
+│   │           │   │   ├── zh-CN.js
+│   │           │   │   └── zh-TW.js
+│   │           │   ├── LICENSE.md
+│   │           │   ├── select2.full.js
+│   │           │   └── select2.full.min.js
+│   │           └── xregexp
+│   │               ├── LICENSE.txt
+│   │               ├── xregexp.js
+│   │               └── xregexp.min.js
+│   ├── assets
+│   │   ├── css
+│   │   │   ├── animate.css
+│   │   │   ├── bootstrap-datetimepicker.min.css
+│   │   │   ├── bootstrap.css
+│   │   │   ├── bootstrap.css.map
+│   │   │   ├── flexslider.css
+│   │   │   ├── icomoon.css
+│   │   │   ├── index.html
+│   │   │   ├── style_main.css
+│   │   │   ├── style.css
+│   │   │   └── style.css.map
+│   │   ├── img
+│   │   │   ├── 1.png
+│   │   │   ├── 2.png
+│   │   │   ├── 3.png
+│   │   │   ├── 4.png
+│   │   │   ├── aakaar
+│   │   │   │   └── 2197.jpg
+│   │   │   ├── aakaar.jpg
+│   │   │   ├── aakaar1.jpg
+│   │   │   ├── aakaar1.png
+│   │   │   ├── akhi.jpg
+│   │   │   ├── b1.jpg
+│   │   │   ├── b2.jpg
+│   │   │   ├── b3.jpg
+│   │   │   ├── b4.jpg
+│   │   │   ├── broken_noise_@2X.png
+│   │   │   ├── broken_noise.png
+│   │   │   ├── compi.jpg
+│   │   │   ├── galary_1.jpeg
+│   │   │   ├── galary_1.jpg
+│   │   │   ├── galary_6.jpg
+│   │   │   ├── galary_7_.jpg
+│   │   │   ├── galary_7.jpg
+│   │   │   ├── galary_8.jpg
+│   │   │   ├── galary_9.jpg
+│   │   │   ├── gallery_1_.jpeg
+│   │   │   ├── gallery_2.jpeg
+│   │   │   ├── gallery_3.jpeg
+│   │   │   ├── gallery_4.jpeg
+│   │   │   ├── h1.jpg
+│   │   │   ├── h2.jpg
+│   │   │   ├── h3.jpg
+│   │   │   ├── h4.jpg
+│   │   │   ├── h5.jpg
+│   │   │   ├── harsh.png
+│   │   │   ├── hero_1_1.jpg
+│   │   │   ├── hero_1_2.jpg
+│   │   │   ├── hero_1_3.jpg
+│   │   │   ├── hero_1.jpg
+│   │   │   ├── img_1.jpeg
+│   │   │   ├── img_sm_1.jpeg
+│   │   │   ├── IMG-20240214-WA0005.jpg
+│   │   │   ├── IMG-20240214-WA0007.jpg
+│   │   │   ├── IMG-20240214-WA0008.jpg
+│   │   │   ├── IMG-20240214-WA0009.jpg
+│   │   │   ├── IMG-20240214-WA0010.jpg
+│   │   │   ├── IMG-20240214-WA0011.jpg
+│   │   │   ├── img1.png
+│   │   │   ├── loader.gif
+│   │   │   ├── Nisha.jpg
+│   │   │   ├── person_1.jpg
+│   │   │   ├── photo.jpg
+│   │   │   ├── piyushraj.JPG
+│   │   │   ├── Rahul.jpg
+│   │   │   ├── skguota.jpg
+│   │   │   ├── smart.jpg
+│   │   │   ├── sym1.jpg
+│   │   │   └── sympo.jpg
+│   │   ├── js
+│   │   │   ├── bootstrap-datetimepicker.js
+│   │   │   ├── bootstrap.min.js
+│   │   │   ├── jquery.easing.1.3.js
+│   │   │   ├── jquery.flexslider-min.js
+│   │   │   ├── jquery.min.js
+│   │   │   ├── jquery.stellar.min.js
+│   │   │   ├── jquery.waypoints.min.js
+│   │   │   ├── main.js
+│   │   │   ├── modernizr-2.6.2.min.js
+│   │   │   ├── moment.min.js
+│   │   │   ├── respond.min.js
+│   │   │   └── zoomerang.js
+│   │   └── particles.json
+│   ├── css
+│   │   └── custom-theme.css
+│   └── import_export
+│       ├── export_selectable_fields.js
+│       ├── export.css
+│       ├── guess_format.js
+│       └── import.css
+├── struct.txt
+└── templates
+    ├── aakaar_new.html
+    ├── account
+    │   └── login.html
+    └── socialaccount
+        └── login.html
+
+70 directories, 452 files

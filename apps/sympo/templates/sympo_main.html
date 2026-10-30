@@ -1,0 +1,265 @@
+{% extends "base_design.html" %}
+{% load static %}
+{% block title %}International Civil Engineering Symposium | AAKAAR IIT Bombay{% endblock %}
+{% block content %}
+<!-- Hero -->
+<section class="relative w-full bg-surface py-space-xl overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs font-label-mono-xs text-label-mono-xs">
+<span class="inline-flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed-variant px-space-md py-1 rounded-full font-bold">
+<span class="material-symbols-outlined text-[14px]">school</span>ELEVENTH EDITION
+        </span>
+<span class="uppercase tracking-widest text-secondary">CEA IIT Bombay</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-primary tracking-tight leading-none mt-space-xs">
+          International Civil Engineering Symposium
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs">
+          Aakaar IIT Bombay is proud to launch its Eleventh International Civil Engineering Symposium (ICES) to encourage young research enthusiasts and act as a platform to exchange ideas and scientific knowledge.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md mt-space-md">
+<a class="inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary px-space-xl py-space-sm rounded-full font-button-text text-button-text font-bold transition-all hover:bg-primary-container" href="#tracks">
+<span class="material-symbols-outlined text-[18px]">menu_book</span><span class="">Symposium Events</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs bg-surface-container text-on-surface px-space-lg py-space-sm rounded-full font-button-text text-button-text transition-colors hover:bg-surface-container-high" href="/sympo/iitb_register">
+<span class="">Register</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-space-sm">
+<span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Innovation</span>
+<span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Research</span>
+<span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Design</span>
+<span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Structure</span>
+<span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Analysis</span>
+<span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Data</span>
+<span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Planning</span>
+<span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Urban</span>
+<span class="bg-secondary-container text-on-secondary-fixed-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full font-bold">Future Tech</span>
+</div>
+</div>
+
+<div class="lg:col-span-5">
+<div class="relative rounded-[24px] overflow-hidden shadow-md">
+<img class="w-full h-72 object-cover" src="{% static 'design/img/wide-2.jpg' %}" alt="Symposium at IIT Bombay">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent flex items-end p-space-md">
+<div class="text-on-secondary">
+<span class="font-label-mono-xs text-label-mono-xs text-tertiary-fixed uppercase">ICES 2027</span>
+<h4 class="font-headline-sm text-headline-sm">Exchange of Ideas &amp; Scientific Knowledge</h4>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="font-headline-md text-headline-md text-primary font-bold">&#8377;95,000+</div>
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Total Prizes</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="font-headline-md text-headline-md text-primary font-bold">3</div>
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Symposium Tracks</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- About ICES -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-4">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-widest">About ICES</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-space-xs">Collaborative Research, Grown Here</h2>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            We believe the Symposium will lead to the fruitful germination of collaborative research work. We look forward to bringing together and supporting talented and enthusiastic people who are inclined toward discovering, learning and innovating new domains in civil engineering.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            The Eleventh International Civil Engineering Symposium invites young researchers to present, discuss and defend their work in front of experienced professors and industry leaders &mdash; and to build a network that carries beyond the festival.
+          </p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Symposium events -->
+<section class="w-full max-w-7xl mx-auto px-margin py-space-xl" id="tracks">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">Symposium Events</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Three Ways to Present Your Research</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Present to experienced professors and industry leaders, and showcase your work on an international platform.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">record_voice_over</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Track 01</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Paper Presentation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Present your research to experienced professors and industry leaders. Build your network and showcase your work on an international platform.
+          </p>
+</div>
+<div class="pt-space-lg border-t border-surface-container-high mt-space-md">
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant uppercase mt-space-sm">Prizes Worth</div>
+<div class="font-headline-md text-headline-md text-secondary font-bold">&#8377;50,000+</div>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors mt-space-sm" href="/sympo/paper/">
+<span class="">View Details</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">image</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Track 02</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Poster Presentation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Creatively demonstrate your research findings in a visually capturing way and test your concise communication skills.
+          </p>
+</div>
+<div class="pt-space-lg border-t border-surface-container-high mt-space-md">
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant uppercase mt-space-sm">Prizes Worth</div>
+<div class="font-headline-md text-headline-md text-secondary font-bold">&#8377;20,000+</div>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors mt-space-sm" href="/sympo/poster">
+<span class="">View Details</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Track 03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Thesis 180</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Curate and present your entire thesis in just three minutes in a way that anyone can understand. A test of clarity and brevity.
+          </p>
+</div>
+<div class="pt-space-lg border-t border-surface-container-high mt-space-md">
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant uppercase mt-space-sm">Prizes Worth</div>
+<div class="font-headline-md text-headline-md text-secondary font-bold">&#8377;25,000</div>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors mt-space-sm" href="/sympo/thesis">
+<span class="">View Details</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Booklet -->
+<section class="w-full max-w-7xl mx-auto px-margin pb-space-xl">
+<div class="bg-secondary-container/40 rounded-[24px] p-space-lg md:p-space-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-lowest text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div>
+<span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-widest">Symposium Booklet</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Schedule, Rules &amp; Key Information</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">The official symposium booklet collects the schedule, rules and key information in one place.</p>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary px-space-lg py-space-sm rounded-full font-button-text text-button-text font-bold shrink-0 transition-all hover:bg-primary-container" href="/sympo/paper/">
+<span class="">View Booklet &amp; Details</span><span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-lg">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-widest">Testimonials</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">From Previous Winners</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Participating in Aakaar was a highly enriching experience. The event provided an excellent platform to present my research, engage in in-depth technical discussions, and exchange ideas with participants from other leading universities. Interactions with faculties from IIT Bombay added significant value.
+          </p>
+<div class="pt-space-sm border-t border-surface-container-high mt-auto">
+<div class="font-headline-sm text-[16px] text-primary font-bold">Altamash Faraz Muzaffar Ali Sayed</div>
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Previous Winner</div>
+</div>
+</div>
+
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            As the 1st Prize winner of the Poster Presentation Competition, my experience at Aakaar was truly enriching. A key highlight was interacting with students from different states across India, which encouraged the exchange of diverse ideas and technical insights. Aakaar offers an outstanding national-level platform.
+          </p>
+<div class="pt-space-sm border-t border-surface-container-high mt-auto">
+<div class="font-headline-sm text-[16px] text-primary font-bold">Abubakar Inayatullah Potrick</div>
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Previous Winner</div>
+</div>
+</div>
+
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Participating in the 17th AAKAAR International Civil Engineering Symposium was an inspiring experience. We gained exposure to strong poster presentations across diverse civil engineering fields. Interacting with participants and judges helped us improve our research and presentation skills, and winning the second prize motivated us further.
+          </p>
+<div class="pt-space-sm border-t border-surface-container-high mt-auto">
+<div class="font-headline-sm text-[16px] text-primary font-bold">Rithishram N</div>
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Previous Winner</div>
+</div>
+</div>
+
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Really grateful for the experience at AAKAAR'25, IIT Bombay. It was a splendid conference with a lot of opportunities to interact with experts and learn from professors at IIT Bombay. I personally interacted with a lot of professors and made new companions on my research journey.
+          </p>
+<div class="pt-space-sm border-t border-surface-container-high mt-auto">
+<div class="font-headline-sm text-[16px] text-primary font-bold">Lakhadive Mehulkumar Rajkumar</div>
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Previous Winner</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section class="max-w-7xl mx-auto px-margin w-full py-space-xl">
+<div class="bg-surface-container-lowest rounded-[22px] p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm border border-surface-container-high">
+<div>
+<span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-widest">Contact Us</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Symposium Team</h2>
+</div>
+<div class="flex flex-wrap gap-space-lg">
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">Dunggam Gao</div>
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Symposium Manager</div>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">Anand</div>
+<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Symposium Manager</div>
+</div>
+</div>
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,728 @@
+{% load static %}
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symposium - Aakaar | IIT Bombay</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* 1. VARIABLES & NEW COLOR SCHEME */
+        :root {
+            --color-bg: #111111;
+            --color-text: #EAEAEA;
+            --color-text-muted: #a0a0a0;
+            --color-primary: #9D00FF; /* Vibrant Purple */
+            --color-primary-light: #bb63ff;
+            --color-border: #444444;
+            --font-base: "Bai Jamjuree", sans-serif;
+            --bg-image: url("apps/sympo/templates/static/image-removebg-preview.png");
+        }
+
+        /* 2. GENERAL & TYPOGRAPHY */
+        body {
+            background: var(--color-bg) var(--bg-image) no-repeat center center fixed;
+            background-size: cover;
+            filter: contrast(1.1) brightness(0.9);
+            color: var(--color-text);
+            font-family: var(--font-base);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-text);
+            font-weight: 700;
+        }
+
+        .display-4 { font-size: 3.5rem; }
+        .display-5 { font-size: 3rem; }
+
+        @media (max-width: 768px) {
+            .display-4 { font-size: 2.5rem; }
+            .display-5 { font-size: 2.2rem; }
+        }
+
+        p, .lead {
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--color-text-muted);
+        }
+
+        .text-brand {
+            color: var(--color-primary) !important;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-primary);
+        }
+
+        /* 3. LAYOUT & SECTIONS */
+        section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        #hero {
+            padding-top: 141px; /* Fixed spacing error */
+            padding-bottom: 0;
+        }
+
+        .full-height {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        main#content-wrapper {
+            padding-left: 0;
+        }
+
+        /* 4. NAVIGATION (NAVBAR) */
+        .navbar {
+            background-color: rgba(17, 17, 17, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .navbar-brand img {
+            height: 50px !important;
+            width: auto;
+            max-width: 150px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 8px 16px !important;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #fff !important;
+            background-color: var(--color-primary) !important;
+        }
+
+        @media (min-width: 992px) {
+            .navbar { min-height: 80px; }
+        }
+
+        @media (max-width: 1200px) {
+            .navbar { padding-left: 1rem; }
+        }
+
+        /* 5. CARDS, BUTTONS & UI ELEMENTS */
+        .card-custom {
+            background-color: rgba(34, 34, 34, 0.5);
+            border: 1px solid var(--color-border);
+            height: 100%;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-primary);
+        }
+
+        .btn-brand {
+            background-color: var(--color-primary);
+            color: #fff !important;
+            border: none;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 12px 28px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-brand:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-light {
+            border-color: var(--color-border);
+            color: var(--color-text);
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 12px 28px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: #fff;
+        }
+
+        /* 6. SPECIFIC SECTIONS */
+        /* Team Section */
+        .team-member {
+            text-align: center;
+            padding: 2rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .team-member-img {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-member-img img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--color-border);
+            transition: all 0.4s ease;
+        }
+
+        .team-member:hover .team-member-img img {
+            border-color: var(--color-primary);
+            transform: scale(1.05);
+        }
+
+        .team-member-info h5 {
+            color: var(--color-text);
+        }
+
+        .team-member-info p {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .team-member-img img { width: 150px; height: 150px; }
+        }
+
+        /* 7. FOOTER & SCROLLBAR */
+        footer {
+            background-color: #000;
+            color: var(--color-text-muted);
+            border-top: 1px solid var(--color-border);
+            padding: 2.5rem 0;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            border-radius: 50%;
+            font-size: 18px;
+            color: #fff;
+            margin: 0 5px;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--color-primary);
+        }
+
+        ::-webkit-scrollbar { width: 8px; background: #111; }
+        ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 4px; }
+
+        /* Booklet Download */
+        #booklet-download {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        #booklet-download .btn-brand {
+            font-size: 1.15rem;
+            padding: 16px 36px;
+            transition: transform 0.25s ease;
+        }
+
+        #booklet-download .btn-brand:hover {
+            transform: translateY(-2px);
+            background-color: var(--color-primary-light);
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #00D1FF;
+        }
+
+        .testimonial-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #00D1FF;
+        }
+
+        /* HEXAGONAL GRID STYLES */
+        .hex-grid-wrapper {
+            position: relative;
+            transform: scale(0.8);
+            transform-origin: top center;
+            margin-top: 50px;
+        }
+
+        .hex-grid {
+            position: relative;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hex-item {
+            position: relative;
+            float: left;
+            width: calc(33.333% - 20px);
+            margin: 10px;
+            margin-top: -50px;
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+            -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+            transition: all 0.5s;
+            shape-outside: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+        }
+
+        .hex-item::before {
+            content: '';
+            display: block;
+            padding-top: 112.5%;
+        }
+
+        .hex-item:nth-child(1) { margin-left: 18%; }
+        .hex-item:nth-child(1), .hex-item:nth-child(2) { margin-top: 0; }
+
+        .hex-img {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background-position: center center;
+            background-size: cover;
+            transition: all 0.5s;
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+            -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+        }
+
+        .hex-img::before, .hex-img::after {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            content: '';
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .hex-img::before { background: rgba(157, 0, 255, 0.4); }
+        .hex-img::after { background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8), transparent); }
+
+        .hex-content {
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 100%;
+            opacity: 0;
+            text-align: center;
+            color: white;
+            transform: translate(-50%, -50%) scale(0.9);
+            transition: all 0.5s;
+            z-index: 2;
+        }
+
+        .hex-content h2 {
+            font-family: var(--font-base);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hex-content .desc {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hex-item:hover .hex-img::before,
+        .hex-item:hover .hex-img::after,
+        .hex-item:hover .hex-content { opacity: 1; }
+
+        .hex-item:hover .hex-content { transform: translate(-50%, -50%) scale(1); }
+
+        @media (max-width: 991px) {
+            .hero-heading, .hero-para { text-align: center; }
+        }
+
+        /* Container for the Live Badge */
+.live-indicator {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 0, 0, 0.1); /* Subtle red background */
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    padding: 6px 12px;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+/* The Red Dot */
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 rgba(255, 0, 0, 0.4);
+    animation: pulse-red 2s infinite;
+}
+
+/* The Text */
+.live-text {
+    color: #ff0000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* Pulse Animation */
+@keyframes pulse-red {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+}
+    </style>
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <div id="particles-js"></div>
+
+    {% include "includes/design_header.html" %}
+
+    <main id="content-wrapper">
+
+        <section class="aa-pagehero">
+  <div class="aa-wrap">
+    <div class="row gy-5 align-items-center">
+      <div class="col-lg-7">
+        <span class="aa-eyebrow"><i class="bi bi-journal-text"></i> International Civil Engineering Symposium</span>
+        <h1 class="aa-hero-title">ICES &mdash; <span class="aa-hero-sage">Research Frontiers</span></h1>
+        <p class="aa-lede">The International Civil Engineering Symposium at AAKAAR brings young researchers, postgraduate scholars and industry luminaries together to present and defend work across the discipline.</p>
+        <div class="aa-pills">
+          <span class="aa-chip">Paper Presentation</span>
+          <span class="aa-chip-dot">&bull;</span>
+          <span class="aa-chip">Poster Exhibition</span>
+          <span class="aa-chip-dot">&bull;</span>
+          <span class="aa-chip aa-chip-sage">Thesis in 180</span>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="aa-hero-mosaic">
+          <img src="{% static 'assets/img/5E2A9260.JPG' %}?v=2" alt="AAKAAR symposium">
+          <img src="{% static 'assets/img/5E2A8940.JPG' %}?v=2" alt="AAKAAR research session">
+          <img src="{% static 'assets/img/5E2A8968.JPG' %}?v=2" alt="AAKAAR delegates">
+          <img src="{% static 'assets/img/5E2A9036.JPG' %}?v=2" alt="AAKAAR lecture">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+        <section id="booklet-download">
+            <div class="container" data-aos="fade-up">
+                <div class="row text-center pb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">Symposium <span class="text-brand">Booklet</span></h1>
+                        <p class="mt-3 mb-4">Click below to download the official symposium booklet with schedule, rules, and key information.</p>
+                        <a href="https://drive.google.com/file/d/1EVCrVMHeFJoNTrfAWtExhYVa7WhkkluQ/view?pli=1" class="btn btn-brand btn-lg" target="_blank">
+                            Download Booklet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="display-5 fw-bold">About <span class="text-brand">ICES</span></h1>
+                        <p class="mt-4">We believe the Symposium will lead to the fruitful germination of collaborative research work. We look forward to bringing together and supporting talented and enthusiastic people who are inclined toward discovering, learning and innovating new domains in civil engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competitions">
+            <div class="container">
+                <div class="row text-center pb-4" data-aos="fade-up">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">Symposium <span class="text-brand">Events</span></h1>
+                    </div>
+                </div>
+                <div class="row gy-4 mt-4">
+
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card-custom position-relative h-100">
+                            <h2>Paper Presentation</h2>
+                            <p>Present your research to experienced professors and industry leaders. Build your network and showcase your work on an international platform.</p>
+                            <h4 class="text-brand">Prizes Worth: INR 50,000+</h4>
+                            <div class="mt-3">
+                                <a href="{% url 'sympo:home' %}" class="btn btn-brand me-2">View Details</a>
+                                <a class="btn btn-outline-light" target="_blank">Registeration Closed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-custom  h-100">
+        
+        <!-- <div class="live-indicator">
+            <span class="live-dot"></span>
+            <span class="live-text">LIVE</span>
+        </div> -->
+                            <h2>Poster Presentation</h2>
+                            <p>Creatively demonstrate your research findings in a visually capturing way and test your concise communication skills.</p>
+                            <h4 class="text-brand">Prizes Worth: INR 20,000+</h4>
+                            <div class="mt-3">
+                                <a href="{% url 'sympo:poster' %}" class="btn btn-brand me-2">View Details</a>
+                                <a class="btn btn-outline-light" target="_blank">Registeration Closed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-custom h-100">
+                            <!-- <div class="live-indicator">
+            <span class="live-dot"></span>
+            <span class="live-text">LIVE</span>
+        </div> -->
+                            <h2>Thesis 180</h2>
+                            <p>Curate and present your entire thesis in just three minutes in a way that anyone can understand. A test of clarity and brevity.</p>
+                            <h4 class="text-brand">Prizes Worth: INR 25,000</h4>
+                            <div class="mt-3">
+                                <a href="{% url 'sympo:mtt' %}" class="btn btn-brand me-2">View Details</a>
+                                <a class="btn btn-outline-light" target="_blank">Registeration Closed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="container py-5" id="testimonials">
+            <h1 style="text-align: center" class="fw-bold title">TESTIMONIALS</h1>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="{% static 'img/pp1.jpeg' %}" alt="Person 1" class="testimonial-img me-3">
+                            <div>
+                                <h4 class="text-white mb-0" style="font-family: 'Poppins', sans-serif;">Altamash Faraz Muzaffar Ali Sayed</h4>
+                                <small class="text-white-50">Previous Winner</small>
+                            </div>
+                        </div>
+                        <p class="text-white" style="font-family: 'Lora', serif; font-style: italic;">
+                            Participating in Aakaar was a highly enriching experience. The event provided an excellent platform to present my research, engage in in-depth technical discussions, and exchange ideas with participants from other leading universities. Interactions with faculties from IIT Bombay added significant value and offered insightful academic perspectives.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="{% static 'img/pp3.jpeg' %}" alt="Person 1" class="testimonial-img me-3">
+                            <div>
+                                <h4 class="text-white mb-0" style="font-family: 'Poppins', sans-serif;">Abubakar Inayatullah Potrick</h4>
+                                <small class="text-white-50">Previous Winner</small>
+                            </div>
+                        </div>
+                        <p class="text-white" style="font-family: 'Lora', serif; font-style: italic;">
+As the 1st Prize winner of the Poster Presentation Competition my experience at IIT Bombay Aakaar was truly enriching. Being recognized at Asia’s largest civil engineering festival was both an honor and a strong source of motivation. A key highlight was interacting with students from different states across India, which encouraged the exchange of diverse ideas, perspectives, and technical insights. The competition upheld high academic standards, supported by a transparent evaluation process and knowledgeable judges. Overall, Aakaar offers an outstanding national-level platform that promotes innovation, collaboration, and holistic learning among aspiring civil engineers.                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="{% static 'sympo_events/Rithishram.png' %}" alt="Person 1" class="testimonial-img me-3">
+                            <div>
+                                <h4 class="text-white mb-0" style="font-family: 'Poppins', sans-serif;">Rithishram N</h4>
+                                <small class="text-white-50">Previous Winner</small>
+                            </div>
+                        </div>
+                        <p class="text-white" style="font-family: 'Lora', serif; font-style: italic;">
+Participating in the 17th AAKAAR IIT Bombay International Civil Engineering Symposium was an inspiring experience. As second semester students, we gained exposure to strong poster presentations across diverse civil engineering fields. Along with Gayathri and Dev Srivastava, we presented a poster on financial strategies for adopting green construction in India. Interacting with participants and judges helped us improve our research and presentation skills, and winning the second prize further motivated us to pursue research-oriented work early in our academic journey.                    </div>
+                </div>
+                
+
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="{% static 'img/pp2.jpeg' %}" alt="Person 2" class="testimonial-img me-3">
+                            <div>
+                                <h4 class="text-white mb-0" style="font-family: 'Poppins', sans-serif;">Lakhadive Mehulkumar Rajkumar</h4>
+                                <small class="text-white-50">Previous Winner</small>
+                            </div>
+                        </div>
+                        <p class="text-white" style="font-family: 'Lora', serif; font-style: italic;">
+                            Really grateful for the experience at AAKAAR'25, IIT Bombay. It was a splendid conference with a lot of opportunities to interact with experts and learn from professors at IIT Bombay. I personally interacted with a lot of professors and also made new companions on my research journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="contact">
+            <div class="container">
+                <div class="row text-center pb-4" data-aos="fade-up">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">Contact <span class="text-brand">Us</span></h1>
+                    </div>
+                </div>
+                <div class="row gy-4 justify-content-center mt-4">
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up">
+                        <div class="team-member">
+                            <div class="team-member-img">
+                                <img src="{% static 'image/dunggam.jpg' %}" alt="Dunggam Gao">
+                            </div>
+                            <div class="team-member-info">
+                                <h5 class="mb-0">Dunggam Gao</h5>
+                                <p class="mb-2">Symposium Manager</p>
+                                <div class="social-icons">
+                                    <a href="tel:9362607727 "><i class="bi bi-telephone-fill"></i></a>
+                                    <a href="mailto:symposium@aakaariitb.org.in"><i class="bi bi-envelope-fill"></i></a>
+                                    <a href="https://www.linkedin.com/in/dunggam-gao-1504462b4/"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <div class="team-member-img">
+                                <img src="{% static 'image/generated.png' %}" alt="Anand" style="object-position: top;">
+                            </div>
+                            <div class="team-member-info">
+                                <h5 class="mb-0">Anand</h5>
+                                <p class="mb-2">Symposium Manager</p>
+                                <div class="social-icons">
+                                    <a href="tel:9785220930"><i class="bi bi-telephone-fill"></i></a>
+                                    <a href="mailto:symposium@aakaariitb.org.in"><i class="bi bi-envelope-fill"></i></a>
+                                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    {% include "includes/design_footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                offset: 100,
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+            });
+
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js', 
+                {
+                  "particles": {
+                    "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#9D00FF" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.8, "random": true },
+                    "size": { "value": 5, "random": true },
+                    "line_linked": { "enable": false },
+                    "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+                  },
+                  "interactivity": {
+                    "detect_on": "canvas",
+                    "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": false }, "resize": true },
+                    "modes": { "bubble": { "distance": 250, "size": 5, "duration": 2, "opacity": 0.8, "speed": 3 } }
+                  },
+                  "retina_detect": true
+                });
+            }
+        });
+    </script>
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+</html>

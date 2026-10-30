@@ -1,0 +1,792 @@
+{% load static %}
+{% load socialaccount %}
+<!doctype html>
+<html lang="en">
+...
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>City Planning | AAKAAR - IIT Bombay</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'fevicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fevicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href=" {% static 'fevicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'fevicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        /* 1. VARIABLES & NEW COLOR SCHEME */
+        :root {
+            --color-bg: #111111;
+            --color-text: #EAEAEA;
+            --color-text-muted: #a0a0a0;
+            --color-primary: #9D00FF;
+            /* Vibrant Purple */
+            --color-primary-light: #bb63ff;
+            --color-border: #444444;
+            --font-base: "Bai Jamjuree", sans-serif;
+        }
+
+        /* 2. GENERAL & TYPOGRAPHY */
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-base);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-text);
+            font-weight: 700;
+        }
+
+        .display-4 { font-size: 3.5rem; }
+        .display-5 { font-size: 3rem; }
+
+        @media (max-width: 768px) {
+            .display-4 { font-size: 2.5rem; }
+            .display-5 { font-size: 2.2rem; }
+        }
+
+        p, .lead, li {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--color-text-muted);
+        }
+
+        .text-brand {
+            color: var(--color-primary) !important;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            color: var(--color-primary-light);
+        }
+
+        /* 3. LAYOUT & SECTIONS */
+        section {
+            padding-top: 100px; /* Reduced padding */
+            padding-bottom: 100px;
+        }
+
+        main#content-wrapper {
+            padding-left: 0;
+        }
+        @media (min-width: 1200px) {
+            main#content-wrapper {
+                padding-left: 110px; /* Space for fixed sidebar */
+            }
+        }
+
+        /* 4. NAVIGATION (NAVBAR & SIDEBAR) */
+        .navbar {
+            background-color: rgba(17, 17, 17, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .navbar-brand img {
+            height: 40px !important; /* Adjusted from 50px */
+            width: auto;
+            max-width: 150px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 8px 16px !important;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #fff !important;
+            background-color: var(--color-primary) !important;
+        }
+
+        @media (min-width: 992px) {
+            .navbar { min-height: 80px; }
+        }
+
+        /* Sidebar */
+        .sidebar-nav {
+            position: fixed;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            width: 90px;
+            background: rgba(34, 34, 34, 0.7);
+            backdrop-filter: blur(10px);
+            z-index: 1050;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px 0;
+            border-radius: 16px;
+            border: 1px solid var(--color-border);
+        }
+
+        .sidebar-links { display: flex; flex-direction: column; gap: 24px; width: 100%; align-items: center; }
+        .sidebar-link { display: flex; flex-direction: column; align-items: center; color: #fff; text-decoration: none; font-weight: 700; font-size: 13px; transition: background 0.2s, color 0.2s; padding: 8px 0; border-radius: 8px; width: 100%; text-align: center; }
+        .sidebar-link:hover, .sidebar-link:focus { background: var(--color-primary); color: #fff; }
+        .sidebar-icon.large-letter { font-size: 2rem; font-weight: bold; }
+        .sidebar-text { font-size: 12px; }
+        @media (max-width: 1200px) { .sidebar-nav { display: none; } }
+
+
+        /* 5. BUTTONS & UI ELEMENTS */
+        .btn-brand {
+            background-color: var(--color-primary);
+            color: #fff !important;
+            border: none;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 14px 32px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .btn-brand:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-3px);
+        }
+
+        /* New button styles from sympo page */
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-primary) !important;
+            border: 1px solid var(--color-primary);
+            padding: 14px 32px;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .btn-outline:hover {
+            background-color: var(--color-primary);
+            color: #fff !important;
+        }
+        .btn-disabled {
+            background-color: var(--color-border) !important;
+            color: var(--color-text-muted) !important;
+            border: none;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 14px 32px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            cursor: not-allowed;
+        }
+        
+        /* 6. PAGE-SPECIFIC STYLES: City Planning */
+
+        /* Hero */
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+            border: 1px solid var(--color-border);
+        }
+        .btn_class .btn {
+            font-size: 1.1rem; /* Standardize button font size */
+            padding: 12px 24px; /* Adjust padding for .btn-lg effect */
+        }
+        
+        /* Tabs Section */
+        .nav-tabs {
+            border-bottom: 1px solid var(--color-primary);
+        }
+        .nav-tabs .nav-link {
+            background: transparent;
+            border: none;
+            color: var(--color-text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -1px; /* Align with bottom border */
+            padding: 1rem 1.25rem;
+        }
+        .nav-tabs .nav-link h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            color: inherit;
+        }
+        .nav-tabs .nav-link:hover {
+            color: var(--color-text);
+        }
+        .nav-tabs .nav-link.active,
+        .nav-tabs .nav-item.show .nav-link {
+            color: var(--color-primary);
+            background-color: transparent;
+            border-color: transparent transparent var(--color-primary) transparent;
+        }
+        .tab-content {
+            background-color: #1a1a1a;
+            border: 1px solid var(--color-border);
+            border-top: none;
+            padding: 2rem;
+            border-radius: 0 0 0.5rem 0.5rem;
+            color: var(--color-text-muted);
+        }
+        
+        /* Tabs Content (Collapsibles) */
+        .point {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .point:hover {
+            color: var(--color-primary);
+        }
+        .point svg {
+            fill: var(--color-primary); /* Change SVG color */
+            transition: transform 0.3s ease;
+            width: 20px;
+            height: 25px;
+            margin-right: 8px;
+        }
+        .point[aria-expanded="true"] svg {
+            transform: rotate(180deg);
+        }
+        .collapse {
+            padding-left: 2rem;
+            color: var(--color-text-muted);
+        }
+        .collapse li { margin-bottom: 0.5rem; }
+
+        /* FAQ Accordion */
+        .accordion-item {
+            background-color: #222;
+            border: 1px solid var(--color-border);
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .accordion-header { margin-bottom: 0; }
+        .accordion-button {
+            background-color: #222;
+            color: var(--color-text);
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            box-shadow: none;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #222;
+            color: var(--color-primary);
+            box-shadow: inset 0 -1px 0 var(--color-border);
+        }
+        .accordion-button:focus { box-shadow: none; }
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%239D00FF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transition: transform .2s ease-in-out;
+        }
+        .accordion-button:not(.collapsed)::after {
+            transform: rotate(-180deg);
+        }
+        .accordion-body {
+            background-color: #1a1a1a;
+            color: var(--color-text-muted);
+        }
+        
+        /* 7. TEAM / CONTACT SECTION */
+        .team-member {
+            text-align: center;
+            padding: 2rem 1rem;
+            transition: all 0.3s ease;
+        }
+        .team-member-img {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .team-member-img img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--color-border);
+            transition: all 0.4s ease;
+        }
+        .team-member:hover .team-member-img img {
+            border-color: var(--color-primary);
+            transform: scale(1.05);
+        }
+        .team-member-info h5 {
+            color: var(--color-text); /* Changed from --color-text-white */
+        }
+        .team-member-info p {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .team-member-img img { width: 150px; height: 150px; }
+        }
+
+        /* 8. FOOTER & SCROLLBAR */
+        footer {
+            background-color: #000;
+            color: var(--color-text-muted);
+            border-top: 1px solid var(--color-border);
+            padding: 2.5rem 0;
+        }
+        .social-icons a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; background-color: #222; border-radius: 50%; font-size: 18px; color: #fff; margin: 0 5px; }
+        .social-icons a:hover { background-color: var(--color-primary); }
+
+        ::-webkit-scrollbar { width: 8px; background: #111; }
+        ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 4px; }
+    </style>
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <div id="particles-js"></div>
+
+    <aside id="sidebar-nav" class="sidebar-nav">
+        <nav class="sidebar-links">
+            <a href="{% url 'events:index' %}" class="sidebar-link">
+                <span class="sidebar-icon large-letter">E</span>
+                <span class="sidebar-text">EVENTS</span>
+            </a>
+            <a href="{% url 'compi:index' %}" class="sidebar-link">
+                <span class="sidebar-icon large-letter">C</span>
+                <span class="sidebar-text">COMPI</span>
+            </a>
+            <a href="{% url 'sympo:index' %}" class="sidebar-link">
+                <span class="sidebar-icon large-letter">S</span>
+                <span class="sidebar-text">SYMPO</span>
+            </a>
+        </nav>
+    </aside>
+
+    {% include "includes/design_header.html" %}
+
+    <main id="content-wrapper">
+
+        <section id="hero" class="full-height text-center" style="background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.8)), url('{% static 'img/sympo_main.jpeg' %}'); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="row" data-aos="fade-up">
+                    <div class="col-lg-10 mx-auto">
+                        <h1 class="display-1 fw-bold text-brand">City Planning</h1>
+                                                <p class="lead text-center">
+                            The evidence of urban planning and designed communities dates back to the Indus Valley and
+                            Egyptian civilizations in the third millennium BCE.
+                            Planning practices have incorporated policy changes to help address global climate change,
+                            sustainable development of cities & infrastructure.
+                            <br><br>
+                            We are providing an opportunity to young students & potential planners to showcase their talent &
+                            get recognition for their work. The competition is based upon understanding the city &
+                            formulating its development action plan for the next 10 to15 years.
+                        </p>
+                         <!-- {% if user.is_authenticated %}
+                         <a class="btn btn-brand" href="{% url 'account_logout' %}">Welcome, {{request.user}}</a>
+                         {% else %}
+                         <a class="btn btn-brand" href="{% provider_login_url 'google' %}">Sign Up / Login</a>
+                         {% endif %} -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <section id="details">
+            <div class="container" data-aos="fade-up">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-objectives-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-objectives" type="button" role="tab" aria-controls="nav-objectives"
+                            aria-selected="true">
+                            <h3>OBJECTIVES</h3>
+                        </button>
+                        <button class="nav-link" id="nav-incentives-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-incentives" type="button" role="tab" aria-controls="nav-incentives"
+                            aria-selected="false">
+                            <h3>INCENTIVES</h3>
+                        </button>
+                        <button class="nav-link" id="nav-structure-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-structure" type="button" role="tab" aria-controls="nav-structure"
+                            aria-selected="false">
+                            <h3>STRUCTURE</h3>
+                        </button>
+                        <button class="nav-link" id="nav-rules-tab" data-bs-toggle="tab" data-bs-target="#nav-rules"
+                            type="button" role="tab" aria-controls="nav-rules" aria-selected="false">
+                            <h3>RULES</h3>
+                        </button>
+                        <button class="nav-link" id="nav-judging-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-judging" type="button" role="tab" aria-controls="nav-judging"
+                            aria-selected="false">
+                            <h3>JUDGING CRITERIA</h3>
+                        </button>
+                    </div>
+                </nav>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-objectives" role="tabpanel" aria-labelledby="nav-objectives-tab" tabindex="0">
+                        <a class="point" data-bs-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample9">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            Analyze the city’s current status
+                        </a>
+                        <div class="collapse" id="collapseExample9">
+                            <ul class="mt-2">
+                                <li>Focus on the current Master Plan & development schemes as proposed by the government authorities (Central, State or Local) for the selected city for disaster management and sustainability.</li>
+                                <li> Prepare a thorough Action Plan for the city on how you intend to improve the current schemes using some of your own ideas, and explain all your points in great detail.</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a class="point" data-bs-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample10">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            Recognize a development theme
+                        </a>
+                        <div class="collapse" id="collapseExample10">
+                            <ul class="mt-2">
+                                <li>Investigate the development possibilities with resilient structures as the theme.</li>
+                                <li>Incorporate at least one theme from Table 1.</li>
+                                <li> Identify & develop a <strong>unique theme (The selected theme should strictly not be from Table 1)</strong> to analyze the city profile.</li>
+                                <li> Collect the data & support your research with proper arguments.</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a class="point" data-bs-toggle="collapse" href="#collapseExample11" role="button" aria-expanded="false" aria-controls="collapseExample11">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            Financial Expenditure
+                        </a>
+                        <div class="collapse" id="collapseExample11">
+                            <ul class="mt-2">
+                                <li>Briefly elaborate and discuss the financial expenses required for the overall development of the city based on your theme with proper research and arguments.</li>
+                            </ul>
+                        </div>
+                        <br><br>
+                        <div>
+                            <span class="text-brand fw-bold">Note:</span>
+                            <p style="display: inline;"> Top 10-15 teams will be shortlisted on the basis of their submission and will be given a chance to present their findings in IIT Bombay before the jury for Aakaar on 18th-19th March 2023.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-incentives" role="tabpanel" aria-labelledby="nav-incentives-tab" tabindex="0">
+                        <ul>
+                            <li> Cash prizes worth 30,000 INR</li>
+                            <li>A great experience of presenting your work in front of judges and reviews from the prominent judge panel.</li>
+                            <li> Top 3 research works would be presented in Aakaar magazine and displayed on the Aakaar website.</li>
+                            <li>Participation Certificates to every participant on successful completion.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="nav-structure" role="tabpanel" aria-labelledby="nav-structure-tab" tabindex="0">
+                        <a class="point" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            Registrations
+                        </a>
+                        <div class="collapse" id="collapseExample1">
+                            <ul class="mt-2">
+                                <li>You can register for this competition either individually or in a team of maximum 4 members.</li>
+                                <li>Registrations will start from 21th Jan 2023. Registrations will be taken through the official website only and any other way of registration will not be accepted. </li>
+                                <li>Click on register tab on website for registration.</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a class="point" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            Abstract Submission (Round 1)
+                        </a>
+                        <div class="collapse" id="collapseExample2">
+                            <ul class="mt-2">
+                                <li>Submit a PPT of maximum 4 slides (including the title slide) supporting the arguments for selection of your city and the development of the unique theme. You need to select only Disaster Prone cities of India (Refer Table 2 and Judging Rubric from brochure).</li>
+                                <li>Please remain strict to the guidelines as given in Table 2 while submitting the PPT. Any violation of the guidelines will result in a penalty accordingly.</li>
+                                <li>Submit the PPT with your team details to the google form link given (<a href="https://forms.gle/duqVDX1DuQfK5ADj8">https://forms.gle/duqVDX1DuQfK5ADj8</a> ) before 15th February 2022, 11:59 P.M (IST). </li>
+                                <li>Delayed submissions will not be accepted.</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <a class="point" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            Final Submission (Round 2)
+                        </a>
+                        <div class="collapse" id="collapseExample3">
+                            <ul class="mt-2">
+                                <li> After getting the verification email for abstract submission, you need to submit your final findings in PPT format.</li>
+                                <li>Submit a presentation (13-16 slides including title and reference slides) illustrating the detailed solution methodology and step-by-step procedure to achieve all the objectives of the competition in detail.</li>
+                                <li> Submit the PPT with your team details to the google form link given (<a href="https://forms.gle/PqF2wzF5v9mFU5Lv7">https://forms.gle/PqF2wzF5v9mFU5Lv7</a>) before 8th March 2023, 11:59 P.M. (IST). Delayed submissions will not be considered.</li>
+                                <li>Please be strict to the guidelines as given in Table 2 while submitting the PPT. Any violation of the guidelines will result in a penalty.</li>
+                            </ul>
+                        </div>
+                        <br><br>
+                        <div>
+                            <span class="text-brand fw-bold">Note:</span>
+                            <p style="display: inline;"> Top 10-15 teams will be shortlisted on the basis of their submission and will be given a chance to present their findings in IIT Bombay before the jury for Aakaar on 18th-19th March 2023.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="nav-rules" role="tabpanel" aria-labelledby="nav-rules-tab" tabindex="0">
+                        <ul>
+                            <li>Only disaster Prone cities can be selected.</li>
+                            <li>The top 10-15 teams selected after final submission will have to present their submission on the event day (Dates will be announced soon on web- site). More details regarding this will be released on Aakaar official website.</li>
+                            <li>The presentation can be done by any of the members of the team and should describe their comprehension and approach towards the problem. There will be strictly 10 minutes available for presentation followed by a 5 min Q/A session by the jury. </li>
+                            <li>Any source referred should be cited correctly in the document. We will check the plagiarized content. If found any, the submission will be rejected, and the team will be debarred from further participating in all the IIT Bombay events.</li>
+                        </ul>
+                        <a class="point" data-bs-toggle="collapse" href="#collapseExample12" role="button" aria-expanded="false" aria-controls="collapseExample12">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            Some General Rules:
+                        </a>
+                        <div class="collapse" id="collapseExample12">
+                            <ul class="mt-2">
+                                <li>Aakaar, IIT BOMBAY reserves the right to disqualify any participant if found using any unfair means.</li>
+                                <li>Aakaar, IIT BOMBAY reserves the right to change any or all of the above rules as they seem fit. Change in rules, if any, will be highlighted on the website and notified to the registered participants.</li>
+                                <li>No responsibility will be held by Aakaar, IIT BOMBAY for any late, lost or mis-credited entries</li>
+                                <li>Note that at any point of time the latest information will be that which is one the website. Registered participants will be informed through mail about any changes on the website.</li>
+                                <li>All modes of official communication will be through Aakaar e-mail.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="nav-judging" role="tabpanel" aria-labelledby="nav-judging-tab" tabindex="0">
+                        <ul>
+                            <li>Teams will be shortlisted for final submission on the basis of their abstract submission. The judging criteria will be based on the rubrics attached (Refer Judging rubrics)</li>
+                            <li>The judging of the final submission will be based on the following factors.
+                                <ul class="mt-2">
+                                    <li>Uniqueness & representation of the theme</li>
+                                    <li>Extent of secondary research</li>
+                                    <li>Innovativeness & practicality of the proposals</li>
+                                    <li>Cost-Effectiveness</li>
+                                    <li>Implementation of Transient Oriented Development or Intelligent Transport System</li>
+                                    <li>Implementation of Waste Management or Rain Water Harvesting.</li>
+                                    <li>Refer rubrics for the marking scheme.</li>
+                                </ul>
+                            </li>
+                            <li>Emphasis will be given to the approach & methodology adopted. Therefore, comprehension of the problem and approach of solving it with more sustainability-oriented solutions will be focused on.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container" data-aos="fade-up">
+                <div class="row text-center pb-4">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">FREQUENTLY ASKED <span class="text-brand">QUESTIONS</span></h1>
+                    </div>
+                </div>
+                <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                1. Who is eligible to participate?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                “All college students who are interested”
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                2. How many members can be there in one team?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                                <p>One team can have a maximum of four members.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                3. Can a team have a members from different colleges?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                Yes, students from different colleges can form a team.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                4. How to register for City Planning?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                            <div class="accordion-body">
+                                Follow these steps to register: Go to symposium.aakaariitbombay.org/cityplanning > signup > Register > Fill your valid details>you will get registered
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                5. Is it free to register for City Planning?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                            <div class="accordion-body">
+                                Yes, there is absolutely no fee for City Planning.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                                6. How to submit an abstract ppt for round 1?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                            <div class="accordion-body">
+                                Submit the PPT with your team details to the google form link given ( <a href="https://forms.gle/duqVDX1DuQfK5ADj8">https://forms.gle/duqVDX1DuQfK5ADj8</a> ) before 15th February 2022, 11:59 P.M (IST). Delayed submissions will not be accepted. For more information please read the brochure.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                                7. In what case participants will be disqualified?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                            <div class="accordion-body">
+                                Aakaar, IIT BOMBAY reserves the right to disqualify any participant if found using any unfair mean.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="row text-center pb-4" data-aos="fade-up">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-5 fw-bold">Contact <span class="text-brand">Us</span></h1>
+                    </div>
+                </div>
+                <div class="row gy-4 justify-content-center mt-4">
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up">
+                        <div class="team-member">
+                            <div class="team-member-img">
+                                <img src="apps/sympo/images/WhatsApp Image 2025-11-15 at 10.33.34_b69e3a4e.jpg" alt="Dunggam Gao">
+                            </div>
+                            <div class="team-member-info">
+                                <h5 class="mb-0">Dunggam Gao</h5>
+                                <p class="mb-2">Symposium Manager</p>
+                                <div class="social-icons">
+                                    <a href="tel:9362607727	"><i class="bi bi-telephone-fill"></i></a>
+                                    <a href="mailto:symposium@aakaariitb.org.in"><i class="bi bi-envelope-fill"></i></a>
+                                    <a href="https://www.linkedin.com/in/dunggam-gao-1504462b4/"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                         <div class="team-member">
+                            <div class="team-member-img">
+                                <img src="apps/sympo/images/generated-image (2).png" alt="Anand">
+                            </div>
+                            <div class="team-member-info">
+                                <h5 class="mb-0">Anand</h5>
+                                <p class="mb-2">Symposium Manager</p>
+                                <div class="social-icons">
+                                    <a href="tel:9785220930"><i class="bi bi-telephone-fill"></i></a>
+                                    <a href="mailto:symposium@aakaariitb.org.in"><i class="bi bi-envelope-fill"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include "includes/design_footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                offset: 100,
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+            });
+
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js',
+                    {
+                        "particles": {
+                            "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+                            "color": { "value": "#9D00FF" },
+                            "shape": { "type": "circle" },
+                            "opacity": { "value": 0.5, "random": true },
+                            "size": { "value": 3, "random": true },
+                            "line_linked": { "enable": false },
+                            "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+                        },
+                        "interactivity": {
+                            "detect_on": "canvas",
+                            "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": false }, "resize": true },
+                            "modes": { "bubble": { "distance": 250, "size": 5, "duration": 2, "opacity": 0.8, "speed": 3 } }
+                        },
+                        "retina_detect": true
+                    });
+            }
+        });
+    </script>
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+
+</html>

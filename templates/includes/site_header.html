@@ -1,0 +1,43 @@
+{% load static %}
+<header class="aa-header" id="aa-header">
+  <div class="aa-header-inner">
+    <a class="aa-brand" href="/" aria-label="AAKAAR IIT Bombay home">
+      <img src="{% static 'img/aakaar_logo_ink.png' %}" alt="AAKAAR — IIT Bombay">
+    </a>
+
+    <nav class="aa-nav" aria-label="Primary">
+      <a href="/" data-nav="home">Home</a>
+      <a href="/#about" data-nav="about">About</a>
+      <a href="/events/" data-nav="events">Events</a>
+      <a href="/events/workshops" data-nav="workshops">Workshops</a>
+      <a href="/events/cenex" data-nav="cenex">CENEX</a>
+      <a href="/sympo/" data-nav="symposium">Symposium (ICES)</a>
+      <a href="/compi/" data-nav="competitions">Competitions</a>
+      <a href="/#partners" data-nav="partners">Partners</a>
+    </nav>
+
+    <div class="aa-actions">
+      <a class="aa-pill" href="/events/">Register / Explore</a>
+      <a class="aa-avatar" href="{% if user.is_authenticated %}{% url 'account_logout' %}{% else %}{% url 'account_login' %}{% endif %}"
+         title="{% if user.is_authenticated %}Sign out{% else %}Sign in{% endif %}">
+        <i class="bi bi-person" aria-hidden="true"></i>
+      </a>
+      <button class="aa-burger" type="button" aria-label="Toggle navigation" aria-expanded="false" data-aa-burger>
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="aa-mobile" data-aa-mobile>
+    <a href="/">Home</a>
+    <a href="/#about">About</a>
+    <a href="/events/">Events</a>
+    <a href="/events/workshops">Workshops</a>
+    <a href="/events/cenex">CENEX</a>
+    <a href="/sympo/">Symposium (ICES)</a>
+    <a href="/compi/">Competitions</a>
+    <a href="/#partners">Partners</a>
+    <a class="aa-mobile-cta" href="/events/">Register / Explore</a>
+  </div>
+</header>
+<script src="{% static 'js/site-chrome.js' %}"></script>

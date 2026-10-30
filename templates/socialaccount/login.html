@@ -1,0 +1,43 @@
+{% extends "base_design.html" %}
+{% load static socialaccount %}
+
+{% block title %}Sign In | AAKAAR IIT Bombay{% endblock %}
+
+{% block content %}
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl">
+    <div class="max-w-md mx-auto bg-surface-container-lowest rounded-[24px] border border-surface-container-highest
+                shadow-[0_6px_0_#e7ede3] p-space-xl text-center">
+
+        <div class="w-14 h-14 mx-auto rounded-2xl bg-secondary-container flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[26px]">person</span>
+        </div>
+
+        <div class="inline-flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary
+                    uppercase tracking-wider mt-space-lg">
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span>Participant Access</span>
+        </div>
+
+        <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight mt-1">
+            Sign In Via Google
+        </h1>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+            You are about to sign in using a third-party account from Google.
+        </p>
+
+        <a href="{% provider_login_url 'google' %}"
+           class="mt-space-lg inline-flex items-center justify-center gap-space-xs w-full
+                  bg-primary hover:bg-primary-container text-on-primary px-space-lg py-space-sm
+                  rounded-full font-button-text text-button-text shadow-[0_4px_0_#1a372a]
+                  active:translate-y-0.5 transition-all font-bold">
+            <span class="material-symbols-outlined text-[18px]">login</span>
+            <span>Continue with Google</span>
+        </a>
+
+        <p class="font-label-mono-xs text-label-mono-xs text-on-surface-variant mt-space-lg">
+            Registration for every competition, workshop and the ICES research forum
+            uses this single sign-in.
+        </p>
+    </div>
+</section>
+{% endblock %}

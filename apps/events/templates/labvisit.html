@@ -1,0 +1,538 @@
+{% load static %}
+	{% load socialaccount %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CENEX provides a unique opportunity to all civil engineering students across India by facilitating them to showcase their research projects incorporating new technology vi>
+    <meta name="keywords" content="Aakaar, Cenex, Exhibition, Civil Engineering Exhibition, Civil Engineering offline, Prototype, IIT, IITB, IIT Bombay, Technical Festival, Asia’s largest, Pan India, Civil, Ci>
+    ">
+    <title>Lab Visit | AAKAAR - IIT Bombay</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+    </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=>
+<!-- Fevicon  -->
+{% load static %}
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'fevicon/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'fevicon/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href=" {% static 'fevicon/site.webmanifest' %}">
+<link rel="mask-icon" href="{% static 'fevicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+{# --- Tectonic Terra design shell --- #}
+{% include "includes/design_assets.html" with preflight="off" %}
+<link rel="stylesheet" href="{% static 'css/custom-theme.css' %}">
+<link rel="stylesheet" href="{% static 'css/site-polish.css' %}">
+</head>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlink:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+
+    :root {
+        --color-body: #b6cbce;
+        --color-heading: #eef3db;
+        --color-base: #033f47;
+        --color-base2: #022a30;
+        --color-brand: #e0f780;
+        --color-brand2: #deff58;
+        --sidbar-width: 240px;
+        --font-base: "Bai Jamjuree";
+    }
+    body {
+      background-color: var(--color-base2);
+      color: var(--color-body);
+      font-family: var(--font-base), sans-serif;
+    }
+    .title {
+  position: relative;
+  margin: 1.5em 0 .9em;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: bolder;
+  text-align: center;
+  overflow: hidden; 
+}
+.title:before, .title:after {
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 50%;
+  height: 5px;
+  display: inline-block;
+  background: white;
+}
+
+.title:before {
+  margin-left: calc(-50% - 14px);
+}
+
+.title:after {
+  margin-left: 14px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+h1,h2,h3,h4,h5,h6 {
+    color: #deff58;
+    font-weight: 700;
+  }
+  
+
+
+
+
+
+
+
+</style>
+
+<body >
+  {% load static %}
+
+    {% include "includes/design_header.html" %}
+
+
+  {% if is_not_labvisit %}
+  <div class="container">
+    {% if is_exists%}
+    <div class="alert alert-danger text-center alert-dismissible fade show" role="alert">
+      <strong>Hi!</strong> {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% else %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Hi!</strong> {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endif %}
+  </div>
+  {% endif %}
+
+  
+
+
+  {% if is_not_staadpro %}
+  <div class="container">
+    {% if is_exists%}
+    <div class="alert alert-danger text-center alert-dismissible fade show" role="alert">
+      <strong>Hi!</strong> {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% else %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Hi!</strong> {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endif %}
+  </div>
+  {% endif %}
+
+
+
+  <div class="container col-xxl-8 px-4 py-4">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6" >
+        <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/d89f84f7-2bfc-46ab-8b0e-4a82b559e1c9" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="200" style="border-radius: 10px" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">LAB VISIT</h1>
+        <p class="lead fw-bold">Registration Fee : INR 200</p>
+        <p class="lead fw-bold">Date : 16th March 2024</p>
+        <p class="lead fw-bold">Venue : IIT Bombay</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+         
+          <button type="button" class="btn fw-bold btn-lg" style="background-color: #E0F780;" style="text-decoration: none; color:black; font-weight: 700;" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+              Register
+            </button>
+
+
+          <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Register</button> -->
+       <button type="button" class="btn fw-bold btn-lg " style="background-color: rgb(241, 146, 146);" style="text-decoration: none; color:black; font-weight: 700;" data-bs-toggle="modal" data-bs-target="#lab_payment" >Pay Now!!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ########################### Payment for Lab visit ###################################### -->
+
+<div class="modal fade text-black" id="lab_payment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-black" id="staticBackdropLabel">Payment for Lab Visit</h5>
+      </div>
+      <div class="modal-body">
+        <form action="/payment_labvisit" method="post" enctype="multipart/form-data"> 
+          {% csrf_token %}
+         
+          
+
+          <p><span style="color: red;">*</span> After Payment it's mandetory to upload the proof of payment </p>
+         
+   
+           <img src="https://github.com/hvm0901/AakaarStatic/assets/135495501/a60bd15e-5a8e-4900-b9af-c0b9542df7b3" style="border: black 2px solid;"  class="rounded mx-auto d-block img-fluid" alt="not found">
+          
+          <br>
+          <div class="mb-3">
+              <label for="state" class="form-label">Email ID </label>
+              <input type="text" class="form-control" id="state" name="email" required >
+            </div>
+
+            <div class="mb-3">
+              <label for="phoneNo" class="form-label">Transaction Id         </label>
+              <input type="number" class="form-control" id="phoneNo" name="transaction_id"  required>
+            </div>
+
+            <div class="col-md-12 mb-4">
+          
+                <div class="form-outline">
+                    <label class="form-label fw-bold" for="lastName"> Screenshot of Transaction </label><br>
+                    <!-- <span style="color: red;">*</span><span>(any valid id such as  Passport, driving licence, voters' ID card, PAN card, Aadhaar card )</span> -->
+                  <input type="file" id="lastName" class="form-control form-control-lg" name="payment_screenshot" required />
+                </div>
+              
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title text-black" id="staticBackdropLabel">Rules and Guidelines</h1>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body">
+          <ol>
+            <li style="color: black; font-weight: bold">Participants will have to register individually for the workshop</li>
+            <li style="color: black; font-weight: bold">Prerequisites for the workshops are a laptop ,notebook and a pen</li>
+            <li style="color: black; font-weight: bold">Certificates from Aakaar,IIT Bombay will be awarded to all the participants </li>
+            <li style="color: black; font-weight: bold">Participants must be present during all the sessions of the workshop failing this criteria participants will not be given any certificate</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade text-black" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-black" id="staticBackdropLabel">Register</h5>
+        </div>
+        <div class="modal-body">
+          <form action="/labvisit_reg" method="post"> {% csrf_token %}
+           
+            <div class="mb-3">
+              <label for="colName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="colName" name="name"  required>
+            </div>
+  
+            
+  
+            <div class="mb-3">
+              <label for="phoneNo" class="form-label">Contact No.         </label>
+              <input type="number" class="form-control" id="phoneNo" name="contact"  required>
+            </div>
+  
+            <div class="mb-3">
+              <label for="whatsNo" class="form-label">College/School Name</label>
+              <input type="text" class="form-control" id="whatsNo" name="colg"  required>
+            </div>
+
+            <div class="mb-3">
+                <label for="state" class="form-label">Email ID </label>
+                <input type="email" class="form-control" id="state" name="email" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="state" class="form-label">Referal</label>
+                <input type="email" class="form-control" id="state" name="ref" >
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- ########################################################################################3 -->
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- ################################################################################## -->
+
+
+
+
+     <div class="container my-4 " style="background-color: #022A30;">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item" style="border: none; background-color: #022A30;">
+                <h1 class="text-brand  fw-bold">FREQUENTLY ASKED QUESTIONS</h1>
+            </div>
+            <br>
+            <div class="accordion " id="accordionPanelsStayOpenExample">
+                <!-- <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+              how many rounds I can play?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div> -->
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed border" style="color: white; background-color: #022A30;" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            1. Who is eligible to participate?
+
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingOne" style="background-color: #022A30;">
+                        <div class="accordion-body text-white">
+                            All the civil engineering enthusiasts.
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed text-white border" type="button" data-bs-toggle="collapse" style="color: white; background-color: #022A30;"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            2. How to register for Lab visits?
+
+
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingTwo" style="background-color: #022A30;">
+                        <div class="accordion-body text-white">
+                            <p>Follow these steps to register : Go to 
+                                <a href="https://events.aakaar.org.in/">events.aakaar.org.in/</a> >Lab visits>Explore>Register>Fill your valid details>you will get       
+                                registered    
+                            
+                              </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <br> -->
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed  text-white border" type="button" data-bs-toggle="collapse" style="color: white; background-color: #022A30;"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            3. How many laboratories will be visited during the lab visits?
+
+
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse "
+                        aria-labelledby="panelsStayOpen-headingTwo" style="color: white; background-color: #022A30;">
+                        <div class="accordion-body text-white">
+                            There will be 2  labs will be visiting that are : 
+                            <ol>
+                                <li>Centrifuge Lab</li>
+                                <li>Hydraulic Lab</li>
+                            </ol>
+                           
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <br> -->
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                        <button class="accordion-button collapsed  text-white border" type="button" data-bs-toggle="collapse" style="color: white; background-color: #022A30;"
+                            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            4. What  are the dates for the lab visit?
+
+
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse "
+                        aria-labelledby="panelsStayOpen-headingThree" style="color: white; background-color: #022A30;">
+                        <div class="accordion-body text-white">
+                            Lab visits will be going to happen on the main event which is on 16th March.
+                        </div>
+                    </div>
+                </div>
+<!-- <br> -->
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                        <button class="accordion-button collapsed  text-white border" type="button" data-bs-toggle="collapse" style="color: white; background-color: #022A30;"
+                            data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseFive">
+                            5. Is it free to register for a lab visit?
+
+
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingFive" style="color: white; background-color: #022A30;">
+                        <div class="accordion-body text-white">
+                            No, there is a registering amount of INR 200
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item" style="border: none;">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                      <button class="accordion-button collapsed  text-white border" type="button" data-bs-toggle="collapse" style="color: white; background-color: #022A30;"
+                          data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                          aria-controls="panelsStayOpen-collapseFive">
+                          6. Where you can get the lab manual?
+
+
+                      </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                      aria-labelledby="panelsStayOpen-headingSix" style="color: white; background-color: #022A30;">
+                      <div class="accordion-body text-white">
+                       You will get lab manual on 16th March                     </div>
+                  </div>
+              </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- footer  -->
+        {% include "includes/design_footer.html" %}
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script> -->
+
+<script src="{% static 'design/chrome.js' %}"></script>
+</body>
+
+</html>

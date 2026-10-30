@@ -1,0 +1,140 @@
+
+
+
+
+
+body{
+
+    background-image: url(/static/Welcome.png);
+    /* overflow: hidden; */
+    background-position: center;
+   /* background-size: cover; */
+   background-repeat: no-repeat;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+   margin: 0;
+   
+  
+
+}
+
+
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  } */
+  
+  
+  
+  /* .centered-image {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin-top: -60%;
+    align-items: center;
+    box-shadow: 10px 10px 20px rgba(205, 40, 40, 1); 
+  } */
+  
+  /* .centered-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10%;
+  } */
+
+
+  .container {
+    text-align: center; /* Center the button horizontally */
+    margin-top: 300px;
+  
+    
+  }
+  
+  .centered-button {
+    display: inline-block; 
+    padding: 10px 20px; /* Add padding to the button for better spacing */
+    font-size: 16px; /* Adjust the font size as needed */
+    text-decoration: none; /* Remove underlines from the link */
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor: pointer; /* Show a pointer cursor on hover */
+    transition: background-color 0.3s; /* Add a smooth background color transition on hover */
+    
+
+
+  }
+  
+  .centered-button:hover {
+    background-color: #1e6bb8; /* Change the background color on hover */
+  }
+
+  @media (max-width: 500px) {
+    body {
+      background-size: 700px 450px; 
+    }
+  }
+
+
+  
+  
+  @media (min-width: 500px) {
+    body {
+      background-size: cover; 
+    }
+  }
+
+
+
+  @media (max-width: 500px) {
+    .container {
+
+      margin-bottom: 100px;
+      
+    }
+  }
+
+  @media (max-width: 820px) {
+    .container {
+
+      margin-top: 400px ;
+      
+    }
+  }
+
+  @media (min-height: 600px) {
+    .container {
+
+      margin-top: 300px ;
+      
+    }
+  }
+
+  @media (min-height: 1000px) {
+    .container {
+
+      margin-top: 450px ;
+      
+    }
+  }
+
+  
+  
+
+
+

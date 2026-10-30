@@ -1,0 +1,21 @@
+{% load static %}
+{% comment %}
+  Tectonic Terra design assets (vendored locally from the reference build).
+
+  Pass `preflight` to control Tailwind's reset:
+    preflight="on"   -> design pages (no Bootstrap on the page)
+    preflight="off"  -> legacy Bootstrap pages, so Bootstrap keeps working
+{% endcomment %}
+<link rel="stylesheet" href="{% static 'design/fonts/fonts.css' %}">
+<link rel="stylesheet" href="{% static 'design/fonts/material-symbols.css' %}">
+<script src="{% static 'design/tailwind.js' %}"></script>
+{% if preflight == "off" %}
+<script src="{% static 'design/tailwind-config-legacy.js' %}"></script>
+{% else %}
+<script src="{% static 'design/tailwind-config.js' %}"></script>
+{% endif %}
+<style>
+  /* The reference build hides scrollbars; keep that look but stay usable. */
+  ::-webkit-scrollbar { width: 0; height: 0; }
+  .aa-scroll-lock { overflow: hidden; }
+</style>
