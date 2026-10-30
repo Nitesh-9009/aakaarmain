@@ -24,6 +24,7 @@ runserver.log
 
 # Static collection output (re-generated on deploy)
 staticfiles/
+dist/
 
 # OS metadata
 .DS_Store
