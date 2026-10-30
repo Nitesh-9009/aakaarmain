@@ -10,6 +10,7 @@ os.environ.setdefault('DJANGO_SECRET_KEY', 'local-export-key')
 import django
 django.setup()
 
+from django.core.management import call_command
 from django.test import Client
 
 OUTPUT_DIR = Path('dist')
@@ -30,6 +31,21 @@ def main():
     if OUTPUT_DIR.exists():
         shutil.rmtree(OUTPUT_DIR)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Run migrations so all database tables exist in the export environment
+    print("Preparing export database...")
+    call_command('migrate', verbosity=0)
+    try:
+        from django.contrib.sites.models import Site
+        from allauth.socialaccount.models import SocialApp
+        site, _ = Site.objects.get_or_create(id=1, defaults={'domain': 'localhost', 'name': 'localhost'})
+        app, _ = SocialApp.objects.get_or_create(
+            provider='google',
+            defaults={'name': 'Google', 'client_id': 'export_dummy', 'secret': 'export_dummy'}
+        )
+        app.sites.add(site)
+    except Exception as e:
+        print(f"Site setup note: {e}")
 
     # 1. Copy static assets to dist/static/
     static_src = Path('static')
@@ -69,3 +85,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

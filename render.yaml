@@ -13,3 +13,4 @@ services:
         value: aakaar_main.settings
       - key: DJANGO_DEBUG
         value: "False"
+

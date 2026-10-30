@@ -1,5 +1,5 @@
 [build]
-  command = "pip install -r requirements.txt && python export_static.py"
+  command = "python export_static.py"
   publish = "dist"
 
 [build.environment]
