@@ -9,17 +9,33 @@
     <link rel="icon" type="image/png" href="/static/design/img/emblem.png">
     
 
+<!-- Preload primary font files for instant rendering without FOUT -->
+<link rel="preload" href="/static/design/fonts/cc63ecbb63cc.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/design/fonts/a97232426709.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/design/fonts/0319ea60ff1a.woff2" as="font" type="font/woff2" crossorigin>
+
 <link rel="stylesheet" href="/static/design/fonts/fonts.css">
 <link rel="stylesheet" href="/static/design/fonts/material-symbols.css">
+
+<style>
+  /* Critical typography: prevents any font-family flash or jump on page refresh */
+  html, body, .font-body-md, .font-body-sm, .font-body-lg {
+    font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .font-display-hero, .font-headline-lg, .font-headline-md, .font-headline-sm, .font-button-text, .aa-hero-title, .aa-btn {
+    font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+  .font-label-mono-xs, .font-label-mono-sm, .aa-hero-eyebrow, .aa-hero-note {
+    font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  }
+  ::-webkit-scrollbar { width: 0; height: 0; }
+  .aa-scroll-lock { overflow: hidden; }
+</style>
+
 <script src="/static/design/tailwind.js"></script>
 
 <script src="/static/design/tailwind-config.js"></script>
 
-<style>
-  /* The reference build hides scrollbars; keep that look but stay usable. */
-  ::-webkit-scrollbar { width: 0; height: 0; }
-  .aa-scroll-lock { overflow: hidden; }
-</style>
 
     <link rel="stylesheet" href="/static/design/hero-pixel.css">
 </head>
@@ -205,6 +221,12 @@
       <rect x="1067" y="139" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
       <rect x="1074" y="139" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
       </g>
+    </g>
+    <g class="aa-birds">
+      <g class="aa-bird" style="--bf-dur:18.0s;--bf-del:0.0s;--by:48px;--bw-dur:0.38s"><g class="aa-bird-wing-up"><rect x="3.5" y="0" width="3.5" height="3.5" fill="#0A3626"/><rect x="24.5" y="0" width="3.5" height="3.5" fill="#0A3626"/><rect x="0" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="3.5" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="7" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="21" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="24.5" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="28" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="3.5" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="7" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="10.5" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="14" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="17.5" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="21" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="24.5" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="7" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="10.5" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="14" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="17.5" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="21" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="10.5" y="14" width="3.5" height="3.5" fill="#0A3626"/><rect x="14" y="14" width="3.5" height="3.5" fill="#0A3626"/><rect x="17.5" y="14" width="3.5" height="3.5" fill="#0A3626"/></g><g class="aa-bird-wing-down"><rect x="7" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="10.5" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="14" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="17.5" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="21" y="3.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="3.5" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="7" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="10.5" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="14" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="17.5" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="21" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="24.5" y="7" width="3.5" height="3.5" fill="#0A3626"/><rect x="0" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="3.5" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="7" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="14" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="21" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="24.5" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="28" y="10.5" width="3.5" height="3.5" fill="#0A3626"/><rect x="0" y="14" width="3.5" height="3.5" fill="#0A3626"/><rect x="28" y="14" width="3.5" height="3.5" fill="#0A3626"/></g></g>
+      <g class="aa-bird" style="--bf-dur:21.0s;--bf-del:-2.8s;--by:72px;--bw-dur:0.34s"><g class="aa-bird-wing-up"><rect x="3" y="0" width="3" height="3" fill="#175134"/><rect x="21" y="0" width="3" height="3" fill="#175134"/><rect x="0" y="3" width="3" height="3" fill="#175134"/><rect x="3" y="3" width="3" height="3" fill="#175134"/><rect x="6" y="3" width="3" height="3" fill="#175134"/><rect x="18" y="3" width="3" height="3" fill="#175134"/><rect x="21" y="3" width="3" height="3" fill="#175134"/><rect x="24" y="3" width="3" height="3" fill="#175134"/><rect x="3" y="6" width="3" height="3" fill="#175134"/><rect x="6" y="6" width="3" height="3" fill="#175134"/><rect x="9" y="6" width="3" height="3" fill="#175134"/><rect x="12" y="6" width="3" height="3" fill="#175134"/><rect x="15" y="6" width="3" height="3" fill="#175134"/><rect x="18" y="6" width="3" height="3" fill="#175134"/><rect x="21" y="6" width="3" height="3" fill="#175134"/><rect x="6" y="9" width="3" height="3" fill="#175134"/><rect x="9" y="9" width="3" height="3" fill="#175134"/><rect x="12" y="9" width="3" height="3" fill="#175134"/><rect x="15" y="9" width="3" height="3" fill="#175134"/><rect x="18" y="9" width="3" height="3" fill="#175134"/><rect x="9" y="12" width="3" height="3" fill="#175134"/><rect x="12" y="12" width="3" height="3" fill="#175134"/><rect x="15" y="12" width="3" height="3" fill="#175134"/></g><g class="aa-bird-wing-down"><rect x="6" y="3" width="3" height="3" fill="#175134"/><rect x="9" y="3" width="3" height="3" fill="#175134"/><rect x="12" y="3" width="3" height="3" fill="#175134"/><rect x="15" y="3" width="3" height="3" fill="#175134"/><rect x="18" y="3" width="3" height="3" fill="#175134"/><rect x="3" y="6" width="3" height="3" fill="#175134"/><rect x="6" y="6" width="3" height="3" fill="#175134"/><rect x="9" y="6" width="3" height="3" fill="#175134"/><rect x="12" y="6" width="3" height="3" fill="#175134"/><rect x="15" y="6" width="3" height="3" fill="#175134"/><rect x="18" y="6" width="3" height="3" fill="#175134"/><rect x="21" y="6" width="3" height="3" fill="#175134"/><rect x="0" y="9" width="3" height="3" fill="#175134"/><rect x="3" y="9" width="3" height="3" fill="#175134"/><rect x="6" y="9" width="3" height="3" fill="#175134"/><rect x="12" y="9" width="3" height="3" fill="#175134"/><rect x="18" y="9" width="3" height="3" fill="#175134"/><rect x="21" y="9" width="3" height="3" fill="#175134"/><rect x="24" y="9" width="3" height="3" fill="#175134"/><rect x="0" y="12" width="3" height="3" fill="#175134"/><rect x="24" y="12" width="3" height="3" fill="#175134"/></g></g>
+      <g class="aa-bird" style="--bf-dur:24.0s;--bf-del:-6.0s;--by:94px;--bw-dur:0.42s"><g class="aa-bird-wing-up"><rect x="2.8" y="0" width="2.8" height="2.8" fill="#244D3B"/><rect x="19.6" y="0" width="2.8" height="2.8" fill="#244D3B"/><rect x="0" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="2.8" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="5.6" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="16.8" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="19.6" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="22.4" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="2.8" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="5.6" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="8.4" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="11.2" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="14" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="16.8" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="19.6" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="5.6" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="8.4" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="11.2" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="14" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="16.8" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="8.4" y="11.2" width="2.8" height="2.8" fill="#244D3B"/><rect x="11.2" y="11.2" width="2.8" height="2.8" fill="#244D3B"/><rect x="14" y="11.2" width="2.8" height="2.8" fill="#244D3B"/></g><g class="aa-bird-wing-down"><rect x="5.6" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="8.4" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="11.2" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="14" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="16.8" y="2.8" width="2.8" height="2.8" fill="#244D3B"/><rect x="2.8" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="5.6" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="8.4" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="11.2" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="14" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="16.8" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="19.6" y="5.6" width="2.8" height="2.8" fill="#244D3B"/><rect x="0" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="2.8" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="5.6" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="11.2" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="16.8" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="19.6" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="22.4" y="8.4" width="2.8" height="2.8" fill="#244D3B"/><rect x="0" y="11.2" width="2.8" height="2.8" fill="#244D3B"/><rect x="22.4" y="11.2" width="2.8" height="2.8" fill="#244D3B"/></g></g>
+      <g class="aa-bird" style="--bf-dur:30.0s;--bf-del:-13.5s;--by:36px;--bw-dur:0.48s"><g class="aa-bird-wing-up"><rect x="2.2" y="0" width="2.2" height="2.2" fill="#357A50"/><rect x="15.4" y="0" width="2.2" height="2.2" fill="#357A50"/><rect x="0" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="2.2" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="4.4" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="13.2" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="15.4" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="17.6" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="2.2" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="4.4" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="6.6" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="8.8" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="11" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="13.2" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="15.4" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="4.4" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="6.6" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="8.8" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="11" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="13.2" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="6.6" y="8.8" width="2.2" height="2.2" fill="#357A50"/><rect x="8.8" y="8.8" width="2.2" height="2.2" fill="#357A50"/><rect x="11" y="8.8" width="2.2" height="2.2" fill="#357A50"/></g><g class="aa-bird-wing-down"><rect x="4.4" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="6.6" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="8.8" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="11" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="13.2" y="2.2" width="2.2" height="2.2" fill="#357A50"/><rect x="2.2" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="4.4" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="6.6" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="8.8" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="11" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="13.2" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="15.4" y="4.4" width="2.2" height="2.2" fill="#357A50"/><rect x="0" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="2.2" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="4.4" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="8.8" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="13.2" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="15.4" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="17.6" y="6.6" width="2.2" height="2.2" fill="#357A50"/><rect x="0" y="8.8" width="2.2" height="2.2" fill="#357A50"/><rect x="17.6" y="8.8" width="2.2" height="2.2" fill="#357A50"/></g></g>
     </g>
     <g class="aa-mountains">
       <rect x="12" y="282" width="36" height="18" fill="#F1F8EE"/>
@@ -1133,10 +1155,6 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
 <!-- Left Column: Narrative -->
 <div class="lg:col-span-6 flex flex-col gap-space-md">
-<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="">About The Legacy</span>
-</div>
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
             Asia's Largest Departmental College Festival
           </h2>
@@ -1144,7 +1162,7 @@
             Aakaar is the annual festival of the Department of Civil Engineering, IIT Bombay. Since its inception in 2009, it has grown into Asia's largest departmental college festival &mdash; a platform where aspiring engineers innovate, create and learn.
           </p>
 <p class="font-body-md text-body-md text-on-surface leading-relaxed bg-surface-container-lowest p-space-md rounded-2xl shadow-sm">
-            From the International Civil Engineering Symposium to Bridge-IT, ConquerIT, CENEX and the national LogiQ quiz, Aakaar brings together competitions, lectures, workshops and lab visits that connect textbook mechanics with real engineering practice.
+            From the International Civil Engineering Symposium to Bridge-IT, ConquerIT, CENEX, Research Debate and City Planning, Aakaar brings together competitions, lectures, workshops and lab visits that connect textbook mechanics with real engineering practice.
           </p>
 <div class="flex items-center gap-space-md pt-space-xs">
 <div class="flex items-center -space-x-2">
@@ -1209,10 +1227,6 @@
 <section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl" id="flagship">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
 <div>
-<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="">Our Events</span>
-</div>
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
           Explore Our Events
         </h2>
@@ -1364,10 +1378,6 @@
 <section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
 <div>
-<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="">National Competitions</span>
-</div>
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
           Our Competitions
         </h2>
@@ -1507,10 +1517,6 @@
 <section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
 <div>
-<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="">Event Gallery</span>
-</div>
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
           Moments from AAKAAR
         </h2>

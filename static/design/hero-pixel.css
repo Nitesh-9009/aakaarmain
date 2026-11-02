@@ -477,3 +477,52 @@
     opacity: 0.55;
   }
 }
+
+
+/* -------------------------------------------------------------- birds --- */
+.aa-birds {
+  pointer-events: none;
+}
+
+.aa-bird {
+  transform-box: fill-box;
+  animation: aa-bird-fly var(--bf-dur, 20s) linear infinite;
+  animation-delay: var(--bf-del, 0s);
+  will-change: transform;
+}
+
+.aa-bird-wing-up {
+  animation: aa-wing-flap var(--bw-dur, 0.4s) steps(1) infinite;
+}
+
+.aa-bird-wing-down {
+  animation: aa-wing-flap-rev var(--bw-dur, 0.4s) steps(1) infinite;
+}
+
+@keyframes aa-wing-flap {
+  0%, 49.9% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes aa-wing-flap-rev {
+  0%, 49.9% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+@keyframes aa-bird-fly {
+  0% {
+    transform: translate3d(-70px, var(--by, 50px), 0);
+  }
+  25% {
+    transform: translate3d(280px, calc(var(--by, 50px) - 12px), 0);
+  }
+  50% {
+    transform: translate3d(620px, calc(var(--by, 50px) + 8px), 0);
+  }
+  75% {
+    transform: translate3d(940px, calc(var(--by, 50px) - 8px), 0);
+  }
+  100% {
+    transform: translate3d(1280px, var(--by, 50px), 0);
+  }
+}

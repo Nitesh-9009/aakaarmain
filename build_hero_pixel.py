@@ -343,6 +343,57 @@ def snow(count=54, seed=7):
     return '\n    '.join(out)
 
 
+
+BIRD_UP = [
+    '.k.....k.',
+    'kkk...kkk',
+    '.kkkkkkk.',
+    '..kkkkk..',
+    '...kkk...',
+]
+
+BIRD_DOWN = [
+    '.........',
+    '..kkkkk..',
+    '.kkkkkkk.',
+    'kkk.k.kkk',
+    'k.......k',
+]
+
+def bird_sprite(cell, color='#175134'):
+    up_rects = []
+    for ry, row in enumerate(BIRD_UP):
+        for cx, ch in enumerate(row):
+            if ch == 'k':
+                up_rects.append(rect(cx * cell, ry * cell, cell, cell, color))
+    down_rects = []
+    for ry, row in enumerate(BIRD_DOWN):
+        for cx, ch in enumerate(row):
+            if ch == 'k':
+                down_rects.append(rect(cx * cell, ry * cell, cell, cell, color))
+    return (
+        '<g class="aa-bird-wing-up">' + ''.join(up_rects) + '</g>'
+        '<g class="aa-bird-wing-down">' + ''.join(down_rects) + '</g>'
+    )
+
+def birds():
+    """Flock of pixel birds soaring across the sky."""
+    flock = [
+        (3.5, 18, 0, 48, 0.38, '#0A3626'),
+        (3.0, 21, -2.8, 72, 0.34, '#175134'),
+        (2.8, 24, -6.0, 94, 0.42, '#244D3B'),
+        (2.2, 30, -13.5, 36, 0.48, '#357A50'),
+    ]
+    out = []
+    for cell, dur, delay, y, flap, col in flock:
+        content = bird_sprite(cell, col)
+        out.append(
+            '<g class="aa-bird" style="--bf-dur:%.1fs;--bf-del:%.1fs;--by:%dpx;--bw-dur:%.2fs">'
+            '%s</g>' % (dur, delay, y, flap, content)
+        )
+    return '\n      '.join(out)
+
+
 SVG = '''<div class="aa-hero-scene" aria-hidden="true">
   <svg class="aa-scene-svg" viewBox="0 0 {W} {H}" preserveAspectRatio="xMidYMax slice"
        shape-rendering="crispEdges" role="presentation" focusable="false">
@@ -355,6 +406,9 @@ SVG = '''<div class="aa-hero-scene" aria-hidden="true">
     </defs>
     <g class="aa-clouds">
       {clouds}
+    </g>
+    <g class="aa-birds">
+      {birds}
     </g>
     <g class="aa-mountains">
       {m_far}
@@ -386,6 +440,7 @@ SVG = '''<div class="aa-hero-scene" aria-hidden="true">
 </div>
 '''.format(W=W, H=H, GROUND=GROUND, GH=H - GROUND,
            clouds=clouds(),
+           birds=birds(),
            m_far=stairs(430, 104, 440, 18, MOUNTAIN_FAR),
            m_near=stairs(905, 152, 330, 18, MOUNTAIN_NEAR),
            city=city(),

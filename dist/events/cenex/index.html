@@ -41,17 +41,33 @@
 
 
 
+<!-- Preload primary font files for instant rendering without FOUT -->
+<link rel="preload" href="/static/design/fonts/cc63ecbb63cc.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/design/fonts/a97232426709.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/design/fonts/0319ea60ff1a.woff2" as="font" type="font/woff2" crossorigin>
+
 <link rel="stylesheet" href="/static/design/fonts/fonts.css">
 <link rel="stylesheet" href="/static/design/fonts/material-symbols.css">
+
+<style>
+  /* Critical typography: prevents any font-family flash or jump on page refresh */
+  html, body, .font-body-md, .font-body-sm, .font-body-lg {
+    font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .font-display-hero, .font-headline-lg, .font-headline-md, .font-headline-sm, .font-button-text, .aa-hero-title, .aa-btn {
+    font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+  .font-label-mono-xs, .font-label-mono-sm, .aa-hero-eyebrow, .aa-hero-note {
+    font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  }
+  ::-webkit-scrollbar { width: 0; height: 0; }
+  .aa-scroll-lock { overflow: hidden; }
+</style>
+
 <script src="/static/design/tailwind.js"></script>
 
 <script src="/static/design/tailwind-config-legacy.js"></script>
 
-<style>
-  /* The reference build hides scrollbars; keep that look but stay usable. */
-  ::-webkit-scrollbar { width: 0; height: 0; }
-  .aa-scroll-lock { overflow: hidden; }
-</style>
 
 <link rel="stylesheet" href="/static/css/custom-theme.css">
 <link rel="stylesheet" href="/static/css/site-polish.css">
@@ -444,7 +460,7 @@ h1,h2,h3,h5,h6 {
         </h4>
         <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScuZ6L6qB46NHTTj06JpfO9r7my-z92llk-8KVW392AGvHQmQ/viewform?usp=sf_link" target="_blank">Google Form</a></p>
     <!--
-            <form action="/cr/task1" method="POST"> <input type="hidden" name="csrfmiddlewaretoken" value="TWK0kWiEKCziwXaxHoCmFw1ykmBJY5uKWm7s4B9Ywo4mn9K6ojlkLTJNADsNQInm">
+            <form action="/cr/task1" method="POST"> <input type="hidden" name="csrfmiddlewaretoken" value="wLqnhTh1ETetFaAIfv884jGXYxo0L0YMdWQGP8th1MoaeRzZjGEGbsdSD1ia961C">
                 <h3>Link:</h3>
                 <textarea name="link" id="" cols="50" rows="10" required></textarea> -->
                 <!-- <input type="textarea" class="form-control" id="colName" name="colName" aria-placeholder="Your College Name" required> -->
@@ -477,7 +493,7 @@ h1,h2,h3,h5,h6 {
           <h5 class="modal-title" id="staticBackdropLabel">Register</h5>
         </div>
         <div class="modal-body">
-          <form action="/cenex_reg" method="post"> <input type="hidden" name="csrfmiddlewaretoken" value="TWK0kWiEKCziwXaxHoCmFw1ykmBJY5uKWm7s4B9Ywo4mn9K6ojlkLTJNADsNQInm">
+          <form action="/cenex_reg" method="post"> <input type="hidden" name="csrfmiddlewaretoken" value="wLqnhTh1ETetFaAIfv884jGXYxo0L0YMdWQGP8th1MoaeRzZjGEGbsdSD1ia961C">
             <div class="mb-3">
                 <label for="colName" class="form-label">Team Name</label>
                 <input type="text" class="form-control" id="colName" name="team"  required>

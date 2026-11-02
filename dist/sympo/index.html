@@ -9,17 +9,33 @@
     <link rel="icon" type="image/png" href="/static/design/img/emblem.png">
     
 
+<!-- Preload primary font files for instant rendering without FOUT -->
+<link rel="preload" href="/static/design/fonts/cc63ecbb63cc.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/design/fonts/a97232426709.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/design/fonts/0319ea60ff1a.woff2" as="font" type="font/woff2" crossorigin>
+
 <link rel="stylesheet" href="/static/design/fonts/fonts.css">
 <link rel="stylesheet" href="/static/design/fonts/material-symbols.css">
+
+<style>
+  /* Critical typography: prevents any font-family flash or jump on page refresh */
+  html, body, .font-body-md, .font-body-sm, .font-body-lg {
+    font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .font-display-hero, .font-headline-lg, .font-headline-md, .font-headline-sm, .font-button-text, .aa-hero-title, .aa-btn {
+    font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+  .font-label-mono-xs, .font-label-mono-sm, .aa-hero-eyebrow, .aa-hero-note {
+    font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  }
+  ::-webkit-scrollbar { width: 0; height: 0; }
+  .aa-scroll-lock { overflow: hidden; }
+</style>
+
 <script src="/static/design/tailwind.js"></script>
 
 <script src="/static/design/tailwind-config.js"></script>
 
-<style>
-  /* The reference build hides scrollbars; keep that look but stay usable. */
-  ::-webkit-scrollbar { width: 0; height: 0; }
-  .aa-scroll-lock { overflow: hidden; }
-</style>
 
     
 </head>
@@ -183,9 +199,6 @@
 <section class="w-full max-w-7xl mx-auto px-margin py-space-xl" id="tracks">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
 <div>
-<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
-<span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">Symposium Events</span>
-</div>
 <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Three Ways to Present Your Research</h2>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
@@ -344,11 +357,11 @@
 </div>
 <div class="flex flex-wrap gap-space-lg">
 <div>
-<div class="font-headline-sm text-headline-sm text-primary font-bold">Dunggam Gao</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">Ashanka Meena</div>
 <div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Symposium Manager</div>
 </div>
 <div>
-<div class="font-headline-sm text-headline-sm text-primary font-bold">Anand</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">Khushboo</div>
 <div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Symposium Manager</div>
 </div>
 </div>

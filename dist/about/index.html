@@ -9,17 +9,33 @@
     <link rel="icon" type="image/png" href="/static/design/img/emblem.png">
     
 
+<!-- Preload primary font files for instant rendering without FOUT -->
+<link rel="preload" href="/static/design/fonts/cc63ecbb63cc.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/design/fonts/a97232426709.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/design/fonts/0319ea60ff1a.woff2" as="font" type="font/woff2" crossorigin>
+
 <link rel="stylesheet" href="/static/design/fonts/fonts.css">
 <link rel="stylesheet" href="/static/design/fonts/material-symbols.css">
+
+<style>
+  /* Critical typography: prevents any font-family flash or jump on page refresh */
+  html, body, .font-body-md, .font-body-sm, .font-body-lg {
+    font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .font-display-hero, .font-headline-lg, .font-headline-md, .font-headline-sm, .font-button-text, .aa-hero-title, .aa-btn {
+    font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+  .font-label-mono-xs, .font-label-mono-sm, .aa-hero-eyebrow, .aa-hero-note {
+    font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  }
+  ::-webkit-scrollbar { width: 0; height: 0; }
+  .aa-scroll-lock { overflow: hidden; }
+</style>
+
 <script src="/static/design/tailwind.js"></script>
 
 <script src="/static/design/tailwind-config.js"></script>
 
-<style>
-  /* The reference build hides scrollbars; keep that look but stay usable. */
-  ::-webkit-scrollbar { width: 0; height: 0; }
-  .aa-scroll-lock { overflow: hidden; }
-</style>
 
     
 </head>
@@ -99,10 +115,6 @@
 <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
 <div class="lg:col-span-7 flex flex-col gap-space-sm">
-<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider">
-<span class="w-2 h-2 rounded-full bg-secondary"></span>
-<span class="">Civil Engineering Association &bull; IIT Bombay</span>
-</div>
 <h1 class="font-display-hero text-display-hero text-primary tracking-tight leading-none mt-space-xs">
           About AAKAAR
         </h1>
