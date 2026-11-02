@@ -78,9 +78,9 @@ def main():
         else:
             print(f"  Warning: Route {route} returned status {response.status_code}")
 
-    # 3. Create a Netlify _redirects file for clean SPA-like routing fallback
+    # 3. Optional 404 fallback
     redirects_file = OUTPUT_DIR / '_redirects'
-    redirects_file.write_text("/*    /index.html   200\n", encoding='utf-8')
+    redirects_file.write_text("/*    /index.html   404\n", encoding='utf-8')
     print("Static export complete in dist/")
 
 if __name__ == '__main__':

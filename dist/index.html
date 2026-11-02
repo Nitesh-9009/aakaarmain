@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAKAAR | IIT Bombay</title>
+    <meta name="description"
+          content="AAKAAR - Asia's largest Civil Engineering technical festival by the Civil Engineering Association, IIT Bombay.">
+    <link rel="icon" type="image/png" href="/static/design/img/emblem.png">
+    
+
+<link rel="stylesheet" href="/static/design/fonts/fonts.css">
+<link rel="stylesheet" href="/static/design/fonts/material-symbols.css">
+<script src="/static/design/tailwind.js"></script>
+
+<script src="/static/design/tailwind-config.js"></script>
+
+<style>
+  /* The reference build hides scrollbars; keep that look but stay usable. */
+  ::-webkit-scrollbar { width: 0; height: 0; }
+  .aa-scroll-lock { overflow: hidden; }
+</style>
+
+    <link rel="stylesheet" href="/static/design/hero-pixel.css">
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="max-w-7xl mx-auto px-margin h-20 flex items-center justify-between gap-space-md">
+
+        <a href="/" class="flex items-center gap-space-sm shrink-0 group">
+            <img alt="AAKAAR IIT Bombay Emblem" class="h-8 w-auto object-contain"
+                 src="/static/design/img/emblem.png">
+            <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">AAKAAR</span>
+                <span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant uppercase">IIT Bombay</span>
+            </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-space-md xl:gap-space-lg">
+            <a class="font-body-sm text-body-sm transition-colors text-primary font-bold"
+               href="/">Home</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/sympo/">Symposium (ICES)</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/compi/">Competitions</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/events/">Events</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/events/workshops">Workshops</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/about/">About &amp; Legacy</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/partners/">Partners</a>
+        </nav>
+
+        <div class="flex items-center gap-space-sm md:gap-space-md shrink-0">
+            <a class="hidden sm:inline-flex items-center justify-center bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed-variant px-space-lg py-space-sm rounded-full font-button-text text-button-text shadow-sm active:translate-y-0.5 transition-all font-bold"
+               href="/compi/">Register / Explore</a>
+
+            
+            <a href="/accounts/login/" title="Sign in"
+               class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+            </a>
+            
+
+            <button type="button" aria-label="Open menu" aria-expanded="false" data-aa-menu-toggle
+                    class="lg:hidden w-9 h-9 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">menu</span>
+            </button>
+        </div>
+    </div>
+
+    <div data-aa-menu-panel
+         class="hidden lg:hidden border-t border-surface-container-highest bg-surface px-margin pb-space-lg pt-space-md">
+        <nav class="flex flex-col">
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-primary font-bold" href="/">Home</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/sympo/">Symposium (ICES)</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/compi/">Competitions</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/events/">Events</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/events/workshops">Workshops</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/about/">About &amp; Legacy</a>
+            <a class="py-space-sm font-body-md text-body-md text-on-surface-variant" href="/partners/">Partners</a>
+        </nav>
+        <a class="mt-space-md inline-flex items-center justify-center w-full bg-secondary-fixed text-on-secondary-fixed-variant px-space-lg py-space-sm rounded-full font-button-text text-button-text font-bold"
+           href="/compi/">Register / Explore</a>
+    </div>
+</header>
+
+
+
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+    <div class="flex flex-col w-full">
+        
+<!-- Top Hero Section -->
+
+
+<section class="aa-hero" id="hero">
+  <div class="aa-hero-scene" aria-hidden="true">
+  <svg class="aa-scene-svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice"
+       shape-rendering="crispEdges" role="presentation" focusable="false">
+    <defs>
+      <linearGradient id="aa-ground" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/>
+        <stop offset=".55" stop-color="#fdfcf6"/>
+        <stop offset="1" stop-color="#fbf9f2"/>
+      </linearGradient>
+    </defs>
+    <g class="aa-clouds">
+      <g class="aa-cloud" style="--cd:26s;--cdl:-4s">
+      <rect x="114" y="168" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="123" y="168" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="132" y="168" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="141" y="168" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="105" y="177" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="114" y="177" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="123" y="177" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="132" y="177" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="141" y="177" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="150" y="177" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="96" y="186" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="105" y="186" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="114" y="186" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="123" y="186" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="132" y="186" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="141" y="186" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="150" y="186" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="159" y="186" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="105" y="195" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="114" y="195" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="123" y="195" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="132" y="195" width="9" height="9" fill="#FFFFFF" fill-opacity=".9"/>
+      </g>
+      <g class="aa-cloud" style="--cd:32s;--cdl:-14s">
+      <rect x="314" y="232" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="321" y="232" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="328" y="232" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="335" y="232" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="307" y="239" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="314" y="239" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="321" y="239" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="328" y="239" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="335" y="239" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="342" y="239" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="300" y="246" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="307" y="246" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="314" y="246" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="321" y="246" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="328" y="246" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="335" y="246" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="342" y="246" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="349" y="246" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="307" y="253" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="314" y="253" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="321" y="253" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="328" y="253" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      </g>
+      <g class="aa-cloud" style="--cd:22s;--cdl:-9s">
+      <rect x="880" y="150" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="890" y="150" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="900" y="150" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="910" y="150" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="870" y="160" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="880" y="160" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="890" y="160" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="900" y="160" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="910" y="160" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="920" y="160" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="860" y="170" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="870" y="170" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="880" y="170" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="890" y="170" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="900" y="170" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="910" y="170" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="920" y="170" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="930" y="170" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="870" y="180" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="880" y="180" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="890" y="180" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="900" y="180" width="10" height="10" fill="#FFFFFF" fill-opacity=".9"/>
+      </g>
+      <g class="aa-cloud" style="--cd:30s;--cdl:-19s">
+      <rect x="1060" y="118" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1067" y="118" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1074" y="118" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1081" y="118" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1053" y="125" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1060" y="125" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1067" y="125" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1074" y="125" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1081" y="125" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1088" y="125" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1046" y="132" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1053" y="132" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1060" y="132" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1067" y="132" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1074" y="132" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1081" y="132" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1088" y="132" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1095" y="132" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1053" y="139" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1060" y="139" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1067" y="139" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      <rect x="1074" y="139" width="7" height="7" fill="#FFFFFF" fill-opacity=".9"/>
+      </g>
+    </g>
+    <g class="aa-mountains">
+      <rect x="12" y="282" width="36" height="18" fill="#F1F8EE"/>
+      <rect x="48" y="264" width="42" height="36" fill="#F1F8EE"/>
+      <rect x="90" y="246" width="42" height="54" fill="#F1F8EE"/>
+      <rect x="132" y="228" width="42" height="72" fill="#F1F8EE"/>
+      <rect x="174" y="210" width="36" height="90" fill="#F1F8EE"/>
+      <rect x="210" y="192" width="42" height="108" fill="#F1F8EE"/>
+      <rect x="252" y="174" width="42" height="126" fill="#F1F8EE"/>
+      <rect x="294" y="156" width="42" height="144" fill="#F1F8EE"/>
+      <rect x="336" y="138" width="36" height="162" fill="#F1F8EE"/>
+      <rect x="372" y="120" width="42" height="180" fill="#F1F8EE"/>
+      <rect x="414" y="102" width="30" height="198" fill="#F1F8EE"/>
+      <rect x="444" y="120" width="42" height="180" fill="#F1F8EE"/>
+      <rect x="486" y="138" width="42" height="162" fill="#F1F8EE"/>
+      <rect x="528" y="156" width="36" height="144" fill="#F1F8EE"/>
+      <rect x="564" y="174" width="42" height="126" fill="#F1F8EE"/>
+      <rect x="606" y="192" width="42" height="108" fill="#F1F8EE"/>
+      <rect x="648" y="210" width="42" height="90" fill="#F1F8EE"/>
+      <rect x="690" y="228" width="36" height="72" fill="#F1F8EE"/>
+      <rect x="726" y="246" width="42" height="54" fill="#F1F8EE"/>
+      <rect x="768" y="264" width="42" height="36" fill="#F1F8EE"/>
+      <rect x="810" y="282" width="42" height="18" fill="#F1F8EE"/>
+      <rect x="594" y="282" width="42" height="18" fill="#D9E7DA"/>
+      <rect x="636" y="264" width="42" height="36" fill="#D9E7DA"/>
+      <rect x="678" y="246" width="36" height="54" fill="#D9E7DA"/>
+      <rect x="714" y="228" width="42" height="72" fill="#D9E7DA"/>
+      <rect x="756" y="210" width="42" height="90" fill="#D9E7DA"/>
+      <rect x="798" y="192" width="36" height="108" fill="#D9E7DA"/>
+      <rect x="834" y="174" width="42" height="126" fill="#D9E7DA"/>
+      <rect x="876" y="156" width="60" height="144" fill="#D9E7DA"/>
+      <rect x="936" y="174" width="36" height="126" fill="#D9E7DA"/>
+      <rect x="972" y="192" width="42" height="108" fill="#D9E7DA"/>
+      <rect x="1014" y="210" width="42" height="90" fill="#D9E7DA"/>
+      <rect x="1056" y="228" width="36" height="72" fill="#D9E7DA"/>
+      <rect x="1092" y="246" width="42" height="54" fill="#D9E7DA"/>
+      <rect x="1134" y="264" width="42" height="36" fill="#D9E7DA"/>
+      <rect x="1176" y="282" width="24" height="18" fill="#D9E7DA"/>
+    </g>
+    <g class="aa-city">
+      <rect x="0" y="252" width="54" height="56" fill="#9BB0A3"/>
+      <rect x="6" y="246" width="42" height="6" fill="#9BB0A3"/>
+      <rect x="6" y="264" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-0.0s"/>
+      <rect x="18" y="276" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="54" y="228" width="36" height="80" fill="#AABDB1"/>
+      <rect x="60" y="222" width="24" height="6" fill="#AABDB1"/>
+      <rect x="69" y="204" width="6" height="18" fill="#AABDB1"/>
+      <rect x="69" y="198" width="6" height="6" fill="#EFC055" class="aa-beacon"/>
+      <rect x="60" y="264" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="72" y="276" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="96" y="264" width="66" height="44" fill="#AABDB1"/>
+      <rect x="102" y="258" width="54" height="6" fill="#AABDB1"/>
+      <rect x="114" y="276" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="162" y="210" width="42" height="98" fill="#9BB0A3"/>
+      <rect x="168" y="204" width="30" height="6" fill="#9BB0A3"/>
+      <rect x="168" y="234" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-3.9s"/>
+      <rect x="180" y="246" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="192" y="258" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-3.9s"/>
+      <rect x="210" y="246" width="78" height="62" fill="#AABDB1"/>
+      <rect x="216" y="240" width="66" height="6" fill="#AABDB1"/>
+      <rect x="240" y="258" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="252" y="270" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-4.2s"/>
+      <rect x="264" y="282" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="288" y="258" width="48" height="50" fill="#AABDB1"/>
+      <rect x="294" y="252" width="36" height="6" fill="#AABDB1"/>
+      <rect x="294" y="270" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="306" y="282" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="342" y="198" width="60" height="110" fill="#9BB0A3"/>
+      <rect x="348" y="192" width="48" height="6" fill="#9BB0A3"/>
+      <rect x="369" y="174" width="6" height="18" fill="#9BB0A3"/>
+      <rect x="369" y="168" width="6" height="6" fill="#EFC055" class="aa-beacon"/>
+      <rect x="384" y="210" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="348" y="234" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-6.8s"/>
+      <rect x="360" y="246" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="372" y="258" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-6.8s"/>
+      <rect x="384" y="270" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="402" y="240" width="36" height="68" fill="#AABDB1"/>
+      <rect x="408" y="234" width="24" height="6" fill="#AABDB1"/>
+      <rect x="420" y="252" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-0.1s"/>
+      <rect x="444" y="252" width="72" height="56" fill="#AABDB1"/>
+      <rect x="450" y="246" width="60" height="6" fill="#AABDB1"/>
+      <rect x="498" y="264" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-1.4s"/>
+      <rect x="450" y="276" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="516" y="222" width="54" height="86" fill="#9BB0A3"/>
+      <rect x="522" y="216" width="42" height="6" fill="#9BB0A3"/>
+      <rect x="546" y="234" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="558" y="246" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="522" y="270" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-2.7s"/>
+      <rect x="534" y="282" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="576" y="264" width="42" height="44" fill="#AABDB1"/>
+      <rect x="582" y="258" width="30" height="6" fill="#AABDB1"/>
+      <rect x="582" y="276" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="618" y="204" width="66" height="104" fill="#AABDB1"/>
+      <rect x="624" y="198" width="54" height="6" fill="#AABDB1"/>
+      <rect x="660" y="216" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="672" y="228" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-4.3s"/>
+      <rect x="624" y="240" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="636" y="252" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="648" y="264" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="660" y="276" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="690" y="246" width="36" height="62" fill="#9BB0A3"/>
+      <rect x="696" y="240" width="24" height="6" fill="#9BB0A3"/>
+      <rect x="708" y="258" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="726" y="234" width="60" height="74" fill="#AABDB1"/>
+      <rect x="732" y="228" width="48" height="6" fill="#AABDB1"/>
+      <rect x="753" y="210" width="6" height="18" fill="#AABDB1"/>
+      <rect x="753" y="204" width="6" height="6" fill="#EFC055" class="aa-beacon"/>
+      <rect x="732" y="258" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="744" y="270" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-6.9s"/>
+      <rect x="756" y="282" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="792" y="264" width="48" height="44" fill="#AABDB1"/>
+      <rect x="798" y="258" width="36" height="6" fill="#AABDB1"/>
+      <rect x="822" y="276" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-0.2s"/>
+      <rect x="840" y="216" width="72" height="92" fill="#9BB0A3"/>
+      <rect x="846" y="210" width="60" height="6" fill="#9BB0A3"/>
+      <rect x="846" y="228" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="858" y="240" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="870" y="252" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="882" y="264" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="894" y="276" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="918" y="252" width="42" height="56" fill="#AABDB1"/>
+      <rect x="924" y="246" width="30" height="6" fill="#AABDB1"/>
+      <rect x="960" y="240" width="54" height="68" fill="#AABDB1"/>
+      <rect x="966" y="234" width="42" height="6" fill="#AABDB1"/>
+      <rect x="978" y="252" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="990" y="264" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-3.1s"/>
+      <rect x="1002" y="276" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="1020" y="258" width="66" height="50" fill="#9BB0A3"/>
+      <rect x="1026" y="252" width="54" height="6" fill="#9BB0A3"/>
+      <rect x="1074" y="270" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="1026" y="282" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="1086" y="210" width="36" height="98" fill="#AABDB1"/>
+      <rect x="1092" y="204" width="24" height="6" fill="#AABDB1"/>
+      <rect x="1092" y="258" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="1104" y="270" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-5.7s"/>
+      <rect x="1128" y="246" width="60" height="62" fill="#AABDB1"/>
+      <rect x="1134" y="240" width="48" height="6" fill="#AABDB1"/>
+      <rect x="1134" y="258" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-6.0s"/>
+      <rect x="1146" y="270" width="6" height="6" fill="#C6D5CB"/>
+      <rect x="1158" y="282" width="6" height="6" fill="#EFC055" class="aa-window" style="animation-delay:-6.0s"/>
+      <rect x="1188" y="228" width="12" height="80" fill="#9BB0A3"/>
+      <rect x="1194" y="222" width="0" height="6" fill="#9BB0A3"/>
+      <rect x="1194" y="264" width="6" height="6" fill="#C6D5CB"/>
+    </g>
+    <g class="aa-ground">
+      <rect x="0" y="300" width="1200" height="120" fill="url(#aa-ground)"/>
+      <rect x="84" y="340" width="54" height="12" fill="#FFFFFF"/>
+      <rect x="96" y="352" width="30" height="6" fill="#EFF5EF"/>
+      <rect x="196" y="372" width="72" height="12" fill="#FFFFFF"/>
+      <rect x="208" y="384" width="48" height="6" fill="#EFF5EF"/>
+      <rect x="322" y="344" width="42" height="12" fill="#FFFFFF"/>
+      <rect x="334" y="356" width="18" height="6" fill="#EFF5EF"/>
+      <rect x="430" y="398" width="60" height="12" fill="#FFFFFF"/>
+      <rect x="442" y="410" width="36" height="6" fill="#EFF5EF"/>
+      <rect x="540" y="366" width="48" height="12" fill="#FFFFFF"/>
+      <rect x="552" y="378" width="24" height="6" fill="#EFF5EF"/>
+      <rect x="664" y="408" width="66" height="12" fill="#FFFFFF"/>
+      <rect x="676" y="420" width="42" height="6" fill="#EFF5EF"/>
+      <rect x="760" y="352" width="54" height="12" fill="#FFFFFF"/>
+      <rect x="772" y="364" width="30" height="6" fill="#EFF5EF"/>
+      <rect x="872" y="388" width="78" height="12" fill="#FFFFFF"/>
+      <rect x="884" y="400" width="54" height="6" fill="#EFF5EF"/>
+      <rect x="1004" y="360" width="48" height="12" fill="#FFFFFF"/>
+      <rect x="1016" y="372" width="24" height="6" fill="#EFF5EF"/>
+      <rect x="1104" y="400" width="60" height="12" fill="#FFFFFF"/>
+      <rect x="1116" y="412" width="36" height="6" fill="#EFF5EF"/>
+      <rect x="60" y="356" width="18" height="8" fill="#DCE7DE"/>
+      <rect x="252" y="402" width="24" height="8" fill="#DCE7DE"/>
+      <rect x="378" y="380" width="18" height="8" fill="#DCE7DE"/>
+      <rect x="596" y="396" width="24" height="8" fill="#DCE7DE"/>
+      <rect x="708" y="376" width="18" height="8" fill="#DCE7DE"/>
+      <rect x="930" y="404" width="24" height="8" fill="#DCE7DE"/>
+      <rect x="1032" y="384" width="18" height="8" fill="#DCE7DE"/>
+    </g>
+    <g class="aa-crane">
+      <rect x="924" y="196" width="7" height="104" fill="#E8B94F"/>
+      <rect x="931" y="196" width="108" height="7" fill="#E8B94F"/>
+      <rect x="1031" y="203" width="7" height="26" fill="#E8B94F"/>
+      <rect x="904" y="196" width="28" height="7" fill="#D4A33B"/>
+      <rect x="917" y="210" width="7" height="7" fill="#D4A33B"/>
+      <rect x="917" y="234" width="7" height="7" fill="#D4A33B"/>
+      <rect x="917" y="258" width="7" height="7" fill="#D4A33B"/>
+      <rect x="917" y="282" width="7" height="7" fill="#D4A33B"/>
+      <rect x="917" y="306" width="7" height="7" fill="#D4A33B"/>
+      <rect x="917" y="330" width="7" height="7" fill="#D4A33B"/>
+      <rect x="1005" y="203" width="4" height="44" fill="#D4A33B"/>
+      <g class="aa-hook"><rect x="995" y="247" width="24" height="20" fill="#C9922C"/></g>
+    </g>
+    <g class="aa-treeline">
+      <g class="aa-tree" style="--sd:7.0s;--sdl:-1.2s">
+      <rect x="32" y="307" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="25" y="314" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="32" y="314" width="7" height="7" fill="#1E4B36"/>
+      <rect x="39" y="314" width="7" height="7" fill="#1E4B36"/>
+      <rect x="25" y="321" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="32" y="321" width="7" height="7" fill="#1E4B36"/>
+      <rect x="39" y="321" width="7" height="7" fill="#1E4B36"/>
+      <rect x="18" y="328" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="25" y="328" width="7" height="7" fill="#1E4B36"/>
+      <rect x="32" y="328" width="7" height="7" fill="#1E4B36"/>
+      <rect x="39" y="328" width="7" height="7" fill="#1E4B36"/>
+      <rect x="46" y="328" width="7" height="7" fill="#1E4B36"/>
+      <rect x="18" y="335" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="25" y="335" width="7" height="7" fill="#1E4B36"/>
+      <rect x="32" y="335" width="7" height="7" fill="#1E4B36"/>
+      <rect x="39" y="335" width="7" height="7" fill="#1E4B36"/>
+      <rect x="46" y="335" width="7" height="7" fill="#1E4B36"/>
+      <rect x="32" y="342" width="7" height="7" fill="#4A3410"/>
+      <rect x="32" y="349" width="7" height="7" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:9.0s;--sdl:-3.4s">
+      <rect x="98" y="312" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="90" y="320" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="98" y="320" width="8" height="8" fill="#1E4B36"/>
+      <rect x="106" y="320" width="8" height="8" fill="#1E4B36"/>
+      <rect x="90" y="328" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="98" y="328" width="8" height="8" fill="#1E4B36"/>
+      <rect x="106" y="328" width="8" height="8" fill="#1E4B36"/>
+      <rect x="82" y="336" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="90" y="336" width="8" height="8" fill="#1E4B36"/>
+      <rect x="98" y="336" width="8" height="8" fill="#1E4B36"/>
+      <rect x="106" y="336" width="8" height="8" fill="#1E4B36"/>
+      <rect x="114" y="336" width="8" height="8" fill="#1E4B36"/>
+      <rect x="82" y="344" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="90" y="344" width="8" height="8" fill="#1E4B36"/>
+      <rect x="98" y="344" width="8" height="8" fill="#1E4B36"/>
+      <rect x="106" y="344" width="8" height="8" fill="#1E4B36"/>
+      <rect x="114" y="344" width="8" height="8" fill="#1E4B36"/>
+      <rect x="74" y="352" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="82" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="90" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="98" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="106" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="114" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="122" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="74" y="360" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="82" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="90" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="98" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="106" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="114" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="122" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="82" y="368" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="90" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="98" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="106" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="114" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="98" y="376" width="8" height="8" fill="#4A3410"/>
+      <rect x="98" y="384" width="8" height="8" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:8.0s;--sdl:-2.1s">
+      <rect x="134" y="312" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="128" y="318" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="134" y="318" width="6" height="6" fill="#1E4B36"/>
+      <rect x="140" y="318" width="6" height="6" fill="#1E4B36"/>
+      <rect x="134" y="324" width="6" height="6" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:6.4s;--sdl:-0.6s">
+      <rect x="186" y="309" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="177" y="318" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="186" y="318" width="9" height="9" fill="#1E4B36"/>
+      <rect x="195" y="318" width="9" height="9" fill="#1E4B36"/>
+      <rect x="177" y="327" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="186" y="327" width="9" height="9" fill="#1E4B36"/>
+      <rect x="195" y="327" width="9" height="9" fill="#1E4B36"/>
+      <rect x="168" y="336" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="177" y="336" width="9" height="9" fill="#1E4B36"/>
+      <rect x="186" y="336" width="9" height="9" fill="#1E4B36"/>
+      <rect x="195" y="336" width="9" height="9" fill="#1E4B36"/>
+      <rect x="204" y="336" width="9" height="9" fill="#1E4B36"/>
+      <rect x="168" y="345" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="177" y="345" width="9" height="9" fill="#1E4B36"/>
+      <rect x="186" y="345" width="9" height="9" fill="#1E4B36"/>
+      <rect x="195" y="345" width="9" height="9" fill="#1E4B36"/>
+      <rect x="204" y="345" width="9" height="9" fill="#1E4B36"/>
+      <rect x="186" y="354" width="9" height="9" fill="#4A3410"/>
+      <rect x="186" y="363" width="9" height="9" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:9.6s;--sdl:-4.2s">
+      <rect x="244" y="302" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="238" y="308" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="244" y="308" width="6" height="6" fill="#1E4B36"/>
+      <rect x="250" y="308" width="6" height="6" fill="#1E4B36"/>
+      <rect x="238" y="314" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="244" y="314" width="6" height="6" fill="#1E4B36"/>
+      <rect x="250" y="314" width="6" height="6" fill="#1E4B36"/>
+      <rect x="232" y="320" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="238" y="320" width="6" height="6" fill="#1E4B36"/>
+      <rect x="244" y="320" width="6" height="6" fill="#1E4B36"/>
+      <rect x="250" y="320" width="6" height="6" fill="#1E4B36"/>
+      <rect x="256" y="320" width="6" height="6" fill="#1E4B36"/>
+      <rect x="232" y="326" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="238" y="326" width="6" height="6" fill="#1E4B36"/>
+      <rect x="244" y="326" width="6" height="6" fill="#1E4B36"/>
+      <rect x="250" y="326" width="6" height="6" fill="#1E4B36"/>
+      <rect x="256" y="326" width="6" height="6" fill="#1E4B36"/>
+      <rect x="244" y="332" width="6" height="6" fill="#4A3410"/>
+      <rect x="244" y="338" width="6" height="6" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:7.6s;--sdl:-1.8s">
+      <rect x="313" y="308" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="304" y="317" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="313" y="317" width="9" height="9" fill="#1E4B36"/>
+      <rect x="322" y="317" width="9" height="9" fill="#1E4B36"/>
+      <rect x="304" y="326" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="313" y="326" width="9" height="9" fill="#1E4B36"/>
+      <rect x="322" y="326" width="9" height="9" fill="#1E4B36"/>
+      <rect x="295" y="335" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="304" y="335" width="9" height="9" fill="#1E4B36"/>
+      <rect x="313" y="335" width="9" height="9" fill="#1E4B36"/>
+      <rect x="322" y="335" width="9" height="9" fill="#1E4B36"/>
+      <rect x="331" y="335" width="9" height="9" fill="#1E4B36"/>
+      <rect x="295" y="344" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="304" y="344" width="9" height="9" fill="#1E4B36"/>
+      <rect x="313" y="344" width="9" height="9" fill="#1E4B36"/>
+      <rect x="322" y="344" width="9" height="9" fill="#1E4B36"/>
+      <rect x="331" y="344" width="9" height="9" fill="#1E4B36"/>
+      <rect x="286" y="353" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="295" y="353" width="9" height="9" fill="#1E4B36"/>
+      <rect x="304" y="353" width="9" height="9" fill="#1E4B36"/>
+      <rect x="313" y="353" width="9" height="9" fill="#1E4B36"/>
+      <rect x="322" y="353" width="9" height="9" fill="#1E4B36"/>
+      <rect x="331" y="353" width="9" height="9" fill="#1E4B36"/>
+      <rect x="340" y="353" width="9" height="9" fill="#1E4B36"/>
+      <rect x="286" y="362" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="295" y="362" width="9" height="9" fill="#1E4B36"/>
+      <rect x="304" y="362" width="9" height="9" fill="#1E4B36"/>
+      <rect x="313" y="362" width="9" height="9" fill="#1E4B36"/>
+      <rect x="322" y="362" width="9" height="9" fill="#1E4B36"/>
+      <rect x="331" y="362" width="9" height="9" fill="#1E4B36"/>
+      <rect x="340" y="362" width="9" height="9" fill="#1E4B36"/>
+      <rect x="295" y="371" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="304" y="371" width="9" height="9" fill="#1E4B36"/>
+      <rect x="313" y="371" width="9" height="9" fill="#1E4B36"/>
+      <rect x="322" y="371" width="9" height="9" fill="#1E4B36"/>
+      <rect x="331" y="371" width="9" height="9" fill="#1E4B36"/>
+      <rect x="313" y="380" width="9" height="9" fill="#4A3410"/>
+      <rect x="313" y="389" width="9" height="9" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:8.8s;--sdl:-5.0s">
+      <rect x="359" y="315" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="352" y="322" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="359" y="322" width="7" height="7" fill="#1E4B36"/>
+      <rect x="366" y="322" width="7" height="7" fill="#1E4B36"/>
+      <rect x="359" y="329" width="7" height="7" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:6.8s;--sdl:-2.6s">
+      <rect x="414" y="324" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="406" y="332" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="414" y="332" width="8" height="8" fill="#1E4B36"/>
+      <rect x="422" y="332" width="8" height="8" fill="#1E4B36"/>
+      <rect x="406" y="340" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="414" y="340" width="8" height="8" fill="#1E4B36"/>
+      <rect x="422" y="340" width="8" height="8" fill="#1E4B36"/>
+      <rect x="398" y="348" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="406" y="348" width="8" height="8" fill="#1E4B36"/>
+      <rect x="414" y="348" width="8" height="8" fill="#1E4B36"/>
+      <rect x="422" y="348" width="8" height="8" fill="#1E4B36"/>
+      <rect x="430" y="348" width="8" height="8" fill="#1E4B36"/>
+      <rect x="398" y="356" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="406" y="356" width="8" height="8" fill="#1E4B36"/>
+      <rect x="414" y="356" width="8" height="8" fill="#1E4B36"/>
+      <rect x="422" y="356" width="8" height="8" fill="#1E4B36"/>
+      <rect x="430" y="356" width="8" height="8" fill="#1E4B36"/>
+      <rect x="414" y="364" width="8" height="8" fill="#4A3410"/>
+      <rect x="414" y="372" width="8" height="8" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:9.2s;--sdl:-3.0s">
+      <rect x="478" y="310" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="472" y="316" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="478" y="316" width="6" height="6" fill="#1E4B36"/>
+      <rect x="484" y="316" width="6" height="6" fill="#1E4B36"/>
+      <rect x="472" y="322" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="478" y="322" width="6" height="6" fill="#1E4B36"/>
+      <rect x="484" y="322" width="6" height="6" fill="#1E4B36"/>
+      <rect x="466" y="328" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="472" y="328" width="6" height="6" fill="#1E4B36"/>
+      <rect x="478" y="328" width="6" height="6" fill="#1E4B36"/>
+      <rect x="484" y="328" width="6" height="6" fill="#1E4B36"/>
+      <rect x="490" y="328" width="6" height="6" fill="#1E4B36"/>
+      <rect x="466" y="334" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="472" y="334" width="6" height="6" fill="#1E4B36"/>
+      <rect x="478" y="334" width="6" height="6" fill="#1E4B36"/>
+      <rect x="484" y="334" width="6" height="6" fill="#1E4B36"/>
+      <rect x="490" y="334" width="6" height="6" fill="#1E4B36"/>
+      <rect x="478" y="340" width="6" height="6" fill="#4A3410"/>
+      <rect x="478" y="346" width="6" height="6" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:7.2s;--sdl:-0.9s">
+      <rect x="544" y="320" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="536" y="328" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="544" y="328" width="8" height="8" fill="#1E4B36"/>
+      <rect x="552" y="328" width="8" height="8" fill="#1E4B36"/>
+      <rect x="536" y="336" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="544" y="336" width="8" height="8" fill="#1E4B36"/>
+      <rect x="552" y="336" width="8" height="8" fill="#1E4B36"/>
+      <rect x="528" y="344" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="536" y="344" width="8" height="8" fill="#1E4B36"/>
+      <rect x="544" y="344" width="8" height="8" fill="#1E4B36"/>
+      <rect x="552" y="344" width="8" height="8" fill="#1E4B36"/>
+      <rect x="560" y="344" width="8" height="8" fill="#1E4B36"/>
+      <rect x="528" y="352" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="536" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="544" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="552" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="560" y="352" width="8" height="8" fill="#1E4B36"/>
+      <rect x="520" y="360" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="528" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="536" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="544" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="552" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="560" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="568" y="360" width="8" height="8" fill="#1E4B36"/>
+      <rect x="520" y="368" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="528" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="536" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="544" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="552" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="560" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="568" y="368" width="8" height="8" fill="#1E4B36"/>
+      <rect x="528" y="376" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="536" y="376" width="8" height="8" fill="#1E4B36"/>
+      <rect x="544" y="376" width="8" height="8" fill="#1E4B36"/>
+      <rect x="552" y="376" width="8" height="8" fill="#1E4B36"/>
+      <rect x="560" y="376" width="8" height="8" fill="#1E4B36"/>
+      <rect x="544" y="384" width="8" height="8" fill="#4A3410"/>
+      <rect x="544" y="392" width="8" height="8" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:9.0s;--sdl:-1.1s">
+      <rect x="946" y="308" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="940" y="314" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="946" y="314" width="6" height="6" fill="#1E4B36"/>
+      <rect x="952" y="314" width="6" height="6" fill="#1E4B36"/>
+      <rect x="940" y="320" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="946" y="320" width="6" height="6" fill="#1E4B36"/>
+      <rect x="952" y="320" width="6" height="6" fill="#1E4B36"/>
+      <rect x="934" y="326" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="940" y="326" width="6" height="6" fill="#1E4B36"/>
+      <rect x="946" y="326" width="6" height="6" fill="#1E4B36"/>
+      <rect x="952" y="326" width="6" height="6" fill="#1E4B36"/>
+      <rect x="958" y="326" width="6" height="6" fill="#1E4B36"/>
+      <rect x="934" y="332" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="940" y="332" width="6" height="6" fill="#1E4B36"/>
+      <rect x="946" y="332" width="6" height="6" fill="#1E4B36"/>
+      <rect x="952" y="332" width="6" height="6" fill="#1E4B36"/>
+      <rect x="958" y="332" width="6" height="6" fill="#1E4B36"/>
+      <rect x="946" y="338" width="6" height="6" fill="#4A3410"/>
+      <rect x="946" y="344" width="6" height="6" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:7.4s;--sdl:-3.3s">
+      <rect x="1010" y="322" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="1002" y="330" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="1010" y="330" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1018" y="330" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1002" y="338" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="1010" y="338" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1018" y="338" width="8" height="8" fill="#1E4B36"/>
+      <rect x="994" y="346" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="1002" y="346" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1010" y="346" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1018" y="346" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1026" y="346" width="8" height="8" fill="#1E4B36"/>
+      <rect x="994" y="354" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="1002" y="354" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1010" y="354" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1018" y="354" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1026" y="354" width="8" height="8" fill="#1E4B36"/>
+      <rect x="986" y="362" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="994" y="362" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1002" y="362" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1010" y="362" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1018" y="362" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1026" y="362" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1034" y="362" width="8" height="8" fill="#1E4B36"/>
+      <rect x="986" y="370" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="994" y="370" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1002" y="370" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1010" y="370" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1018" y="370" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1026" y="370" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1034" y="370" width="8" height="8" fill="#1E4B36"/>
+      <rect x="994" y="378" width="8" height="8" fill="#2F6C4A"/>
+      <rect x="1002" y="378" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1010" y="378" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1018" y="378" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1026" y="378" width="8" height="8" fill="#1E4B36"/>
+      <rect x="1010" y="386" width="8" height="8" fill="#4A3410"/>
+      <rect x="1010" y="394" width="8" height="8" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:8.2s;--sdl:-5.4s">
+      <rect x="1058" y="322" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="1052" y="328" width="6" height="6" fill="#2F6C4A"/>
+      <rect x="1058" y="328" width="6" height="6" fill="#1E4B36"/>
+      <rect x="1064" y="328" width="6" height="6" fill="#1E4B36"/>
+      <rect x="1058" y="334" width="6" height="6" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:6.9s;--sdl:-2.8s">
+      <rect x="1110" y="327" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="1103" y="334" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="1110" y="334" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1117" y="334" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1103" y="341" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="1110" y="341" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1117" y="341" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1096" y="348" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="1103" y="348" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1110" y="348" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1117" y="348" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1124" y="348" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1096" y="355" width="7" height="7" fill="#2F6C4A"/>
+      <rect x="1103" y="355" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1110" y="355" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1117" y="355" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1124" y="355" width="7" height="7" fill="#1E4B36"/>
+      <rect x="1110" y="362" width="7" height="7" fill="#4A3410"/>
+      <rect x="1110" y="369" width="7" height="7" fill="#4A3410"/>
+      </g>
+      <g class="aa-tree" style="--sd:7.9s;--sdl:-1.7s">
+      <rect x="1179" y="306" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="1170" y="315" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="1179" y="315" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1188" y="315" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1170" y="324" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="1179" y="324" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1188" y="324" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1161" y="333" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="1170" y="333" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1179" y="333" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1188" y="333" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1197" y="333" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1161" y="342" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="1170" y="342" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1179" y="342" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1188" y="342" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1197" y="342" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1152" y="351" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="1161" y="351" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1170" y="351" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1179" y="351" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1188" y="351" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1197" y="351" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1206" y="351" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1152" y="360" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="1161" y="360" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1170" y="360" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1179" y="360" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1188" y="360" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1197" y="360" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1206" y="360" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1161" y="369" width="9" height="9" fill="#2F6C4A"/>
+      <rect x="1170" y="369" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1179" y="369" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1188" y="369" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1197" y="369" width="9" height="9" fill="#1E4B36"/>
+      <rect x="1179" y="378" width="9" height="9" fill="#4A3410"/>
+      <rect x="1179" y="387" width="9" height="9" fill="#4A3410"/>
+      </g>
+    </g>
+    <g class="aa-drift">
+      <rect x="0" y="386" width="132" height="34" fill="#FFFFFF"/>
+      <rect x="0" y="386" width="132" height="6" fill="#FFFFFF"/>
+      <rect x="132" y="374" width="96" height="46" fill="#FFFFFF"/>
+      <rect x="132" y="374" width="96" height="6" fill="#FFFFFF"/>
+      <rect x="228" y="382" width="128" height="38" fill="#FFFFFF"/>
+      <rect x="228" y="382" width="128" height="6" fill="#FFFFFF"/>
+      <rect x="356" y="368" width="120" height="52" fill="#FFFFFF"/>
+      <rect x="356" y="368" width="120" height="6" fill="#FFFFFF"/>
+      <rect x="476" y="378" width="132" height="42" fill="#FFFFFF"/>
+      <rect x="476" y="378" width="132" height="6" fill="#FFFFFF"/>
+      <rect x="608" y="362" width="148" height="58" fill="#FFFFFF"/>
+      <rect x="608" y="362" width="148" height="6" fill="#FFFFFF"/>
+      <rect x="756" y="376" width="128" height="44" fill="#FFFFFF"/>
+      <rect x="756" y="376" width="128" height="6" fill="#FFFFFF"/>
+      <rect x="884" y="368" width="116" height="52" fill="#FFFFFF"/>
+      <rect x="884" y="368" width="116" height="6" fill="#FFFFFF"/>
+      <rect x="1000" y="380" width="108" height="40" fill="#FFFFFF"/>
+      <rect x="1000" y="380" width="108" height="6" fill="#FFFFFF"/>
+      <rect x="1108" y="372" width="92" height="48" fill="#FFFFFF"/>
+      <rect x="1108" y="372" width="92" height="6" fill="#FFFFFF"/>
+      <rect x="168" y="402" width="40" height="6" fill="#EAF1EA"/>
+      <rect x="392" y="396" width="32" height="6" fill="#EAF1EA"/>
+      <rect x="652" y="400" width="44" height="6" fill="#EAF1EA"/>
+      <rect x="940" y="398" width="36" height="6" fill="#EAF1EA"/>
+      <rect x="1132" y="404" width="40" height="6" fill="#EAF1EA"/>
+      <rect x="532" y="398" width="30" height="6" fill="#EAF1EA"/>
+    </g>
+    <g class="aa-cast">
+      <g class="aa-char aa-penguin">
+      <rect x="613" y="286" width="9" height="9" fill="#22303C"/>
+      <rect x="622" y="286" width="9" height="9" fill="#22303C"/>
+      <rect x="631" y="286" width="9" height="9" fill="#22303C"/>
+      <rect x="640" y="286" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="295" width="9" height="9" fill="#22303C"/>
+      <rect x="613" y="295" width="9" height="9" fill="#22303C"/>
+      <rect x="622" y="295" width="9" height="9" fill="#22303C"/>
+      <rect x="631" y="295" width="9" height="9" fill="#22303C"/>
+      <rect x="640" y="295" width="9" height="9" fill="#22303C"/>
+      <rect x="649" y="295" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="304" width="9" height="9" fill="#22303C"/>
+      <rect x="613" y="304" width="9" height="9" fill="#1B1C18"/>
+      <rect x="622" y="304" width="9" height="9" fill="#1B1C18"/>
+      <rect x="631" y="304" width="9" height="9" fill="#1B1C18"/>
+      <rect x="640" y="304" width="9" height="9" fill="#1B1C18"/>
+      <rect x="649" y="304" width="9" height="9" fill="#22303C"/>
+      <rect x="595" y="313" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="313" width="9" height="9" fill="#1B1C18"/>
+      <rect x="613" y="313" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="622" y="313" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="631" y="313" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="640" y="313" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="649" y="313" width="9" height="9" fill="#1B1C18"/>
+      <rect x="658" y="313" width="9" height="9" fill="#22303C"/>
+      <rect x="595" y="322" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="322" width="9" height="9" fill="#1B1C18"/>
+      <rect x="613" y="322" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="622" y="322" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="631" y="322" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="640" y="322" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="649" y="322" width="9" height="9" fill="#1B1C18"/>
+      <rect x="658" y="322" width="9" height="9" fill="#22303C"/>
+      <rect x="595" y="331" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="331" width="9" height="9" fill="#1B1C18"/>
+      <rect x="613" y="331" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="622" y="331" width="9" height="9" fill="#E8B94F"/>
+      <rect x="631" y="331" width="9" height="9" fill="#E8B94F"/>
+      <rect x="640" y="331" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="649" y="331" width="9" height="9" fill="#1B1C18"/>
+      <rect x="658" y="331" width="9" height="9" fill="#22303C"/>
+      <rect x="595" y="340" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="340" width="9" height="9" fill="#1B1C18"/>
+      <rect x="613" y="340" width="9" height="9" fill="#1B1C18"/>
+      <rect x="622" y="340" width="9" height="9" fill="#1B1C18"/>
+      <rect x="631" y="340" width="9" height="9" fill="#1B1C18"/>
+      <rect x="640" y="340" width="9" height="9" fill="#1B1C18"/>
+      <rect x="649" y="340" width="9" height="9" fill="#1B1C18"/>
+      <rect x="658" y="340" width="9" height="9" fill="#22303C"/>
+      <rect x="595" y="349" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="349" width="9" height="9" fill="#1B1C18"/>
+      <rect x="613" y="349" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="622" y="349" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="631" y="349" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="640" y="349" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="649" y="349" width="9" height="9" fill="#1B1C18"/>
+      <rect x="658" y="349" width="9" height="9" fill="#22303C"/>
+      <rect x="595" y="358" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="358" width="9" height="9" fill="#1B1C18"/>
+      <rect x="613" y="358" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="622" y="358" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="631" y="358" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="640" y="358" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="649" y="358" width="9" height="9" fill="#1B1C18"/>
+      <rect x="658" y="358" width="9" height="9" fill="#22303C"/>
+      <rect x="595" y="367" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="367" width="9" height="9" fill="#1B1C18"/>
+      <rect x="613" y="367" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="622" y="367" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="631" y="367" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="640" y="367" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="649" y="367" width="9" height="9" fill="#1B1C18"/>
+      <rect x="658" y="367" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="376" width="9" height="9" fill="#22303C"/>
+      <rect x="613" y="376" width="9" height="9" fill="#1B1C18"/>
+      <rect x="622" y="376" width="9" height="9" fill="#1B1C18"/>
+      <rect x="631" y="376" width="9" height="9" fill="#1B1C18"/>
+      <rect x="640" y="376" width="9" height="9" fill="#1B1C18"/>
+      <rect x="649" y="376" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="385" width="9" height="9" fill="#22303C"/>
+      <rect x="613" y="385" width="9" height="9" fill="#1B1C18"/>
+      <rect x="622" y="385" width="9" height="9" fill="#1B1C18"/>
+      <rect x="631" y="385" width="9" height="9" fill="#1B1C18"/>
+      <rect x="640" y="385" width="9" height="9" fill="#1B1C18"/>
+      <rect x="649" y="385" width="9" height="9" fill="#22303C"/>
+      <rect x="604" y="394" width="9" height="9" fill="#E8B94F"/>
+      <rect x="649" y="394" width="9" height="9" fill="#E8B94F"/>
+      <rect x="604" y="403" width="9" height="9" fill="#E8B94F"/>
+      <rect x="613" y="403" width="9" height="9" fill="#E8B94F"/>
+      <rect x="640" y="403" width="9" height="9" fill="#E8B94F"/>
+      <rect x="649" y="403" width="9" height="9" fill="#E8B94F"/>
+      </g>
+      <g class="aa-char aa-owl">
+      <rect x="726" y="277" width="9" height="9" fill="#143A2B"/>
+      <rect x="735" y="277" width="9" height="9" fill="#143A2B"/>
+      <rect x="780" y="277" width="9" height="9" fill="#143A2B"/>
+      <rect x="789" y="277" width="9" height="9" fill="#143A2B"/>
+      <rect x="726" y="286" width="9" height="9" fill="#143A2B"/>
+      <rect x="735" y="286" width="9" height="9" fill="#357A50"/>
+      <rect x="744" y="286" width="9" height="9" fill="#143A2B"/>
+      <rect x="771" y="286" width="9" height="9" fill="#143A2B"/>
+      <rect x="780" y="286" width="9" height="9" fill="#357A50"/>
+      <rect x="789" y="286" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="295" width="9" height="9" fill="#143A2B"/>
+      <rect x="726" y="295" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="295" width="9" height="9" fill="#357A50"/>
+      <rect x="744" y="295" width="9" height="9" fill="#357A50"/>
+      <rect x="753" y="295" width="9" height="9" fill="#143A2B"/>
+      <rect x="762" y="295" width="9" height="9" fill="#143A2B"/>
+      <rect x="771" y="295" width="9" height="9" fill="#357A50"/>
+      <rect x="780" y="295" width="9" height="9" fill="#357A50"/>
+      <rect x="789" y="295" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="295" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="304" width="9" height="9" fill="#143A2B"/>
+      <rect x="726" y="304" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="304" width="9" height="9" fill="#357A50"/>
+      <rect x="744" y="304" width="9" height="9" fill="#357A50"/>
+      <rect x="753" y="304" width="9" height="9" fill="#357A50"/>
+      <rect x="762" y="304" width="9" height="9" fill="#357A50"/>
+      <rect x="771" y="304" width="9" height="9" fill="#357A50"/>
+      <rect x="780" y="304" width="9" height="9" fill="#357A50"/>
+      <rect x="789" y="304" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="304" width="9" height="9" fill="#143A2B"/>
+      <rect x="708" y="313" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="313" width="9" height="9" fill="#357A50"/>
+      <rect x="726" y="313" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="313" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="744" y="313" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="753" y="313" width="9" height="9" fill="#357A50"/>
+      <rect x="762" y="313" width="9" height="9" fill="#357A50"/>
+      <rect x="771" y="313" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="780" y="313" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="789" y="313" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="313" width="9" height="9" fill="#357A50"/>
+      <rect x="807" y="313" width="9" height="9" fill="#143A2B"/>
+      <rect x="708" y="322" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="322" width="9" height="9" fill="#357A50"/>
+      <rect x="726" y="322" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="322" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="744" y="322" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="753" y="322" width="9" height="9" fill="#357A50"/>
+      <rect x="762" y="322" width="9" height="9" fill="#357A50"/>
+      <rect x="771" y="322" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="780" y="322" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="789" y="322" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="322" width="9" height="9" fill="#357A50"/>
+      <rect x="807" y="322" width="9" height="9" fill="#143A2B"/>
+      <rect x="708" y="331" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="331" width="9" height="9" fill="#357A50"/>
+      <rect x="726" y="331" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="331" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="744" y="331" width="9" height="9" fill="#1B1C18"/>
+      <rect x="753" y="331" width="9" height="9" fill="#357A50"/>
+      <rect x="762" y="331" width="9" height="9" fill="#357A50"/>
+      <rect x="771" y="331" width="9" height="9" fill="#FFFFFF"/>
+      <rect x="780" y="331" width="9" height="9" fill="#1B1C18"/>
+      <rect x="789" y="331" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="331" width="9" height="9" fill="#357A50"/>
+      <rect x="807" y="331" width="9" height="9" fill="#143A2B"/>
+      <rect x="708" y="340" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="340" width="9" height="9" fill="#357A50"/>
+      <rect x="726" y="340" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="340" width="9" height="9" fill="#357A50"/>
+      <rect x="744" y="340" width="9" height="9" fill="#357A50"/>
+      <rect x="753" y="340" width="9" height="9" fill="#357A50"/>
+      <rect x="762" y="340" width="9" height="9" fill="#E8B94F"/>
+      <rect x="771" y="340" width="9" height="9" fill="#E8B94F"/>
+      <rect x="780" y="340" width="9" height="9" fill="#357A50"/>
+      <rect x="789" y="340" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="340" width="9" height="9" fill="#357A50"/>
+      <rect x="807" y="340" width="9" height="9" fill="#143A2B"/>
+      <rect x="708" y="349" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="349" width="9" height="9" fill="#357A50"/>
+      <rect x="726" y="349" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="349" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="744" y="349" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="753" y="349" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="762" y="349" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="771" y="349" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="780" y="349" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="789" y="349" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="349" width="9" height="9" fill="#357A50"/>
+      <rect x="807" y="349" width="9" height="9" fill="#143A2B"/>
+      <rect x="708" y="358" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="358" width="9" height="9" fill="#143A2B"/>
+      <rect x="726" y="358" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="358" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="744" y="358" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="753" y="358" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="762" y="358" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="771" y="358" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="780" y="358" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="789" y="358" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="358" width="9" height="9" fill="#143A2B"/>
+      <rect x="807" y="358" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="367" width="9" height="9" fill="#143A2B"/>
+      <rect x="726" y="367" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="367" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="744" y="367" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="753" y="367" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="762" y="367" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="771" y="367" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="780" y="367" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="789" y="367" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="367" width="9" height="9" fill="#143A2B"/>
+      <rect x="717" y="376" width="9" height="9" fill="#143A2B"/>
+      <rect x="726" y="376" width="9" height="9" fill="#357A50"/>
+      <rect x="735" y="376" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="744" y="376" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="753" y="376" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="762" y="376" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="771" y="376" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="780" y="376" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="789" y="376" width="9" height="9" fill="#357A50"/>
+      <rect x="798" y="376" width="9" height="9" fill="#143A2B"/>
+      <rect x="726" y="385" width="9" height="9" fill="#143A2B"/>
+      <rect x="735" y="385" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="744" y="385" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="753" y="385" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="762" y="385" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="771" y="385" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="780" y="385" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="789" y="385" width="9" height="9" fill="#143A2B"/>
+      <rect x="735" y="394" width="9" height="9" fill="#143A2B"/>
+      <rect x="744" y="394" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="753" y="394" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="762" y="394" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="771" y="394" width="9" height="9" fill="#F6EFDA"/>
+      <rect x="780" y="394" width="9" height="9" fill="#143A2B"/>
+      <rect x="735" y="403" width="9" height="9" fill="#E8B94F"/>
+      <rect x="780" y="403" width="9" height="9" fill="#E8B94F"/>
+      </g>
+      <g class="aa-owl-lids">
+      <rect x="735" y="313" width="18" height="9" fill="#143A2B"/>
+      <rect x="771" y="313" width="18" height="9" fill="#143A2B"/>
+      </g>
+      <g class="aa-bubble-wrap aa-bubble-left">
+      <g class="aa-bubble"><path d="M482 198 L658 198 L658 206 L666 206 L666 238 L658 238 L658 246 L590 246 L590 254 L580 254 L580 262 L568 262 L568 254 L556 254 L556 246 L482 246 L482 238 L474 238 L474 206 L482 206 Z" fill="#FFFFFF" stroke="#1B1C18" stroke-width="4"/><text class="aa-bubble-text" x="570" y="227" text-anchor="middle">High five!</text></g>
+      </g>
+      <g class="aa-bubble-wrap aa-bubble-right">
+      <g class="aa-bubble"><path d="M852 186 L1044 186 L1044 194 L1052 194 L1052 226 L1044 226 L1044 234 L888 234 L888 242 L878 242 L878 250 L866 250 L866 242 L854 242 L854 234 L852 234 L852 226 L844 226 L844 194 L852 194 Z" fill="#FFFFFF" stroke="#1B1C18" stroke-width="4"/><text class="aa-bubble-text" x="948" y="215" text-anchor="middle">Hello there!</text></g>
+      </g>
+    </g>
+  </svg>
+</div>
+<div class="aa-snow" aria-hidden="true">
+    <i style="--x:32.2%;--s:4px;--o:0.59;--d:11.6s;--dl:-19.7s;--dx:-20px;--ty:693px;--c:#ffffff"></i>
+    <i style="--x:90.4%;--s:4px;--o:0.37;--d:16.6s;--dl:-1.7s;--dx:-21px;--ty:741px;--c:#ffffff"></i>
+    <i style="--x:82.2%;--s:3px;--o:0.92;--d:19.2s;--dl:-14.0s;--dx:-23px;--ty:747px;--c:#ffffff"></i>
+    <i style="--x:4.9%;--s:4px;--o:0.38;--d:22.2s;--dl:-7.0s;--dx:-17px;--ty:738px;--c:#ffffff"></i>
+    <i style="--x:30.7%;--s:4px;--o:0.41;--d:18.4s;--dl:-4.5s;--dx:-20px;--ty:740px;--c:#c8d7cc"></i>
+    <i style="--x:56.1%;--s:4px;--o:0.65;--d:17.9s;--dl:-18.7s;--dx:3px;--ty:749px;--c:#c8d7cc"></i>
+    <i style="--x:35.9%;--s:4px;--o:0.83;--d:20.1s;--dl:-5.9s;--dx:10px;--ty:676px;--c:#ffffff"></i>
+    <i style="--x:87.0%;--s:6px;--o:0.52;--d:23.7s;--dl:-2.8s;--dx:0px;--ty:642px;--c:#c8d7cc"></i>
+    <i style="--x:15.1%;--s:6px;--o:0.60;--d:23.5s;--dl:-1.9s;--dx:9px;--ty:746px;--c:#c8d7cc"></i>
+    <i style="--x:81.3%;--s:5px;--o:0.77;--d:18.7s;--dl:-13.9s;--dx:3px;--ty:617px;--c:#c8d7cc"></i>
+    <i style="--x:93.9%;--s:6px;--o:0.77;--d:11.8s;--dl:-17.5s;--dx:-7px;--ty:765px;--c:#ffffff"></i>
+    <i style="--x:67.7%;--s:6px;--o:0.52;--d:16.0s;--dl:-16.0s;--dx:-25px;--ty:718px;--c:#ffffff"></i>
+    <i style="--x:60.7%;--s:6px;--o:0.39;--d:21.0s;--dl:-3.1s;--dx:-11px;--ty:701px;--c:#ffffff"></i>
+    <i style="--x:86.6%;--s:3px;--o:0.45;--d:16.2s;--dl:-6.7s;--dx:-18px;--ty:809px;--c:#ffffff"></i>
+    <i style="--x:54.7%;--s:6px;--o:0.94;--d:19.9s;--dl:-9.1s;--dx:-12px;--ty:638px;--c:#ffffff"></i>
+    <i style="--x:15.0%;--s:4px;--o:0.36;--d:21.8s;--dl:-4.4s;--dx:-8px;--ty:601px;--c:#ffffff"></i>
+    <i style="--x:53.1%;--s:5px;--o:0.92;--d:20.0s;--dl:-12.4s;--dx:13px;--ty:767px;--c:#c8d7cc"></i>
+    <i style="--x:5.4%;--s:6px;--o:0.59;--d:16.1s;--dl:-11.6s;--dx:-1px;--ty:615px;--c:#ffffff"></i>
+    <i style="--x:97.9%;--s:6px;--o:0.45;--d:15.4s;--dl:-1.3s;--dx:-26px;--ty:745px;--c:#ffffff"></i>
+    <i style="--x:10.1%;--s:5px;--o:0.72;--d:11.9s;--dl:-5.0s;--dx:-2px;--ty:638px;--c:#c8d7cc"></i>
+    <i style="--x:95.0%;--s:5px;--o:0.63;--d:12.5s;--dl:-11.7s;--dx:3px;--ty:722px;--c:#ffffff"></i>
+    <i style="--x:8.5%;--s:3px;--o:0.80;--d:20.6s;--dl:-11.5s;--dx:18px;--ty:641px;--c:#ffffff"></i>
+    <i style="--x:20.4%;--s:5px;--o:0.44;--d:18.1s;--dl:-0.6s;--dx:7px;--ty:676px;--c:#c8d7cc"></i>
+    <i style="--x:85.8%;--s:5px;--o:0.66;--d:22.8s;--dl:-8.5s;--dx:-12px;--ty:736px;--c:#ffffff"></i>
+    <i style="--x:50.0%;--s:4px;--o:0.72;--d:21.2s;--dl:-18.2s;--dx:-14px;--ty:806px;--c:#ffffff"></i>
+    <i style="--x:39.8%;--s:4px;--o:0.47;--d:17.4s;--dl:-17.5s;--dx:-25px;--ty:802px;--c:#ffffff"></i>
+    <i style="--x:25.8%;--s:5px;--o:0.62;--d:23.2s;--dl:-23.7s;--dx:-3px;--ty:620px;--c:#ffffff"></i>
+    <i style="--x:22.5%;--s:4px;--o:0.55;--d:17.3s;--dl:-23.6s;--dx:13px;--ty:815px;--c:#ffffff"></i>
+    <i style="--x:90.4%;--s:5px;--o:0.83;--d:12.1s;--dl:-15.9s;--dx:-2px;--ty:800px;--c:#c8d7cc"></i>
+    <i style="--x:19.8%;--s:4px;--o:0.61;--d:19.3s;--dl:-2.1s;--dx:20px;--ty:701px;--c:#ffffff"></i>
+    <i style="--x:73.9%;--s:3px;--o:0.78;--d:13.2s;--dl:-3.0s;--dx:-17px;--ty:751px;--c:#c8d7cc"></i>
+    <i style="--x:80.2%;--s:4px;--o:0.72;--d:18.7s;--dl:-11.4s;--dx:-4px;--ty:639px;--c:#ffffff"></i>
+    <i style="--x:13.0%;--s:3px;--o:0.83;--d:20.4s;--dl:-2.5s;--dx:21px;--ty:635px;--c:#ffffff"></i>
+    <i style="--x:86.7%;--s:4px;--o:0.37;--d:13.8s;--dl:-12.0s;--dx:22px;--ty:750px;--c:#ffffff"></i>
+    <i style="--x:54.1%;--s:4px;--o:0.39;--d:20.6s;--dl:-21.5s;--dx:16px;--ty:749px;--c:#c8d7cc"></i>
+    <i style="--x:51.4%;--s:4px;--o:0.67;--d:17.8s;--dl:-0.4s;--dx:2px;--ty:798px;--c:#ffffff"></i>
+    <i style="--x:0.4%;--s:4px;--o:0.45;--d:17.2s;--dl:-17.4s;--dx:9px;--ty:615px;--c:#ffffff"></i>
+    <i style="--x:51.5%;--s:6px;--o:0.82;--d:12.4s;--dl:-13.4s;--dx:-11px;--ty:648px;--c:#ffffff"></i>
+    <i style="--x:76.8%;--s:6px;--o:0.69;--d:20.9s;--dl:-21.9s;--dx:2px;--ty:683px;--c:#ffffff"></i>
+    <i style="--x:50.3%;--s:4px;--o:0.77;--d:16.9s;--dl:-12.8s;--dx:4px;--ty:729px;--c:#c8d7cc"></i>
+    <i style="--x:69.5%;--s:5px;--o:0.90;--d:22.6s;--dl:-4.9s;--dx:2px;--ty:635px;--c:#ffffff"></i>
+    <i style="--x:39.0%;--s:5px;--o:0.39;--d:14.1s;--dl:-1.8s;--dx:16px;--ty:677px;--c:#c8d7cc"></i>
+    <i style="--x:89.2%;--s:4px;--o:0.91;--d:19.4s;--dl:-8.8s;--dx:-10px;--ty:635px;--c:#c8d7cc"></i>
+    <i style="--x:21.8%;--s:3px;--o:0.59;--d:17.3s;--dl:-23.8s;--dx:-12px;--ty:641px;--c:#c8d7cc"></i>
+    <i style="--x:98.8%;--s:6px;--o:0.55;--d:13.5s;--dl:-7.6s;--dx:20px;--ty:693px;--c:#ffffff"></i>
+    <i style="--x:55.1%;--s:6px;--o:0.77;--d:16.0s;--dl:-12.4s;--dx:-8px;--ty:731px;--c:#c8d7cc"></i>
+    <i style="--x:11.2%;--s:4px;--o:0.93;--d:12.4s;--dl:-6.4s;--dx:-24px;--ty:799px;--c:#ffffff"></i>
+    <i style="--x:75.1%;--s:6px;--o:0.86;--d:19.8s;--dl:-22.7s;--dx:-1px;--ty:638px;--c:#ffffff"></i>
+    <i style="--x:51.2%;--s:6px;--o:0.77;--d:12.2s;--dl:-1.4s;--dx:18px;--ty:646px;--c:#ffffff"></i>
+    <i style="--x:7.2%;--s:3px;--o:0.73;--d:21.4s;--dl:-2.0s;--dx:-12px;--ty:617px;--c:#ffffff"></i>
+    <i style="--x:12.1%;--s:3px;--o:0.55;--d:18.2s;--dl:-22.2s;--dx:-9px;--ty:759px;--c:#ffffff"></i>
+    <i style="--x:52.4%;--s:4px;--o:0.91;--d:23.6s;--dl:-6.3s;--dx:-15px;--ty:651px;--c:#c8d7cc"></i>
+    <i style="--x:62.5%;--s:4px;--o:0.52;--d:17.5s;--dl:-4.3s;--dx:-4px;--ty:805px;--c:#ffffff"></i>
+    <i style="--x:24.9%;--s:3px;--o:0.36;--d:17.6s;--dl:-23.5s;--dx:6px;--ty:721px;--c:#ffffff"></i>
+</div>
+
+
+  <div class="aa-hero-inner">
+    <h1 class="aa-hero-title">
+      Engineering Ideas.<br>
+      Shaping <span class="aa-mark">Tomorrow.</span>
+    </h1>
+
+    <p class="aa-hero-lede">
+      Explore the ideas, innovations, and engineering challenges that bring the
+      civil engineering community together at IIT Bombay. Join thousands of
+      innovators solving real-world infrastructure frontiers.
+    </p>
+
+    <div class="aa-hero-ctas">
+      <a class="aa-btn aa-btn-primary" href="#flagship">
+        Explore Events
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+      </a>
+      <a class="aa-btn aa-btn-ghost" href="#about">
+        <span class="material-symbols-outlined" aria-hidden="true">celebration</span>
+        Discover AAKAAR
+      </a>
+    </div>
+
+    <p class="aa-hero-note">
+      <b>19th Edition</b>
+      <i aria-hidden="true">&bull;</i> IIT Bombay Campus
+      <i aria-hidden="true">&bull;</i> Annual Civil Fest
+      <i aria-hidden="true">&bull;</i> National Footfall
+    </p>
+  </div>
+</section>
+
+<!-- Editorial Section: About AAKAAR -->
+<section class="w-full bg-surface-container-low py-space-xl my-space-md" id="about">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Narrative -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">About The Legacy</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+            Asia's Largest Departmental College Festival
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Aakaar is the annual festival of the Department of Civil Engineering, IIT Bombay. Since its inception in 2009, it has grown into Asia's largest departmental college festival &mdash; a platform where aspiring engineers innovate, create and learn.
+          </p>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed bg-surface-container-lowest p-space-md rounded-2xl shadow-sm">
+            From the International Civil Engineering Symposium to Bridge-IT, ConquerIT, CENEX and the national LogiQ quiz, Aakaar brings together competitions, lectures, workshops and lab visits that connect textbook mechanics with real engineering practice.
+          </p>
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="flex items-center -space-x-2">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-mono-xs text-label-mono-xs">IIT</div>
+<div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-label-mono-xs text-label-mono-xs">CEA</div>
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-label-mono-xs text-label-mono-xs">19th</div>
+</div>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Department of Civil Engineering &middot; IIT Bombay &middot; Since 2009</span>
+</div>
+</div>
+<!-- Right Column: Tactile Stats 2x2 Bento -->
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[20px]">history_edu</span>
+</div>
+<div>
+<div class="font-display-hero text-headline-lg text-primary tracking-tight">2009</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">Inception</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">The annual technical festival of the Department of Civil Engineering, IIT Bombay.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary-container mb-space-md">
+<span class="material-symbols-outlined text-[20px]">celebration</span>
+</div>
+<div>
+<div class="font-display-hero text-headline-lg text-primary tracking-tight">19th</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">Edition &mdash; 2027</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">All set to scale new prominences with a wider line-up of competitions.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-space-md">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div>
+<div class="font-display-hero text-headline-lg text-primary tracking-tight">11th</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">International Symposium</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">ICES brings young research enthusiasts together to exchange ideas and scientific knowledge.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col justify-between hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[20px]">emoji_events</span>
+</div>
+<div>
+<div class="font-display-hero text-headline-lg text-primary tracking-tight">6</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">Event Formats</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">CENEX, workshops, lab visits, lectures, panel discussion and the Civil Expo.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Pillars: How You Can Experience AAKAAR -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl" id="flagship">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">Our Events</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+          Explore Our Events
+        </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Explore our wide range of lectures, workshops, and exhibitions designed for the civil engineering community.
+      </p>
+</div>
+<!-- 6-Card Tactile Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Track: CENEX -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Exhibition</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">CENEX</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Civil Engineering National Exhibition: a national-level exhibition showcasing groundbreaking research and projects in civil engineering.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">National Level</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Workshops -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">developer_board</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Workshops</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Workshops</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Gain hands-on experience with industry-standard software and simulations in the fields of design, analysis and construction processes.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Certification Track</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Lab Visits -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">biotech</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Lab Visits</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Lab Visits</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Aakaar organizes educational lab visits to various laboratories to introduce students to the latest developments and evolving technologies.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Exclusive Access</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Lectures -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">record_voice_over</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Keynotes</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Lectures</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            The Aakaar lecture series, renowned globally, unites experts in civil engineering for insightful discussions and knowledge dissemination.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Global Speakers</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Panel Discussion -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Flagship</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Panel Discussion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Our flagship event, where eminent personalities from different sectors of Civil Engineering discuss pressing industry topics.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Round Table</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Track: Civil Expo -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">storefront</span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Civil Expo</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Civil Expo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            A grand platform for Civil Engineering companies to display their products, and for attendees to learn about market trends.
+          </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary">Industry Floor</span>
+<a class="inline-flex items-center gap-1 font-button-text text-button-text text-primary hover:text-secondary transition-colors" href="/events/">
+<span class="">Explore Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+
+</div>
+</section>
+<!-- International Civil Engineering Symposium (ICES) Section -->
+<section class="w-full bg-secondary-container/40 py-space-xl my-space-md"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin"><div class="bg-surface-container-lowest rounded-[28px] p-space-lg md:p-space-xl shadow-md border border-secondary-fixed-dim/30"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center"><div class="lg:col-span-7 flex flex-col gap-space-sm"><div class="inline-flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed-variant px-space-md py-1 rounded-full font-label-mono-xs text-label-mono-xs self-start font-bold"><span class="material-symbols-outlined text-[14px] text-secondary">school</span><span class="">ICES 2027 • 11TH EDITION</span></div><h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">International Civil Engineering Symposium</h2><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-xl">Aakaar is proud to host its Eleventh International Civil Engineering Symposium (ICES), encouraging young research enthusiasts and acting as a platform to exchange ideas and scientific knowledge.</p><div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-space-sm"><div class="bg-surface-container-low p-space-md rounded-xl hover:bg-secondary-container/20 transition-colors"><span class="font-label-mono-xs text-label-mono-xs text-secondary block font-bold">TRACK 01</span><span class="font-headline-sm text-[16px] text-on-surface font-bold">Paper Presentation</span><p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Present your research to experienced professors and industry leaders &mdash; prizes worth over &#8377;50,000!</p></div><div class="bg-surface-container-low p-space-md rounded-xl hover:bg-secondary-container/20 transition-colors"><span class="font-label-mono-xs text-label-mono-xs text-secondary block font-bold">TRACK 02</span><span class="font-headline-sm text-[16px] text-on-surface font-bold">Poster Exhibition</span><p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Communicate your research in a concise, creative format that demonstrates your findings and analytical skills.</p></div><div class="bg-surface-container-low p-space-md rounded-xl hover:bg-secondary-container/20 transition-colors"><span class="font-label-mono-xs text-label-mono-xs text-secondary block font-bold">TRACK 03</span><span class="font-headline-sm text-[16px] text-on-surface font-bold">Thesis in 180</span><p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Curate and present your entire thesis in just three minutes, in a way that anyone can understand.</p></div></div><div class="flex flex-wrap items-center gap-space-xs pt-space-xs"><span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Innovation</span><span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Research</span><span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Design</span><span class="bg-surface-container text-on-surface font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full">Structure</span><span class="bg-secondary-container text-on-secondary-fixed-variant font-label-mono-xs text-label-mono-xs px-2.5 py-1 rounded-full font-bold">Analysis</span></div></div><div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-[22px] flex flex-col gap-space-md"><div class="flex items-center justify-between"><span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant font-bold">SYMPOSIUM EVENTS</span><span class="bg-secondary-fixed text-on-secondary-fixed-variant px-space-sm py-0.5 rounded-full font-label-mono-xs text-label-mono-xs font-bold">Prizes Worth &#8377;95,000+</span></div><div class="space-y-space-xs"><div class="flex justify-between items-center py-2 border-b border-surface-container-highest"><span class="font-body-sm text-body-sm text-on-surface">Paper Presentation</span><span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">&#8377;50,000+</span></div><div class="flex justify-between items-center py-2 border-b border-surface-container-highest"><span class="font-body-sm text-body-sm text-on-surface">Poster Presentation</span><span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">&#8377;20,000+</span></div><div class="flex justify-between items-center py-2"><span class="font-body-sm text-body-sm text-on-surface">Thesis 180</span><span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">&#8377;25,000</span></div></div><div class="flex flex-col gap-space-xs"><a class="inline-flex items-center justify-center gap-space-xs bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed-variant py-space-sm rounded-full font-button-text text-button-text shadow-sm active:translate-y-0.5 transition-all text-center font-bold" href="/compi/"><span class="material-symbols-outlined text-[18px]">upload_file</span><span class="">View Symposium Details</span></a><span class="font-label-mono-xs text-[10px] text-center text-on-surface-variant">Eleventh International Civil Engineering Symposium &middot; IIT Bombay</span></div></div></div></div></div></section>
+<!-- National Competitions Showcase -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">National Competitions</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+          Our Competitions
+        </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Aakaar in its 19th edition is all set to scale new prominences with many competitions. It instigates students to innovate, create and learn better.
+      </p>
+</div>
+<!-- 5 Card Asymmetric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Comp: Crackathon -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-xs text-label-mono-xs bg-error-container text-on-error-container px-2.5 py-1 rounded-full font-bold">Road Intelligence</span>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Computer Vision</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Crackathon</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Leverage the power of artificial intelligence to revolutionize road maintenance: build a computer vision model that automatically detects and classifies road defects such as cracks, paving the way for smarter infrastructure.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">&#8377;20,000 Prize</span>
+<a class="bg-surface-container hover:bg-surface-container-high text-on-surface font-button-text text-body-sm px-space-md py-1.5 rounded-full transition-colors" href="/compi/">Details &rarr;</a>
+</div>
+</div>
+<!-- Comp: ConquerIT -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-xs text-label-mono-xs bg-secondary-container text-on-secondary-fixed-variant px-2.5 py-1 rounded-full font-bold">Materials Science</span>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Structures</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">ConquerIT</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Investigate the future of materials by exploring high-strength pervious concrete and lightweight beam structures &mdash; an introduction to pervious concrete for the budding civil engineer.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">&#8377;25,000 Prize</span>
+<a class="bg-surface-container hover:bg-surface-container-high text-on-surface font-button-text text-body-sm px-space-md py-1.5 rounded-full transition-colors" href="/compi/">Details &rarr;</a>
+</div>
+</div>
+<!-- Comp: Bidwars -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-xs text-label-mono-xs bg-tertiary-fixed text-on-tertiary-fixed-variant px-2.5 py-1 rounded-full font-bold">Tender Simulation</span>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Estimation</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Bidwars</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Simulate real-world tendering by analysing tender documents and developing cost-effective, innovative bidding strategies.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">Prizes TBA</span>
+<a class="bg-surface-container hover:bg-surface-container-high text-on-surface font-button-text text-body-sm px-space-md py-1.5 rounded-full transition-colors" href="/compi/">Details &rarr;</a>
+</div>
+</div>
+<!-- Comp: BridgeIT -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-xs text-label-mono-xs bg-primary-fixed text-on-primary-fixed-variant px-2.5 py-1 rounded-full font-bold">Truss Load Test</span>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Fabrication</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">BridgeIT</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Design and construct the most efficient truss popsicle bridge, built to specific technical load requirements.
+          </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">&#8377;50,000 Prize</span>
+<a class="bg-surface-container hover:bg-surface-container-high text-on-surface font-button-text text-body-sm px-space-md py-1.5 rounded-full transition-colors" href="/compi/">Details &rarr;</a>
+</div>
+</div>
+<!-- Comp: Industrial Design Problem (IDP) -->
+<div class="md:col-span-2 bg-primary text-on-primary rounded-[24px] p-space-lg shadow-md flex flex-col justify-between"><div><div class="flex items-center justify-between mb-space-sm"><span class="font-label-mono-xs text-label-mono-xs bg-secondary-fixed text-on-secondary-fixed-variant px-2.5 py-1 rounded-full font-bold">Flagship Industry Track</span><span class="font-label-mono-xs text-label-mono-xs text-secondary-fixed">National Open</span></div><h3 class="font-headline-sm text-headline-sm text-on-primary mb-space-xs">Industrial Design Problem (IDP)</h3><p class="font-body-md text-body-md text-on-primary-container leading-relaxed">An opportunity to tackle real-world engineering challenges faced by the industry. Participants are expected to provide innovative, sustainable and practical solutions to complex structural and design hurdles.</p></div><div class="pt-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-label-mono-sm text-label-mono-sm text-secondary-fixed font-bold">&#8377;30,000 Prize</span><span class="text-outline-variant font-label-mono-xs">&bull;</span><span class="font-label-mono-xs text-label-mono-xs text-primary-fixed">Innovative, practical solutions</span></div><a class="bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed-variant font-button-text text-body-sm px-space-md py-1.5 rounded-full shadow-sm transition-all font-bold" href="/compi/">View IDP &rarr;</a></div></div>
+
+</div>
+</section>
+<!-- Editorial Section: Why Civil Engineers Flock to AAKAAR -->
+<section class="w-full bg-surface-container-low py-space-xl my-space-md">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-lg">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider block mb-1">About Us</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+          A Platform to Innovate, Create and Learn
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+          Aakaar upholds the legacy of inter-college civil events, carrying the best ideas and creativity from every civil enthusiast at the nation's finest institutions.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">emoji_events</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Inter-College Legacy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Since 2009, Aakaar has brought the nation's civil engineering students together to compete, share and learn.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">developer_board</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Software Workshops</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Hands-on workshops in ETABS, Autodesk Civil 3D, STAAD Pro, BIM and Revit build practical, industry-ready skills.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Certificates &amp; Prizes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Certificates from Aakaar, IIT Bombay for participants, plus prize money across the competition and symposium tracks.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-[20px] shadow-sm flex flex-col gap-space-sm hover:translate-y-[-2px] transition-transform">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Lectures &amp; Lab Visits</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            A globally renowned lecture series and educational lab visits introduce students to the latest developments and evolving technologies.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Atmosphere & Highlights Gallery -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">Event Gallery</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">
+          Moments from AAKAAR
+        </h2>
+</div>
+<span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant bg-surface-container px-space-md py-1 rounded-full">IIT Bombay Campus • Powai</span>
+</div>
+<!-- Media Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<div class="md:col-span-7 rounded-[22px] overflow-hidden bg-surface-container-lowest relative group shadow-sm">
+<img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"  src="/static/design/img/wide-1.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent flex items-end p-space-md">
+<div class="text-on-secondary">
+<span class="font-label-mono-xs text-label-mono-xs text-tertiary-fixed uppercase">Exhibition</span>
+<h4 class="font-headline-sm text-headline-sm">CENEX Showcase</h4>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 rounded-[22px] overflow-hidden bg-surface-container-lowest relative group shadow-sm">
+<img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"  src="/static/design/img/wide-2.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent flex items-end p-space-md">
+<div class="text-on-secondary">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary-fixed uppercase">Symposium</span>
+<h4 class="font-headline-sm text-headline-sm">Paper Presentations at ICES</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners & Patrons Showcase -->
+<section class="w-full bg-surface-container-lowest py-space-xl my-space-md shadow-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+<div class="text-center max-w-xl mx-auto mb-space-lg">
+<span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-wider block mb-1">Our Sponsors</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+          Sponsors &amp; Partners of Aakaar 2027
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Backed by leading names across industry, media and student communities &mdash; through workshop, media, CR and symposium partnerships.
+        </p>
+</div>
+<!-- Partner Logo Strip / Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-sm items-center">
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://www.jsw.in/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">JSW</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Sponsor</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://www.hccindia.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">HCC</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Sponsor</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://ind.sika.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">SIKA</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Sponsor</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://www.bentley.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">BENTLEY</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Sponsor</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://www.autodesk.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">AUTODESK</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">Workshop Partner</span>
+</a>
+<a class="bg-surface-container-low p-space-md rounded-2xl flex flex-col items-center justify-center text-center h-24 hover:bg-surface-container transition-colors" href="https://unstop.com/" target="_blank" rel="noopener">
+<span class="font-headline-sm text-[16px] text-primary font-bold">UNSTOP</span>
+<span class="font-label-mono-xs text-[10px] text-on-surface-variant">CR Partner</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Call-To-Action Banner -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-xl">
+<div class="bg-primary text-on-primary rounded-[28px] p-space-lg md:p-space-xl shadow-xl relative overflow-hidden"><div class="relative z-10 max-w-2xl flex flex-col gap-space-md"><span class="bg-secondary-fixed text-on-secondary-fixed-variant px-space-md py-1 rounded-full font-label-mono-xs text-label-mono-xs self-start font-bold">Registration Open &mdash; Aakaar 2027</span><h2 class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-on-primary tracking-tight">Be Part of Asia's Largest Civil Engineering Festival.</h2><p class="font-body-md text-body-md text-on-primary-container leading-relaxed">Present your research at the International Civil Engineering Symposium, compete in the national competitions, or join a workshop &mdash; your gateway to Aakaar 2027 begins here.</p><div class="flex flex-wrap items-center gap-space-md pt-space-xs"><a class="inline-flex items-center justify-center gap-space-xs bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed-variant px-space-lg py-space-sm rounded-full font-button-text text-button-text shadow-sm active:translate-y-0.5 transition-all font-bold" href="https://docs.google.com/forms/d/e/1FAIpQLSex34g1QLGBRVXOg6Ow_uSFwe79qsu1BJFjHpBFzzyI1toKgw/viewform?usp=header"><span class="">Register Now</span><span class="material-symbols-outlined text-[18px]">how_to_reg</span></a><a class="inline-flex items-center justify-center gap-space-xs bg-primary-container hover:bg-primary-container/80 text-on-primary px-space-lg py-space-sm rounded-full font-button-text text-button-text transition-all font-bold" href="https://crportal.aakaariitb.org.in/cr/" target="_blank" rel="noopener"><span class="">CR Portal</span><span class="material-symbols-outlined text-[18px]">download</span></a></div></div><div class="absolute -right-12 -bottom-12 w-96 h-96 opacity-10 pointer-events-none text-secondary-fixed"><svg class="w-full h-full" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" stroke-dasharray="4 4"></circle><circle cx="100" cy="100" r="60"></circle><path d="M10 100h180M100 10v180M36.36 36.36l127.28 127.28M36.36 163.64L163.64 36.36"></path></svg></div></div>
+</section>
+<!-- Newsletter / Quick Query Hook -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin pb-space-lg">
+<div class="bg-surface-container-low rounded-[22px] p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">forward_to_inbox</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Stay Tuned to Aakaar 2027</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Get schedule updates, registration alerts and event announcements as they go live.</p>
+</div>
+</div>
+<div class="flex items-center w-full md:w-auto gap-space-xs">
+<input class="bg-surface-container-lowest px-space-md py-2.5 rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none w-full md:w-72 shadow-sm focus:ring-2 focus:ring-secondary" placeholder="Enter college or email ID" type="email">
+<button class="bg-primary hover:bg-primary-container text-on-primary px-space-md py-2.5 rounded-full font-button-text text-body-sm shrink-0 transition-colors shadow-sm">
+          Subscribe
+        </button>
+</div>
+</div>
+</section>
+<script>
+  // Simple micro-interaction for smooth link anchor jumps
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+</script>
+
+    </div>
+</main>
+
+
+<footer id="aa-contact" class="w-full bg-surface-container-high py-space-xl mt-space-xl">
+    <div class="max-w-7xl mx-auto px-margin">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl">
+
+            <div>
+                <div class="flex items-center gap-space-sm mb-space-sm">
+                    <img alt="AAKAAR CEA IIT Bombay Emblem" class="h-8 w-auto object-contain"
+                         src="/static/design/img/emblem.png">
+                    <span class="font-headline-sm text-headline-sm text-primary">AAKAAR</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Asia's Largest Civil Engineering
+                    Technical Festival, proudly organized by the Civil Engineering Association (CEA), Department of Civil
+                    Engineering, IIT Bombay.</p>
+                <div class="inline-flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs bg-surface-container text-secondary px-space-sm py-space-xs rounded-full">
+                    <span class="material-symbols-outlined text-[14px]">verified</span>CEA &bull; IIT Bombay Affiliated
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Festival Tracks</h3>
+                <ul class="flex flex-col gap-space-xs">
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/compi/">Competitions &amp; Challenges</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/events/cenex">Workshops &amp; CENEX Expo</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/sympo/">Symposium (ICES Research)</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/partners/">Corporate &amp; Innovation Partners</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Navigation</h3>
+                <ul class="flex flex-col gap-space-xs">
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/">Home Overview</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/about/">About &amp; CEA Legacy</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/events/lecture_series">Lecture Series</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/events/labvisit">IITB Lab Visits</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Get In Touch</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Department of Civil
+                    Engineering,<br>IIT Bombay, Powai, Mumbai - 400076</p>
+                <p class="font-label-mono-xs text-label-mono-xs text-secondary mb-space-md">
+                    <a href="mailto:contact@aakaariitb.org">contact@aakaariitb.org</a>
+                </p>
+                <div class="flex items-center gap-space-sm">
+                    <a aria-label="Location"
+                       class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                       href="https://maps.google.com/?q=IIT+Bombay+Powai+Mumbai" target="_blank" rel="noopener">
+                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                    </a>
+                    <a aria-label="Email"
+                       class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                       href="mailto:contact@aakaariitb.org">
+                        <span class="material-symbols-outlined text-[18px]">mail</span>
+                    </a>
+                    <a aria-label="Call"
+                       class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                       href="tel:+919820123456">
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+                    </a>
+                    <a aria-label="Share"
+                       class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                       href="/compi/">
+                        <span class="material-symbols-outlined text-[18px]">share</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between pt-space-lg gap-space-sm">
+            <p class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">&copy; 2027 AAKAAR, Civil
+                Engineering Association (CEA), IIT Bombay. All rights reserved.</p>
+            <div class="flex items-center gap-space-lg">
+                <a class="font-label-mono-xs text-label-mono-xs text-on-surface-variant hover:text-on-surface"
+                   href="/about/">Privacy Policy</a>
+                <a class="font-label-mono-xs text-label-mono-xs text-on-surface-variant hover:text-on-surface"
+                   href="/about/">Code of Conduct</a>
+                <a class="font-label-mono-xs text-label-mono-xs text-on-surface-variant hover:text-on-surface"
+                   href="/about/">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/static/design/chrome.js"></script>
+
+</body>
+</html>

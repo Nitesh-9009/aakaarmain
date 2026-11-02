@@ -1,0 +1,465 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workshops - Aakaar | IIT Bombay</title>
+    <meta name="description" content="Aakaar provides unique opportunities to civil engineering students to learn industry-standard software and technologies through expert-led workshops.">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/fevicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/fevicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/fevicon/favicon-16x16.png">
+    <link rel="manifest" href=" /static/fevicon/site.webmanifest">
+    <link rel="mask-icon" href="/static/fevicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-bg: #111111;
+            --color-text: #EAEAEA;
+            --color-text-muted: #a0a0a0;
+            --color-primary: #9D00FF; 
+            --color-primary-light: #bb63ff;
+            --color-border: #444444;
+            --font-base: "Bai Jamjuree", sans-serif;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-base);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .text-brand { color: var(--color-primary) !important; }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(17, 17, 17, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .navbar-brand img { height: 50px; width: auto; max-width: 150px; }
+
+        /* Sections */
+        section { padding-top: 100px; padding-bottom: 80px; }
+
+        /* Buttons */
+        .btn-brand {
+            background-color: var(--color-primary);
+            color: #fff !important;
+            border: none;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 12px 28px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .btn-brand:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* Cards */
+        .card-custom {
+            background-color: rgba(34, 34, 34, 0.5);
+            border: 1px solid var(--color-border);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Tabs */
+        .nav-tabs { border-bottom: 1px solid var(--color-border); }
+        .nav-tabs .nav-link {
+            color: var(--color-text-muted);
+            border: none;
+            font-weight: 600;
+            background: transparent;
+        }
+        .nav-tabs .nav-link.active {
+            color: var(--color-primary);
+            background-color: transparent;
+            border-bottom: 3px solid var(--color-primary);
+        }
+
+        .tab-content {
+            background-color: rgba(34, 34, 34, 0.3);
+            border: 1px solid var(--color-border);
+            border-top: none;
+            border-radius: 0 0 1rem 1rem;
+            padding: 2rem;
+        }
+
+        footer {
+            background-color: #000;
+            color: var(--color-text-muted);
+            border-top: 1px solid var(--color-border);
+            padding: 2.5rem 0;
+        }
+    </style>
+
+
+
+
+
+
+<link rel="stylesheet" href="/static/design/fonts/fonts.css">
+<link rel="stylesheet" href="/static/design/fonts/material-symbols.css">
+<script src="/static/design/tailwind.js"></script>
+
+<script src="/static/design/tailwind-config-legacy.js"></script>
+
+<style>
+  /* The reference build hides scrollbars; keep that look but stay usable. */
+  ::-webkit-scrollbar { width: 0; height: 0; }
+  .aa-scroll-lock { overflow: hidden; }
+</style>
+
+<link rel="stylesheet" href="/static/css/custom-theme.css">
+<link rel="stylesheet" href="/static/css/site-polish.css">
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="max-w-7xl mx-auto px-margin h-20 flex items-center justify-between gap-space-md">
+
+        <a href="/" class="flex items-center gap-space-sm shrink-0 group">
+            <img alt="AAKAAR IIT Bombay Emblem" class="h-8 w-auto object-contain"
+                 src="/static/design/img/emblem.png">
+            <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">AAKAAR</span>
+                <span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant uppercase">IIT Bombay</span>
+            </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-space-md xl:gap-space-lg">
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/">Home</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/sympo/">Symposium (ICES)</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/compi/">Competitions</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/events/">Events</a>
+            <a class="font-body-sm text-body-sm transition-colors text-primary font-bold"
+               href="/events/workshops">Workshops</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/about/">About &amp; Legacy</a>
+            <a class="font-body-sm text-body-sm transition-colors text-on-surface-variant hover:text-on-surface"
+               href="/partners/">Partners</a>
+        </nav>
+
+        <div class="flex items-center gap-space-sm md:gap-space-md shrink-0">
+            <a class="hidden sm:inline-flex items-center justify-center bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed-variant px-space-lg py-space-sm rounded-full font-button-text text-button-text shadow-sm active:translate-y-0.5 transition-all font-bold"
+               href="/compi/">Register / Explore</a>
+
+            
+            <a href="/accounts/login/" title="Sign in"
+               class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+            </a>
+            
+
+            <button type="button" aria-label="Open menu" aria-expanded="false" data-aa-menu-toggle
+                    class="lg:hidden w-9 h-9 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">menu</span>
+            </button>
+        </div>
+    </div>
+
+    <div data-aa-menu-panel
+         class="hidden lg:hidden border-t border-surface-container-highest bg-surface px-margin pb-space-lg pt-space-md">
+        <nav class="flex flex-col">
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/">Home</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/sympo/">Symposium (ICES)</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/compi/">Competitions</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/events/">Events</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-primary font-bold" href="/events/workshops">Workshops</a>
+            <a class="py-space-sm font-body-md text-body-md border-b border-surface-container-highest text-on-surface-variant" href="/about/">About &amp; Legacy</a>
+            <a class="py-space-sm font-body-md text-body-md text-on-surface-variant" href="/partners/">Partners</a>
+        </nav>
+        <a class="mt-space-md inline-flex items-center justify-center w-full bg-secondary-fixed text-on-secondary-fixed-variant px-space-lg py-space-sm rounded-full font-button-text text-button-text font-bold"
+           href="/compi/">Register / Explore</a>
+    </div>
+</header>
+
+
+
+    <main>
+        <section id="workshop-hero">
+            <div class="container">
+                <div class="row align-items-center" data-aos="fade-up">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <img src="/static/image/revit.png" 
+                             class="img-fluid rounded-4 shadow-lg border border-secondary" alt="Revit Architecture">
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <span class="badge bg-primary mb-2">Technical Workshop</span>
+                        <h1 class="display-4 fw-bold mb-3">Revit <span class="text-brand">Architecture</span></h1>
+                        
+                        <div class="row g-3 mb-4">
+                            <div class="col-6 col-md-4">
+                                <div class="card-custom p-2 text-center">
+                                    <p class="small text-muted mb-0">Date</p>
+                                    <p class="fw-bold mb-0">15th March</p>
+                                </div>
+                            </div>
+                            <!-- <div class="col-6 col-md-4">
+                                <div class="card-custom p-2 text-center">
+                                    <p class="small text-muted mb-0">Fee</p>
+                                    <p class="fw-bold mb-0">₹ 499</p>
+                                </div>
+                            </div> -->
+                            <div class="col-12 col-md-4">
+                                <div class="card-custom p-2 text-center">
+                                    <p class="small text-muted mb-0">Duration</p>
+                                    <p class="fw-bold mb-0">5 Hours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column flex-md-row gap-3">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSci885TmfBWjdWysK_fWtzYjKIspyiL_vevvJbUXEfCHHAfkA/viewform?usp=publish-editor" target="_blank" class="btn btn-brand btn-lg">
+                                <i class="bi bi-person-plus me-2"></i> Register Now
+                            </a>
+                        </div>
+                        <p class="mt-3 text-muted small">
+    <i class="bi bi-geo-alt-fill text-brand me-1"></i> Venue: IIT Bombay Campus
+</p>
+<p class="mt-3 text-muted small">
+    <i class="bi bi-person-fill text-brand me-1"></i> Mode: Offline
+</p>
+<p class="mt-3 text-muted small">
+    <i class="bi bi-clock-fill text-brand me-1"></i> Workshop starts 11:00 AM onwards
+</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="pt-0">
+            <div class="container" data-aos="fade-up">
+                <nav>
+                    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-overview-tab" data-bs-toggle="tab" data-bs-target="#nav-overview" type="button" role="tab">OVERVIEW</button>
+                        <button class="nav-link" id="nav-incentives-tab" data-bs-toggle="tab" data-bs-target="#nav-incentives" type="button" role="tab">INCENTIVES</button>
+                        <button class="nav-link" id="nav-rules-tab" data-bs-toggle="tab" data-bs-target="#nav-rules" type="button" role="tab">TIMELINE</button>
+                    </div>
+                </nav>
+                
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-overview" role="tabpanel">
+                        <h3 class="mb-3">Master <span class="text-brand">BIM Technology</span></h3>
+                        <p>Revit is a powerful BIM software, revolutionizing building design with intelligent 3D models. Crucial for architects and engineers, it sets new benchmarks in efficiency and innovation throughout the project lifecycle.</p>
+                        <h5 class="mt-4 text-brand">Prerequisites:</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check2-circle text-brand me-2"></i> Laptops are mandatory for hands-on sessions.</li>
+                            <li><i class="bi bi-check2-circle text-brand me-2"></i> Foundational knowledge in building design or drafting is recommended.</li>
+                            <li><i class="bi bi-check2-circle text-brand me-2"></i> Should have revit software installed well before the workshop.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-incentives" role="tabpanel">
+                        <h3 class="mb-4">Why <span class="text-brand">Join Us?</span></h3>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card-custom h-100 text-center p-3">
+                                    <i class="bi bi-patch-check fs-2 text-brand mb-2"></i>
+                                    <h6>Certification</h6>
+                                    <p class="small text-muted">Autodesk Workshop Certificate for all participants.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card-custom h-100 text-center p-3">
+                                    <i class="bi bi-laptop fs-2 text-brand mb-2"></i>
+                                    <h6>Hands-on</h6>
+                                    <p class="small text-muted">Work with parametric 3D design tools directly.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card-custom h-100 text-center p-3">
+                                    <i class="bi bi-briefcase fs-2 text-brand mb-2"></i>
+                                    <h6>Career Edge</h6>
+                                    <p class="small text-muted">Enhance employability with industry-standard BIM skills.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card-custom h-100 text-center p-3">
+                                    <i class="bi bi-people fs-2 text-brand mb-2"></i>
+                                    <h6>Professional Development</h6>
+                                    <p class="small text-muted">Gain insights from experts in construction management.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="nav-rules" role="tabpanel">
+                        <h3 class="mb-3">Workshop <span class="text-brand">Timeline</span></h3>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent text-white border-secondary"><i class="bi bi-1-circle text-brand me-2"></i> Fill out the Google Form to register for the workshop.</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary"><i class="bi bi-2-circle text-brand me-2"></i> Carefully follow and complete the installation and setup guidelines shared with you to install Autodesk Revit before the workshop.</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary"><i class="bi bi-3-circle text-brand me-2"></i> Come to IIT Bombay with your laptop and the installed Revit setup, and enjoy the hands-on learning session with Autodesk experts.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+<footer id="aa-contact" class="w-full bg-surface-container-high py-space-xl mt-space-xl">
+    <div class="max-w-7xl mx-auto px-margin">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl">
+
+            <div>
+                <div class="flex items-center gap-space-sm mb-space-sm">
+                    <img alt="AAKAAR CEA IIT Bombay Emblem" class="h-8 w-auto object-contain"
+                         src="/static/design/img/emblem.png">
+                    <span class="font-headline-sm text-headline-sm text-primary">AAKAAR</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Asia's Largest Civil Engineering
+                    Technical Festival, proudly organized by the Civil Engineering Association (CEA), Department of Civil
+                    Engineering, IIT Bombay.</p>
+                <div class="inline-flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs bg-surface-container text-secondary px-space-sm py-space-xs rounded-full">
+                    <span class="material-symbols-outlined text-[14px]">verified</span>CEA &bull; IIT Bombay Affiliated
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Festival Tracks</h3>
+                <ul class="flex flex-col gap-space-xs">
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/compi/">Competitions &amp; Challenges</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/events/cenex">Workshops &amp; CENEX Expo</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/sympo/">Symposium (ICES Research)</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/partners/">Corporate &amp; Innovation Partners</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Navigation</h3>
+                <ul class="flex flex-col gap-space-xs">
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/">Home Overview</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/about/">About &amp; CEA Legacy</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/events/lecture_series">Lecture Series</a>
+                    </li>
+                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
+                        <a href="/events/labvisit">IITB Lab Visits</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Get In Touch</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Department of Civil
+                    Engineering,<br>IIT Bombay, Powai, Mumbai - 400076</p>
+                <p class="font-label-mono-xs text-label-mono-xs text-secondary mb-space-md">
+                    <a href="mailto:contact@aakaariitb.org">contact@aakaariitb.org</a>
+                </p>
+                <div class="flex items-center gap-space-sm">
+                    <a aria-label="Location"
+                       class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                       href="https://maps.google.com/?q=IIT+Bombay+Powai+Mumbai" target="_blank" rel="noopener">
+                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                    </a>
+                    <a aria-label="Email"
+                       class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                       href="mailto:contact@aakaariitb.org">
+                        <span class="material-symbols-outlined text-[18px]">mail</span>
+                    </a>
+                    <a aria-label="Call"
+                       class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                       href="tel:+919820123456">
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+                    </a>
+                    <a aria-label="Share"
+                       class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                       href="/compi/">
+                        <span class="material-symbols-outlined text-[18px]">share</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between pt-space-lg gap-space-sm">
+            <p class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">&copy; 2027 AAKAAR, Civil
+                Engineering Association (CEA), IIT Bombay. All rights reserved.</p>
+            <div class="flex items-center gap-space-lg">
+                <a class="font-label-mono-xs text-label-mono-xs text-on-surface-variant hover:text-on-surface"
+                   href="/about/">Privacy Policy</a>
+                <a class="font-label-mono-xs text-label-mono-xs text-on-surface-variant hover:text-on-surface"
+                   href="/about/">Code of Conduct</a>
+                <a class="font-label-mono-xs text-label-mono-xs text-on-surface-variant hover:text-on-surface"
+                   href="/about/">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({ duration: 800, once: true });
+            if (document.getElementById('particles-js')) {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": { "value": 40 },
+                        "color": { "value": "#9D00FF" },
+                        "shape": { "type": "circle" },
+                        "opacity": { "value": 0.3 },
+                        "size": { "value": 2 },
+                        "move": { "enable": true, "speed": 1 }
+                    },
+                    "interactivity": { "events": { "onhover": { "enable": true, "mode": "repulse" } } }
+                });
+            }
+        });
+    </script>
+
+<script src="/static/design/chrome.js"></script>
+</body>
+</html>

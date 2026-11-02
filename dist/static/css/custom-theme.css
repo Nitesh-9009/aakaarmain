@@ -1,0 +1,353 @@
+/* ==========================================================================
+   AAKAAR — Tectonic Terra design tokens & base
+   Palette, typography and layout primitives taken verbatim from the
+   reference design system (DESIGN.md). Loaded on the legacy Bootstrap pages
+   so their content reads in the same visual language as the rebuilt pages.
+   ========================================================================== */
+
+/* 1. TOKENS --------------------------------------------------------------- */
+:root {
+    /* Surfaces */
+    --aa-surface: #fbf9f2;
+    --aa-surface-lowest: #ffffff;
+    --aa-surface-low: #f5f4ed;
+    --aa-surface-container: #f0eee7;
+    --aa-surface-high: #eae8e1;
+    --aa-surface-highest: #e4e2dc;
+    --aa-sage-tint: #e7ede3;
+
+    /* Ink */
+    --aa-on-surface: #1b1c18;
+    --aa-on-surface-variant: #414944;
+    --aa-charcoal: #252a26;
+
+    /* Brand */
+    --aa-primary: #0a3626;
+    --aa-primary-container: #244d3b;
+    --aa-on-primary: #ffffff;
+    --aa-on-primary-container: #91bda6;
+    --aa-primary-fixed: #bfedd4;
+    --aa-primary-fixed-dim: #a4d0b9;
+
+    --aa-secondary: #44673a;
+    --aa-secondary-container: #c5eeb5;
+    --aa-secondary-fixed: #c5eeb5;
+    --aa-secondary-fixed-dim: #aad19b;
+    --aa-on-secondary-container: #4a6d40;
+    --aa-sage: #82a875;
+
+    --aa-tertiary: #3e2c00;
+    --aa-tertiary-container: #594100;
+    --aa-tertiary-fixed: #ffdf9f;
+    --aa-tertiary-fixed-dim: #efc055;
+    --aa-ochre: #e8b94f;
+    --aa-ochre-dark: #cf9c2e;
+    --aa-ochre-text: #8f6914;
+    --aa-ochre-soft: #fdf3dc;
+
+    /* Lines */
+    --aa-outline: #717973;
+    --aa-outline-variant: #c1c8c2;
+    --aa-sandstone: #e2dec9;
+    --aa-sandstone-strong: #d8d3bc;
+
+    /* Type */
+    --aa-font-display: "Bricolage Grotesque", "Bai Jamjuree", system-ui, sans-serif;
+    --aa-font-body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", "Bai Jamjuree", system-ui, sans-serif;
+    --aa-font-mono: "Space Mono", ui-monospace, "Courier New", monospace;
+
+    /* Shape */
+    --aa-radius-sm: 12px;
+    --aa-radius: 16px;
+    --aa-radius-lg: 20px;
+    --aa-radius-xl: 24px;
+    --aa-pill: 9999px;
+
+    /* Tactile grounding — hard offset shadows, never blur */
+    --aa-shadow-tactile: 0 4px 0 #1a372a;
+    --aa-shadow-ochre: 0 4px 0 var(--aa-ochre-dark);
+    --aa-shadow-plate: 0 1px 2px rgba(27, 28, 24, 0.05);
+    --aa-shadow-card: 0 6px 16px rgba(27, 28, 24, 0.06);
+
+    --aa-header-h: 80px;
+    --aa-transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Legacy variable names kept wired to the same palette */
+    --color-bg: var(--aa-surface);
+    --color-bg-deep: var(--aa-surface-low);
+    --color-surface: var(--aa-surface-lowest);
+    --color-surface-strong: var(--aa-surface-container);
+    --color-sage: var(--aa-sage-tint);
+    --color-border: var(--aa-sandstone);
+    --color-border-strong: var(--aa-outline-variant);
+    --color-text: var(--aa-charcoal);
+    --color-text-white: var(--aa-on-surface);
+    --color-text-muted: var(--aa-on-surface-variant);
+    --color-primary: var(--aa-primary-container);
+    --color-primary-light: var(--aa-sage);
+    --color-primary-dark: var(--aa-primary);
+    --color-primary-soft: rgba(130, 168, 117, 0.18);
+    --color-primary-glow: rgba(36, 77, 59, 0.25);
+    --color-accent: var(--aa-ochre);
+    --color-accent-dark: var(--aa-ochre-dark);
+    --color-accent-text: var(--aa-ochre-text);
+    --color-accent-soft: var(--aa-ochre-soft);
+    --color-card-bg: var(--aa-surface-lowest);
+    --color-body: var(--aa-charcoal);
+    --color-heading: var(--aa-on-surface);
+    --color-brand: var(--aa-primary-container);
+    --color-brand2: var(--aa-sage);
+    --color-accent2: var(--aa-ochre);
+    --color-base: var(--aa-surface);
+    --color-base2: var(--aa-surface);
+    --bg-image: none;
+    --font-head: var(--aa-font-display);
+    --font-base: var(--aa-font-body);
+    --font-mono: var(--aa-font-mono);
+    --radius-sm: 12px;
+    --radius-md: var(--aa-radius);
+    --radius-lg: var(--aa-radius-lg);
+    --radius-pill: var(--aa-pill);
+    --nav-height: var(--aa-header-h);
+    --transition: var(--aa-transition);
+    --shadow-sm: var(--aa-shadow-plate);
+    --shadow-md: var(--aa-shadow-card);
+    --shadow-card: var(--aa-shadow-card);
+    --shadow-glow: var(--aa-shadow-tactile);
+}
+
+/* 2. BASE ----------------------------------------------------------------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    /* The design header is fixed; reserve its height. */
+    padding-top: var(--aa-header-h);
+    background-color: var(--aa-surface) !important;
+    background-image: none !important;
+    color: var(--aa-charcoal) !important;
+    font-family: var(--aa-font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+}
+
+body[style] { background-color: var(--aa-surface) !important; }
+
+/* The old particle backdrop is not part of the design. */
+#particles-js { display: none !important; }
+
+/* Scroll-triggered reveals from the legacy pages: the design has none, and
+   they leave content invisible whenever the CDN script fails to arrive. */
+[data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* 3. TYPOGRAPHY ----------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    color: var(--aa-on-surface) !important;
+    font-family: var(--aa-font-display) !important;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.75rem, 3.6vw, 2.5rem); font-weight: 700; }
+h3 { font-size: clamp(1.25rem, 2.2vw, 1.75rem); font-weight: 700; }
+h4 { font-size: 1.2rem; font-weight: 700; }
+h5, h6 { font-size: 1.02rem; font-weight: 700; }
+
+p, li, .lead {
+    color: var(--aa-on-surface-variant);
+    font-family: var(--aa-font-body);
+}
+
+a { color: var(--aa-primary-container); text-decoration: none; transition: color var(--aa-transition); }
+a:hover { color: var(--aa-secondary); }
+
+::selection { background: var(--aa-ochre); color: var(--aa-charcoal); }
+
+hr { border-color: var(--aa-sandstone); opacity: 1; }
+
+/* Blueprint-style mono labels */
+.font-mono, code, kbd, .bb-label, .eyebrow, .aa-label {
+    font-family: var(--aa-font-mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Inline headline accent — ochre, as in the reference hero */
+.text-brand { color: var(--aa-ochre-text) !important; }
+h1 .text-brand, h2 .text-brand, .display-1 .text-brand,
+.display-3 .text-brand, .display-4 .text-brand, .display-5 .text-brand {
+    color: var(--aa-ochre) !important;
+}
+
+/* Legacy display headings */
+.display-1, .display-2, .display-3, .display-4, .display-5 {
+    font-family: var(--aa-font-display) !important;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+    color: var(--aa-on-surface) !important;
+}
+
+.display-1, .display-2 { font-size: clamp(2.5rem, 6vw, 4rem); }
+.display-3, .display-4 { font-size: clamp(2rem, 4.6vw, 2.75rem); }
+.display-5 { font-size: clamp(1.6rem, 3.4vw, 2.125rem); font-weight: 700; }
+
+.fw-bold, .font-weight-bold { font-weight: 800 !important; }
+
+.small, .text-small { font-size: 14px; }
+
+/* 4. LAYOUT -------------------------------------------------------------- */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    max-width: 1280px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container, .container-lg, .container-xl {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+section { padding-top: clamp(48px, 7vw, 88px); padding-bottom: clamp(48px, 7vw, 88px); }
+section:first-of-type { padding-top: clamp(28px, 4vw, 48px); }
+
+.full-height { min-height: auto; }
+
+/* Legacy dark full-bleed bands become forest structural panels */
+.bg-dark, .dark-section, [style*="background: #000"], [style*="background:#000"],
+[style*="background-color: #000"], [style*="background-color:#000"] {
+    background-color: var(--aa-primary-container) !important;
+    color: var(--aa-surface) !important;
+}
+
+/* 5. INK ROLES ----------------------------------------------------------- */
+.text-white, .text-black, .text-light, .text-dark,
+.text-body, .text-heading { color: var(--aa-charcoal) !important; }
+
+.text-muted, .text-secondary, .text-secondary-emphasis,
+.text-body-secondary { color: var(--aa-on-surface-variant) !important; }
+
+.text-primary { color: var(--aa-primary-container) !important; }
+.text-success { color: var(--aa-secondary) !important; }
+.text-danger { color: #ba1a1a !important; }
+.text-warning { color: var(--aa-ochre-text) !important; }
+.text-info { color: var(--aa-primary-container) !important; }
+
+.bg-primary, .bg-success, .bg-info { background-color: var(--aa-primary-container) !important; color: #fff !important; }
+.bg-secondary, .bg-light { background-color: var(--aa-sage-tint) !important; color: var(--aa-charcoal) !important; }
+.bg-white, .bg-body { background-color: var(--aa-surface-lowest) !important; }
+.bg-warning { background-color: var(--aa-ochre) !important; color: var(--aa-charcoal) !important; }
+
+.border, .border-top, .border-bottom, .border-start, .border-end,
+.border-secondary, .border-light, .border-white {
+    border-color: var(--aa-sandstone) !important;
+}
+
+.badge {
+    font-family: var(--aa-font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.4em 0.85em;
+    border-radius: var(--aa-pill);
+    background: var(--aa-sage-tint) !important;
+    color: var(--aa-primary-container) !important;
+}
+
+.badge.bg-primary, .badge.bg-success { background: var(--aa-primary-container) !important; color: #fff !important; }
+.badge.bg-warning { background: var(--aa-ochre-soft) !important; color: var(--aa-ochre-text) !important; }
+
+/* 6. SURFACE PLATES ------------------------------------------------------ */
+.card, .card-custom, .team-member, .aa-card,
+.panel, .surface-plate, .feature-box {
+    background: var(--aa-surface-lowest) !important;
+    border: 1px solid var(--aa-sandstone) !important;
+    border-radius: var(--aa-radius-lg);
+    box-shadow: var(--aa-shadow-card) !important;
+    color: var(--aa-charcoal) !important;
+}
+
+.card-body, .card-header, .card-footer { background: transparent !important; color: var(--aa-charcoal); }
+.card-header { border-bottom: 1px solid var(--aa-sandstone) !important; border-radius: var(--aa-radius-lg) var(--aa-radius-lg) 0 0 !important; }
+.card-footer { border-top: 1px solid var(--aa-sandstone) !important; }
+
+.modal-content, .offcanvas, .dropdown-menu, .toast {
+    background: var(--aa-surface-lowest) !important;
+    border: 1px solid var(--aa-sandstone) !important;
+    border-radius: var(--aa-radius-lg) !important;
+    color: var(--aa-charcoal);
+    box-shadow: var(--aa-shadow-card) !important;
+}
+
+.modal-header, .modal-footer { border-color: var(--aa-sandstone) !important; }
+.modal-title { color: var(--aa-on-surface) !important; }
+.dropdown-item { color: var(--aa-charcoal); }
+.dropdown-item:hover, .dropdown-item:focus { background: var(--aa-sage-tint); color: var(--aa-primary-container); }
+
+/* Tables */
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--aa-charcoal);
+    --bs-table-border-color: var(--aa-sandstone);
+    color: var(--aa-charcoal);
+}
+
+.table > thead th {
+    font-family: var(--aa-font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--aa-primary-container);
+    border-bottom: 1px solid var(--aa-sandstone) !important;
+}
+
+.table > tbody > tr > td { border-color: var(--aa-sandstone) !important; }
+
+/* Keep light ink inside genuine forest panels */
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6,
+.bg-dark p, .bg-dark span, .bg-dark li, .bg-dark td, .bg-dark th,
+.dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4,
+.dark-section p, .dark-section li, .dark-section span {
+    color: var(--aa-surface) !important;
+}
+
+.bg-dark .text-muted, .bg-dark .text-brand, .dark-section .text-muted {
+    color: var(--aa-primary-fixed-dim) !important;
+}
+
+/* 7. ACCESSIBILITY ------------------------------------------------------- */
+:focus-visible {
+    outline: 2px solid var(--aa-sage);
+    outline-offset: 2px;
+}
+
+@media print {
+    .aa-no-print { display: none !important; }
+}
