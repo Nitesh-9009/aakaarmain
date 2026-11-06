@@ -19,10 +19,51 @@
     font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
   }
   .font-label-mono-xs, .font-label-mono-sm, .aa-hero-eyebrow, .aa-hero-note {
-    font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-family: 'Bricolage Grotesque', 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    letter-spacing: 0.03em;
   }
   ::-webkit-scrollbar { width: 0; height: 0; }
   .aa-scroll-lock { overflow: hidden; }
+
+  /* Global button interactive behavior requested by user:
+     Bold colored by default, hover: light green (#c5eeb5 / #022101), clicked/active: normal green (#44673a / #ffffff) */
+  .btn-primary,
+  .aa-btn-primary,
+  .aa-btn-ghost,
+  .filter-btn,
+  .compi-filter,
+  button.bg-primary,
+  a.bg-primary,
+  a.font-button-text[class*="rounded-full"],
+  button[class*="font-button-text"][class*="rounded-full"] {
+    transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.1s ease !important;
+  }
+  .btn-primary:hover,
+  .aa-btn-primary:hover,
+  .aa-btn-ghost:hover,
+  .filter-btn:hover,
+  .compi-filter:hover,
+  button.bg-primary:hover,
+  a.bg-primary:hover,
+  a.font-button-text[class*="rounded-full"]:hover,
+  button[class*="font-button-text"][class*="rounded-full"]:hover {
+    background-color: #c5eeb5 !important;
+    color: #022101 !important;
+    border-color: #c5eeb5 !important;
+  }
+  .btn-primary:active,
+  .aa-btn-primary:active,
+  .aa-btn-ghost:active,
+  .filter-btn:active,
+  .compi-filter:active,
+  button.bg-primary:active,
+  a.bg-primary:active,
+  a.font-button-text[class*="rounded-full"]:active,
+  button[class*="font-button-text"][class*="rounded-full"]:active {
+    background-color: #44673a !important;
+    color: #ffffff !important;
+    border-color: #44673a !important;
+  }
 </style>
 
 <script src="{% static 'design/tailwind.js' %}"></script>

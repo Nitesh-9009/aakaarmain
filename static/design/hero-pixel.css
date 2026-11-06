@@ -136,24 +136,40 @@
 }
 
 .aa-btn-primary:hover {
-  background: #244d3b;
-  color: #ffffff;
+  background: #c5eeb5;
+  color: #022101;
   transform: translateY(2px);
-  box-shadow: 0 2px 0 #1a372a;
+  box-shadow: 0 2px 0 #44673a;
+}
+
+.aa-btn-primary:active {
+  background: #44673a;
+  color: #ffffff;
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
 }
 
 .aa-btn-ghost {
-  background: #ffffff;
-  color: #0a3626;
-  border: 1.5px solid #244d3b;
-  box-shadow: 0 4px 0 rgba(10, 54, 38, 0.12);
+  background: #0a3626;
+  color: #ffffff;
+  border: 1.5px solid #0a3626;
+  box-shadow: 0 4px 0 #1a372a;
 }
 
 .aa-btn-ghost:hover {
-  background: #f5f4ed;
-  color: #0a3626;
+  background: #c5eeb5;
+  color: #022101;
+  border-color: #c5eeb5;
   transform: translateY(2px);
-  box-shadow: 0 2px 0 rgba(10, 54, 38, 0.12);
+  box-shadow: 0 2px 0 #44673a;
+}
+
+.aa-btn-ghost:active {
+  background: #44673a;
+  color: #ffffff;
+  border-color: #44673a;
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
 }
 
 /* ------------------------------------------------------- edition strip --- */

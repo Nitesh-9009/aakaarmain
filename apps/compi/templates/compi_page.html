@@ -2,64 +2,22 @@
 {% load static %}
 {% block title %}Competitions | AAKAAR IIT Bombay{% endblock %}
 {% block content %}
-<!-- Top Hero Architectural Banner -->
-<section class="relative w-full bg-primary-container text-surface px-margin py-space-xl overflow-hidden shadow-md">
-<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
-<div class="absolute left-1/3 bottom-0 w-80 h-80 rounded-full bg-tertiary-fixed/10 blur-2xl pointer-events-none"></div>
-<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
-<div class="lg:col-span-8 flex flex-col gap-space-md">
-<div class="inline-flex items-center gap-space-xs self-start px-space-md py-space-xs rounded-full bg-surface-container-lowest/10 text-tertiary-fixed backdrop-blur-md">
-<span class="material-symbols-outlined text-[16px]">military_tech</span>
-</div>
-<h1 class="font-display-hero text-display-hero text-surface tracking-tight leading-none">
-          Our Competitions &mdash; <span class="text-tertiary-fixed">Innovate, Create, Learn</span>
-</h1>
-<p class="font-body-lg text-body-lg text-surface-container-high max-w-2xl">
-          Aakaar in its 19th edition is all set to scale new prominences with many competitions. It instigates students to innovate, create and learn better &mdash; from truss bridges and pervious concrete to road-defect detection and a national civil engineering quiz.
+<!-- Hero (Standardized with Symposium & Events) -->
+<section class="relative w-full bg-surface py-space-xl overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="max-w-3xl flex flex-col gap-space-sm">
+<h1 class="font-display-hero text-display-hero text-primary tracking-tight leading-none mt-space-xs">
+          Our Competitions
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs">
+          Aakaar in its 19th edition is all set to scale new prominences with many competitions. It instigates students to innovate, create and learn better &mdash; from truss bridges and pervious concrete to road-defect detection and structural design challenges.
         </p>
-<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
-<div class="bg-surface-container-lowest text-on-surface px-space-lg py-space-sm rounded-xl flex items-center gap-space-md" style="box-shadow: rgb(112, 192, 85) 0px 4px 0px; border: 2px solid rgb(184, 233, 101);">
-<span class="material-symbols-outlined text-[32px] text-tertiary">workspace_premium</span>
-<div>
-<div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant uppercase">Combined Prize Money</div>
-<div class="font-headline-lg text-headline-lg text-primary leading-tight">&#8377;1,45,000</div>
-</div>
-</div>
-<div class="flex items-center gap-space-xs text-surface-container-high font-label-mono-sm text-label-mono-sm">
-<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">verified</span>
-<span class="">Certificates from Aakaar, IIT Bombay for all participants</span>
-</div>
-</div>
-</div>
-<!-- Quick Stats on the Right -->
-<div class="lg:col-span-4 flex flex-col gap-space-md bg-surface-container-lowest/10 p-space-lg rounded-2xl backdrop-blur-sm">
-<div class="flex items-center justify-between bg-surface-container-lowest/5 p-space-sm rounded-lg">
-<div>
-<span class="font-label-mono-xs text-label-mono-xs text-tertiary-fixed uppercase">Competitions</span>
-<div class="font-headline-md text-headline-md text-surface">4 Tracks</div>
-</div>
-<span class="material-symbols-outlined text-[28px] text-tertiary-fixed">groups</span>
-</div>
-<div class="flex items-center justify-between bg-surface-container-lowest/5 p-space-sm rounded-lg">
-<div>
-<span class="font-label-mono-xs text-label-mono-xs text-tertiary-fixed uppercase">Edition</span>
-<div class="font-headline-md text-headline-md text-surface">19th</div>
-</div>
-<span class="material-symbols-outlined text-[28px] text-tertiary-fixed">celebration</span>
-</div>
-<div class="flex items-center justify-between bg-surface-container-lowest/5 p-space-sm rounded-lg">
-<div>
-<span class="font-label-mono-xs text-label-mono-xs text-tertiary-fixed uppercase">Grand Finals</span>
-<div class="font-headline-sm text-headline-sm text-surface">IIT Bombay Campus</div>
-</div>
-<span class="material-symbols-outlined text-[28px] text-tertiary-fixed">location_on</span>
-</div>
 </div>
 </div>
 </section>
 
 <!-- Filter & Search Ribbon -->
-<section class="max-w-7xl mx-auto px-margin w-full -mt-6 z-20">
+<section class="max-w-7xl mx-auto px-margin w-full pt-space-sm pb-space-sm z-20">
 <div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
 <div class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0" id="filter-container">
 <button class="filter-btn active-filter px-space-md py-space-xs rounded-full font-label-mono-xs text-label-mono-xs bg-primary text-on-primary transition-all" onclick="filterCards('all', this)">All Tracks (4)</button>
@@ -214,9 +172,7 @@
               Sign up through the Aakaar registration portal and pick your competition. Cross-college teams are welcome across the tracks.
             </p>
 </div>
-<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-primary font-label-mono-xs text-label-mono-xs">
-<span class="material-symbols-outlined text-[16px]">app_registration</span> Online Entry
-          </div>
+
 </div>
 <div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
 <div>
@@ -226,9 +182,7 @@
               Submit your report, design or model as per your competition's rulebook. Shortlists are announced ahead of the finals.
             </p>
 </div>
-<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-primary font-label-mono-xs text-label-mono-xs">
-<span class="material-symbols-outlined text-[16px]">cloud_upload</span> Rulebook-based Evaluation
-          </div>
+
 </div>
 <div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
 <div>
@@ -238,9 +192,7 @@
               Shortlisted finalists compete live during the festival at the IIT Bombay campus in Powai.
             </p>
 </div>
-<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-primary font-label-mono-xs text-label-mono-xs">
-<span class="material-symbols-outlined text-[16px]">domain_verification</span> On-Campus Finals
-          </div>
+
 </div>
 </div>
 </div>
