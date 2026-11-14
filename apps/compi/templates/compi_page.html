@@ -16,23 +16,6 @@
 </div>
 </section>
 
-<!-- Filter & Search Ribbon -->
-<section class="max-w-7xl mx-auto px-margin w-full pt-space-sm pb-space-sm z-20">
-<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
-<div class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0" id="filter-container">
-<button class="filter-btn active-filter px-space-md py-space-xs rounded-full font-label-mono-xs text-label-mono-xs bg-primary text-on-primary transition-all" onclick="filterCards('all', this)">All Tracks (4)</button>
-<button class="filter-btn px-space-md py-space-xs rounded-full font-label-mono-xs text-label-mono-xs bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="filterCards('structural', this)">Structural</button>
-<button class="filter-btn px-space-md py-space-xs rounded-full font-label-mono-xs text-label-mono-xs bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="filterCards('materials', this)">Materials</button>
-<button class="filter-btn px-space-md py-space-xs rounded-full font-label-mono-xs text-label-mono-xs bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="filterCards('roads', this)">Roads &amp; AI</button>
-<button class="filter-btn px-space-md py-space-xs rounded-full font-label-mono-xs text-label-mono-xs bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="filterCards('industry', this)">Industry</button>
-</div>
-<div class="relative shrink-0 w-full md:w-72">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
-<input class="w-full pl-10 pr-4 py-2 text-body-sm font-body-sm bg-surface-container-low text-on-surface rounded-xl outline-none focus:bg-surface-container-lowest focus:shadow-sm transition-all placeholder:text-on-surface-variant" id="comp-search" oninput="handleSearch(this.value)" placeholder="Search competitions..." type="text">
-</div>
-</div>
-</section>
-
 <!-- About Our Competitions -->
 <section class="max-w-7xl mx-auto px-margin w-full pt-space-xl">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
@@ -203,10 +186,14 @@
 <div class="bg-surface-container-low rounded-2xl p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
 <div>
 <h2 class="font-headline-md text-headline-md text-on-surface mt-1">Competitions Team</h2>
+<div class="font-body-sm text-body-sm text-secondary font-semibold mt-1 flex flex-wrap gap-3">
+  <a href="mailto:aakaar@iitb.org.in" class="hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">mail</span>aakaar@iitb.org.in</a>
+  <a href="tel:+919926967455" class="hover:underline flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">call</span>+91 9926967455</a>
+</div>
 </div>
 <div class="flex flex-wrap gap-space-lg">
 <div>
-<div class="font-headline-sm text-headline-sm text-primary font-bold">Ashanka Meena</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">Aashanka Meena</div>
 <div class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Competitions Manager</div>
 </div>
 <div>

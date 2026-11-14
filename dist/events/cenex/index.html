@@ -295,9 +295,9 @@ h1,h2,h3,h5,h6 {
 <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <div class="max-w-7xl mx-auto px-margin h-20 flex items-center justify-between gap-space-md">
 
-        <a href="/" class="flex items-center gap-space-xs shrink-0 group">
-            <img alt="AAKAAR 19th Edition IIT Bombay" class="h-10 md:h-12 w-auto object-contain"
-                 src="/static/img/aakaar_logo_ink.png">
+        <a href="/" class="flex items-center gap-space-xs shrink-0 group py-1">
+            <img alt="AAKAAR 19th Edition IIT Bombay" class="h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+                 src="/static/img/aakaar_logo_black.png">
         </a>
 
         <nav class="hidden lg:flex items-center gap-space-md xl:gap-space-lg">
@@ -487,7 +487,7 @@ h1,h2,h3,h5,h6 {
         </h4>
         <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScuZ6L6qB46NHTTj06JpfO9r7my-z92llk-8KVW392AGvHQmQ/viewform?usp=sf_link" target="_blank">Google Form</a></p>
     <!--
-            <form action="/cr/task1" method="POST"> <input type="hidden" name="csrfmiddlewaretoken" value="9eb4cXMkcn1UXh3jtK8ZPI0K76bhRbypsd7E8ZBFqKyxsiSWeerEcQ8m9PvoVrWc">
+            <form action="/cr/task1" method="POST"> <input type="hidden" name="csrfmiddlewaretoken" value="iPQZIKepDYSju6mydQQK4ghc2t7nodXpvVGXDW54pq1pjSblvWNZcLEul9YJeHNu">
                 <h3>Link:</h3>
                 <textarea name="link" id="" cols="50" rows="10" required></textarea> -->
                 <!-- <input type="textarea" class="form-control" id="colName" name="colName" aria-placeholder="Your College Name" required> -->
@@ -520,7 +520,7 @@ h1,h2,h3,h5,h6 {
           <h5 class="modal-title" id="staticBackdropLabel">Register</h5>
         </div>
         <div class="modal-body">
-          <form action="/cenex_reg" method="post"> <input type="hidden" name="csrfmiddlewaretoken" value="9eb4cXMkcn1UXh3jtK8ZPI0K76bhRbypsd7E8ZBFqKyxsiSWeerEcQ8m9PvoVrWc">
+          <form action="/cenex_reg" method="post"> <input type="hidden" name="csrfmiddlewaretoken" value="iPQZIKepDYSju6mydQQK4ghc2t7nodXpvVGXDW54pq1pjSblvWNZcLEul9YJeHNu">
             <div class="mb-3">
                 <label for="colName" class="form-label">Team Name</label>
                 <input type="text" class="form-control" id="colName" name="team"  required>
@@ -983,20 +983,15 @@ be presented at CENEX in Aakaar, IIT Bombay in March, 2024. </div>
         
 <footer id="aa-contact" class="w-full bg-surface-container-high py-space-xl mt-space-xl">
     <div class="max-w-7xl mx-auto px-margin">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-space-xl">
 
             <div>
                 <div class="flex items-center gap-space-sm mb-space-sm">
-                    <img alt="AAKAAR CEA IIT Bombay Emblem" class="h-8 w-auto object-contain"
-                         src="/static/design/img/emblem.png">
-                    <span class="font-headline-sm text-headline-sm text-primary">AAKAAR</span>
+                    <img alt="AAKAAR 19th Edition IIT Bombay" class="h-10 w-auto object-contain"
+                         src="/static/img/aakaar_logo_black.png">
                 </div>
                 <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Asia's Largest Civil Engineering
-                    Technical Festival, proudly organized by the Civil Engineering Association (CEA), Department of Civil
-                    Engineering, IIT Bombay.</p>
-                <div class="inline-flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs bg-surface-container text-secondary px-space-sm py-space-xs rounded-full">
-                    <span class="material-symbols-outlined text-[14px]">verified</span>CEA &bull; IIT Bombay Affiliated
-                </div>
+                    Technical Festival, organized by the Department of Civil Engineering, IIT Bombay.</p>
             </div>
 
             <div>
@@ -1006,31 +1001,13 @@ be presented at CENEX in Aakaar, IIT Bombay in March, 2024. </div>
                         <a href="/compi/">Competitions &amp; Challenges</a>
                     </li>
                     <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
-                        <a href="/events/cenex">Workshops &amp; CENEX Expo</a>
+                        <a href="/events/">Flagship Events &amp; Workshops</a>
                     </li>
                     <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
                         <a href="/sympo/">Symposium (ICES Research)</a>
                     </li>
                     <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
-                        <a href="/partners/">Corporate &amp; Innovation Partners</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Navigation</h3>
-                <ul class="flex flex-col gap-space-xs">
-                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
-                        <a href="/">Home Overview</a>
-                    </li>
-                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
-                        <a href="/about/">About &amp; CEA Legacy</a>
-                    </li>
-                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
-                        <a href="/events/lecture_series">Lecture Series</a>
-                    </li>
-                    <li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">
-                        <a href="/events/labvisit">IITB Lab Visits</a>
+                        <a href="https://crportal.aakaariitb.org.in/cr/" target="_blank" rel="noopener">Campus Representative Portal</a>
                     </li>
                 </ul>
             </div>
@@ -1039,8 +1016,15 @@ be presented at CENEX in Aakaar, IIT Bombay in March, 2024. </div>
                 <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md">Get In Touch</h3>
                 <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Department of Civil
                     Engineering,<br>IIT Bombay, Powai, Mumbai - 400076</p>
-                <p class="font-label-mono-xs text-label-mono-xs text-secondary mb-space-md">
-                    <a href="mailto:contact@aakaariitb.org">contact@aakaariitb.org</a>
+                <p class="font-body-sm text-body-sm text-secondary font-semibold mb-space-md flex flex-col gap-1">
+                    <a href="mailto:aakaar@iitb.org.in" class="hover:underline flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-[16px]">mail</span>
+                        <span>aakaar@iitb.org.in</span>
+                    </a>
+                    <a href="tel:+919926967455" class="hover:underline flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-[16px]">call</span>
+                        <span>+91 9926967455</span>
+                    </a>
                 </p>
                 <div class="flex items-center gap-space-sm">
                     <a aria-label="Location"
@@ -1050,12 +1034,12 @@ be presented at CENEX in Aakaar, IIT Bombay in March, 2024. </div>
                     </a>
                     <a aria-label="Email"
                        class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
-                       href="mailto:contact@aakaariitb.org">
+                       href="mailto:aakaar@iitb.org.in">
                         <span class="material-symbols-outlined text-[18px]">mail</span>
                     </a>
                     <a aria-label="Call"
                        class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
-                       href="tel:+919820123456">
+                       href="tel:+919926967455">
                         <span class="material-symbols-outlined text-[18px]">call</span>
                     </a>
                     <a aria-label="Share"
@@ -1068,8 +1052,7 @@ be presented at CENEX in Aakaar, IIT Bombay in March, 2024. </div>
         </div>
 
         <div class="flex flex-col sm:flex-row items-center justify-between pt-space-lg gap-space-sm">
-            <p class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">&copy; 2027 AAKAAR, Civil
-                Engineering Association (CEA), IIT Bombay. All rights reserved.</p>
+            <p class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">&copy; 2027 AAKAAR, IIT Bombay. All rights reserved.</p>
         </div>
     </div>
 </footer>
